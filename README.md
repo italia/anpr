@@ -3,14 +3,14 @@
 L’Anagrafe Nazionale della Popolazione Residente (ANPR), è la banca dati nazionale nella quale confluiranno progressivamente le anagrafi comunali.
 
 L'ANPR consentirà di:
-evitare duplicazioni di comunicazione con le Pubbliche Amministrazioni;
-garantire maggiore certezza e qualità al dato anagrafico;
-semplificare le operazioni di cambio di residenza, emigrazioni, immigrazioni, censimenti, e molto altro ancora
+- evitare duplicazioni di comunicazione con le Pubbliche Amministrazioni;
+- garantire maggiore certezza e qualità al dato anagrafico;
+- semplificare le operazioni di cambio di residenza, emigrazioni, immigrazioni, censimenti, e molto altro ancora
 
-[Guida Anpr](https://www.anpr.interno.it/portale/guida-anpr)
+[https://www.anpr.interno.it/portale/guida-anpr]
 
 
-Questo progetto contiene le informazioni tecniche rilevanti
+Questo progetto intende raccogliere la documentazione tecnica ed e le segnalazioni e domande degli utenti relative al progetto:
 
-  - [WSDL](wsdl)
-  - [Domande e segnalazioni](issues?q=is%3Aissue+is%3Aclosed)
+  - [WSDL  (versione 17 febbraio 2017)](wsdl)
+  - [Domande e segnalazioni](https://github.com/italia/anpr/issues?q=is%3Aissue+is%3Aclosed)
