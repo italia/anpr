@@ -5,8 +5,8 @@
 
 
 ### Data del test
-{"gitdown": "date", "format": "dd-MM-YYYY"}
+
 ### Ambiente
-- [] test
-- [] pre subentro
-- [] subentro
+- [x] test
+- [x] pre subentro
+- [x] subentro
