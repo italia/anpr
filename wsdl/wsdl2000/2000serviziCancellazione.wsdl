@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sogei.it/ANPR/2000AnprService" xmlns:schema="http://sogei.it/ANPR/2000cancellazione" xmlns:tns="http://sogei.it/ANPR/2000AnprService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/2000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/2000cancellazione" schemaLocation="2000cancellazione.xsd"/>  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta2001">
+		<wsdl:part element="schema:Richiesta2001" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta2001">  
+		<wsdl:part element="schema:Risposta2001" name="response"/>  
+	</wsdl:message>
+	
+	<wsdl:message name="Richiesta2003">
+		<wsdl:part element="schema:Richiesta2003" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta2003">  
+		<wsdl:part element="schema:Risposta2003" name="response"/>  
+	</wsdl:message>
+	
+	<wsdl:message name="Richiesta2009">
+		<wsdl:part element="schema:Richiesta2009" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta2009">  
+		<wsdl:part element="schema:Risposta2009" name="response"/>  
+	</wsdl:message>
+	
+	<wsdl:message name="Richiesta2011">
+		<wsdl:part element="schema:Richiesta2011" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta2011">  
+		<wsdl:part element="schema:Risposta2011" name="response"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortType2000">  
+		<wsdl:operation name="decesso">    
+			<wsdl:input message="tns:Richiesta2001"/>    
+			<wsdl:output message="tns:Risposta2001"/>  
+		</wsdl:operation>
+		<wsdl:operation name="cancellazione_AltriMotivi">    
+			<wsdl:input message="tns:Richiesta2003"/>    
+			<wsdl:output message="tns:Risposta2003"/>  
+		</wsdl:operation>
+		<wsdl:operation name="cancellazione_Archiviazione_Scheda_Convivenza">    
+			<wsdl:input message="tns:Richiesta2009"/>    
+			<wsdl:output message="tns:Risposta2009"/>  
+		</wsdl:operation>
+		<wsdl:operation name="annullamento_Cancellazione">    
+			<wsdl:input message="tns:Richiesta2011"/>    
+			<wsdl:output message="tns:Risposta2011"/>  
+		</wsdl:operation>		
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding2000" type="tns:AnprPortType2000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="decesso">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="cancellazione_AltriMotivi">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="cancellazione_Archiviazione_Scheda_Convivenza">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="annullamento_Cancellazione">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation> 		
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService2000">    
+		<wsdl:port binding="tns:AnprBinding2000" name="AnprServicePort2000">      
+			<wsdlsoap:address location="http://sogei.it/ANPR/AnprService2000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

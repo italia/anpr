@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/A000aire" 
+		   targetNamespace="http://sogei.it/ANPR/A000aire" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolarioA000aire"
+		   xmlns:risp="http://sogei.it/ANPR/rispostaComune" 
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified"> 
+
+	 <xs:import namespace="http://sogei.it/ANPR/vocabolarioA000aire"  schemaLocation="vocabolarioA000aire.xsd"/>	
+	 <xs:import namespace="http://sogei.it/ANPR/rispostaComune"  schemaLocation="rispostaComune.xsd"/>	
+	 
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>    						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- fine rispostaKO -->
+
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+	 
+		<!-- servizio A001 -->
+		<xs:element name="RichiestaA001">      
+			<xs:complexType>    
+				<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta di iscrizione per nascita AIRE
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta" 		type="anpr:tipoTestataRichiesta" 	     	minOccurs="1" maxOccurs="1" />			
+				<xs:element name="generalitaA001" 			type="anpr:tipoGeneralitaIscrizioneA001"    minOccurs="1" maxOccurs="1"/>    			
+				<xs:element name="attoNascita" 				type="anpr:tipoAttoNascita" 		        minOccurs="1" maxOccurs="1"/>
+				<xs:element name="altraCittadinanza" 		type="anpr:tipoCittadinanza" 		        minOccurs="0" maxOccurs="unbounded"/>			
+				<xs:element name="paternita" 				type="anpr:tipoGenitore" 				    minOccurs="0" maxOccurs="1"/> 												
+				<xs:element name="maternita" 				type="anpr:tipoGenitore" 				    minOccurs="0" maxOccurs="1"/>
+				<xs:element name="famiglia" 				type="anpr:tipoFamigliaConvivenza"	     	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="legameSoggetto" 			type="anpr:tipoLegameSoggetto"	       	    minOccurs="1" maxOccurs="1"/>				
+				<xs:element name="iscrizioneAire" 			type="anpr:tipoIscrizioneAIRE" 	         	minOccurs="1" maxOccurs="1"/>				
+				<xs:element name="residenzaEstera" 			type="anpr:tipoResidenza" 				    minOccurs="0" maxOccurs="1"/>
+				<xs:element name="datiDelProcedimento" 		type="anpr:tipoDatiProcedimento"			minOccurs="0" maxOccurs="1"/> 
+				<xs:element name="datiControllo"            type="anpr:tipoDatiControlloA001" 			minOccurs="1" maxOccurs="1"/> 
+				</xs:sequence>  
+			</xs:complexType>
+		</xs:element>
+	 
+		<xs:element name="RispostaA001">  
+			<xs:complexType>    
+				<xs:sequence>
+					<xs:annotation>
+						<xs:documentation>
+							Risposta di iscrizione per nascita AIRE
+						</xs:documentation>
+					</xs:annotation>
+					<xs:choice>
+						<xs:element ref="risp:Risposta_Comune" 	    minOccurs="0" maxOccurs="1" />
+						<xs:element ref="rispostaKO" 		        minOccurs="0" maxOccurs="1"/> 	
+						<xs:element ref="RispostaMultipla1001" 		minOccurs="0" maxOccurs="1"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		
+		<xs:element name="RispostaMultipla1001">
+		<xs:complexType >
+			<xs:annotation>
+					<xs:documentation>
+						RispostaMultipla1001
+					</xs:documentation>
+				</xs:annotation>	
+			<xs:sequence>
+				<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+				<xs:element name="elencoSoggettiPadre" 		type="anpr:tipoElencoGenitori" 	minOccurs="0" maxOccurs="1"/>    						
+				<xs:element name="elencoSoggettiMadre" 		type="anpr:tipoElencoGenitori" 	minOccurs="0" maxOccurs="1"/>
+			 </xs:sequence>
+		</xs:complexType>
+		</xs:element>
+	<!-- fine servizio 1001 -->
+		
+	<!-- fine servizio A001 -->
+
+
+	<!-- servizio A002 -->
+	<xs:element name="RichiestaA002">      
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta di iscrizione per altri motivi AIRE
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" minOccurs="1" maxOccurs="1" />
+				<xs:element name="generalitaA002"
+					type="anpr:tipoGeneralitaIscrizioneA002" minOccurs="1"
+					maxOccurs="1" />
+				<xs:element name="attoNascita"
+					type="anpr:tipoAttoNascita" minOccurs="0" maxOccurs="1" />
+				<!--<xs:element name="attoNascita" 				type="anpr:tipoAttoNascita" 			    minOccurs="1" maxOccurs="1"/> -->
+				<xs:element name="altraCittadinanza"
+					type="anpr:tipoCittadinanza" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="paternita" type="anpr:tipoGenitore"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="maternita" type="anpr:tipoGenitore"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="ultimaResidenzaIt"
+					type="anpr:tipoResidenza" minOccurs="0" maxOccurs="1" />
+				<xs:element name="famiglia" type="anpr:tipoFamigliaA002"
+					minOccurs="1" maxOccurs="1" />
+				<xs:element name="matrimonio" type="anpr:tipoMatrimonio"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="vedovanza" type="anpr:tipoVedovanza"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="annullamentoMatrimonio"
+					type="anpr:tipoAnnullamentoMatrimonio" minOccurs="0" maxOccurs="1" />
+				<xs:element name="convivenzaDiFatto"
+					type="anpr:tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="unioneCivile" type="anpr:tipoUnioneCivile" minOccurs="0" maxOccurs="1"></xs:element>
+				<xs:element name="cartaIdentita"
+					type="anpr:tipoCartaIdentita" minOccurs="0" maxOccurs="1" />
+				<xs:element name="listaElettorale"
+					type="anpr:tipoListaElettorale" minOccurs="0" maxOccurs="1" />
+				<xs:element name="listaLeva" type="anpr:tipoListaLeva"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="altriDati" type="anpr:tipoAltriDati"
+					minOccurs="0" maxOccurs="1" />
+				<!--<xs:element name="domicilioDigitale"	    type="anpr:tipoDomicilioDigitale"		    minOccurs="0" maxOccurs="1"/>-->
+				<xs:element name="iscrizioneAire"
+					type="anpr:tipoIscrizioneAIRE" minOccurs="1" maxOccurs="1" />
+				<xs:element name="residenzaEstera"
+					type="anpr:tipoResidenza" minOccurs="0" maxOccurs="1" />
+				<xs:element name="domicilioDigitale"
+					type="anpr:tipoDomicilioDigitale" minOccurs="0" maxOccurs="1" />
+				<xs:element name="datiDelProcedimento"
+					type="anpr:tipoDatiProcedimento" minOccurs="0" maxOccurs="1" />
+				<xs:element name="datiControllo"
+					type="anpr:tipoDatiControlloA002" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaA002">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta di iscrizione per altri motivi AIRE
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element ref="risp:Risposta_Comune"  	minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 		        minOccurs="0" maxOccurs="1"/>	
+					<xs:element ref="RispostaMultipla1002" 	 	minOccurs="0" maxOccurs="1"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="RispostaMultipla1002">	
+		<xs:complexType >    
+			<xs:annotation>
+				<xs:documentation>
+					RispostaMultipla1002
+				</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 		minOccurs="1" maxOccurs="1"/>	
+				<xs:element name="elencoSoggettiPadre" 		type="anpr:tipoElencoGenitori" 		    minOccurs="0" maxOccurs="1"/>    						
+				<xs:element name="elencoSoggettiMadre" 		type="anpr:tipoElencoGenitori" 			minOccurs="0" maxOccurs="1"/>
+				<xs:element name="elencoMatrimoni" 			type="anpr:tipoElencoMatrimoni" 	    minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio A002 -->
+
+	<!-- servizio A006 -->
+	<xs:element name="RichiestaA006">      
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta mutazione AIRE
+					</xs:documentation>
+				</xs:annotation>			
+				<xs:element name="testataRichiesta"			    type="anpr:tipoTestataRichiesta"		minOccurs="1" maxOccurs="1"/>  
+				<xs:element name="generalita"					type="anpr:tipoGeneralita"     			minOccurs="1" maxOccurs="1"/>			
+				<xs:element name="famiglia"  	  				type="anpr:tipoFamigliaConvivenza" 		minOccurs="1" maxOccurs="1"/>
+				<xs:element name="legameSoggetto" 				type="anpr:tipoLegameSoggetto"			minOccurs="0" maxOccurs="1"/>	
+				<xs:element name="altriDati" 					type="anpr:tipoAltriDati"				minOccurs="0" maxOccurs="1"/>				
+				<xs:element name="iscrizioneAire"  	  			type="anpr:tipoIscrizioneAIRE" 		    minOccurs="0" maxOccurs="1"/>			
+				<xs:element name="residenzaEstera" 			    type="anpr:tipoResidenza" 			    minOccurs="0" maxOccurs="1"/>
+				<xs:element name="datiDelProcedimento"	    	type="anpr:tipoDatiProcedimento" 		minOccurs="0" maxOccurs="1"/>
+				<xs:element name="datiControllo"       			type="anpr:tipoDatiControlloA006"      	minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>  
+	</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaA006">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta mutazione AIRE
+					</xs:documentation>
+				</xs:annotation>		
+				<xs:choice>
+					<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>	
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio A006 -->
+	
+	
+</xs:schema>

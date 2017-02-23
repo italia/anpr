@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sogei.it/ANPR/5000AnprService" xmlns:schema="http://sogei.it/ANPR/5000mutazione" xmlns:tns="http://sogei.it/ANPR/5000AnprService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/5000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/5000mutazione" schemaLocation="5000mutazione.xsd"/>  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta5001">
+		<wsdl:part element="schema:Richiesta5001" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta5001">  
+		<wsdl:part element="schema:Risposta5001" name="response"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta5005">  
+		<wsdl:part element="schema:Richiesta5005" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta5005">  
+		<wsdl:part element="schema:Risposta5005" name="response"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta5008">  
+		<wsdl:part element="schema:Richiesta5008" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta5008">  
+		<wsdl:part element="schema:Risposta5008" name="response"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta5009">  
+		<wsdl:part element="schema:Richiesta5009" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta5009">  
+		<wsdl:part element="schema:Risposta5009" name="response"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta5012">  
+		<wsdl:part element="schema:Richiesta5012" name="request"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta5012">  
+		<wsdl:part element="schema:Risposta5012" name="response"/>  
+	</wsdl:message>		
+	
+	<wsdl:portType name="AnprPortType5000">  
+		<wsdl:operation name="mutazione_famiglia_convivenza">    
+			<wsdl:input message="tns:Richiesta5001"/>    
+			<wsdl:output message="tns:Risposta5001"/>  
+		</wsdl:operation>
+		<wsdl:operation name="mutazione_residenza">    
+			<wsdl:input message="tns:Richiesta5005"/>    
+			<wsdl:output message="tns:Risposta5005"/>  
+		</wsdl:operation>
+		<wsdl:operation name="mutazione_scheda">    
+			<wsdl:input message="tns:Richiesta5008"/>    
+			<wsdl:output message="tns:Risposta5008"/>  
+		</wsdl:operation>	
+		<wsdl:operation name="mutazione_di_rettifica_dati_AE">    
+			<wsdl:input message="tns:Richiesta5009"/>    
+			<wsdl:output message="tns:Risposta5009"/>  
+		</wsdl:operation>		
+		<wsdl:operation name="annullamento_mutazione">    
+			<wsdl:input message="tns:Richiesta5012"/>    
+			<wsdl:output message="tns:Risposta5012"/>  
+		</wsdl:operation>		
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding5000" type="tns:AnprPortType5000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="mutazione_famiglia_convivenza">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="mutazione_residenza">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="mutazione_scheda">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation> 	
+		<wsdl:operation name="mutazione_di_rettifica_dati_AE">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>		
+		<wsdl:operation name="annullamento_mutazione">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation> 		
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService5000">    
+		<wsdl:port binding="tns:AnprBinding5000" name="AnprServicePort5000">      
+			<wsdlsoap:address location="http://www.sogei.it/Interno/ANPR/AnprService5000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

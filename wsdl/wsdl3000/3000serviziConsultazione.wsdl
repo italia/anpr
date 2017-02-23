@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/3000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/3000AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/3000consultazione" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/3000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/3000consultazione" schemaLocation="3000consultazione.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta3001">
+		<wsdl:part name="request" element="schema:Richiesta3001"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3001">  
+		<wsdl:part name="response" element="schema:Risposta3001"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta3002">  
+		<wsdl:part name="request" element="schema:Richiesta3002"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3002">  
+		<wsdl:part name="response" element="schema:Risposta3002"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta3003">  
+		<wsdl:part name="request" element="schema:Richiesta3003"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3003">  
+		<wsdl:part name="response" element="schema:Risposta3003"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta3005">  
+		<wsdl:part name="request" element="schema:Richiesta3005"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3005">  
+		<wsdl:part name="response" element="schema:Risposta3005"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta3006">
+		<wsdl:part name="request" element="schema:Richiesta3006"/>
+	</wsdl:message>
+	<wsdl:message name="Risposta3006">
+		<wsdl:part name="response" element="schema:Risposta3006"/>
+	</wsdl:message>
+	<wsdl:message name="Richiesta3007">  
+		<wsdl:part name="request" element="schema:Richiesta3007"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3007">  
+		<wsdl:part name="response" element="schema:Risposta3007"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortType3000">  
+		<wsdl:operation name="richiesta_paternita_maternita">    
+			<wsdl:input   message="tns:Richiesta3001"/>    
+			<wsdl:output  message="tns:Risposta3001" />  
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneCittadino_famiglia_convivenza">    
+			<wsdl:input   message="tns:Richiesta3002"/>    
+			<wsdl:output  message="tns:Risposta3002" />  
+		</wsdl:operation>
+		<wsdl:operation name="gestione_richieste">    
+			<wsdl:input   message="tns:Richiesta3003"/>    
+			<wsdl:output  message="tns:Risposta3003" />  
+		</wsdl:operation>
+		<wsdl:operation name="visualizzazione_eleaborati">    
+			<wsdl:input   message="tns:Richiesta3005"/>    
+			<wsdl:output  message="tns:Risposta3005" />  
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneCittadino_enti">
+			<wsdl:input   message="tns:Richiesta3006"/>
+			<wsdl:output  message="tns:Risposta3006" />
+		</wsdl:operation>
+		<wsdl:operation name="ricerca_identificativi_anpr">
+			<wsdl:input   message="tns:Richiesta3007"/>
+			<wsdl:output  message="tns:Risposta3007" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding3000" type="tns:AnprPortType3000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="richiesta_paternita_maternita">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="interrogazioneCittadino_famiglia_convivenza">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="gestione_richieste">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>   
+		<wsdl:operation name="visualizzazione_eleaborati">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneCittadino_enti">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="ricerca_identificativi_anpr">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService3000">    
+		<wsdl:port binding="tns:AnprBinding3000" name="AnprServicePort3000">      
+			<wsdlsoap:address location="http://sogei.it/Interno/ANPR/AnprService3000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

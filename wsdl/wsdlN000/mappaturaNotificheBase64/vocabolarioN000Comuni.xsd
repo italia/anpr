@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolarioN000Comuni"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+           targetNamespace="http://sogei.it/ANPR/vocabolarioN000Comuni" 
+	       elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>	
+
+<!-- tipoNotificheN010 -->
+	<xs:complexType name="tipoNotificaN010">
+		<xs:sequence>
+			<xs:element name="generalitaSoggetto" 		type="tpdt:tipoGeneralita" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta" 			type="tpdt:tipoComuneRichiesta" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idOperazioneANPR" 		type="tpdt:numericoMax30" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataDecorrenza" 			type="xs:date" 							minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoNotificheN010 -->
+
+<!-- tipoNotificheN030 -->
+	<xs:complexType name="tipoNotificheN030">
+		<xs:sequence>
+			<xs:element name="datiNotifica" 								type="tpdt:tipoDatiNotifica" 			minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoNotificheN030 -->
+
+<!-- tipoNotificheN031 -->
+	<xs:complexType name="tipoNotificheN031">
+		<xs:sequence>
+			<xs:element name="comuneRichiesta" 								type="tpdt:tipoComuneRichiesta" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataOperativitaAnpr" 					 		type="xs:date" 							minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoNotificheN031 -->
+
+</xs:schema>

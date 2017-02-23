@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/N000AnprService" 
+    xmlns:tns="http://sogei.it/ANPR/N000AnprService" 
+    xmlns:schema="http://sogei.it/ANPR/N000notifiche"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/N000AnprService">
+			<xsd:element name="RichiestaN000">		
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="testataNotifica" type="tns:tipoDatoTestataNotifica" minOccurs="1" maxOccurs="1"/>
+						<xsd:element name="contenuto" type="xsd:base64Binary" xmime:expectedContentTypes="application/octet-stream" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" minOccurs="1" maxOccurs="1"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>	
+			
+			<xsd:element name="RispostaN000">		
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="codiceEsito" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+						<xsd:element name="esito" type="xsd:string" minOccurs="1" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>	
+			<xsd:complexType name="tipoDatoTestataNotifica">
+				<xsd:sequence>
+					<xsd:element name="tipoNotifica" 		type="xsd:string" 	minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="codMittente" 		type="xsd:string" 	minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="codDestinatario" 	type="xsd:string" 	minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="dataOraRichiesta" 	type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="idOperazioneANPR" 	type="xsd:integer" 	minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="RichiestaN000">
+		<wsdl:part name="request" element="tns:RichiestaN000"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RispostaN000">
+		<wsdl:part name="response" element="tns:RispostaN000"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AnprPortTypeN000">  
+		<wsdl:operation name="inoltroNotificaANPR">
+			<wsdl:input message="tns:RichiestaN000"></wsdl:input>
+			<wsdl:output message="tns:RispostaN000"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingN000" type="tns:AnprPortTypeN000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="inoltroNotificaANPR">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceN000">    
+		<wsdl:port binding="tns:AnprBindingN000" name="AnprServicePortN000"> 
+		     <wsdlsoap:address location="http://localhost:9080/ANPRN000ServizioNotifiche/AnprServiceN000"/>
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

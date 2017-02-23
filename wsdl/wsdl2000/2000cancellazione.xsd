@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/2000cancellazione" 
+		   targetNamespace="http://sogei.it/ANPR/2000cancellazione" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolario2000cancellazione" 
+		   xmlns:risp="http://sogei.it/ANPR/rispostaComune" 
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+ 
+ <xs:import namespace="http://sogei.it/ANPR/vocabolario2000cancellazione"  schemaLocation="vocabolario2000cancellazione.xsd"/>
+ <xs:import namespace="http://sogei.it/ANPR/rispostaComune"  schemaLocation="rispostaComune.xsd"/>	
+ 
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>    						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine rispostaKO -->
+
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- servizio 2001 -->
+<xs:element name="Richiesta2001">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta di cancellazione per morte o morte presunta giudizialmente dichiarata
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta"    									type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="motivoCancellazione" 									type="anpr:tipoMotivoCancellazione2001" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="generalitaPerRicerca" 								type="anpr:tipoGeneralita" 					minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiDecesso" 											type="anpr:tipoDatiEvento" 					minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="datiSentenza" 	   									type="anpr:tipoSentenza" 					minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="elencoSoggettiFamiglia" 								type="anpr:tipoElencoSoggettiFamiglia" 	    minOccurs="0" maxOccurs="unbounded"/>					
+			<xs:element name="altriDati" 											type="anpr:tipoAltriDati" 	   				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="datiDelProcedimento" 									type="anpr:tipoDatiProcedimento"			minOccurs="0" maxOccurs="1"/> 
+			<xs:element name="datiControllo"  										type="anpr:tipoDatiControllo2001" 			minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta2001">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta di cancellazione per morte o morte presunta giudizialmente dichiarata
+				</xs:documentation>
+			</xs:annotation>		
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>	
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 2001 -->
+
+<!-- servizio 2003 -->
+<xs:element name="Richiesta2003">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta di cancellazione per altri motivi
+				</xs:documentation>	
+			</xs:annotation>				
+			<xs:element name="testataRichiesta"    									type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiCancellazione"    								type="anpr:tipoDatiCancellazione2003" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="generalitaPerRicerca"									type="anpr:tipoGeneralita" 					minOccurs="1" maxOccurs="1"/> 
+			<xs:element name="destinazione" 		   								type="anpr:tipoProvenienzaDestinazione" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="elencoSoggetti" 										type="anpr:tipoElencoSoggettiFamiglia" 	  	minOccurs="0" maxOccurs="unbounded"/>			
+			<xs:element name="altriDati" 											type="anpr:tipoAltriDati" 	   				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiDelProcedimento" 									type="anpr:tipoDatiProcedimento"		    minOccurs="0" maxOccurs="1"/> 
+			<xs:element name="datiControllo"  										type="anpr:tipoDatiControllo2003" 			minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta2003">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta di cancellazione per altri motivi
+				</xs:documentation>
+			</xs:annotation>		
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 2003 -->
+
+<!-- servizio 2009 -->
+<xs:element name="Richiesta2009">      
+	<xs:complexType>    
+		  <xs:annotation>
+				<xs:documentation>
+					Richiesta Archiviazione Scheda Convivenza
+				</xs:documentation>
+			</xs:annotation>
+         <xs:sequence>			
+			<xs:element name="testataRichiesta"			  			type="anpr:tipoTestataRichiesta"		minOccurs="1" maxOccurs="1"/>  
+			<xs:element name="estremiSchedaConvivenza"  			type="anpr:tipoFamigliaConvivenza"   	minOccurs="1" maxOccurs="1"/>	
+			<xs:element name="datiArchiviazione"  					type="anpr:tipoDatiArchiviazione"   	minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="datiControllo" 			  			type="anpr:tipoDatiControllo2009"  	    minOccurs="1" maxOccurs="1"/>
+	</xs:sequence>  
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta2009">  
+	<xs:complexType>    
+		
+			<xs:annotation>
+				<xs:documentation>
+					Archiviazione Scheda Convivenza
+				</xs:documentation>
+			</xs:annotation>
+         <xs:sequence>			
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>
+		 </xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 2009 -->
+
+<!-- servizio 2011 -->
+<xs:element name="Richiesta2011">      
+	<xs:complexType>    
+		  <xs:annotation>
+				<xs:documentation>
+					Richiesta di annullamento operazione di cancellazione
+				</xs:documentation>
+			</xs:annotation>
+         <xs:sequence>			
+			<xs:element name="testataRichiesta"			  			type="anpr:tipoTestataRichiesta"	minOccurs="1" maxOccurs="1"/>  
+			<xs:element name="datiOperazioneDaAnnullare"  			type="anpr:tipoDatiOperazione"   	minOccurs="1" maxOccurs="1"/>    
+			<xs:element name="datiSchedaSoggettoFamigliaConvivenza"	type="anpr:tipoDatiRicercaScheda" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiDelProcedimento" 		            type="anpr:tipoDatiProcedimento"	minOccurs="0" maxOccurs="1"/> 
+			<xs:element name="datiControllo" 			  			type="anpr:tipoDatiControllo2011"  	minOccurs="1" maxOccurs="1"/>
+	</xs:sequence>  
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta2011">  
+	<xs:complexType>    
+		
+			<xs:annotation>
+				<xs:documentation>
+					Risposta di annullamento operazione di cancellazione
+				</xs:documentation>
+			</xs:annotation>
+         <xs:sequence>			
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>
+		 </xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 2011 -->
+
+</xs:schema>
+
+
+

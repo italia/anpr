@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/1000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/1000AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/1000iscrizione" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/1000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/1000iscrizione" schemaLocation="1000iscrizione.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta1001">
+		<wsdl:part name="request" element="schema:Richiesta1001"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta1001">  
+		<wsdl:part name="response" element="schema:Risposta1001"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta1002">
+		<wsdl:part name="request" element="schema:Richiesta1002"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta1002">  
+		<wsdl:part name="response" element="schema:Risposta1002"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta1010">
+		<wsdl:part name="request" element="schema:Richiesta1010"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta1010">  
+		<wsdl:part name="response" element="schema:Risposta1010"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta1013">
+		<wsdl:part name="request" element="schema:Richiesta1013"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta1013">  
+		<wsdl:part name="response" element="schema:Risposta1013"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta1014">
+		<wsdl:part name="request" element="schema:Richiesta1014"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta1014">  
+		<wsdl:part name="response" element="schema:Risposta1014"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortType1000">  
+		<wsdl:operation name="iscrizione_nascita">    
+			<wsdl:input   message="tns:Richiesta1001"/>    
+			<wsdl:output  message="tns:Risposta1001" />  
+		</wsdl:operation>
+		<wsdl:operation name="iscrizione_altriMotivi">    
+			<wsdl:input   message="tns:Richiesta1002"/>    
+			<wsdl:output  message="tns:Risposta1002" />  
+		</wsdl:operation>
+		<wsdl:operation name="iscrizione_schedaConvivenza">    
+			<wsdl:input   message="tns:Richiesta1010"/>    
+			<wsdl:output  message="tns:Risposta1010" />  
+		</wsdl:operation>
+		<wsdl:operation name="annullamento_iscrizione">    
+			<wsdl:input   message="tns:Richiesta1013"/>    
+			<wsdl:output  message="tns:Risposta1013" />  
+		</wsdl:operation>
+		<wsdl:operation name="procedimento_amministrativo">    
+			<wsdl:input   message="tns:Richiesta1014"/>    
+			<wsdl:output  message="tns:Risposta1014" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding1000" type="tns:AnprPortType1000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="iscrizione_nascita">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="iscrizione_altriMotivi">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="iscrizione_schedaConvivenza">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="annullamento_iscrizione">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="procedimento_amministrativo">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService1000">    
+		<wsdl:port binding="tns:AnprBinding1000" name="AnprServicePort1000">      
+			<wsdlsoap:address location="http://sogei.it/ANPR/AnprService1000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

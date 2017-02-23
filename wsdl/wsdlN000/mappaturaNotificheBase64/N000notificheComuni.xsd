@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/N000notificheComuni"
+		   targetNamespace="http://sogei.it/ANPR/N000notificheComuni"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcbl="http://sogei.it/ANPR/vocabolarioN000Comuni" 
+	       elementFormDefault="unqualified" 
+	       attributeFormDefault="unqualified">
+	       
+<xs:import namespace="http://sogei.it/ANPR/vocabolarioN000Comuni"  schemaLocation="vocabolarioN000Comuni.xsd"/>
+
+<!-- NotificaN010 residenza -->
+<xs:element name="NotificaN010" type="vcbl:tipoNotificaN010"  />
+<!-- Fine NotificaN010 -->
+
+<!-- NotificaN031 subentro -->
+	<xs:element name="NotificaN031" type="vcbl:tipoNotificheN031" />
+<!-- Fine NotificaN031 -->
+
+<!-- NotificaN030 fornitura -->
+	<xs:element name="NotificaN030" type="vcbl:tipoNotificheN030" />   
+<!-- Fine NotificaN030 -->
+
+</xs:schema>
+	

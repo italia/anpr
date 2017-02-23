@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolario4000estrazione"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+		   targetNamespace="http://sogei.it/ANPR/vocabolario4000estrazione" 
+		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>
+	
+<!-- USATO IN TUTTI I MSG DI RICHIESTA -->
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoDatoTestataRichiesta" >
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- FINE USATO IN TUTTI I MSG DI RICHIESTA -->
+
+<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->	
+<!-- FINE USATO IN TUTTI I MSG DI RISPOSTA -->
+
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori -->
+
+<!-- tipoComuneRichiesta -->
+   <xs:complexType name="tipoComuneRichiesta">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoComuneRichiesta"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoComuneRichiesta -->
+
+<!-- tipoIdOperazioneANPR -->
+	<xs:simpleType name="tipoIdOperazioneANPR">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>		
+	</xs:simpleType>
+<!-- Fine tipoIdOperazioneANPR -->
+	
+<!-- tipoElencoGenitori -->
+	<xs:complexType name="tipoElencoGenitori">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoElencoGenitori">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoElencoGenitori -->
+
+<!-- tipoElencoMatrimoni -->
+	<xs:complexType name="tipoElencoMatrimoni">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoElencoMatrimoni">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoElencoMatrimoni -->
+
+
+<!-- ################################################################# Inizio usati in 4001 ###########################################################-->
+
+<!-- tipoCriteriRicerca4001 -->
+	<xs:complexType name="tipoCriteriRicerca4001">
+		<xs:sequence>
+			<xs:element name="comuneRichiesta"  	  					type="tpdt:tipoComuneRichiesta" 	 	   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiAnagraficiRichiesti"         			type="tpdt:tipoDatiRichiesti" 	 	        minOccurs="1" maxOccurs="unbounded"/>			
+			<xs:element name="riferimentoRichiesta"   					type="tipoRiferimentoRichiesta"	 	  		minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="registrazioni"  	      					type="tipoRegistrazioni" 			       	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="identificativiComunali" 					type="tipoIdentificativiComunali"	   	  	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="identificativiANPR"  	  					type="tipoIdentificativiAnpr4001" 	       	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="estremiAttoParziali"    					type="tipoEstremiAttoParziali" 	           	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="indirizzoParziale"  	  					type="tipoIndirizzoParz" 		           	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ulterioriSelezioni"  	  					type="tipoUlterioriSelezioni" 	  	     	minOccurs="0" maxOccurs="1"/>			
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoCriteriRicerca4001 -->
+
+<!-- tipoRiferimentoRichiesta -->
+	<xs:complexType name="tipoRiferimentoRichiesta">
+		<xs:sequence>
+			<xs:element name="dataIniziale" 			type="xs:date" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataFinale" 				type="xs:date" 				minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoRiferimentoRichiesta -->
+
+<!-- tipoRegistrazioni -->
+	<xs:complexType name="tipoRegistrazioni">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="eventoAnagrafico" 	type="tpdt:tipoEventoAnagrafico" 			/>
+				<xs:element name="codiceServizio"   	type="tpdt:tipoOperazioneRichiesta"  		/>
+			</xs:choice>			
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoRegistrazioni -->
+
+<!-- tipoIdentificativiComunali -->
+	<xs:complexType name="tipoIdentificativiComunali">
+		<xs:sequence>
+			<xs:element name="tipoScheda" 	        		type="tpdt:tipoSchedaAnn" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="identificativoComuneDa" 		type="tpdt:charMax20" 	  				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="identificativoComuneA"  		type="tpdt:charMax20" 	  				minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoIdentificativiComunali -->
+
+<!-- tipoIdentificativiAnpr -->
+	<xs:complexType name="tipoIdentificativiAnpr4001">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPRDa" 		type="tpdt:numericoMax15" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoANPRA"  		type="tpdt:numericoMax15" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tipoScheda" 	          		type="tpdt:tipoScheda"   	 			minOccurs="0" maxOccurs="1"/>	
+			<xs:element name="identificativoANPRDa"   		type="tpdt:charMax20" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="identificativoANPRA"    		type="tpdt:charMax20" 					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoIdentificativiAnpr -->
+
+<!-- tipoEstremiAttoParziali -->
+	<xs:complexType name="tipoEstremiAttoParziali">
+		<xs:sequence>
+			<xs:element name="tipoAtto" 					type="tpdt:tipoDatoAtto" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="anno"     					type="tpdt:numerico4"     				minOccurs="1" maxOccurs="1"/>		
+			<xs:element name="parte"    					type="tpdt:charMax5"     				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="serie"    					type="tpdt:charMax10"     				minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoEstremiAttoParziali -->
+
+<!-- tipoIndirizzoParz -->
+	<xs:complexType name="tipoIndirizzoParz">
+		<xs:sequence>
+			<xs:element name="toponimo" 					type="tipoToponimoParz" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numeroCivico" 				type="tipoNumeroCivicoParz" 			minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoIndirizzoParz -->
+
+<!-- tipoToponimoParz -->
+	<xs:complexType name="tipoToponimoParz">
+		<xs:sequence>			 
+			<xs:element name="codSpecie" 					type="tpdt:tipoSpecieToponimo" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="specie" 						type="tpdt:charMax30"			 			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="codToponimo" 					type="tpdt:charMax6" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="denominazioneToponimo" 		type="tpdt:alfanumericoIndirizzo" 			minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- fine tipoToponimoParz -->
+	
+<!-- tipoNumeroCivicoParz -->
+	<xs:complexType name="tipoNumeroCivicoParz">
+		<xs:sequence>
+			<xs:element name="codiceCivico" 				type="tpdt:charMax10" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numero" 						type="tpdt:tipoNumeroCiv" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="progSNC" 						type="tpdt:numericoMax5" 					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- fine tipoNumeroCivicoParz -->
+
+<!-- tipoUlterioriSelezioni -->
+	<xs:complexType name="tipoUlterioriSelezioni">
+		<xs:sequence>
+<!-- 			<xs:element name="ricercaChiaveParziale"  					type="tpdt:tipoSN1" 		               	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="codiceFiscale"  	      					type="tipoCodiceFiscaleParziale"       		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cognome"  	  							type="tpdt:alfabeticoNomiCognomi" 	       	minOccurs="0" maxOccurs="1"/> -->
+			<xs:element name="ricercaChiaveParziale"  	  				type="tpdt:tipoRicercaChiaveParziale" 	    minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaCittadiniSenzaNome"  				type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaCittadiniSenzaCognome" 			type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaCittadiniSenzaGiornoNascita"  		type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaCittadiniSenzaGiornoMeseNascita"  	type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoCodiceFiscale"  	  					type="tpdt:tipoStatoCF" 			      	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tipoResidenza"  	  						type="tpdt:tipoResidenza4001" 		      	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="sesso"  	  								type="tpdt:tipoSesso" 			           	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="statoCivile"  	           				type="tpdt:tipoDatoStatoCivile"	           	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="senzaFissaDimora"  	        			type="tpdt:tipoSN1" 			           	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="tipoCittadinanza"  	        			type="tpdt:tipoDominioCittadinanza"      	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="codiceStato"  	            			type="tpdt:numerico3" 			       		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="codiceConsolato"  	        			type="tpdt:char7" 			               	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaDataIscrizioneAire"  				type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaDataArrivoConsolato"  				type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaAnnoEspatrio"  					type="tpdt:tipoSN1" 	       				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="statoIstruttoria"  						type="tpdt:tipoStatoIstruttoria"			minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="idProfessione"  	            			type="tpdt:tipoPosizioneProfessionale"    	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idCondizioneNonProfessionale" 			type="tpdt:tipoCondizioneNonProfessionale"	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="titoloDiStudio"  	  						type="tpdt:tipoTitoloStudio" 			   	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="possessoPatente"  	  				    type="tpdt:tipoSN1" 			           	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="possessoVeicoli"  	  					type="tpdt:tipoSN1" 			           	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fasciaEtaDa"  	  						type="tpdt:numericoMax3" 			        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fasciaEtaA"  	  							type="tpdt:numericoMax3" 			        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataRiferimento"  	  					type="xs:date" 			                   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="etaMinimaAllaDataRiferimento"       		type="tpdt:numericoMax3" 			        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="elettoreAllaDataRiferimento"  			type="tipoElettoreAllaDataRiferimento" 	    minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="listaLeva"  	  							type="tpdt:tipoSN1" 			           	minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- fine tipoUlterioriSelezioni -->
+
+<!-- tipodatiRichiestiRisposta -->
+	<xs:complexType name="tipodatiRichiestiRisposta">
+		<xs:sequence>
+			<xs:element name="datiSoggetto"  	  					type="tpdt:tipoDatiSoggettiRisposta" 	 	   	minOccurs="1" maxOccurs="1"/>				
+			<xs:element name="etaCittadino"  	  					type="tpdt:numerico3" 					 	   	minOccurs="1" maxOccurs="1"/>	
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipodatiRichiestiRisposta -->
+
+<!-- tipoCodiceFiscaleParziale -->
+	<xs:simpleType name="tipoCodiceFiscaleParziale">	
+		<xs:restriction base="tpdt:charMax16">
+			<xs:pattern value="([A-Z0-9])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+<!-- Fine tipoCodiceFiscaleParziale -->
+
+<!-- tipoElettoreAllaDataRiferimento -->
+	<xs:simpleType name="tipoElettoreAllaDataRiferimento">
+		<xs:annotation>
+			<xs:documentation>S=Si|
+							  N=No per assenza dei requisiti|
+						 <!-- P=No per perdita definitiva dei requisiti| --> 
+						 <!-- T=No per perdita temporanea dei requisiti| -->
+			</xs:documentation>
+		</xs:annotation>	
+		<xs:restriction base="tpdt:char1">		
+		</xs:restriction>
+	</xs:simpleType>
+<!-- fine tipoElettoreAllaDataRiferimento -->
+
+
+<!-- ################################################################# Fine usati in 4001 ###########################################################-->
+
+<!-- ################################################################# Inizio usati in 4002 ###########################################################-->
+
+<!-- tipoCriteriRicerca4002 -->
+	<xs:complexType name="tipoCriteriRicerca4002">
+		<xs:sequence>
+			<xs:element name="dataRiferimento"  	  		type="xs:date" 				 	           minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesti"   		        type="tpdt:tipoDatiRichiesti" 	 	       minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="xmlFileCodiciFiscali"  	    type="xs:base64Binary" 			           minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoCriteriRicerca4002 -->
+
+<!-- tipoDatiRichiestiRisposta4002 -->
+	<xs:complexType name="tipoDatiRichiestiRisposta4002">
+		<xs:sequence>
+			<xs:element name="dataRiferimento"  	  		type="xs:date" 				 	           minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiRichiesti"   		        type="tpdt:tipoDatiRichiesti" 			   minOccurs="0" maxOccurs="unbounded"/>				
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiestiRisposta4002 -->
+
+
+<!-- ################################################################# Fine usati in 4002 ###########################################################-->
+
+<!-- ################################################################# Inizio usati in 4003 ###########################################################-->
+
+<!-- tipoDatiRichiesta4003 -->
+	<xs:complexType name="tipoDatiRichiesta4003">
+		<xs:sequence>
+			<xs:element name="comune"  	  		            type="tpdt:tipoComuneRichiesta"		 	   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tipologiaProspetto"   		type="tpdt:tipoProspetto" 	 	           minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mese"  	    				type="tpdt:numericoMax2" 			       minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="anno"  	    				type="tpdt:numerico4" 			           minOccurs="1" maxOccurs="1"/>	
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta4003 -->
+
+<!-- tipoDatiElaborati -->
+  <xs:complexType name="tipoDatiElaborati">
+		<xs:sequence>
+			<xs:element name="idDato" 					type="tpdt:numerico3" 			  minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="totaleMaschi" 			type="tpdt:numerico20"            minOccurs="0" maxOccurs="1"/>	
+			<xs:element name="totaleFemmine" 			type="tpdt:numerico20"            minOccurs="0" maxOccurs="1"/>
+			<xs:element name="totaleComplessivo" 		type="tpdt:numerico20"            minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="stranieriResidenti"		type="tpdt:char1"	 		      minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="codiceStato" 				type="tpdt:numerico3" 		      minOccurs="1" maxOccurs="1"/>
+			<xs:element name="statoCivile" 	 			type="tpdt:tipoDatoStatoCivile"   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="annoNascita"			  	type="tpdt:numerico4" 			  minOccurs="1" maxOccurs="1"/>				
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoDatiElaborati -->
+
+<!-- ################################################################# Fine usati in 4003 ###########################################################-->
+
+
+</xs:schema>

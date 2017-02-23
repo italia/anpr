@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/3000consultazione" 
+		   targetNamespace="http://sogei.it/ANPR/3000consultazione" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolario3000consultazione"
+		   xmlns:risp="http://sogei.it/ANPR/rispostaComune" 
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+ 
+ <xs:import namespace="http://sogei.it/ANPR/vocabolario3000consultazione"  schemaLocation="vocabolario3000consultazione.xsd"/>
+ 
+ <!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>   			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine rispostaKO -->
+
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+ 
+<!-- servizio 3001 -->
+<xs:element name="Richiesta3001">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta della paternita e maternita
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 				type="anpr:tipoTestataRichiesta" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="paternita" 						type="anpr:tipoGenitore" 						minOccurs="0" maxOccurs="1" />			
+			<xs:element name="maternita" 						type="anpr:tipoGenitore" 						minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiControlli"  					type="anpr:tipoDatiControllo3001" 				minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="Risposta3001">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta della paternita e maternita
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<!--  <xs:element ref="risp:Risposta_Comune" 		minOccurs="0" maxOccurs="1" /> -->
+					<xs:element ref="Risposta3001_OK" 	 		    minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="rispostaKO" 				    minOccurs="0" maxOccurs="1"/> 
+				</xs:choice>			
+
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3001_OK">
+<xs:complexType >
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta della scheda famiglia KO 3001 Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 		type="anpr:tipoTestataRisposta" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="elencoSoggettiPadre" 	type="anpr:tipoGenitore3000" 					minOccurs="0" maxOccurs="unbounded"/>    						
+			<xs:element name="elencoSoggettiMadre" 	type="anpr:tipoGenitore3000" 					minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 3001 -->
+
+<!-- servizio 3002 -->
+<xs:element name="Richiesta3002">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta della scheda interrogazione cittadino/famiglia/convivenza
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 					type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca" 						type="anpr:tipoCriteriRicerca" 				minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="datiNascita" 							type="anpr:tipoDatiNascita3000"				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="residenzaIscrizioneAIRE"  			type="anpr:tipoResidenzaIscrizioneAIRE" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  						type="anpr:tipoDatiRichiesta" 				minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3002">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta della scheda interrogazione cittadino/famiglia/convivenza
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<xs:element ref="Risposta3002_OK" 		minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>			
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3002_OK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta della scheda interrogazione cittadino/famiglia/convivenza 3002Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 		type="anpr:tipoTestataRisposta" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="listaSoggetti" 		type="anpr:tipoListaSoggetti"           minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 3002 -->
+
+<!-- servizio 3003 -->
+<xs:element name="Richiesta3003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta per la gestione delle operazioni di richiesta effettuate dai comuni 
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 					type="anpr:tipoTestataRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta"  					type="anpr:tipoComuneRichiesta" 	       		     	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaSingolaRichiesta"  			type="anpr:tipoRicercaSingolaRichiesta" 				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaElenchiRichieste" 				type="anpr:tipoRicercaElenchiRichieste"					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriRicercaSoggetto" 			type="anpr:tipoParametriRicercaSoggetto" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriProcedimenti" 				type="anpr:tipoParametriProcedimenti"					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3003">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la gestione delle operazioni di richiesta effettuate dai comuni
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<xs:element ref="Risposta3003_OK" 		minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>			
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3003_OK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la gestione delle operazioni di richiesta effettuate dai comuni 3003Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta"  		type="anpr:tipoComuneRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ricercaSingolaRichiesta"  type="anpr:tipoRicercaSingolaRichiesta" 	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaElenchiRichieste" 	type="anpr:tipoRicercaElenchiRichieste"		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriRicercaSoggetto" type="anpr:tipoParametriRicercaSoggetto" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriProcedimenti" 	type="anpr:tipoParametriProcedimenti"		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="elencoRisposte"  			type="anpr:tipodatiRisposta3003" 			minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 3003 -->
+
+<!-- servizio 3005 -->
+<xs:element name="Richiesta3005">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta per la visualizzazione elaborati
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	type="anpr:tipoTestataRichiesta" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  		type="anpr:tipoDatiRichiesta3005" 	minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="Risposta3005">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la visualizzazione elaborati
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<xs:element ref="Risposta3005_OK" 		minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>			
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+ 
+ <xs:element name="Risposta3005_OK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la visualizzazione elaborati 3005Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 		type="anpr:tipoTestataRisposta" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  		type="anpr:tipoDatiRichiesta3005" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="file"  		        type="anpr:tipofile3005" 			minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+ </xs:element>
+ <!-- fine servizio 3005 -->
+
+<!-- servizio 3006 -->
+<xs:element name="Richiesta3006">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta della scheda interrogazione cittadino per enti
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 				type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca" 					type="anpr:tipoCriteriRicerca3006" 			minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="datiNascita" 						type="anpr:tipoDatiNascita3000"				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="residenzaIscrizioneAIRE"  		type="anpr:tipoResidenzaIscrizioneAIRE" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  					type="anpr:tipoDatiRichiesta3006" 			minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3006">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta della scheda interrogazione cittadino per enti
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<xs:element ref="Risposta3006_OK" 		minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>			
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3006_OK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta della scheda interrogazione cittadino per enti 3006Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 		type="anpr:tipoTestataRisposta" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="listaSoggetti" 		type="anpr:tipoListaSoggetti3006"   minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 3006 -->
+ 
+<!-- servizio 3007 -->
+<xs:element name="Richiesta3007">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta per la gestione delle operazioni di richiesta effettuate dai comuni 
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 					type="anpr:tipoTestataRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta"  					type="anpr:tipoComuneRichiesta" 	       		     	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaSingolaRichiesta"  			type="anpr:tipoRicercaSingolaRichiesta" 				minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaElenchiRichieste" 				type="anpr:tipoRicercaElenchiRichieste"					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriRicercaSoggetto" 			type="anpr:tipoParametriRicercaSoggetto" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriProcedimenti" 				type="anpr:tipoParametriProcedimenti"					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3007">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la gestione delle operazioni di richiesta effettuate dai comuni
+				</xs:documentation>
+			</xs:annotation>
+				<xs:choice>
+					<xs:element ref="Risposta3007_OK" 		minOccurs="0" maxOccurs="1" />
+					<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				</xs:choice>			
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta3007_OK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>			
+				<xs:documentation>
+					Risposta per la gestione delle operazioni di richiesta effettuate dai comuni 3003Response
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta"  		type="anpr:tipoComuneRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ricercaSingolaRichiesta"  type="anpr:tipoRicercaSingolaRichiesta" 	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="ricercaElenchiRichieste" 	type="anpr:tipoRicercaElenchiRichieste"		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriRicercaSoggetto" type="anpr:tipoParametriRicercaSoggetto" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriProcedimenti" 	type="anpr:tipoParametriProcedimenti"		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="listaOperazioniAnpr"  	type="anpr:tipoListaOperazioniANPR3007" 	minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 3007 -->
+ 
+</xs:schema>

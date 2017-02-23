@@ -1,0 +1,1 @@
+Nella cartella mappaturaNotificheBase64 sono presenti gli xsd che mappano l'elemento contenuto di tipo base64 presente nel wsdl
