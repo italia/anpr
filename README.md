@@ -1,5 +1,6 @@
 
-### ANPR - Anagrafe Nazionale della Popolazione Residente
+![ANPR](/img/anpr.png)
+
 L’Anagrafe Nazionale della Popolazione Residente (ANPR), è la banca dati nazionale nella quale confluiranno progressivamente le anagrafi comunali.
 
 L'ANPR consentirà di:
@@ -10,7 +11,7 @@ L'ANPR consentirà di:
 [https://www.anpr.interno.it/portale/guida-anpr]
 
 
-Questo progetto intende raccogliere la documentazione tecnica ed e le segnalazioni e domande degli utenti relative al progetto:
+Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e domande degli utenti relative all'integrazione con ANPR:
 
   - [WSDL  (versione 17 febbraio 2017)](wsdl)
   - [Domande e segnalazioni](https://github.com/italia/anpr/issues?q=is%3Aissue+is%3Aclosed)
