@@ -1,4 +1,5 @@
 ### Linee guida generali per la sottoscrizione dei bug
+
 Questo strumento si intende a supporto di segnalazione di errori software o proporre questioni sulla implementazione di procedure anagrafiche in ANPR.
 Alcune linee guida:
 - evitare ogni riferimento a dati sensibili o informazioni personali
