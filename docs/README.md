@@ -1,5 +1,9 @@
-Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categories listed in `_config.yml`. It will appear in the navigation on the left once recompiled. Or use the supplied script to make creating pages easier:
-Per creare una nuova pagina includi
+Per configurare le categorie andare al file
+
+`_config.yml`.
+
+ Per rigenerare le tabelle dal file
+
 ```bash
-ruby bin/jekyll-page "Some Page Title" ref
+build.sh
 ```

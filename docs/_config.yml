@@ -15,13 +15,13 @@ google_analytics_id: ''
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/bruth/jekyll-docs-template'
+codeurl: 'https://github.com/italia/anpr'
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['doc', 'Documentazione'],
+    ['error', 'Codice Errore'],
     ['tut', 'Tutorial'],
-    ['ref', 'Reference'],
+    ['tab', 'Tabelle Di Riferimento'],
     ['dev', 'Sviluppatori'],
     ['post', 'Posts']
 ]

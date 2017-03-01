@@ -1,3 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
+_includes/tabelle/*
+_pages/*
+

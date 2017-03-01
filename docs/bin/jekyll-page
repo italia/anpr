@@ -28,7 +28,8 @@ parser.parse!
 
 title = ARGV[0]
 category = ARGV[1]
-filename = ARGV[2]
+html_include = ARGV[2]
+filename = ARGV[3]
 
 # Resolve any relative links
 BASE_DIR = File.expand_path(options[:path])
@@ -90,6 +91,8 @@ category: #{category}
 date: #{now}
 ---
 
+{% include form_ricerca.html %}
+{% include tabelle/#{html_include} %}
 
 END
 
