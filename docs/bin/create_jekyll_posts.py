@@ -27,21 +27,21 @@ def convertXlsxToHtml(infn,outfn):
 
 
 
-	print >>f,"<table class=\"table table-condensed\">"
+	print >>f,"<table class=\"table\">"
 	headers = rows[0]
-	print >>f,"<tr>"
+	print >>f,"<thead><tr>"
 	#print >>f, "<th><a name=\""+headers[0]+"\">"+headers[0]+"</a></th>"
 	for header in headers:
 		print >>f, "<th>"+header+"</th>"
-	print >>f,"</tr>"
+	print >>f,"</tr></thead><tbody>"
 	for row in rows[1:]:
 		print >>f,"<tr>"
-		print >>f, "<td><a name=\""+row[0]+"\">"+row[0]+"</a></td>"
+		print >>f, "<th scope=\"row\"><a name=\""+row[0]+"\">"+row[0]+"</a></th>"
 		for cell in row[1:]:
 			print >>f, "<td>"+cell+"</td>"
 		print >>f,"</tr>"
 
-	print >>f,"</table>"
+	print >>f,"</tbody></table>"
 	f.close()
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
@@ -57,7 +57,10 @@ if __name__ == "__main__":
 	print xlsx
 	for xls in xlsx:
 		file_name = (xls[0:-5]).lower()
-
+		print file_name
+		section=file_name[:(file_name.index("_"))]
+		title =  (file_name[(file_name.index("_")+1)::]).replace("_"," ").title()
+		print "Title: "  + title
 		convertXlsxToHtml(xlxs_folder+xls, sys.argv[2]+file_name+".html" )
-		print "Creating Jekyll Posts for " + file_name
-		os.system("ruby bin/jekyll-page \""+file_name.replace("_"," ")+"\" tab "+file_name+".html tab_"+file_name+".html")
+		print "Creating Jekyll Posts for " + title +", section: "+ section
+		os.system("ruby bin/jekyll-page \""+title+"\" "+section+" "+file_name+".html "+file_name+".html")

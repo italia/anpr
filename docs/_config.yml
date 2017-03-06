@@ -19,7 +19,7 @@ codeurl: 'https://github.com/italia/anpr'
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['error', 'Codice Errore'],
+    ['error', 'Codici Errore'],
     ['tut', 'Tutorial'],
     ['tab', 'Tabelle Di Riferimento'],
     ['dev', 'Sviluppatori'],
