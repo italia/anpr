@@ -9,12 +9,13 @@ class Anpr(object):
 
 def crawlXlsFromPath(url,section_prefix):
     page = requests.get(Anpr.domain()+url)
-    print ("Get all xlsx from " +Anpr.domain()+url)
+    print ("Get all Excel files from " +Anpr.domain()+url)
     tree = html.fromstring(page.content)
 
     allxlxs= tree.xpath("//a[contains(@href,'.xlsx')]")
     for xls in allxlxs:
-        wGetAndRename(xls.get("href"),xls.text,section_prefix)
+        if xls.text is not None:
+            wGetAndRename(xls.get("href"),xls.text,section_prefix)
 
 
 def wGetAndRename(path,title,section_prefix):
@@ -22,8 +23,7 @@ def wGetAndRename(path,title,section_prefix):
     print Anpr.domain()+path
     if r.status_code == 200:
         file_content = r.raw.read()
-        print "Anpr Domain: "+Anpr.domain()
-        #print "Downloading: [" + Anpr.domain()+path+"] "+title
+        print "Downloading: [" + Anpr.domain()+path+"]"
         try:
             print title
             file_name= section_prefix+"_"+(re.sub(r'([^.a-zA-Z0-9_])','_',title) +".xlsx")
@@ -37,7 +37,9 @@ def wGetAndRename(path,title,section_prefix):
 
 if __name__ == "__main__":
 
-    crawlXlsFromPath("portale/tabelle-di-riferimento","tab")
     #Downloads single contents
     wGetAndRename("portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578","Errori ANPR","error")
     wGetAndRename("portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044","Errori Agenzia Entrate","error")
+    crawlXlsFromPath("portale/tabelle-di-riferimento","tab")
+
+    #wGetAndRename("portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx","Tabella di utilizzo dei servizi","spec")
