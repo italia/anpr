@@ -64,3 +64,7 @@ owner: Ministero degli Interni
 owner_link: http://www.interno.gov.it/it
 logo: http://designer.italia.it/images/loghi/logo-it.svg
 lang: it
+
+gems:
+  - jekyll-seo-tag
+
