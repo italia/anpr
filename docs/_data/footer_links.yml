@@ -1,6 +1,6 @@
 privacy:
   title: footer_link_privacy_policy
-  href: '/'
+  url: 'http://www.interno.gov.it/it/privacy'
 toc:
   title: footer_link_toc
-  href: '/'
+  url: 'http://www.interno.gov.it/it/note-legali'
