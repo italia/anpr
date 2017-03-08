@@ -5,6 +5,13 @@ layout: default
 {% assign active_lang = page.lang | default: site.lang | default: "en" %}
 {% assign t = site.data.l10n[active_lang].t %}
 
+{% comment %}
+<p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">Menu</a>
+</p>
+{% endcomment %}
+
 <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl u-padding-top-xxl u-layout-r-withGutter">
 
   {% comment %}
@@ -20,7 +27,7 @@ layout: default
       </article>
     </div>
 
-    <div class="Grid-cell u-sizeFull u-md-size3of12 u-lg-size3of12 u-flexOrderFirst">
+    <div class="Grid-cell u-sizeFull u-md-size3of12 u-lg-size3of12 u-md-flexOrderFirst u-lg-flexOrderFirst">
       <div class="u-cf u-padding-bottom-xxl">
         {% comment %}
         {% include share.html %}

@@ -8,7 +8,15 @@
       </a>
     </div>
     <nav>
+
+			{% assign post_count = site.posts|size %}
+			{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
+				{% include navigation.html dynamic=true %}
+			{% endif %}
+
+			{% comment %}
 			{% include linklist.html dynamic=true items=include.menu_items %}
+			{% endcomment %}
     </nav>
   </div>
 </section>

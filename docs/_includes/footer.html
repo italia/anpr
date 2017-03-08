@@ -10,6 +10,7 @@
 
   <div class="Grid Grid--withGutter">
 
+    {% if include.hasContacts %}
     <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
       <h2 class="Footer-blockTitle">{{ t.footer_address | capitalize }}</h2>
       <div class="Footer-subBlock">
@@ -35,9 +36,10 @@
           {% endfor %}
       </div>
     </div>
+    {% endif %}
 
+    {% if include.hasSocial %}
     <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-      {% if include.hasSocial %}
       <h2 class="Footer-blockTitle">{{ t.follow_us | capitalize }}</h2>
       <div class="Footer-subBlock">
         <ul class="Footer-socialIcons">
@@ -47,8 +49,8 @@
           {% endfor %}
         </ul>
       </div>
-      {% endif %}
     </div>
+    {% endif %}
 
   </div>
 
