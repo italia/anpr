@@ -1,9 +1,13 @@
 ---
-layout: default
-title: "Anpr Anagrafica Unica del cittadino"
+layout: page
+title: "ANPR"
+prose: true
+path: /
 ---
-### Anpr
-Anagrafe Nazionale della Popolazione Residente (ANPR), è la banca dati nazionale nella quale confluiranno progressivamente le anagrafi comunali.
+
+## Anagrafica Unica del cittadino
+
+L'Anagrafe Nazionale della Popolazione Residente (ANPR), è la banca dati nazionale nella quale confluiranno progressivamente le anagrafi comunali.
 
 È istituita presso il Ministero dell’Interno ai sensi dell’articolo 62 del Dlgs n. 82/2005 (Codice dell’Amministrazione Digitale).
 
@@ -15,5 +19,4 @@ Questa pagina intende raccogliere la documentazione di tipo tecnico:
 
 - tabelle di riferimento
 - documentazioni servizi
-- ![Pdf](img/pdf-icon.png)
- [Specifiche di interfaccia dei servizi di ANPR per i comuni – documentazione tecnica](https://anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+WS17022017.rar/1a781c1a-cfb7-41e1-bb21-483616055478)
+- [Specifiche di interfaccia dei servizi di ANPR per i comuni – documentazione tecnica (pdf)](https://anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+WS17022017.rar/1a781c1a-cfb7-41e1-bb21-483616055478)

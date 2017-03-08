@@ -27,7 +27,7 @@ def convertXlsxToHtml(infn,outfn):
 
 
 
-	print >>f,"<table class=\"table\">"
+	print >>f,"<table class=\"Table Table--withBorder Table--compact u-text-r-xxs\">"
 	headers = rows[0]
 	print >>f,"<thead><tr>"
 	#print >>f, "<th><a name=\""+headers[0]+"\">"+headers[0]+"</a></th>"
