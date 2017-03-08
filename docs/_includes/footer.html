@@ -37,6 +37,7 @@
     </div>
 
     <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      {% if include.hasSocial %}
       <h2 class="Footer-blockTitle">{{ t.follow_us | capitalize }}</h2>
       <div class="Footer-subBlock">
         <ul class="Footer-socialIcons">
@@ -46,6 +47,7 @@
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
     </div>
 
   </div>

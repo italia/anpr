@@ -56,3 +56,10 @@ redcarpet:
         'tables',
         'hardwrap'
     ]
+
+# Custom vars
+theme_color: "#0066cc"
+css_theme: t-Pac
+owner: Ministero degli Interni
+logo: http://designer.italia.it/images/loghi/logo-it.svg
+lang: it

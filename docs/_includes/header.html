@@ -9,7 +9,9 @@
   <div class="Header-banner">
     <div class="Header-owner Headroom-hideme">
       <a href="{{ site.owner_link }}"><span>{{ site.owner }}</span></a>
+      {% if include.hasLang %}
       {% include lang_switch.html %}
+      {% endif %}
     </div>
   </div>
 
@@ -49,6 +51,7 @@
     {% endif %}
 
     <div class="Header-utils Grid-cell">
+      {% if include.hasSocial %}
       <div class="Header-social Headroom-hideme">
         <p>{{ t.follow_us | capitalize }}:</p>
         <ul class="Header-socialIcons">
@@ -58,6 +61,7 @@
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
       {% if include.hasSearch %}
       <div class="Header-search" id="header-search">
         {% include search_form.html %}

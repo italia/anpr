@@ -1,9 +1,10 @@
 email: your-email@domain.com
-description: My site description (for SEO)
+description: Docmentazione tecnica per l'implementazione di ANPR
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+lang: it
 
 # Build settings
 markdown: kramdown
@@ -17,7 +18,7 @@ exclude:
 # Custom vars
 theme_color: "#0066cc"
 css_theme: t-Pac
-owner: Governo Italiano
+owner: Ministero degli interni
 logo: http://designer.italia.it/images/loghi/logo-it.svg
 
 collections:
