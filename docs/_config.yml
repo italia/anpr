@@ -63,3 +63,7 @@ css_theme: t-Pac
 owner: Ministero degli Interni
 logo: http://designer.italia.it/images/loghi/logo-it.svg
 lang: it
+
+gems:
+  - jekyll-seo-tag
+
