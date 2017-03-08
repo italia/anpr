@@ -1,4 +1,86 @@
+{% if page.lang == site.lang %}
+  {% assign homepage_link = "/" %}
+{% else %}
+  {% assign homepage_link = "/" | append: page.lang %}
+{% endif %}
 
-<h4><a class="brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
-</h4>
+<header class="Header {% if include.isFixed %}Headroom--fixed js-Headroom{% endif %} u-hiddenPrint">
+
+  <div class="Header-banner">
+    <div class="Header-owner Headroom-hideme">
+      <a href="{{ site.owner_link }}"><span>{{ site.owner }}</span></a>
+      {% include lang_switch.html %}
+    </div>
+  </div>
+
+  <div class="Header-navbar Grid Grid--alignMiddle">
+    <div class="Header-toggle Grid-cell">
+      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
+        {% if include.hideOnDesktop %}u-lg-hidden u-md-hidden{% endif %}" href="#menu"
+        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </a>
+    </div>
+
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="" tabindex="-1">
+        <img src="{{ site.logo }}" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
+      <h1 class="Header-titleLink">
+        <a href="{{ homepage_link | relative_url }}">{{ t.site_title | default: site.title | escape }}<br>
+          <small>{{ t.site_subtitle | default: site.subtitle | escape }}</small>
+        </a>
+      </h1>
+    </div>
+
+    {% if include.hasSearch %}
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
+        title="{{ t.search_form_on }}" aria-label="{{ t.search_form_on }}" aria-hidden="false">
+      </button>
+      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
+        title="{{ t.search_form_off }}" aria-label="{{ t.search_form_off }}" aria-hidden="true">
+      </button>
+    </div>
+    {% endif %}
+
+    <div class="Header-utils Grid-cell">
+      <div class="Header-social Headroom-hideme">
+        <p>{{ t.follow_us | capitalize }}:</p>
+        <ul class="Header-socialIcons">
+          {% for social in site.data.social %}
+            <li><a href="{{ social[1].link }}" title="{{ social[1].name }}"><span class="Icon-{{ social[0] }}"></span>
+              <span class="u-hiddenVisually">{{ social[1].name | capitalize }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if include.hasSearch %}
+      <div class="Header-search" id="header-search">
+        {% include search_form.html %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <!-- Header-navbar -->
+
+  {% if include.menu or include.megamenu %}
+  <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+    {% if include.megamenu %}
+      <nav class="Megamenu Megamenu--default js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
+    {% else %}
+      <nav class="Megamenu Megamenu--default">
+        <ul class="Megamenu-list">
+          {% for item in site.data.menu_items %}
+            <li class="Megamenu-item"><a href="{{ item.url }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
+  {% endif %}
+
+</header>

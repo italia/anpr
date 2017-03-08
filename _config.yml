@@ -1,1 +1,35 @@
-theme: jekyll-theme-minimal
+email: your-email@domain.com
+description: My site description (for SEO)
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Custom vars
+theme_color: "#0066cc"
+css_theme: t-Pac
+owner: Governo Italiano
+logo: http://designer.italia.it/images/loghi/logo-it.svg
+
+collections:
+   pages:
+     output: true
+     permalink: /:path/
+     layout: page
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      subnav: "subnav"
