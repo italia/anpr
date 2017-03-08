@@ -1,7 +1,17 @@
-<p> Inserisci il codice da ricercare</p>
-<form>
-  <input name="code_input" id="code_input" onkeyUp="_searchAnchorOnPage()" onsubmit="return false;">
-</form>
+<div class="u-color-grey-30 u-border-top-xxs u-border-bottom-xxs u-margin-r-bottom">
 
+    <form class="Form Form--ultraLean">
+      <div class="Form-field Form-field--withPlaceholder u-border-right-xxs u-border-top-xxs u-border-left-xxs">
+          <input class="Form-input u-text-r-xs u-padding-r-all u-color-black" id="cerca" aria-required="true" required
+          name="code_input" id="code_input" onkeyUp="_searchAnchorOnPage()" onsubmit="return false;">
+          <label class="Form-label is-required u-color-grey-50 u-text-r-xxs u-zindex-min" for="cerca">inserisci un codice</label>
+          <button class="u-background-40 u-color-white u-padding-all-s u-text-r-xs u-textNoWrap">Cerca</button>
+      </div>
+    </form>
 
-<br/>
+</div>
+<script>
+function _searchAnchorOnPage(){
+  location.hash = "#" + document.getElementById("code_input").value.trim().toUpperCase();
+}
+</script>
