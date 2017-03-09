@@ -10,8 +10,17 @@
     </form>
 
 </div>
+
 <script>
 function _searchAnchorOnPage(){
-  location.hash = "#" + document.getElementById("code_input").value.trim().toUpperCase();
+  var full_url = this.href;
+  var code_value = $("#code_input").val();
+  var target_offset =$("a[name='"+code_value.trim().toUpperCase()+"']").offset();
+  if(target_offset){
+    $('html, body').animate({
+        scrollTop: target_offset.top
+      }, 500);
+    }
 }
+
 </script>
