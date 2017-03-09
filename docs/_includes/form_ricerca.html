@@ -5,7 +5,7 @@
           <input class="Form-input u-text-r-xs u-padding-r-all u-color-black" id="cerca" aria-required="true" required
           name="code_input" id="code_input" onkeyUp="_searchAnchorOnPage()" onsubmit="return false;">
           <label class="Form-label is-required u-color-grey-50 u-text-r-xxs u-zindex-min" for="cerca">inserisci un codice</label>
-          <button class="u-background-40 u-color-white u-padding-all-s u-text-r-xs u-textNoWrap">Cerca</button>
+          <button class="u-background-40 u-color-white u-padding-all-s u-text-r-xs u-textNoWrap" onclick="_searchAnchorOnPage()">Cerca</button>
       </div>
     </form>
 
@@ -15,10 +15,12 @@
 function _searchAnchorOnPage(){
   var full_url = this.href;
   var code_value = $("#code_input").val();
-  var target_offset =$("a[name='"+code_value.trim().toUpperCase()+"']").offset();
+  var anchor_selector = "a[name='"+code_value.trim().toUpperCase()+"']";
+  $(anchor_selector).closest("tr").addClass("u-color-grey-90").addClass("u-background-grey-10")
+  var target_offset =$(anchor_selector).offset();
   if(target_offset){
     $('html, body').animate({
-        scrollTop: target_offset.top
+        scrollTop: (target_offset.top-20)
       }, 500);
     }
 }
