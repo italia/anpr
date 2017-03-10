@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% assign active_lang = page.lang | default: site.lang | default: "en" %}
+{% assign t = site.data.l10n[active_lang].t %}
+
+{% comment %}
+<p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">Menu</a>
+</p>
+{% endcomment %}
+
+<div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl u-padding-top-xxl u-layout-r-withGutter">
+
+  {% comment %}
+  {% include breadcrumbs.html %}
+  {% endcomment %}
+
+  <div class="Grid Grid--withGutter">
+
+    <div class="Grid-cell u-md-size9of12 u-lg-size9of12">
+      <article class="Prose {% if page.prose %}u-layout-prose{% endif %}">
+        <h1>{{ page.title | escape }}</h1>
+        {{ content }}
+      </article>
+    </div>
+
+    <div class="Grid-cell u-sizeFull u-md-size3of12 u-lg-size3of12 u-md-flexOrderFirst u-lg-flexOrderFirst">
+      <div class="u-cf u-padding-bottom-xxl">
+        {% comment %}
+        {% include share.html %}
+        {% endcomment %}
+      </div>
+
+      <div class="u-sizeFull u-md-size11of12 u-lg-size11of12" id="subnav">
+
+        {% assign post_count = site.posts|size %}
+        {% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
+          {% include navigation.html dynamic=true %}
+        {% endif %}
+
+        {% assign subnav = site.data[page.subnav] %}
+        {% include linklist.html items=subnav dynamic=true %}
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

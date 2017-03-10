@@ -1,0 +1,26 @@
+{% assign navurl = page.url | remove: 'index.html' %}
+
+<ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs Treeview Treeview--default js-Treeview">
+
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
+    {% for section in site.sections %}
+        {% assign attr = section[0] %}
+        {% assign label = section[1] %}
+
+        {% for page in site.categories[attr] %}
+
+            {% if forloop.first %}
+              <li><a href="#">{{ label }}</a><ul>
+            {% endif %}
+
+            <li data-order="{{ page.order }}"><a href="{{ page.url | relative_url }}"
+              {% if page.url == navurl %}class="is-current u-textWeight-700"{% endif %}>{{ page.title }}</a></li>
+
+            {% if forloop.last %}
+              </ul></li>
+            {% endif %}
+
+        {% endfor %}
+    {% endfor %}
+
+</ul>

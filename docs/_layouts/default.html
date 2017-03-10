@@ -1,0 +1,18 @@
+{% assign active_lang = page.lang | default: layout.lang | default: site.lang | default: "en" %}
+{% assign t = site.data.l10n[active_lang].t %}
+
+{% include head.html %}
+{% include skiplinks.html %}
+
+{% include header.html hideOnDesktop=true megamenu=false %}
+
+{% include cookiebar.html %}
+
+{% include offcanvas.html menu_items=site.data.menu_items %}
+
+<div id="main">
+  {{ content }}
+</div>
+
+{% include scrolltop.html %}
+{% include footer.html %}
