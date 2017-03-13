@@ -12,6 +12,6 @@ L'ANPR consentirà di:
 
 
 Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e domande degli utenti relative all'integrazione con ANPR:
-  - [Tabelle di errore] (https://italia.github.io/anpr/)
+  - [Tabelle di riferimento] (https://italia.github.io/anpr/)
   - [WSDL  (versione 17 febbraio 2017)](wsdl)
   - [Domande e segnalazioni](https://github.com/italia/anpr/issues?q=is%3Aissue+is%3Aclosed)
