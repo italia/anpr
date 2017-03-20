@@ -19,21 +19,21 @@ Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e d
 
 ### Come creare una segnalazione
 
-Creare una segnalazion in Github é molto semplice e puoi farlo direttamente dal tuo account.
+Creare una segnalazione in Github é molto semplice e puoi farlo direttamente dal tuo account.
 
 Se non hai già un account su github lo puoi creare registandoti
 [https://github.com/join?source=login](https://github.com/join?source=login) usando sia la tua mail personale che aziendale.
 
-Una volta registato, puoi aggiungere una nuova _issue_ cliccando sul pulsante indicato di seguito
+Una volta registato, puoi aggiungere una nuova _issue_ cliccando sul pulsante indicato di seguito:
 
 ![Issue list](/img/issue_list.png)
 
-Per aiutarci a categorizzare le issues correttamente, puoi usare i _labels_ indicati sotto e segliere uno o più categorie
+Per aiutarci a categorizzare le issues correttamente, puoi usare i _labels_ indicati sotto e segliere uno o più categorie:
 
 ![Add Issue](/img/issue_add.png)
 
 ## Importante
-Per favore, non inserire dati sensibili dei cittadini. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
+Per favore, **non inserire dati sensibili dei cittadini**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
 
 Se devi inviarci un tracciato con dati sensibili invialo per email a [segnalazioni-anpr@teamdigitale.governo.it](mailto:segnalazioni-anpr@teamdigitale.governo.it) specificando nell'oggetto il codice del bug.
 
