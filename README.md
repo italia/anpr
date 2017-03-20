@@ -12,8 +12,7 @@ https://www.anpr.interno.it/portale/guida-anpr
 
 
 Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e domande degli utenti relative all'integrazione con ANPR:
-[
-  - [Come creare un bug](# Come creare una segnalazione)
+
   - [Tabelle di riferimento](https://italia.github.io/anpr/)
   - [WSDL  (versione 17 febbraio 2017)](wsdl)
   - [Domande e segnalazioni](https://github.com/italia/anpr/issues?q=is%3Aissue+is%3Aclosed)
