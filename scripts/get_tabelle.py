@@ -20,7 +20,7 @@ class Table(object):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
 
-def crawlXlsFromPath(url,section_prefix):
+def crawlXlsFromPath(path,url,section_prefix):
     page = requests.get(Anpr.domain()+url)
     print ("Get all Excel files from " +Anpr.domain()+url)
     tree = html.fromstring(page.content)
@@ -43,7 +43,7 @@ def crawlXlsFromPath(url,section_prefix):
     #     json.dump(files_array, outfile)
 
     for data in files_array:
-        saved_name = wGetAndRename(data.url,data.title,"tab")
+        saved_name = wGetAndRename(path,data.url,data.title,"tab")
         data.saved_name = saved_name
 
 '''
@@ -54,7 +54,7 @@ def crawlXlsFromPath(url,section_prefix):
             wGetAndRename(xls.get("href"),xls.text,section_prefix)
 '''
 
-def wGetAndRename(url,title,section_prefix):
+def wGetAndRename(path,url,title,section_prefix):
     print "File to download " +url
     r = requests.get(url ,stream=True)
     print r.status_code
@@ -64,7 +64,7 @@ def wGetAndRename(url,title,section_prefix):
         try:
             print title
             file_name= section_prefix+"_"+(re.sub(r'([^.a-zA-Z0-9_])','_',title) +".xlsx")
-            file_location= "xlsx/"+file_name
+            file_location= path + "/" +file_name
             with open(file_location, 'w') as f:
                 f.write(file_content)
             return file_name
@@ -77,4 +77,9 @@ if __name__ == "__main__":
     #Downloads single contents
     #wGetAndRename("portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578","Errori ANPR","error")
     #wGetAndRename("portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044","Errori Agenzia Entrate","error")
-    crawlXlsFromPath("/portale/tabelle-di-riferimento","tab")
+
+    if len(sys.argv) < 2:
+        print "use get_tabelle.py [xlsx-path]"
+        sys.exit(2)
+
+    crawlXlsFromPath(sys.argv[1], "/portale/tabelle-di-riferimento","tab")
