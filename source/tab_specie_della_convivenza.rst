@@ -1,9 +1,6 @@
 Tabella 27 - Specie della convivenza
 ====================================
 
-:Aggiornamento:  
-:Fonte:  
-:Note:  
 
 ================== ================== ================== ================== ==================
 ID                 DESCRIZIONE        ORDINAMENTO        DATAINIZIOVALIDITA DATAFINEVALIDITA  

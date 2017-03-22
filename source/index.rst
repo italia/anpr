@@ -22,16 +22,7 @@ Questa pagina intende raccogliere la documentazione di tipo tecnico:
 .. __: https://anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+WS17022017.rar/1a781c1a-cfb7-41e1-bb21-483616055478
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   codicierrore
-   tab_Stati_Esteri
-   tab_motivi_iscrizione_aire
-   tab_comuni
-   tab_esenzione_bollo
-   tab_lingue
+.. include:: toc.rst
 
 
 Indice e tabelle

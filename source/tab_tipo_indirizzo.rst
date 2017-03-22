@@ -1,9 +1,6 @@
 Tabella 25 - Tipo indirizzo
 ===========================
 
-:Aggiornamento:  
-:Fonte:  
-:Note:  
 
 ============================== ============================== ============================== ============================== ==============================
 ID                             DESCRIZIONE                    ORDINAMENTO                    DATAINIZIOVALIDITA             DATAFINEVALIDITA              

@@ -1,9 +1,6 @@
 Tabella 26 - Motivo costituzione della famiglia
 ===============================================
 
-:Aggiornamento:  
-:Fonte:  
-:Note:  
 
 ===================== ===================== ===================== ===================== =====================
 ID                    DESCRIZIONE           ORDINAMENTO           DATAINIZIOVALIDITA    DATAFINEVALIDITA     

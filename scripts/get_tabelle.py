@@ -1,6 +1,7 @@
 from lxml import html
 import requests
 import re
+import os
 import sys
 import json
 import codecs
@@ -41,13 +42,15 @@ def crawlXlsFromPath(xlsxpath,rstpath,url,section_prefix):
         print xls_url
         files_array.append(Table(tds[0].text,xls_url,tds[2].text,title,tds[3].text,tds[4].text))
 
-
-    # print files_array
-    # with open('data.json', 'w') as outfile:
-    #     json.dump(files_array, outfile)
-
+    toclist = []
     for data in files_array:
+        if data.title is None:
+            print "FIXME: data.title is None in file:", data.url
+            continue
+
         xlsx_name, rst_name = wGetAndRename(xlsxpath,rstpath,data.url,data.title,"tab")
+        if xlsx_name == "":
+            continue
 
         f = codecs.open(rst_name, "w", "utf-8")
 
@@ -55,42 +58,50 @@ def crawlXlsFromPath(xlsxpath,rstpath,url,section_prefix):
         print >>f, tablename
         print >>f, "="*len(tablename)
         print >>f
-        if data.date:
+        if data.date.strip():
             print >>f, ":Aggiornamento: %s" % data.date
-        if data.source:
+        if data.source.strip():
             print >>f, ":Fonte: %s" % data.source
-        if data.note:
+        if data.note.strip():
             print >>f, ":Note: %s" % data.note
         print >>f
 
         create_sphinx_tables.convertXlsxToRst(xlsx_name, f)
         f.close()
 
-'''
-    allxlxs= tree.xpath("//a[contains(@href,'.xlsx')]")
-    for xls in allxlxs:
-        print xls
-        if xls.text is not None:
-            wGetAndRename(xls.get("href"),xls.text,section_prefix)
-'''
+        toclist.append((data.id, os.path.splitext(os.path.basename(rst_name))[0]))
+
+    # generate toc
+    f = open(rstpath + "/toc.rst", "w")
+    print >>f, ".. toctree::"
+    print >>f, "    :maxdepth: 2"
+    print >>f, "    :caption: Contents"
+    print >>f
+
+    toclist.sort()
+    for id,name in toclist:
+        print >>f, "    %s" % name
+    f.close()
+
 
 def wGetAndRename(xlsxpath,rstpath,url,title,section_prefix):
     print "File to download " +url
-    r = requests.get(url ,stream=True)
-    print r.status_code
-    if r.status_code == 200:
-        file_content = r.raw.read()
-        print "Downloading: [" + url+ "]"
-        try:
-            print title
-            base_name = section_prefix+"_"+ re.sub(r'([^.a-zA-Z0-9_])','_',title)
-            xlsx_name = xlsxpath + "/" + base_name + ".xlsx"
-            rst_name = rstpath + "/" + base_name + ".rst"
-            with open(xlsx_name, 'w') as f:
-                f.write(file_content)
-            return xlsx_name, rst_name
-        except TypeError as detail:
-            print "Unexpected error:", detail
+    try:
+        r = requests.get(url ,stream=True)
+        r.raise_for_status()
+    except requests.ConnectionError:
+        print "ERROR: downloading file, skipping"
+        return "", ""
+
+    file_content = r.raw.read()
+    print "Downloading: [" + url+ "]"
+    print "Title:", title
+    base_name = section_prefix+"_"+ re.sub(r'([^.a-zA-Z0-9_])','_',title)
+    xlsx_name = xlsxpath + "/" + base_name + ".xlsx"
+    rst_name = rstpath + "/" + base_name + ".rst"
+    with open(xlsx_name, 'w') as f:
+        f.write(file_content)
+    return xlsx_name, rst_name
 
 
 

@@ -1,8 +1,6 @@
 Tabella 16 - Dati richiesti
 ===========================
 
-:Aggiornamento:  
-:Fonte:  
 :Note: Indica i dati da inserire nella risposta ad una interrogazione della scheda individuale
 
 =========================== =========================== =========================== =========================== ===========================
