@@ -1,1 +1,0 @@
-../_posts/2017-03-01-individuazione_del_comune_di_iscrizione_aire.md

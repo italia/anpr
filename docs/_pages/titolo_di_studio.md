@@ -1,1 +1,0 @@
-../_posts/2017-03-01-titolo_di_studio.md

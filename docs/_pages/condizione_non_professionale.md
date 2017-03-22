@@ -1,1 +1,0 @@
-../_posts/2017-03-01-condizione_non_professionale.md

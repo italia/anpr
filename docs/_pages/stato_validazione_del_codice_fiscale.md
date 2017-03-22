@@ -1,1 +1,0 @@
-../_posts/2017-03-01-stato_validazione_del_codice_fiscale.md

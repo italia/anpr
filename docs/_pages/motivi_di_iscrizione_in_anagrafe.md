@@ -1,1 +1,0 @@
-../_posts/2017-03-01-motivi_di_iscrizione_in_anagrafe.md
