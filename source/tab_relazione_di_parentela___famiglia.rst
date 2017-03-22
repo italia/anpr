@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Relazione di parentela   Famiglia.xlsx
-=================================================================
+Tabella 05 - Relazione di parentela - Famiglia
+==============================================
+
+:Aggiornamento: 20 gennaio 2017
+:Fonte: Istat
+:Note: Aggiunto il legame parentela "Unito civilmente"
 
 ================================================ ================================================ ================================================ ================================================ ================================================ ================================================ ================================================
                                                  ID                                               DESCRIZIONE                                      ORDINAMENTO                                      DATAINIZIOVALIDITA                               DATAFINEVALIDITA                                 Note                                            

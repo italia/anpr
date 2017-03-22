@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Posizione nella Professione.xlsx
-===========================================================
+Tabella 09 - Posizione nella Professione
+========================================
+
+:Aggiornamento:  
+:Fonte: Istat
+:Note: I valori A e B sono stati inseriti per gestire la conversione delle tabelle AIRE, che attualmente utilizza diverse codifiche. 
 
 ================================================================ ================================================================ ================================================================ ================================================================ ================================================================ ================================================================
 ID                                                               DESCRIZIONE                                                      ORDINAMENTO                                                      DATAINIZIOVALIDITA                                               DATAFINEVALIDITA                                                                                                                 

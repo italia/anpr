@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Stato civile.xlsx
-============================================
+Tabella 01 - Stato civile
+=========================
+
+:Aggiornamento: 20 gennaio 2017
+:Fonte: Istat
+:Note: Aggiunto lo stato civile “Unito civilmente”
 
 ============================= ============================= ============================= ============================= ============================= =============================
                               ID                            DESCRIZIONE                   ORDINAMENTO                   DATAINIZIOVALIDITA            DATAFINEVALIDITA             

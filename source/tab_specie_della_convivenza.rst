@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Specie della convivenza.xlsx
-=======================================================
+Tabella 27 - Specie della convivenza
+====================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 ================== ================== ================== ================== ==================
 ID                 DESCRIZIONE        ORDINAMENTO        DATAINIZIOVALIDITA DATAFINEVALIDITA  

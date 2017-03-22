@@ -4,9 +4,8 @@ import codecs
 from openpyxl import load_workbook
 from os import listdir
 
-def convertXlsxToRst(infn,outfn):
+def convertXlsxToRst(infn,f):
     wb = load_workbook(infn)
-    f = codecs.open(outfn, "w", "utf-8")
 
     # grab the active worksheet
     ws = wb.active
@@ -28,17 +27,6 @@ def convertXlsxToRst(infn,outfn):
         rows.append(cells)
 
 
-    slug = "".join(infn.lstrip("tab_").split("_"))
-    print "Slug:", slug
-
-    title = " ".join(infn.lstrip("tab_").split("_"))
-    print "Title:", title
-
-
-    print >>f, title
-    print >>f, "="*len(title)
-    print >>f
-
     headers = rows[0]
     ncol = len(rows[0])
 
@@ -55,8 +43,6 @@ def convertXlsxToRst(infn,outfn):
     for row in rows[1:]:        
         print >>f, fmt % tuple(row)
     print >>f, fmt % (("="*width,)*ncol)
-
-    f.close()
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
     filenames = listdir(path_to_dir)
@@ -75,5 +61,8 @@ if __name__ == "__main__":
         section=file_name[:(file_name.index("_"))]
         title =  (file_name[(file_name.index("_")+1)::]).replace("_"," ").title()
         print "Title: "  + title
-        convertXlsxToRst(xlxs_folder+xls, sys.argv[2]+file_name+".rst" )
+
+        f = codecs.open(sys.argv[2]+file_name+".rst", "w", "utf-8")
+        convertXlsxToRst(xlxs_folder+xls, f)
+        f.close()
 

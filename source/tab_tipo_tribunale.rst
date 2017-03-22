@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Tipo tribunale.xlsx
-==============================================
+Tabella 32 - Tipo tribunale
+===========================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 ========================= ========================= ========================= ========================= ========================= =========================
                           ID                        DESCRIZIONE               ORDINAMENTO               DATAINIZIOVALIDITA        DATAFINEVALIDITA         

@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Motivo costituzione della famiglia.xlsx
-==================================================================
+Tabella 26 - Motivo costituzione della famiglia
+===============================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 ===================== ===================== ===================== ===================== =====================
 ID                    DESCRIZIONE           ORDINAMENTO           DATAINIZIOVALIDITA    DATAFINEVALIDITA     

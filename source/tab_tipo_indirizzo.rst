@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Tipo indirizzo.xlsx
-==============================================
+Tabella 25 - Tipo indirizzo
+===========================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 ============================== ============================== ============================== ============================== ==============================
 ID                             DESCRIZIONE                    ORDINAMENTO                    DATAINIZIOVALIDITA             DATAFINEVALIDITA              

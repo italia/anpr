@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Tipo cessazione matrimonio.xlsx
-==========================================================
+Tabella 31 - Tipo cessazione matrimonio
+=======================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note: Per i valori da 1 a 4 occorre indicare:
 
 ================================================== ================================================== ================================================== ================================================== ==================================================
 ID                                                 DESCRIZIONE                                        ORDINAMENTO                                        DATAINIZIOVALIDITA                                 DATAFINEVALIDITA                                  

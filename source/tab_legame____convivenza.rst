@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Legame    Convivenza.xlsx
-====================================================
+Tabella 06 - Legame  - Convivenza
+=================================
+
+:Aggiornamento:  
+:Fonte: Istat
+:Note:  
 
 ======================= ======================= ======================= ======================= =======================
 ID                      DESCRIZIONE             ORDINAMENTO             DATAINIZIOVALIDITA      DATAFINEVALIDITA       

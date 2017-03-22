@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Tipi di mutazione.xlsx
-=================================================
+Tabella 36 - Tipi di mutazione
+==============================
+
+:Aggiornamento: 21 marzo 2017
+:Fonte:  
+:Note:  
 
 ================================ ================================
 Codice                           Descrizione                     

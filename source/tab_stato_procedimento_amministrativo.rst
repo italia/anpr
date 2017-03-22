@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Stato Procedimento amministrativo.xlsx
-=================================================================
+Tabella 30 - Stato Procedimento amministrativo
+==============================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 ========================================= ========================================= ========================================= ========================================= =========================================
 ID                                        DESCRIZIONE                               ORDINAMENTO                               DATAINIZIOVALIDITA                        DATAFINEVALIDITA                         

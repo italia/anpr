@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Cessazione unione civile   convivenze.xlsx
-=====================================================================
+Tabella 43 - Cessazione unione civile - convivenze
+==================================================
+
+:Aggiornamento: 20 gennaio 2017
+:Fonte:  
+:Note:  
 
 =========================================== =========================================== =========================================== =========================================== ===========================================
 ID                                          DESCRIZIONE                                 ORDINAMENTO                                 DATAINIZIOVALIDITA                          DATAFINEVALIDITA                           

@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Conversione codici AIRE al subentro.xlsx
-===================================================================
+Tabella 33 - Conversione codici AIRE al subentro
+================================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 =================================================== =================================================== =================================================== =================================================== ===================================================
 Tabella                                             AIRE attuale codice                                 AIRE attuale descrizione                            Codice corrispondente ANPR                          Descrizione codice ANPR                            

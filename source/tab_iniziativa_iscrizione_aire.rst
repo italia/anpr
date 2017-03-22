@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Iniziativa iscrizione AIRE.xlsx
-==========================================================
+Tabella 20 - Iniziativa iscrizione AIRE
+=======================================
+
+:Aggiornamento:  
+:Fonte:  
+:Note:  
 
 =========================================== =========================================== =========================================== =========================================== ===========================================
 ID                                          DESCRIZIONE                                 ORDINAMENTO                                 DATAINIZIOVALIDITA                          DATAFINEVALIDITA                           

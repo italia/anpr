@@ -1,5 +1,9 @@
-../source/ static/xlsx/tab Condizione non professionale.xlsx
-============================================================
+Tabella 10 - Condizione non professionale
+=========================================
+
+:Aggiornamento:  
+:Fonte: Istat
+:Note:  
 
 ========================================== ========================================== ========================================== ========================================== ==========================================
 ID                                         DESCRIZIONE                                ORDINAMENTO                                DATAINIZIOVALIDITA                         DATAFINEVALIDITA                          

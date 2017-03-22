@@ -27,6 +27,7 @@ Questa pagina intende raccogliere la documentazione di tipo tecnico:
    :caption: Contents:
 
    codicierrore
+   tab_Stati_Esteri
    tab_motivi_iscrizione_aire
    tab_comuni
    tab_esenzione_bollo
