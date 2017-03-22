@@ -1,0 +1,1 @@
+../_posts/2017-03-01-posizione_nella_professione.md

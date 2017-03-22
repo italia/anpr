@@ -33,14 +33,16 @@ def convertXlsxToRst(infn,f):
     # Compute filed with maximum width, to format the table correctly
     width = 0
     for row in rows:
-        width = max(width, max([len(c) for c in row]))
+        width = max(width, max([len(c) for c in row])+10)
 
     fmt = " ".join(["%-" + str(width) + "s"] * ncol)
 
     print >>f, fmt % (("="*width,)*ncol)
     print >>f, fmt % tuple(rows[0])
     print >>f, fmt % (("="*width,)*ncol)
-    for row in rows[1:]:        
+    for row in rows[1:]:
+        for i,v in enumerate(row):
+                row[i] = v.replace("\n", " ")
         print >>f, fmt % tuple(row)
     print >>f, fmt % (("="*width,)*ncol)
 
@@ -65,4 +67,3 @@ if __name__ == "__main__":
         f = codecs.open(sys.argv[2]+file_name+".rst", "w", "utf-8")
         convertXlsxToRst(xlxs_folder+xls, f)
         f.close()
-

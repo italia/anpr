@@ -39,7 +39,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
         tds = tr.getchildren()
         xls_url = Anpr.domain()+ tds[1].getchildren()[0].get("href")
         title = tds[1].getchildren()[0].text
-        print xls_url
+
         files_array.append(Table(tds[0].text,xls_url,tds[2].text,title,tds[3].text,tds[4].text))
 
     toclist = []
@@ -70,6 +70,9 @@ def createRstFromXlsx(data):
         print >>f, ":Fonte: %s" % data.source
     if data.note.strip():
         print >>f, ":Note: %s" % data.note
+
+    print >>f
+    print >>f, "`Download <%s>`_" % data.url
     print >>f
 
     create_sphinx_tables.convertXlsxToRst(xlsx_name, f)
@@ -126,13 +129,14 @@ if __name__ == "__main__":
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
 
     toclist.append(createRstFromXlsx(Table(
-        id=100, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578",
+        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578",
         title="Elenco Errori ANPR", date="17 Marzo 2017",
     )))
     toclist.append(createRstFromXlsx(Table(
-        id=101, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
+        id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
         title="Errori Agenzia Entrate",
     )))
-
-    createtoc(rstpath, toclist)
-
+    toclist.append(createRstFromXlsx(Table(
+        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
+        title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
+    )))

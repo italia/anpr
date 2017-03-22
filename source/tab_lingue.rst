@@ -3,11 +3,13 @@ Tabella 14 - Lingue
 
 :Note: Contiene le lingue nelle quali potrà essere prodotto un certificato
 
-================== ================== ================== ================== ==================
-ID                 DESCRIZIONE        ORDINAMENTO        DATAINIZIOVALIDITA DATAFINEVALIDITA  
-================== ================== ================== ================== ==================
-IT                 Italiana                                                                   
-DE                 Tedesca                                                                    
-FR                 Francese                                                                   
-SL                 Slovena                                                                    
-================== ================== ================== ================== ==================
+`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella_14.xlsx/0ff7a256-1d63-4fca-abc7-e64baf9d1d78>`_
+
+============================ ============================ ============================ ============================ ============================
+ID                           DESCRIZIONE                  ORDINAMENTO                  DATAINIZIOVALIDITA           DATAFINEVALIDITA            
+============================ ============================ ============================ ============================ ============================
+IT                           Italiana                                                                                                           
+DE                           Tedesca                                                                                                            
+FR                           Francese                                                                                                           
+SL                           Slovena                                                                                                            
+============================ ============================ ============================ ============================ ============================

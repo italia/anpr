@@ -1,0 +1,1 @@
+../_posts/2017-03-01-motivi_di_cancellazione_dall_anagrafe.md
