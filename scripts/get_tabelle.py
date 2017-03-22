@@ -97,6 +97,7 @@ def wGetAndRename(xlsxpath,rstpath,url,title,section_prefix):
     print "Downloading: [" + url+ "]"
     print "Title:", title
     base_name = section_prefix+"_"+ re.sub(r'([^.a-zA-Z0-9_])','_',title)
+    base_name = base_name.lower()
     xlsx_name = xlsxpath + "/" + base_name + ".xlsx"
     rst_name = rstpath + "/" + base_name + ".rst"
     with open(xlsx_name, 'w') as f:
