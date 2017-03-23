@@ -1,6 +1,5 @@
 .. toctree::
     :maxdepth: 2
-    :caption: Indice e tabelle
 
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
