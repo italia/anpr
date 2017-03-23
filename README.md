@@ -34,7 +34,7 @@ Per aiutarci a categorizzare le issues correttamente, puoi usare i _labels_ indi
 
 ## Importante
 Per favore, **non inserire dati sensibili dei cittadini**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
-
+Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password**
 Se devi inviarci un tracciato con dati sensibili invialo per email a [segnalazioni-anpr@teamdigitale.governo.it](mailto:segnalazioni-anpr@teamdigitale.governo.it) specificando nell'oggetto il codice del bug.
 
 In ogni caso, ricordati di inserire:
