@@ -29,22 +29,46 @@ def convertXlsxToRst(infn,f):
 
     headers = rows[0]
     ncol = len(rows[0])
-
+    ncol =2
     # Compute filed with maximum width, to format the table correctly
     width = 0
     for row in rows:
         width = max(width, max([len(c) for c in row])+10)
 
-    fmt = " ".join(["%-" + str(width) + "s"] * ncol)
+    '''
++--------+--------------------+
+| Header | Header with 2 cols |
++========+========+===========+
+'''
+    #fmt = "%-50s %-200s"
+    #print fmt
+    idSize= 20
+    descSize = 200
+    row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
+    fmt_row = u'|{:'+str(idSize)+'}|{:'+str(descSize)+'}|';
+    print fmt_row
+    print >>f, row_separator
+    print >>f, fmt_row.format("id","descrizione")
+    print >>f, '+{}+{}+'.format("="*idSize, "="*descSize)
 
-    print >>f, fmt % (("="*width,)*ncol)
-    print >>f, fmt % tuple(rows[0])
-    print >>f, fmt % (("="*width,)*ncol)
+    #print >>f, fmt % (("="*width,)*ncol)
+    #print >>f, fmt % tuple(("ID","Descrizione"))
+    #print >>f, fmt % (("="*width,)*ncol)
     for row in rows[1:]:
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
-        print >>f, fmt % tuple(row)
-    print >>f, fmt % (("="*width,)*ncol)
+        #is_empy
+        row_adjusted = (row[0], row[1])
+        print >>f,fmt_row.format(row[0],row[1])
+
+        for other_row in row[1::]:
+            print >>f, fmt_row.format("",other_row)
+
+
+        #print >>f, fmt % tuple(row_adjusted)
+        print >>f, row_separator
+
+    print >>f ,'+{}+{}+'.format("-"*idSize, "-"*descSize)
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
     filenames = listdir(path_to_dir)
