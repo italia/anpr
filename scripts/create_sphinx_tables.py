@@ -27,13 +27,10 @@ def convertXlsxToRst(infn,f):
         rows.append(cells)
 
 
-    headers = rows[0]
-    ncol = len(rows[0])
+    #headers = rows[0]
+    #ncol = len(rows[0])
     ncol =2
     # Compute filed with maximum width, to format the table correctly
-    width = 0
-    for row in rows:
-        width = max(width, max([len(c) for c in row])+10)
 
     '''
 +--------+--------------------+
@@ -42,33 +39,50 @@ def convertXlsxToRst(infn,f):
 '''
     #fmt = "%-50s %-200s"
     #print fmt
-    idSize= 20
-    descSize = 200
+
+    headers = rows[0]
+    firstHeader = 0
+    for i,r in enumerate(headers):
+        if(len(r)>0):
+            break
+        firstHeader = firstHeader+1
+
+    idSize= 10
+    descSize = 600
+    width = 0
+    for row in rows:
+        idSize = max(idSize, len(row[firstHeader]))
+
+    print idSize
     row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
     fmt_row = u'|{:'+str(idSize)+'}|{:'+str(descSize)+'}|';
+
+    #first header
+
     print fmt_row
     print >>f, row_separator
-    print >>f, fmt_row.format("id","descrizione")
+    print >>f, fmt_row.format(headers[firstHeader],headers[firstHeader+1])
     print >>f, '+{}+{}+'.format("="*idSize, "="*descSize)
 
-    #print >>f, fmt % (("="*width,)*ncol)
-    #print >>f, fmt % tuple(("ID","Descrizione"))
-    #print >>f, fmt % (("="*width,)*ncol)
+
     for row in rows[1:]:
+        if not row[0]:
+            continue
+
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
-        #is_empy
-        row_adjusted = (row[0], row[1])
-        print >>f,fmt_row.format(row[0],row[1])
 
-        for other_row in row[1::]:
-            print >>f, fmt_row.format("",other_row)
+        print >>f,fmt_row.format(row[firstHeader],row[firstHeader+1])
+
+        for i, other_row in enumerate(row[firstHeader+2::]):
+            if other_row:
+                key = ""+headers[firstHeader+2+i]+ ": " if headers[firstHeader+2+i]   else  ""
+                print >>f, fmt_row.format("",  "  - "+key+  other_row)
 
 
-        #print >>f, fmt % tuple(row_adjusted)
         print >>f, row_separator
 
-    print >>f ,'+{}+{}+'.format("-"*idSize, "-"*descSize)
+    #print >>f ,row_separator
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
     filenames = listdir(path_to_dir)

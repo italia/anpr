@@ -44,7 +44,7 @@ def convertXlsxToRst(infn,f):
     #fmt = "%-50s %-200s"
     print fmt
     idSize= 20
-    descSize = 200
+    descSize = 400
     row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
     print >>f row_separator
     print >>f '|{:^'+str(idSize)'}|{^'+str(descSize)+'}|'.format("id","descrizione")

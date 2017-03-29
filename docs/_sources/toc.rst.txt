@@ -1,8 +1,10 @@
 .. toctree::
     :maxdepth: 2
+    :caption: Contents
 
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
+    tab_elenco_delle_funzionalita__disponibili
     tab_stato_civile
     tab_stati_esteri
     tab_comuni

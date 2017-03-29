@@ -30,7 +30,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
     print ("Get all Excel files from " +Anpr.domain()+url)
     tree = html.fromstring(page.content)
 
-    xpath_expr = "//tr[td//text()[contains(., '.xlsx')]]"
+    #xpath_expr = "//tr[td//text()[contains(., '.xlsx')]]"
 
     xpath_expr = "//tr[td//a[contains(@href,'.xlsx')]]"
     allTrWithTh = tree.xpath(xpath_expr)
@@ -53,14 +53,17 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
 
     return toclist
 
-def createRstFromXlsx(data):
+
+def createRstFromXlsx(data, table=True):
     xlsx_name, rst_name = wGetAndRename(xlsxpath,rstpath,data.url,data.title,"tab")
     if xlsx_name == "":
         return
 
     f = codecs.open(rst_name, "w", "utf-8")
+    tablename = "%s" % (data.title)
+    if table:
+        tablename = "Tabella %s - %s" % (data.id, data.title)
 
-    tablename = "Tabella %s - %s" % (data.id, data.title)
     print >>f, tablename
     print >>f, "="*len(tablename)
     print >>f
@@ -74,8 +77,9 @@ def createRstFromXlsx(data):
     print >>f
     print >>f, "`Download <%s>`_" % data.url
     print >>f
-
-    create_sphinx_tables.convertXlsxToRst(xlsx_name, f)
+    print os.path.getsize(xlsx_name);
+    if (os.path.getsize(xlsx_name)<1000000):
+        create_sphinx_tables.convertXlsxToRst(xlsx_name, f)
     f.close()
 
     return (data.id, os.path.splitext(os.path.basename(rst_name))[0])
@@ -131,12 +135,13 @@ if __name__ == "__main__":
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578",
         title="Elenco Errori ANPR", date="17 Marzo 2017",
-    )))
+    ),False))
     toclist.append(createRstFromXlsx(Table(
         id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
         title="Errori Agenzia Entrate",
-    )))
+    ),False))
     toclist.append(createRstFromXlsx(Table(
-        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
+        id=300, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
         title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
-    )))
+    ),False))
+    createtoc("../src/", toclist)
