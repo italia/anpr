@@ -32,11 +32,7 @@ def convertXlsxToRst(infn,f):
     ncol =2
     # Compute filed with maximum width, to format the table correctly
 
-    '''
-+--------+--------------------+
-| Header | Header with 2 cols |
-+========+========+===========+
-'''
+
     #fmt = "%-50s %-200s"
     #print fmt
 
@@ -52,14 +48,13 @@ def convertXlsxToRst(infn,f):
     width = 0
     for row in rows:
         idSize = max(idSize, len(row[firstHeader]))
+        descSize = max(descSize, max([len(c) for c in row])+10)
 
-    print idSize
+
     row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
     fmt_row = u'|{:'+str(idSize)+'}|{:'+str(descSize)+'}|';
 
-    #first header
 
-    print fmt_row
     print >>f, row_separator
     print >>f, fmt_row.format(headers[firstHeader],headers[firstHeader+1])
     print >>f, '+{}+{}+'.format("="*idSize, "="*descSize)
@@ -75,14 +70,15 @@ def convertXlsxToRst(infn,f):
         print >>f,fmt_row.format(row[firstHeader],row[firstHeader+1])
 
         for i, other_row in enumerate(row[firstHeader+2::]):
+            if i ==0 :
+                print >>f, fmt_row.format(" ",  " ")
+
             if other_row:
                 key = ""+headers[firstHeader+2+i]+ ": " if headers[firstHeader+2+i]   else  ""
                 print >>f, fmt_row.format("",  "  - "+key+  other_row)
 
 
         print >>f, row_separator
-
-    #print >>f ,row_separator
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
     filenames = listdir(path_to_dir)

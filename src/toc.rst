@@ -2,6 +2,8 @@
     :maxdepth: 2
     :caption: Contents
 
+    tab_aggiornamenti_alla_documentazione_tecnica
+    tab_elenco_dei_web_services_disponibili
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
     tab_elenco_delle_funzionalita__disponibili
