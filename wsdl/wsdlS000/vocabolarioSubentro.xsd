@@ -14,6 +14,62 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<!-- tipoDatiDettaglioRisposta -->
+	<xs:complexType name="tipoDatiDettaglioRisposta">
+		<xs:sequence>
+			<xs:element name="nomeFile" 		 type="xs:string" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="descrizioneEsito"  type="xs:string"       minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiDettaglioRisposta -->
+	
+	<!-- USATO IN TUTTI I MSG DI RICHIESTA -->
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRichiesta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->	
+	
+<!-- ################################################################# Inizio usati in 6001 ###########################################################-->
+ 
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori --> 
+ 
+<!-- tipoListaAnomalie -->
+	<xs:complexType name="tipoListaAnomalie">
+		<xs:sequence>
+			<xs:element name="anomalie"	 type="tipoAnomalie" 		minOccurs="0" maxOccurs="unbounded"/>											
+		</xs:sequence>		
+	</xs:complexType>
+<!-- Fine tipoListaAnomalie -->
+
+<!-- tipoAnomalie -->
+	<xs:complexType name="tipoAnomalie">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoErroriAnomalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoAnomalie -->
+	
 	<!-- tipoGeneralitaSubIscr -->
 	<xs:complexType name="tipoGeneralitaSubIscr">
 		<xs:sequence>
@@ -33,8 +89,8 @@
 			<xs:element name="luogoNascita" 	 					type="tpdt:tipoLuogoEvento" 			        minOccurs="1" maxOccurs="1"/>
 			<xs:element name="soggettoAIRE" 	 					type="tpdt:char1"	 				   		   	minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="idSchedaSoggettoComune" 				type="tpdt:tipoIdSchedaSoggettoComune" 		   	minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:numericoMax15"                		minOccurs="0" maxOccurs="1"/>					
-			<xs:element name="dataPrimaIscrizioneComune" 			type="xs:date" 	                  		  		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:numericoMax15"                		   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataPrimaIscrizioneComune"            type="xs:date"                                  minOccurs="0" maxOccurs="1"/>					
 		</xs:sequence>	
 	</xs:complexType>
 <!-- Fine tipoGeneralitaSubIscr -->
@@ -97,7 +153,8 @@
 			<xs:element name="autoveicoli" 							type="tpdt:tipoAutoveicoli"   							minOccurs="0" maxOccurs="1"/>					
 			<xs:element name="altriDati" 							type="tpdt:tipoAltriDati"			 		  			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="unioneCivile" 						type="tpdt:tipoUnioneCivile"			 		  		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="convivenzaDiFatto" 					type="tpdt:tipoConvivenzaDiFatto"			 		  	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="convivenzaDiFatto" 					type="tpdt:tipoConvivenzaDiFatto"			 		  	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="altraCittadinanza" 					type="tpdt:tipoCittadinanza" 							minOccurs="0" maxOccurs="unbounded"/>			
 		</xs:sequence>		
 	</xs:complexType>	
 <!-- Fine GENERALITA -->

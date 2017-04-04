@@ -671,7 +671,10 @@
 <!-- Fine tipoAttribuzioneFamigliaAire -->
 <!-- tipoOperazioneRichiesta -->
 	<xs:simpleType name="tipoOperazioneRichiesta">
-		<xs:restriction base="xs:string">
+        <xs:annotation>
+        	<xs:documentation>Codice del servizio così come riportati nella tabella servizi (es. 1001, 5005)</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
 			<xs:length value="4"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1175,21 +1178,86 @@
 <!-- tipoDatoTestataRichiesta -->
 	<xs:complexType name="tipoDatoTestataRichiesta">
 		<xs:sequence>
-			<xs:element name="idOperazioneComune" 		type="charMax30" 					minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codMittente" 				type="char6" 						minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codDestinatario" 			type="char6" 						minOccurs="1" maxOccurs="1"/>			
-			<xs:element name="operazioneRichiesta" 		type="tipoOperazioneRichiesta" 		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataOraRichiesta" 		type="xs:dateTime" 					minOccurs="1" maxOccurs="1"/>
-			<xs:element name="tipoOperazione" 			type="tipoRichiedenteOperazione" 	minOccurs="1" maxOccurs="1"/>			
-			<xs:element name="protocolloComune" 		type="charMax20" 					minOccurs="0" maxOccurs="1"/>	
-			<xs:element name="dataProtocolloComune" 	type="xs:date" 						minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="tipoInvio" 				type="tipoInvioAmmesso" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataDecorrenza" 			type="xs:date" 						minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataDefinizionePratica" 	type="xs:date" 						minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="nomeApplicativo" 			type="charMax80" 					minOccurs="0" maxOccurs="1"/>
-			<xs:element name="versioneApplicativo" 		type="charMax80" 					minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="fornitoreApplicativo" 	type="charMax80" 					minOccurs="0" maxOccurs="1"/>							
-		</xs:sequence>		
+			<xs:element name="idOperazioneComune" type="charMax30"
+				minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione dal comune.	
+Deve essere numerico e crescente. 
+Se esiste in ANPR, il comune riceve come esito la risposta in precedenza fornita da ANPR con lo stesso ID; se non esiste ed e' inferiore all'ultimo inviato, l'elaborazione termina con errore.
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codMittente" type="char6" minOccurs="1"
+				maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Il codice ISTAT del comune che effettua la richiesta.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codDestinatario" type="char6"
+				minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>il codice dell'ANPR (999999)</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="operazioneRichiesta"
+				type="tipoOperazioneRichiesta" minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Codice dell'operazione richiesta (es. 1001,5005)</xs:documentation></xs:annotation></xs:element>
+			<xs:element name="dataOraRichiesta" type="xs:dateTime"
+				minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>La data e l‟ora in cui si invia la comunicazione anagrafica ad ANPR.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="tipoOperazione"
+				type="tipoRichiedenteOperazione" minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>C=richiesta del cittadino
+V= variazione per correzioni di errori o anomalie dei dati
+R =rettifica di una precedente operazione
+
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="protocolloComune" type="charMax20"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Il protocollo assegnato dall‟anagrafe comunale alla pratica</xs:documentation></xs:annotation></xs:element>
+			<xs:element name="dataProtocolloComune" type="xs:date"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Data di protocollazione della pratica da parte dell'ufficio Anagrafe.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="tipoInvio" type="tipoInvioAmmesso"
+				minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Può assumere i valori:
+TEST	
+PRE_SUB			
+PROD			
+Se il parametro non è compatibile con l'ambiente di riferimento il servizio termina con errore</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="dataDecorrenza" type="xs:date"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Data di inizio validità dell’operazione di registrazione.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="dataDefinizionePratica" type="xs:date"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>La data di definizione della pratica del comune associata alla registrazione anagrafica</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="nomeApplicativo" type="charMax80"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Nome dell'applicativo utilizzato per l'invio</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="versioneApplicativo" type="charMax80"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Versione dell'applicativo utilizzato per l'invio</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="fornitoreApplicativo" type="charMax80"
+				minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>Fornitore del software</xs:documentation>
+				</xs:annotation></xs:element>
+		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoDatoTestataRichiesta -->
 
@@ -1197,16 +1265,53 @@
 <!-- tipoDatoTestataRisposta -->
 	<xs:complexType name="tipoDatoTestataRisposta">
 		<xs:sequence>
-			<xs:element name="idOperazioneComune" 	type="charMax30"   				minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codMittente" 			type="char6" 					minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codDestinatario" 		type="char6" 					minOccurs="1" maxOccurs="1"/>
-			<xs:element name="operazioneRichiesta" 	type="tipoOperazioneRichiesta"	minOccurs="1" maxOccurs="1"/>			
-			<xs:element name="dataOraRichiesta" 	type="xs:dateTime"      		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="protocolloComune" 	type="charMax20" 				minOccurs="0" maxOccurs="1"/>				
-			<xs:element name="dataProtocolloComune" type="xs:date" 					minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataDecorrenza" 		type="xs:date" 					minOccurs="0" maxOccurs="1"/>
-			<xs:element name="idOperazioneANPR" 	type="numericoMax30" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="esitoOperazione" 		type="charMax4" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idOperazioneComune" 	type="charMax30"   				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione. Normalmente è attribuito dal comune; per il WEB è attribuito da ANPR.
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codMittente" 			type="char6" 					minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>codice dell'ANPR</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codDestinatario" 		type="char6" 					minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice ISTAT del comune a cui inviare la risposta.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="operazioneRichiesta" 	type="tipoOperazioneRichiesta"	minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice dell'operazione richiesta (es. 1001,5005)</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="dataOraRichiesta" 	type="xs:dateTime"      		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data e l‟ora in cui si invia la comunicazione anagrafica ad ANPR.
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="protocolloComune" 	type="charMax20" 				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data e l‟ora in cui si invia la comunicazione anagrafica ad ANPR.</xs:documentation>
+				</xs:annotation></xs:element>				
+			<xs:element name="dataProtocolloComune" type="xs:date" 					minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data di protocollazione della pratica da parte dell'ufficio Anagrafe.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="dataDecorrenza" 		type="xs:date" 					minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data di inizio validità dell’operazione di registrazione.Obbligatorio solo per i servizi di registrazione.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="idOperazioneANPR" 	type="numericoMax30" 			minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione da ANPR.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="esitoOperazione" 		type="charMax4" 				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice che indica se l’operazione è terminata con successo oppure con segnalazioni o errori.
+2 = richiesta completata con esito positivo                                            
+3 = richiesta completata con esito negativo    
+4 = richiesta annullata                                              
+6 = richiesta completata con esito positivo ma con warnings
+</xs:documentation>
+				</xs:annotation></xs:element>
 			
 		</xs:sequence>		
 	</xs:complexType>
@@ -1214,10 +1319,22 @@
 
 <!-- tipoLuogoEvento -->
 	<xs:complexType name="tipoLuogoEvento">
-		<xs:sequence>
-			<xs:element name="luogoEccezionale"    type="charMax120" 		    minOccurs="0" maxOccurs="1"/>			
-		    <xs:element  name="comune"             type="tipoComune"  	        minOccurs="0" maxOccurs="1"/>
-			<xs:element name="localita"            type="tipoLocalita"          minOccurs="0" maxOccurs="1"/>			
+        <xs:annotation>
+        	<xs:documentation>Deve essere presente obbligatoriamente uno dei tre campi.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+			<xs:element name="luogoEccezionale"    type="charMax120" 		    minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>un luogo eccezionale, non identificabile solo con un comune o una località (es: su una nave, in aereo, ecc.)</xs:documentation>
+				</xs:annotation></xs:element>			
+		    <xs:element  name="comune"             type="tipoComune"  	        minOccurs="0" maxOccurs="1">
+		    	<xs:annotation>
+		    		<xs:documentation>Dati del comune italiano in cui si è verificato l'evento.</xs:documentation>
+		    	</xs:annotation></xs:element>
+			<xs:element name="localita"            type="tipoLocalita"          minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dati della località estera in cui si è verificato l'evento.</xs:documentation>
+				</xs:annotation></xs:element>			
 		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoLuogoEvento -->	
@@ -1237,10 +1354,21 @@
 <!-- tipoLocalita contiene i dati relativi a una localita -->
 	<xs:complexType name="tipoLocalita">
 		<xs:sequence>
-			<xs:element name="descrizioneLocalita" type="alfanumerico120char"     minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="descrizioneStato"    type="alfanumerico120char"     minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codiceStato"         type="numerico3"               minOccurs="1" maxOccurs="1"/>
-			<xs:element name="provinciaContea"     type="charMax30"       		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="descrizioneLocalita" type="alfanumerico120char"     minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Descrizione della località estera</xs:documentation></xs:annotation></xs:element>			
+			<xs:element name="descrizioneStato"    type="alfanumerico120char"     minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La denominazione dello stato cui la località appartiene</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codiceStato"         type="numerico3"               minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice istat dello stato cui la località appartiene </xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="provinciaContea"     type="charMax30"       		  minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>la provincia/contea</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoLocalita -->
@@ -1403,9 +1531,18 @@
 <!-- tipoAltriDati -->
     <xs:complexType name="tipoAltriDati">
 		<xs:sequence>
-			<xs:element name="posizioneProfessionale" 	 	type="tipoPosizioneProfessionale" 		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="condizioneNonProfessionale" 	type="tipoCondizioneNonProfessionale" 	minOccurs="0" maxOccurs="1"/>
-			<xs:element name="titoloStudio"  		 		type="tipoTitoloStudio" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="posizioneProfessionale" 	 	type="tipoPosizioneProfessionale" 		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice della posizone nella professione: Vedi Tabella 9 Posizione nella professione</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="condizioneNonProfessionale" 	type="tipoCondizioneNonProfessionale" 	minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice della condizione non professionale: Vedi Tabella 10 Condizione non professionale.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="titoloStudio"  		 		type="tipoTitoloStudio" 				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice del titolo di studio: Vedi Tabella 11 Titolo di studio</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoAltriDati -->
@@ -1448,8 +1585,14 @@
 <!-- tipoAutoveicoli -->
 	<xs:complexType name="tipoAutoveicoli">
 		<xs:sequence>
-			<xs:element name="possessoAutoveicoli" type="tipoSN1" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="possessoPatente"     type="tipoSN1" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="possessoAutoveicoli" type="tipoSN1" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indica il possesso di autoveicoli, valori: S/N</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="possessoPatente"     type="tipoSN1" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indica il possesso di patente, valori: S/N</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- tipoAutoveicoli -->
@@ -1507,9 +1650,19 @@
 <!-- tipoCodiceFiscale -->
 	<xs:complexType name="tipoCodiceFiscale">
 		<xs:sequence>
-			<xs:element name="codFiscale" 					type="tipoDominioCodiceFiscale"     minOccurs="1" maxOccurs="1"/>			
-			<xs:element name="validitaCF" 					type="numericoMax2"           		minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="dataAttribuzioneValidita" 	type="xs:date" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="codFiscale" 					type="tipoDominioCodiceFiscale"     minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice fiscale</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="validitaCF" 					type="numericoMax2"           		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indica l'esito della validazione dei dati anagrafici con il servizio di AE.
+Vedi tabella stato validazione CF.</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="dataAttribuzioneValidita" 	type="xs:date" 						minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data in cui è stato validato il codice fiscale</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoCodiceFiscale -->
@@ -1517,10 +1670,23 @@
 <!-- tipoComune contiene i dati relativi a un comune -->
 	<xs:complexType name="tipoComune">
 		<xs:sequence>
-			<xs:element name="nomeComune"         		 type="alfanumericoComune"		 minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codiceIstat"       		 type="char6"              		 minOccurs="0" maxOccurs="1"/>
-			<xs:element name="siglaProvinciaIstat"		 type="alfabeticoProvincia"		 minOccurs="1" maxOccurs="1"/>
-			<xs:element name="descrizioneLocalita" 		 type="alfanumerico120char"      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nomeComune"         		 type="alfanumericoComune"		 minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La denominazione del comune</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="codiceIstat"       		 type="char6"              		 minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice istat del comune</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="siglaProvinciaIstat"		 type="alfabeticoProvincia"		 minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La sigla istat della provincia di appartenenza del comune</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="descrizioneLocalita" 		 type="alfanumerico120char"      minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Descrizione della località italiana. 
+Non deve essere indicata se coincide con nomeComune.</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoComune -->
@@ -1528,11 +1694,28 @@
 <!-- tipoDatiEvento -->
 	<xs:complexType name="tipoDatiEvento">
 		<xs:sequence>
-			<xs:element name="dataEvento" 					type="xs:date"    			 minOccurs="1" maxOccurs="1"/>
-			<xs:element name="senzaGiorno"       			type="tipoSenza" 		     minOccurs="0" maxOccurs="1"/>
-            <xs:element name="senzaGiornoMese"   			type="tipoSenza"  		     minOccurs="0" maxOccurs="1"/>	
-			<xs:element name="luogoEvento" 					type="tipoLuogoEvento" 	   	 minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="attoEvento" 					type="tipoAtto" 			 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataEvento" 					type="xs:date"    			 minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data dell'evento (nascita, matrimonio, morte, ecc.)</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="senzaGiorno"       			type="tipoSenza" 		     minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indica se data dell'evento è composta dal solo mese e anno
+se impostato deve valere 1</xs:documentation>
+				</xs:annotation></xs:element>
+            <xs:element name="senzaGiornoMese"   			type="tipoSenza"  		     minOccurs="0" maxOccurs="1">
+            	<xs:annotation>
+            		<xs:documentation>Indica se data dell'evento è composta dal solo anno
+se impostato deve valere 1</xs:documentation>
+            	</xs:annotation></xs:element>	
+			<xs:element name="luogoEvento" 					type="tipoLuogoEvento" 	   	 minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il luogo dove si è verificato l'evento</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="attoEvento" 					type="tipoAtto" 			 minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>l'atto con cui è stato registrato l'evento</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoDatiEvento -->
@@ -1603,9 +1786,18 @@
 <!-- tipoDatiProcedimento-->
    <xs:complexType name="tipoDatiProcedimento">
 		<xs:sequence>			
-			<xs:element name="numeroPraticaAnpr"           type="charMax20"          minOccurs="0" maxOccurs="1"/>
-			<xs:element name="numeroPraticaComune"         type="charMax20"          minOccurs="0" maxOccurs="1"/>	
-			<xs:element name="dataDefinizionePratica"      type="xs:date"            minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numeroPraticaAnpr"           type="charMax20"          minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il numero assegnato da ANPR alla pratica comunale</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="numeroPraticaComune"         type="charMax20"          minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il numero assegnato alla pratica dal comune</xs:documentation>
+				</xs:annotation></xs:element>	
+			<xs:element name="dataDefinizionePratica"      type="xs:date"            minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>la data di definizione della pratica</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>	
 	</xs:complexType>
 <!-- Fine tipoDatiProcedimento -->
@@ -1623,12 +1815,30 @@
 <!-- tipoErroriAnomalia -->
 	<xs:complexType name="tipoErroriAnomalia">
 		<xs:sequence>
-			<xs:element name="codiceErroreAnomalia" 	type="charMax6" 		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="tipoErroreAnomalia" 		type="char1" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="testoErroreAnomalia"      type="charMax240"		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="oggettoErroreAnomalia"    type="charMax240"		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="campoErroreAnomalia"      type="charMax240"		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="valoreErroreAnomalia"     type="charMax240"		minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="codiceErroreAnomalia" 	type="charMax6" 		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice che identifica l'errore o l'anomalia</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="tipoErroreAnomalia" 		type="char1" 			minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>E= errore bloccante; A = anomalia non bloccante
+</xs:documentation></xs:annotation></xs:element>
+			<xs:element name="testoErroreAnomalia"      type="charMax240"		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Testo descrittivo dell'errore o dell'anomalia.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="oggettoErroreAnomalia"    type="charMax240"		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Oggetto nel quale è stato rilevato l'errore o l'anomalia.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="campoErroreAnomalia"      type="charMax240"		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Descrizione del campo presente nell'oggetto nel quale è stato rilevato l'errore o l'anomalia.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="valoreErroreAnomalia"     type="charMax240"		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Valore del campo nel quale è stato rilevato l'errore o l'anomalia.</xs:documentation>
+				</xs:annotation></xs:element>		
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoErroriAnomalia -->
@@ -1652,25 +1862,75 @@
 
 <!-- tipoGeneralita -->
 	<xs:complexType name="tipoGeneralita">
-		<xs:sequence>
-			<xs:element name="codiceFiscale" 						type="tipoCodiceFiscale" 				   minOccurs="0" maxOccurs="1"/>
+        <xs:annotation>
+        	<xs:documentation>Contiene le generalità di un soggetto</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+			<xs:element name="codiceFiscale" 						type="tipoCodiceFiscale" 				   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dati relativi al codice fiscale</xs:documentation>
+				</xs:annotation></xs:element>
 			<xs:choice>
-				<xs:element name="cognome" 		 						type="alfabeticoNomiCognomi" 		   	   />
-				<xs:element name="senzaCognome" 		 				type="tipoSenza"                  		   />
+				<xs:element name="cognome" 		 						type="alfabeticoNomiCognomi" 		   	   >
+					<xs:annotation>
+						<xs:documentation>Il cognome del soggetto</xs:documentation>
+					</xs:annotation></xs:element>
+				<xs:element name="senzaCognome" 		 				type="tipoSenza"                  		   >
+					<xs:annotation>
+						<xs:documentation>Indica se il soggetto è senza cognome. 
+Se presente deve assumere il valore 1</xs:documentation>
+					</xs:annotation></xs:element>
 			</xs:choice>
 			<xs:choice>
-				<xs:element name="nome" 		 						type="alfabeticoNomiCognomi" 			   />
-				<xs:element name="senzaNome" 		 					type="tipoSenza"                  		   />
+				<xs:element name="nome" 		 						type="alfabeticoNomiCognomi" 			   >
+					<xs:annotation>
+						<xs:documentation>Il nome del soggetto</xs:documentation>
+					</xs:annotation></xs:element>
+				<xs:element name="senzaNome" 		 					type="tipoSenza"                  		   >
+					<xs:annotation>
+						<xs:documentation>Indica se il soggetto è senza nome. 
+Se presente deve assumere il valore 1</xs:documentation>
+					</xs:annotation></xs:element>
 			</xs:choice>
-			<xs:element name="sesso" 		 						type="tipoSesso" 			 	   		   minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataNascita" 	     					type="xs:date" 	                  		   minOccurs="0" maxOccurs="1"/>
-            <xs:element name="senzaGiorno"       					type="tipoSenza"                		   minOccurs="0" maxOccurs="1"/>
-            <xs:element name="senzaGiornoMese"   					type="tipoSenza"                		   minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="luogoNascita" 	 					type="tipoLuogoEvento" 			           minOccurs="0" maxOccurs="1"/>
-			<xs:element name="soggettoAIRE" 	 					type="char1"	 				   		   minOccurs="0" maxOccurs="1"/>
-			<xs:element name="annoEspatrio" 	 					type="numerico4"	 				   	   minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="idSchedaSoggettoComune" 				type="tipoIdSchedaSoggettoComune" 		   minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="idSchedaSoggettoANPR" 				type="numericoMax15"                	   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sesso" 		 						type="tipoSesso" 			 	   		   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Può assumere i seguenti valori: F, M, N (non conosciuto)</xs:documentation></xs:annotation></xs:element>
+			<xs:element name="dataNascita" 	     					type="xs:date" 	                  		   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data di nascita del soggetto.
+Se è senza giorno indicare AAAAMM01, se è senza mese e giorno, indicare AAAA0101</xs:documentation>
+				</xs:annotation></xs:element>
+            <xs:element name="senzaGiorno"       					type="tipoSenza"                		   minOccurs="0" maxOccurs="1">
+            	<xs:annotation>
+            		<xs:documentation>Indica se data nascita è composta dal solo mese e anno
+se impostato deve valere 1</xs:documentation>
+            	</xs:annotation></xs:element>
+            <xs:element name="senzaGiornoMese"   					type="tipoSenza"                		   minOccurs="0" maxOccurs="1">
+            	<xs:annotation>
+            		<xs:documentation>Indica se data nascita è composta dal solo anno
+se impostato deve valere 1</xs:documentation>
+            	</xs:annotation></xs:element>			
+			<xs:element name="luogoNascita" 	 					type="tipoLuogoEvento" 			           minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il luogo di nascita del soggetto</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="soggettoAIRE" 	 					type="char1"	 				   		   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Per i soggetti AIRE deve essere pari a "S"</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="annoEspatrio" 	 					type="numerico4"	 				   	   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>L'anno in cui il soggetto è espatriato.
+Si può indicare solo se soggettoAIRE = S</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="idSchedaSoggettoComune" 				type="tipoIdSchedaSoggettoComune" 		   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>dati identificativi del soggetto attribuiti dal comune</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="idSchedaSoggettoANPR" 				type="numericoMax15"                	   minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>identificativo della scheda soggetto attribuito da ANPR</xs:documentation>
+				</xs:annotation></xs:element>
 			<xs:element name="note" 								type="charMax240"                	   	   minOccurs="0" maxOccurs="1"/>					
 		</xs:sequence>	
 	</xs:complexType>
@@ -1712,8 +1972,14 @@
 <!-- tipoIdSchedaSoggettoComune -->
 		<xs:complexType name="tipoIdSchedaSoggettoComune">
 			<xs:sequence >
-				<xs:element name="idSchedaSoggettoComuneIstat" type="char6" 		minOccurs="1" maxOccurs="1"/>					
-				<xs:element name="idSchedaSoggetto" 		   type="charMax20" 	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="idSchedaSoggettoComuneIstat" type="char6" 		minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation> codice istat del comune presso cui è registrato il soggetto.</xs:documentation>
+					</xs:annotation></xs:element>					
+				<xs:element name="idSchedaSoggetto" 		   type="charMax20" 	minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>identificativo della scheda soggetto attribuitdo dal comune</xs:documentation>
+					</xs:annotation></xs:element>
 			</xs:sequence>
 		</xs:complexType>
 <!-- Fine tipoIdSchedaSoggettoComune -->
@@ -1733,10 +1999,29 @@
 <!-- tipoLegameSoggetto -->
 	<xs:complexType name="tipoLegameSoggetto">
 		<xs:sequence>
-			<xs:element name="tipoLegame" 			   type="tipoScheda"  				minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataDecorrenza" 		   type="xs:date"       			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="codiceLegame" 		   type="tipoCodiceLegame"  		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="progressivoComponente"   type="numericoMax3"  			minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="tipoLegame" 			   type="tipoScheda"  				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il tipo di legame che lega i componenti della famiglia (tipo scheda):
+3=famiglia
+4=convivemza
+5=famigliaAIRE
+Se non impostato viene considerato 3</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="dataDecorrenza" 		   type="xs:date"       			minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data a partire dalla quale il soggetto appartiene alla famiglia/convivenza</xs:documentation></xs:annotation></xs:element>
+			<xs:element name="codiceLegame" 		   type="tipoCodiceLegame"  		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice il legame del soggetto con la famiglia o con la convivenza.
+Vedi:
+Tabella 5 RELAZIONE DI PARENTELA – SCHEDA FAMIGLIA o
+Tabella 6 LEGAME – SCHEDA CONVIVENZA
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="progressivoComponente"   type="numericoMax3"  			minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indica il progressivo del soggetto tra i componenti della famiglia.</xs:documentation>
+				</xs:annotation></xs:element>		
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoLegameSoggetto -->
@@ -1765,11 +2050,35 @@
 <!-- tipoSentenza -->
 	<xs:complexType name="tipoSentenza">
 		<xs:sequence>
-			<xs:element name="data" 	        type="xs:date" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="numero" 			type="charMax20"    	minOccurs="0" maxOccurs="1"/>
-			<xs:element name="tipoTribunale" 	type="numerico1" 		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="autorita" 		type="charMax120" 		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataValidita" 	type="xs:date" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="data" 	        type="xs:date" 			minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data in cui è stata emessa la sentenza 
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="numero" 			type="charMax20"    	minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il numero della sentenza</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="tipoTribunale" 	type="numerico1" 		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il tipo Autorità Giurisdizionale/amministrativa che ha emesso la sentenza.
+1=Tribunale civile Italiano
+
+2=Sacra Rota
+
+3=Tribunale Estero
+
+9=Non conosciuto
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="autorita" 		type="charMax120" 		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il tribunale che ha emesso la sentenza </xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="dataValidita" 	type="xs:date" 			minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data a partire dalla quale la sentenza è valida.</xs:documentation>
+				</xs:annotation></xs:element>
 			
 		</xs:sequence>
 	</xs:complexType>
@@ -2002,8 +2311,14 @@
 <!-- tipoElencoSoggettiFamiglia -->
 	<xs:complexType name="tipoElencoSoggettiFamiglia">
 	   <xs:sequence>
-		  <xs:element name="soggettoFamiglia"			type="tipoSoggettoFamiglia"   		minOccurs="1" maxOccurs="1"/>
-		  <xs:element name="legameSoggetto" 			type="tipoLegameSoggetto" 	   	minOccurs="1" maxOccurs="1"/>
+		  <xs:element name="soggettoFamiglia"			type="tipoSoggettoFamiglia"   		minOccurs="1" maxOccurs="1">
+		  	<xs:annotation>
+		  		<xs:documentation>Dati relativi al componente della famiglia</xs:documentation>
+		  	</xs:annotation></xs:element>
+		  <xs:element name="legameSoggetto" 			type="tipoLegameSoggetto" 	   	minOccurs="1" maxOccurs="1">
+		  	<xs:annotation>
+		  		<xs:documentation>Dati relativi al legame che intercorre tra il componente (soggettoFamiglia) e l'intestatario della famiglia</xs:documentation>
+		  	</xs:annotation></xs:element>
 	   </xs:sequence>			
 	</xs:complexType>
 <!-- Fine tipoElencoSoggettiFamiglia  -->	
@@ -2011,9 +2326,18 @@
 <!-- tipoSoggettoFamiglia -->
 	<xs:complexType name="tipoSoggettoFamiglia">
 	   	<xs:sequence>
-		  	<xs:element name="generalita" 				type="tipoGeneralita"	 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="legameSoggetto" 		   	type="tipoLegameSoggetto"	 		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="autoveicoli"  			type="tipoAutoveicoli" 					minOccurs="0" maxOccurs="1"/>
+		  	<xs:element name="generalita" 				type="tipoGeneralita"	 			minOccurs="1" maxOccurs="1">
+		  		<xs:annotation>
+		  			<xs:documentation>le generalità del componente della famiglia/convivenza</xs:documentation>
+		  		</xs:annotation></xs:element>
+			<xs:element name="legameSoggetto" 		   	type="tipoLegameSoggetto"	 		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il legame che il soggetto ha all'interno della famiglia</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="autoveicoli"  			type="tipoAutoveicoli" 					minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dati relativi al possesso di autoveicoli/patente.</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>			
 	</xs:complexType>
 <!-- Fine tipoSoggettoFamiglia  -->	
@@ -2071,8 +2395,14 @@
 
 	<xs:complexType name="tipoControllo">
 		<xs:sequence>
-			<xs:element name="codice"	type="alfanumerico2char"   minOccurs="1" maxOccurs="1"/>
-			<xs:element name="valore"	type="charMax50"   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="codice"	type="alfanumerico2char"   minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>il codice del dato di controllo</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="valore"	type="charMax50"   minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>il valore del dato di controllo</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -2317,6 +2647,8 @@
 				type="tipoFamigliaConvivenza" minOccurs="0" maxOccurs="1" />
 			<xs:element name="altriDati" type="tipoAltriDati"
 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="autoveicoli" type="tipoAutoveicoli"
+				minOccurs="0" maxOccurs="1" />				
 			<xs:element name="legameSoggetto" type="tipoLegameSoggetto"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="datiIscrizione" type="tipoDatiIscrizione"

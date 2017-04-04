@@ -8,7 +8,7 @@
 	
 	<wsdl:types> 
 		<xsd:schema targetNamespace="http://sogei.it/ANPR/S001AnprService">    
-			<xsd:import namespace="http://www.sogei.it/ANPR/S001subentro" schemaLocation="S001subentro.xsd" />  
+			<xsd:import namespace="http://www.sogei.it/ANPR/S001subentro" schemaLocation="./S001subentro.xsd" />  
 		</xsd:schema>
 	</wsdl:types>
 	

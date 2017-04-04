@@ -43,7 +43,7 @@
 				</xs:annotation>
 				<xs:element name="testataRichiesta" 	type="anpr:tipoTestataRichiesta" 	 		minOccurs="1" maxOccurs="1" />			
 				<xs:element name="generalita1001" 		type="anpr:tipoGeneralitaIscrizione1001"	minOccurs="1" maxOccurs="1"/>    			
-				<xs:element name="attoNascita" 			type="anpr:tipoAttoNascita"   				minOccurs="1" maxOccurs="1"/>
+				<xs:element name="attoNascita" 			type="anpr:tipoAttoNascita"   				minOccurs="0" maxOccurs="1"/>
 				<xs:element name="cittadinanza" 		type="anpr:tipoCittadinanza" 		 		minOccurs="1" maxOccurs="1"/>			
 				<xs:element name="paternita" 			type="anpr:tipoGenitore" 					minOccurs="0" maxOccurs="1"/> 												
 				<xs:element name="maternita" 			type="anpr:tipoGenitore" 					minOccurs="0" maxOccurs="1"/>
