@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolarioSubentro"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+           targetNamespace="http://sogei.it/ANPR/vocabolarioSubentro" 
+	       elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>	
+
+	<!-- numericoMax9 -->
+	<xs:simpleType name="numericoMax9">
+		<xs:restriction base="tpdt:numerico">
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- tipoDatiDettaglioRisposta -->
+	<xs:complexType name="tipoDatiDettaglioRisposta">
+		<xs:sequence>
+			<xs:element name="nomeFile" 		 type="xs:string" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="descrizioneEsito"  type="xs:string"       minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiDettaglioRisposta -->
+	
+	<!-- USATO IN TUTTI I MSG DI RICHIESTA -->
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRichiesta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->	
+	
+<!-- ################################################################# Inizio usati in 6001 ###########################################################-->
+ 
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori --> 
+ 
+<!-- tipoListaAnomalie -->
+	<xs:complexType name="tipoListaAnomalie">
+		<xs:sequence>
+			<xs:element name="anomalie"	 type="tipoAnomalie" 		minOccurs="0" maxOccurs="unbounded"/>											
+		</xs:sequence>		
+	</xs:complexType>
+<!-- Fine tipoListaAnomalie -->
+
+<!-- tipoAnomalie -->
+	<xs:complexType name="tipoAnomalie">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoErroriAnomalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoAnomalie -->
+	
+	<!-- tipoGeneralitaSubIscr -->
+	<xs:complexType name="tipoGeneralitaSubIscr">
+		<xs:sequence>
+			<xs:element name="codiceFiscale" 						type="tpdt:tipoCodiceFiscale" 				   	minOccurs="0" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="cognome" 		 					type="tpdt:alfabeticoNomiCognomi" 		   	   	/>
+				<xs:element name="senzaCognome" 		 			type="tpdt:tipoSenza"                  		   	/>
+			</xs:choice>
+			<xs:choice>
+				<xs:element name="nome" 		 					type="tpdt:alfabeticoNomiCognomi" 			   	/>
+				<xs:element name="senzaNome" 		 				type="tpdt:tipoSenza"                  		   	/>
+			</xs:choice>
+			<xs:element name="sesso" 		 						type="tpdt:tipoSesso" 			 	   		   	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataNascita" 	     					type="xs:date" 	                  		  		minOccurs="1" maxOccurs="1"/>
+            <xs:element name="senzaGiorno"       					type="tpdt:tipoSenza"                		   	minOccurs="0" maxOccurs="1"/>
+            <xs:element name="senzaGiornoMese"   					type="tpdt:tipoSenza"                		   	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="luogoNascita" 	 					type="tpdt:tipoLuogoEvento" 			        minOccurs="1" maxOccurs="1"/>
+			<xs:element name="soggettoAIRE" 	 					type="tpdt:char1"	 				   		   	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="idSchedaSoggettoComune" 				type="tpdt:tipoIdSchedaSoggettoComune" 		   	minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:numericoMax15"                		   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataPrimaIscrizioneComune"            type="xs:date"                                  minOccurs="0" maxOccurs="1"/>					
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoGeneralitaSubIscr -->
+
+<!-- DATI FORNITURA -->
+	<xs:complexType name="tipoDatiFornitura">
+		<xs:sequence>
+			<xs:element name="versioneFornitura" 					 type="tpdt:numericoMax3"	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="totaleInvii"							 type="tpdt:numericoMax3" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleSchedeSoggetto"			 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleCittadiniItaliani"		 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleIscrittiNonItaliani"   	 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotalePersoneSessoFemminile"	 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotalePersoneSessoMaschile" 	 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleSchedeFamiglia"			 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleSchedeConvivenza"			 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>	
+<!-- Fine FORNITURA -->
+
+<!-- DATI INVIO -->
+	<xs:complexType name="tipoDatiInvio">
+		<xs:sequence>
+			<xs:element name="progressivoInvio" 					 type="tpdt:numericoMax3"	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataEstrazione"						 type="xs:date" 	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroSchedeSoggettoInvio" 	  	 	 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroCittadiniItalianiInvio"		 	 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroIscrittiNonItalianiInvio"		 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroPersoneSessoFemminileInvio"  	 type="numericoMax9"		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroPersoneSessoMaschileInvio"   	 type="numericoMax9"	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleSchedeFamigliaInvio"    	 type="numericoMax9"	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleSchedeConvivenzaInvio"	 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine DATI INVIO -->
+
+<!-- GENERALITA -->
+	<xs:complexType name="tipoGeneralitaSoggetto">
+		<xs:sequence>
+			<xs:element name="generalitaSubIscr"					type="tipoGeneralitaSubIscr"						 	minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="statoCivile"							type="tpdt:tipoStatoCivile" 							minOccurs="0" maxOccurs="1"/>
+			<xs:element name="attributiSoggetto"					type="tpdt:tipoAttributiSoggetto" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataUltimoAggiornamento"				type="xs:date" 										 	minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="motivoIscrizioneAPR"					type="tpdt:tipoMotivoIscrizione" 						minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="attoNascita"							type="tpdt:tipoAtto" 									minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="cittadinanza" 						type="tpdt:tipoCittadinanza" 							minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="paternita" 							type="tpdt:tipoGenitore"   								minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maternita" 							type="tpdt:tipoGenitore"   								minOccurs="0" maxOccurs="1"/>	
+			<xs:element name="residenza"			  				type="tpdt:tipoResidenza" 								minOccurs="0" maxOccurs="1"/> 
+			<xs:element name="famiglia"			  					type="tipoFamConv" 										minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="convivenza"			  				type="tipoFamConv"			 							minOccurs="0" maxOccurs="1"/>
+			<xs:element name="matrimonio"							type="tpdt:tipoMatrimonio" 								minOccurs="0" maxOccurs="1"/>
+			<xs:element name="vedovanza"							type="tpdt:tipoVedovanza" 								minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="separazioneAnnullamentoCessazioneMatrimonio"	type="tpdt:tipoAnnullamentoMatrimonio"		    minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="cartaIdentita"						type="tpdt:tipoCartaIdentita" 							minOccurs="0" maxOccurs="1"/>
+			<xs:element name="permessoSoggiorno"					type="tpdt:tipoPermessoSoggiorno" 						minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="listaElettorale" 						type="tpdt:tipoListaElettorale" 						minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="listaLeva" 							type="tpdt:tipoListaLeva" 								minOccurs="0" maxOccurs="1"/>	
+			<xs:element name="censimento" 							type="tpdt:tipoCensimento" 						  		minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="autoveicoli" 							type="tpdt:tipoAutoveicoli"   							minOccurs="0" maxOccurs="1"/>					
+			<xs:element name="altriDati" 							type="tpdt:tipoAltriDati"			 		  			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="unioneCivile" 						type="tpdt:tipoUnioneCivile"			 		  		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="convivenzaDiFatto" 					type="tpdt:tipoConvivenzaDiFatto"			 		  	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="altraCittadinanza" 					type="tpdt:tipoCittadinanza" 							minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>		
+	</xs:complexType>	
+<!-- Fine GENERALITA -->
+
+<!-- tipoFamiglia -->
+	<xs:complexType name="tipoFamConv">
+		<xs:sequence>
+			<xs:element name="idFamConvComune"  					type="tpdt:charMax20"						minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="legameSoggetto" 						type="tpdt:tipoLegameSoggetto"   	        minOccurs="1" maxOccurs="1"/>				
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoFamiglia -->
+
+	<!-- INDIVIDUI -->
+ 	<xs:complexType name="tipoSoggetti">
+		<xs:sequence>
+			<xs:element name="soggetto" type="tipoGeneralitaSoggetto" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoFamiglieSub">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoFamigliaConvivenza">
+				<xs:sequence>
+					<xs:element name="tipoTutoreIntestatario" type="tpdt:tipoTutoreIntestatario" 	minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+			
+	<!-- FAMIGLIE -->
+	<xs:complexType name="tipoFamiglie">
+		<xs:sequence>
+			<xs:element name="famiglia" type="tipoFamiglieSub" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- CONVIVENZE -->
+	<xs:complexType name="tipoConvivenze">
+		<xs:sequence>
+			<xs:element name="convivenza" type="tipoFamiglieSub" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
