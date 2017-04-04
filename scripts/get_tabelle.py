@@ -89,7 +89,7 @@ def createtoc(rstpath, toclist):
     f = open(rstpath + "/toc.rst", "w")
     print >>f, ".. toctree::"
     print >>f, "    :maxdepth: 2"
-    print >>f, "    :caption: Contents"
+    print >>f, "    :caption: Contenuti"
     print >>f
 
     toclist.sort()

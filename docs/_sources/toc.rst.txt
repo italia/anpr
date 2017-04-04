@@ -1,6 +1,6 @@
 .. toctree::
     :maxdepth: 2
-    :caption: Contents
+    :caption: Contenuti
 
     tab_aggiornamenti_alla_documentazione_tecnica
     tab_elenco_dei_web_services_disponibili
