@@ -1,0 +1,10 @@
+Elenco servizi da utilizzare
+==================================================
+
+:Aggiornamento: 20 gennaio 2017
+
+.. exceltable:: Table caption
+  :file: https://www.anpr.interno.it/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx
+  :header: 1
+  :selection: A1:B3
+  

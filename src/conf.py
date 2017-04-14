@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
+    #'sphinxcontrib.exceltable',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

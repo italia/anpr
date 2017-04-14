@@ -4,7 +4,7 @@ import codecs
 from openpyxl import load_workbook
 from os import listdir
 
-def convertXlsxToRst(infn,f):
+def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
     wb = load_workbook(infn)
 
     # grab the active worksheet
@@ -27,47 +27,51 @@ def convertXlsxToRst(infn,f):
         rows.append(cells)
 
 
-    headers = rows[0]
-    ncol = len(rows[0])
-    ncol =2
-    # Compute filed with maximum width, to format the table correctly
+
+    headers = rows[startFromRow]
+    print "headers" , headers
+    firstHeader = 0
+    for i,r in enumerate(headers):
+        if(len(r)>0):
+            break
+        firstHeader = firstHeader+1
+
+    idSize= 20
+    descSize = 600
     width = 0
     for row in rows:
-        width = max(width, max([len(c) for c in row])+10)
+        idSize = max(idSize, len(row[firstHeader]))
+        descSize = max(descSize, max([len(c) for c in row])+10)
 
-    fmt = " ".join(["%-" + str(width) + "s"] * ncol)
-    '''
-+--------+--------------------+
-| Header | Header with 2 cols |
-+========+========+===========+
-''''
-    #fmt = "%-50s %-200s"
-    print fmt
-    idSize= 20
-    descSize = 400
+
     row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
-    print >>f row_separator
-    print >>f '|{:^'+str(idSize)'}|{^'+str(descSize)+'}|'.format("id","descrizione")
-    print >>f '+{}+{}+'.format("="*idSize, "="*descSize)
+    fmt_row = u'|{:'+str(idSize)+'}|{:'+str(descSize)+'}|';
 
-    print >>f, fmt % (("="*width,)*ncol)
-    print >>f, fmt % tuple(("ID","Descrizione"))
-    print >>f, fmt % (("="*width,)*ncol)
-    for row in rows[1:]:
+
+    print >>f, row_separator
+    print >>f, fmt_row.format(headers[firstHeader],headers[firstHeader+1])
+    print >>f, '+{}+{}+'.format("="*idSize, "="*descSize)
+
+    firstDataRow  = startFromRow+1
+    for row in rows[firstDataRow:]:
+        if not row[firstDataRow]:
+            continue
+
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
-        #is_empy
-        row_adjusted = (row[0], row[1])
-        print >>f '|{:^'+str(idSize)'}|{^'+str(descSize)+'}|'.format(row[0],row[1])
 
-        for other_row in row[1::]:
-            print >>f '|{:^'+str(idSize)'}|{^'+str(descSize)+'}|'.format("",other_row)
+        print >>f,fmt_row.format(row[firstHeader],row[firstHeader+1])
+
+        for i, other_row in enumerate(row[firstHeader+2::]):
+            if i ==0 :
+                print >>f, fmt_row.format(" ",  " ")
+
+            if len(other_row)>0:
+                key = ""+headers[firstHeader+2+i]+ ": " if headers[firstHeader+2+i]   else  ""
+                print >>f, fmt_row.format("",  "  - "+key+  other_row)
 
 
-        #print >>f, fmt % tuple(row_adjusted)
-        print >>f row_separator
-
-    print >>f '+{}+{}+'.format("-"*idSize, "-"*descSize)
+        print >>f, row_separator
 
 def getXlsxFiles(path_to_dir, suffix=".xlsx" ):
     filenames = listdir(path_to_dir)

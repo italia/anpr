@@ -4,7 +4,7 @@ import codecs
 from openpyxl import load_workbook
 from os import listdir
 
-def convertXlsxToRst(infn,f):
+def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
     wb = load_workbook(infn)
 
     # grab the active worksheet
@@ -22,61 +22,69 @@ def convertXlsxToRst(infn,f):
                     value = unicode(description,"utf-8")
             else:
                 value = unicode(description)
-            # value = value.encode("utf-8")
+
             cells.append(value)
         rows.append(cells)
 
 
-    #headers = rows[0]
-    #ncol = len(rows[0])
-    ncol =2
-    # Compute filed with maximum width, to format the table correctly
 
-
-    #fmt = "%-50s %-200s"
-    #print fmt
-
-    headers = rows[0]
+    headers = rows[startFromRow]
+    print "headers", headers
     firstHeader = 0
     for i,r in enumerate(headers):
         if(len(r)>0):
             break
         firstHeader = firstHeader+1
 
-    idSize= 10
-    descSize = 600
-    width = 0
+    print "firsHeader",firstHeader
+    size  = [10]* ncol
+    maxCol = 400
+
+
+    maxHeader = max([(len(u''+x),x) for x in headers])
+    print "maxHeader", maxHeader
     for row in rows:
-        idSize = max(idSize, len(row[firstHeader]))
-        descSize = max(descSize, max([len(c) for c in row])+10)
+        for i in range((ncol-1),len(headers)):
+            print "row", row
+            lenRow_i = len(u''+row[i])
+            print "i row len ",i, row[i], lenRow_i
+            size[i]=max(size[i], lenRow_i)
+            maxCol=max(maxCol, (lenRow_i+maxHeader[0]+20))
 
 
-    row_separator = '+{}+{}+'.format("-"*idSize, "-"*descSize)
-    fmt_row = u'|{:'+str(idSize)+'}|{:'+str(descSize)+'}|';
 
+    print "maxCol:", maxCol
+    size[ncol-1] = maxCol
+    row_separator=('+'+'{:}+'*ncol).format(*[x*"-" for x in size]);
+
+    fmt_row = u'|'+ '|'.join(["{:"+str(x)+"}" for x in size])+"|"
 
     print >>f, row_separator
-    print >>f, fmt_row.format(headers[firstHeader],headers[firstHeader+1])
-    print >>f, '+{}+{}+'.format("="*idSize, "="*descSize)
+    v= headers[:ncol]
 
+    print >>f, fmt_row.format(*v)
+    print >>f, ('+'+'{:}+'*ncol).format(*[x*"=" for x in size]);
 
-    for row in rows[1:]:
-        if not row[0]:
+    firstDataRow  = startFromRow+1
+    for row in rows[firstDataRow:]:
+        if not row[firstDataRow]:
             continue
 
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
 
-        print >>f,fmt_row.format(row[firstHeader],row[firstHeader+1])
 
-        for i, other_row in enumerate(row[firstHeader+2::]):
+        print "fmt_row", fmt_row, row,firstHeader, ncol,  row[firstHeader:(firstHeader+ncol)]
+        print >>f,fmt_row.format(*row[firstHeader:(firstHeader+ncol)])
+
+        for i, other_row in enumerate(row[firstHeader+ncol::]):
             if i ==0 :
-                print >>f, fmt_row.format(" ",  " ")
+                print >>f, fmt_row.format(*(['']*ncol))
 
-            if other_row:
-                key = ""+headers[firstHeader+2+i]+ ": " if headers[firstHeader+2+i]   else  ""
-                print >>f, fmt_row.format("",  "  - "+key+  other_row)
-
+            if len(other_row)>0:
+                key = ""+headers[firstHeader+ncol+i]+ ": " if headers[firstHeader+ncol+i]   else  ""
+                v = [""]*(ncol-1) +["  - "+key+  other_row]
+                print >>f, fmt_row.format(*v)
 
         print >>f, row_separator
 
