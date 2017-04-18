@@ -35,7 +35,11 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
     files_array =[]
     for tr in allTrWithTh:
         tds = tr.getchildren()
-        xls_url = Anpr.domain()+ tds[1].getchildren()[0].get("href")
+        href_url = tds[1].getchildren()[0].get("href")
+        xls_url = href_url
+        if(Anpr.domain() not in href_url):
+            xls_url = Anpr.domain()+ href_url
+
         title = tds[1].getchildren()[0].text
 
         files_array.append(Table(tds[0].text,xls_url,tds[2].text,title,tds[3].text,tds[4].text))
@@ -129,13 +133,14 @@ if __name__ == "__main__":
     rstpath = sys.argv[2]
     toclist = []
 
-    '''
+
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
+    '''
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
         title="Utilizzo del WebService", date="1 Marzo 2017",
-    ),False,3,3))
-
+    ),False,4,3))
+    '''
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_29_03_2017.xlsx/910657e9-bc87-4f5b-9b2b-2d370d6d826f",
         title="Aggiornamenti alla documentazione tecnica", date="29 Marzo 2017",
@@ -146,14 +151,14 @@ if __name__ == "__main__":
         title="Elenco dei web services disponibili", date="17 dicembre 2017",
     ),False))
 
-    '''
+
 
     toclist.append(createRstFromXlsx(Table(
         id=300, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
         title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
-    ),False))
+    ),False,0,3))
 
-    '''
+
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578",
         title="Elenco Errori ANPR", date="17 Marzo 2017",
@@ -162,7 +167,5 @@ if __name__ == "__main__":
         id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
         title="Errori Agenzia Entrate",
     ),False))
-
-    '''
 
     createtoc("../src/", toclist)

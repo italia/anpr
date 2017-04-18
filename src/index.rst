@@ -12,9 +12,16 @@ Questa pagina intende raccogliere la documentazione di tipo tecnico:
 
 - tabelle di riferimento
 - documentazioni servizi
-- Specifiche di interfaccia dei servizi di ANPR per i comuni - `documentazione tecnica (pdf)`__
 
-.. __: https://anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+WS17022017.rar/1a781c1a-cfb7-41e1-bb21-483616055478
+
+
+**Specifiche Tecniche**
+
+  - `Specifiche generali di interfaccia [PDF] (aggiornate al 7 Aprile 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_07_04_2017.pdf/7d5cfb44-6d06-4ec4-8aee-5d75b1aece67>`_
+     Documento esteso di specifiche tecniche, inclusi la configurazione di sicurezza (SAML) dei servizi, la struttura dei messaggi, l'integrazione con Agenzia delle Entrate.
+
+  - `Specifiche di accesso per i Web Services [RAR] (aggiornate al 7 Aprile 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+07042017.rar/def12c55-dccc-417a-8b82-21851e1d505f>`_
+     Specifiche dei singoli Web Services
 
 
 Indice e tabelle

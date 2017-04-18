@@ -1,1 +1,0 @@
-../_posts/2017-03-06-tab_tipo_soggiorno.html.md

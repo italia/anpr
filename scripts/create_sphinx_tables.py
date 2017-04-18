@@ -29,26 +29,23 @@ def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
 
 
     headers = rows[startFromRow]
-    print "headers", headers
     firstHeader = 0
     for i,r in enumerate(headers):
         if(len(r)>0):
             break
         firstHeader = firstHeader+1
 
-    print "firsHeader",firstHeader
-    size  = [10]* ncol
+    size  = [200]* ncol
     maxCol = 400
 
 
     maxHeader = max([(len(u''+x),x) for x in headers])
-    print "maxHeader", maxHeader
+
     for row in rows:
-        for i in range((ncol-1),len(headers)):
-            print "row", row
+        for i in range((ncol-1),len(headers)-1):
+
             lenRow_i = len(u''+row[i])
-            print "i row len ",i, row[i], lenRow_i
-            size[i]=max(size[i], lenRow_i)
+
             maxCol=max(maxCol, (lenRow_i+maxHeader[0]+20))
 
 
@@ -74,7 +71,7 @@ def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
                 row[i] = v.replace("\n", " ")
 
 
-        print "fmt_row", fmt_row, row,firstHeader, ncol,  row[firstHeader:(firstHeader+ncol)]
+        #print "fmt_row", fmt_row, row,firstHeader, ncol,  row[firstHeader:(firstHeader+ncol)]
         print >>f,fmt_row.format(*row[firstHeader:(firstHeader+ncol)])
 
         for i, other_row in enumerate(row[firstHeader+ncol::]):

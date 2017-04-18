@@ -1,1 +1,0 @@
-../_posts/2017-03-06-tab_titolo_di_studio.html.md

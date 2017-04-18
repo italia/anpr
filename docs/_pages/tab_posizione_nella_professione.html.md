@@ -1,1 +1,0 @@
-../_posts/2017-03-06-tab_posizione_nella_professione.html.md
