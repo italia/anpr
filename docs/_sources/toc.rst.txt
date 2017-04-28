@@ -7,6 +7,7 @@
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
     tab_elenco_delle_funzionalita__disponibili
+    tab_tabella_03___comuni
     tab_stato_civile
     tab_stati_esteri
     tab_relazione_di_parentela___famiglia

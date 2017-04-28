@@ -1,7 +1,7 @@
 Elenco Errori ANPR
 ==================
 
-:Aggiornamento: 17 Marzo 2017
+:Aggiornamento: 27 Aprile 2017
 
 `Download <https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578>`_
 
