@@ -4,7 +4,7 @@ import codecs
 from openpyxl import load_workbook
 from os import listdir
 
-def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
+def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers = []):
     wb = load_workbook(infn)
 
     # grab the active worksheet
@@ -27,11 +27,14 @@ def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
         rows.append(cells)
 
 
-
-    headers = rows[startFromRow]
+    if ( not custom_headers ):
+        headers = rows[startFromRow]
+    else:
+        headers = custom_headers
+    print "headers", headers
     firstHeader = 0
     for i,r in enumerate(headers):
-        if(len(r)>0):
+        if(len(r)>0 ):
             break
         firstHeader = firstHeader+1
 
@@ -63,15 +66,26 @@ def convertXlsxToRst(infn,f, startFromRow=0,ncol =2):
     print >>f, ('+'+'{:}+'*ncol).format(*[x*"=" for x in size]);
 
     firstDataRow  = startFromRow+1
-    for row in rows[firstDataRow:]:
-        if not row[firstDataRow]:
-            continue
 
+    selected_rows = rows[firstDataRow:endRow]
+    if(endRow < 2000):
+        print "row",selected_rows
+
+
+    for row in selected_rows:
+        if(endRow < 2000):
+            print "row_to_print", row
+
+
+        '''if not row[firstDataRow]:
+            print "not first data"
+            continue
+        '''    
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
 
 
-        #print "fmt_row", fmt_row, row,firstHeader, ncol,  row[firstHeader:(firstHeader+ncol)]
+        #print "row ", i, row, len(row)
         print >>f,fmt_row.format(*row[firstHeader:(firstHeader+ncol)])
 
         for i, other_row in enumerate(row[firstHeader+ncol::]):

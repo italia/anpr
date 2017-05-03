@@ -33,7 +33,7 @@
 	 
 
 	<!-- servizio 1001 -->
-	<xs:element name="Richiesta1001">      
+	  <xs:element name="Richiesta1001">      
 		<xs:complexType>    
 			<xs:sequence>
 				<xs:annotation>

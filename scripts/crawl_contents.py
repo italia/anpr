@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 from lxml import html
 import requests
 import re
@@ -56,7 +58,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
     return toclist
 
 
-def createRstFromXlsx(data, table=True, startFromRow=0, nCols=2):
+def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, headers=[]):
     xlsx_name, rst_name = wGetAndRename(xlsxpath,rstpath,data.url,data.title,"tab")
     if xlsx_name == "":
         return
@@ -81,7 +83,7 @@ def createRstFromXlsx(data, table=True, startFromRow=0, nCols=2):
     print >>f
     print os.path.getsize(xlsx_name);
     if (os.path.getsize(xlsx_name)<1000000):
-        create_sphinx_tables.convertXlsxToRst(xlsx_name, f, startFromRow, nCols)
+        create_sphinx_tables.convertXlsxToRst(xlsx_name, f, startFromRow,endRow,nCols,headers)
     f.close()
 
     return (data.id, os.path.splitext(os.path.basename(rst_name))[0])
@@ -135,13 +137,12 @@ if __name__ == "__main__":
 
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
-    '''
+
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
         title="Utilizzo del WebService", date="1 Marzo 2017",
-    ),False,4,3))
+    ),False,4,25,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
-    '''
 
 
 
@@ -151,22 +152,24 @@ if __name__ == "__main__":
         title="Aggiornamenti alla documentazione tecnica", date="29 Marzo 2017",
     ),False))
 
-
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
+        id=5, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
         title="Elenco dei web services disponibili", date="17 dicembre 2017",
     ),False))
 
     toclist.append(createRstFromXlsx(Table(
         id=3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
         title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
-    ),False,0,3))
+    ),False,0,2000,3))
+
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170301.xlsx/1e54c0fd-b77b-4980-9374-af6f05111578",
+        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170427.xlsx/a2c8308c-ae86-4a6f-bec8-56387421d244",
         title="Elenco Errori ANPR", date="27 Aprile 2017",
-    ),False))
+    ),False,1,2000,3, ['Data Aggiornamento', 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Operazioni di Registrazione - Severità" ,"Operazioni di Registrazione: Note" ]))
+
+
     toclist.append(createRstFromXlsx(Table(
         id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
         title="Errori Agenzia Entrate", date="27 Aprile 2017",
