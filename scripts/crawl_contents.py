@@ -33,8 +33,11 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
     tree = html.fromstring(page.content)
 
     xpath_expr = "//tr[td//a[contains(@href,'.xlsx')]]"
+    #xpath_expr = "//table[tr[td//a[contains(@href,'.xlsx')]]]"
+
     allTrWithTh = tree.xpath(xpath_expr)
     files_array =[]
+
     for tr in allTrWithTh:
         tds = tr.getchildren()
         href_url = tds[1].getchildren()[0].get("href")
