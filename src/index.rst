@@ -17,10 +17,10 @@ Questa pagina intende raccogliere la documentazione di tipo tecnico:
 
 **Specifiche Tecniche**
 
-  - `Specifiche generali di interfaccia [PDF] (aggiornate al 7 Aprile 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_07_04_2017.pdf/7d5cfb44-6d06-4ec4-8aee-5d75b1aece67>`_
+  - `Specifiche generali di interfaccia [PDF] (aggiornate al 11 Maggio 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_11_05_2017.pdf/79483b7f-5dcd-47ce-9583-ecdd5e52a1a9>`_
      Documento esteso di specifiche tecniche, inclusi la configurazione di sicurezza (SAML) dei servizi, la struttura dei messaggi, l'integrazione con Agenzia delle Entrate.
 
-  - `Specifiche di accesso per i Web Services [RAR] (aggiornate al 7 Aprile 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+07042017.rar/def12c55-dccc-417a-8b82-21851e1d505f>`_
+  - `Specifiche di accesso per i Web Services [RAR] (aggiornate al 11 Maggio 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+11052017.rar/67e65cb8-b769-46a5-bdf7-708486e55e91>`_
      Specifiche dei singoli Web Services
 
 

@@ -80,7 +80,7 @@ def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers
         '''if not row[firstDataRow]:
             print "not first data"
             continue
-        '''    
+        '''
         for i,v in enumerate(row):
                 row[i] = v.replace("\n", " ")
 
@@ -109,13 +109,12 @@ if __name__ == "__main__":
         quit()
     xlxs_folder =sys.argv[1]
     xlsx= getXlsxFiles(xlxs_folder)
-    print xlsx
+    
     for xls in xlsx:
         file_name = (xls[0:-5]).lower()
-        print file_name
+
         section=file_name[:(file_name.index("_"))]
         title =  (file_name[(file_name.index("_")+1)::]).replace("_"," ").title()
-        print "Title: "  + title
 
         f = codecs.open(sys.argv[2]+file_name+".rst", "w", "utf-8")
         convertXlsxToRst(xlxs_folder+xls, f)

@@ -58,7 +58,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
     return toclist
 
 
-def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, headers=[]):
+def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, headers=[], legend=""):
     xlsx_name, rst_name = wGetAndRename(xlsxpath,rstpath,data.url,data.title,"tab")
     if xlsx_name == "":
         return
@@ -78,6 +78,9 @@ def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, he
     if data.note.strip():
         print >>f, ":Note: %s" % data.note
 
+    if legend:
+        print >>f
+        print >>f, ".. note:: %s" %legend
     print >>f
     print >>f, "`Download <%s>`_" % data.url
     print >>f
@@ -138,46 +141,47 @@ if __name__ == "__main__":
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
 
+
+    toclist.append(createRstFromXlsx(Table(
+        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_11_05_2017.xlsx/8bf91645-f248-4e2d-a40a-e263ccc9d929",
+        title="Aggiornamenti alla documentazione tecnica", date="11 Maggio 2017",
+    ),False))
+
+
     toclist.append(createRstFromXlsx(Table(
         id=0, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
         title="Utilizzo del WebService", date="1 Marzo 2017",
-    ),False,4,25,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
-
-
+    ),False,4,37,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_29_03_2017.xlsx/910657e9-bc87-4f5b-9b2b-2d370d6d826f",
-        title="Aggiornamenti alla documentazione tecnica", date="29 Marzo 2017",
-    ),False))
-
-    toclist.append(createRstFromXlsx(Table(
-        id=5, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
+        id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
         title="Elenco dei web services disponibili", date="17 dicembre 2017",
     ),False))
 
     toclist.append(createRstFromXlsx(Table(
-        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
+        id=2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
         title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
     ),False,0,2000,3))
 
 
+    toclist.append(createRstFromXlsx(Table(
+        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_11_05_2017.xlsx/877a3673-6318-4d09-a089-11d1d33b7942",
+        title="Elenco Errori ANPR", date="11 Maggio 2017",
+    ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" ], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
+
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_20170427.xlsx/a2c8308c-ae86-4a6f-bec8-56387421d244",
-        title="Elenco Errori ANPR", date="27 Aprile 2017",
-    ),False,1,2000,3, ['Data Aggiornamento', 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Operazioni di Registrazione - Severità" ,"Operazioni di Registrazione: Note" ]))
-
-
-    toclist.append(createRstFromXlsx(Table(
-        id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044",
+        id=4, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
         title="Errori Agenzia Entrate", date="27 Aprile 2017",
-    ),False))
+    ),False,nCols=3))
 
     toclist.append(createRstFromXlsx(Table(
-        id=4, url=Anpr.domain()+"/portale/documents/20182/26001/tabella+3+archivio+comuni+20170413/43d8e1f4-bb22-4aaa-a74a-1e83c334dc6b",
+        id=5, url=Anpr.domain()+"/portale/documents/20182/26001/tabella+3+archivio+comuni+20170413/43d8e1f4-bb22-4aaa-a74a-1e83c334dc6b",
         title="Tabella 03 - Comuni", source="Istat-Agenzia delle Entrate-Ministero dell'Interno", date="13 Aprile 2017",note="Variazioni dovute a operazioni di fusione e/o accorpamento di comuni"
     ),False))
+
+
 
     createtoc("../src/", toclist)

@@ -3,12 +3,12 @@
     :caption: Contenuti
 
     tab_aggiornamenti_alla_documentazione_tecnica
-    tab_elenco_errori_anpr
     tab_utilizzo_del_webservice
-    tab_errori_agenzia_entrate
-    tab_elenco_delle_funzionalita__disponibili
-    tab_tabella_03___comuni
     tab_elenco_dei_web_services_disponibili
+    tab_elenco_delle_funzionalita__disponibili
+    tab_elenco_errori_anpr
+    tab_errori_agenzia_entrate
+    tab_tabella_03___comuni
     tab_stato_civile
     tab_stati_esteri
     tab_relazione_di_parentela___famiglia

@@ -15,8 +15,8 @@
     <link rel="index" title="Indice" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
     <link rel="top" title="ANPR  documentazione" href="index.html" />
-    <link rel="next" title="Elenco delle funzionalita’ disponibili" href="tab_elenco_delle_funzionalita__disponibili.html" />
-    <link rel="prev" title="Utilizzo del WebService" href="tab_utilizzo_del_webservice.html" />  
+    <link rel="next" title="Tabella 03 - Comuni" href="tab_tabella_03___comuni.html" />
+    <link rel="prev" title="Elenco Errori ANPR" href="tab_elenco_errori_anpr.html" />  
     <script src="_static/js/modernizr.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
 
@@ -74,12 +74,12 @@
                           <p class="caption"><span class="caption-text">Contenuti</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tab_aggiornamenti_alla_documentazione_tecnica.html">Aggiornamenti alla documentazione tecnica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tab_elenco_errori_anpr.html">Elenco Errori ANPR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab_utilizzo_del_webservice.html">Utilizzo del WebService</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Errori Agenzia Entrate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tab_elenco_delle_funzionalita__disponibili.html">Elenco delle funzionalita&#8217; disponibili</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tab_tabella_03___comuni.html">Tabella 03 - Comuni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab_elenco_dei_web_services_disponibili.html">Elenco dei web services disponibili</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab_elenco_delle_funzionalita__disponibili.html">Elenco delle funzionalita&#8217; disponibili</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab_elenco_errori_anpr.html">Elenco Errori ANPR</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Errori Agenzia Entrate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab_tabella_03___comuni.html">Tabella 03 - Comuni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab_stato_civile.html">Tabella 01 - Stato civile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab_stati_esteri.html">Tabella 02 - Stati Esteri</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab_relazione_di_parentela___famiglia.html">Tabella 05 - Relazione di parentela - Famiglia</a></li>
@@ -185,176 +185,199 @@
 </tr>
 </tbody>
 </table>
-<p><a class="reference external" href="https://www.anpr.interno.it/portale/documents/20182/26001/Allegato+9+-+Esiti+AE.xlsx/05d05160-20e5-4afc-9ba9-07fde16c8044">Download</a></p>
+<p><a class="reference external" href="https://www.anpr.interno.it/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6">Download</a></p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="33%" />
-<col width="67%" />
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Codice di errore</th>
+<tr class="row-odd"><th class="head">Tipo Operazione</th>
+<th class="head">Codice</th>
 <th class="head">Descrizione</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>EAA00</td>
-<td>Codice fiscale attribuito</td>
+<tr class="row-even"><td>Attribuzione</td>
+<td>EAA10</td>
+<td>Codice fiscale &#64; già presente in AT, con dati anagrafici uguali ed indirizzo simile</td>
 </tr>
-<tr class="row-odd"><td>EAA10</td>
-<td>Codice fiscale già presente in AT, con dati anagrafici uguali ed indirizzo simile</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAA30</td>
+<td>Codice fiscale individuato in AT con dati anagrafici diversi o indirizzo diverso</td>
 </tr>
-<tr class="row-even"><td>EAA30</td>
-<td>Codice fiscale individuato in AT con dati anagrafici diversi o indirizzo diverso, forniti CF individuati</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAA40</td>
+<td>Codice fiscale individuato in AT come collegato. Utilizzare il CF &#64;</td>
 </tr>
-<tr class="row-odd"><td>EAA40</td>
-<td>Codice fiscale individuato in AT come collegato</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAA50</td>
+<td>Codice fiscale individuato in AT come base di omocodice</td>
 </tr>
-<tr class="row-even"><td>EAA50</td>
-<td>Codice fiscale individuato in AT come collegato</td>
-</tr>
-<tr class="row-odd"><td>EAC00</td>
-<td>Codice Fiscale annullato</td>
-</tr>
-<tr class="row-even"><td>EAC12</td>
-<td>Soggetto non individuato in AT -  Codice fiscale NON annullato</td>
-</tr>
-<tr class="row-odd"><td>EAC13</td>
-<td>Soggetto individuato in AT - residente in altro comune -  Codice fiscale NON annullato</td>
-</tr>
-<tr class="row-even"><td>EAC14</td>
-<td>Soggetto individuato in AT - residente nello stesso comune - Codice fiscale già presente in altre banche dati -  Codice fiscale NON annullato</td>
-</tr>
-<tr class="row-odd"><td>EAC80</td>
-<td>Soggetto individuato in AT : CF Falso o di soggetto adottato</td>
-</tr>
-<tr class="row-even"><td>EAI20</td>
-<td>Codice fiscale presente in AT</td>
-</tr>
-<tr class="row-odd"><td>EAI23</td>
+<tr class="row-even"><td>Interrogazione</td>
+<td>EAI22</td>
 <td>Codice fiscale presente in AT , il CF ATTRIBUITO IN AT non è congruente</td>
 </tr>
-<tr class="row-even"><td>EAI40</td>
-<td>Codice fiscale presente in AT  come collegato</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAI20</td>
+<td>Codice fiscale presente in AT</td>
 </tr>
-<tr class="row-odd"><td>EAI44</td>
-<td>Codice fiscale presente in AT  come collegato</td>
-</tr>
-<tr class="row-even"><td>EAI48</td>
-<td>Codice fiscale presente in AT  come collegato</td>
-</tr>
-<tr class="row-odd"><td>EAI49</td>
-<td>Codice fiscale presente in AT  come collegato</td>
-</tr>
-<tr class="row-even"><td>EAI50</td>
-<td>Codice fiscale presente in AT  come base di omocodice</td>
-</tr>
-<tr class="row-odd"><td>EAI59</td>
-<td>Codice fiscale presente in AT  come base di omocodice</td>
-</tr>
-<tr class="row-even"><td>EAI80</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAI80</td>
 <td>Codice fiscale presente in AT ma non utilizzabile</td>
 </tr>
-<tr class="row-odd"><td>EAI89</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAI40</td>
+<td>Codice fiscale presente in AT  come collegato</td>
 </tr>
-<tr class="row-even"><td>EAI90</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAI59</td>
+<td>Codice fiscale presente in AT  come base di omocodice</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAI90</td>
 <td>Codice Fiscale non trovato</td>
 </tr>
-<tr class="row-odd"><td>EAV20</td>
-<td>Soggetto già censito in Agenzia Entrate</td>
+<tr class="row-even"><td>Allineamento</td>
+<td>EAL12</td>
+<td>Codice fiscale presente in AT ma non utilizzabile</td>
 </tr>
-<tr class="row-even"><td>EAV21</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAL92</td>
+<td>Richiesta incongruente - soggetto validato in Agenzia Entrate</td>
+</tr>
+<tr class="row-even"><td>Variazione dati anagrafici</td>
+<td>EAM47</td>
+<td>Soggetto individuato in AT con CF non utilizzabile</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM91</td>
+<td>Richiesta incongruente - soggetto NON marcato ANPR</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAM93</td>
+<td>Variazione non consentita per superamento numero campi variati</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM94</td>
+<td>Richiesta incongruente - nessun campo variato</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAM95</td>
+<td>Variazione non consentita, soggetto registrato in AT ANPR di altro comune</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM9C</td>
+<td>TIPO VARIAZIONE RICHIESTA INCONGRUENTE CON SITUAZIONE PRESENTE IN AT - individuate due posizioni in AT non unificabili</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAM12</td>
+<td>Soggetto non individuato in AT -  Codice fiscale NON variato</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM13</td>
+<td>Soggetto individuato in AT - in lavorazione per risoluzione omocodia -  Codice fiscale NON variato</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAM15</td>
+<td>Soggetto individuato in AT già in trattamento - operazione non effettuabile in data odierna</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM21</td>
+<td>Soggetto individuato in AT - ma errata indicazione del codice fiscale comune</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAM28</td>
+<td>Altri soggetti individuati in AT dai NUOVI dati anagrafici, richiesta di variazione dati non effettuabile</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAM80</td>
+<td>Soggetto individuato in AT con CF non utilizzabile</td>
+</tr>
+<tr class="row-even"><td>Rettifica dati AE</td>
+<td>EAR13</td>
+<td>Soggetto non rettificabile perchè in lavorazione per risoluzione omocodia</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAR97</td>
+<td>Soggetto non rettificabile</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAR15</td>
+<td>Soggetto non rettificabile perchè già in lavorazione</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAR21</td>
+<td>Soggetto non rettificabile per errata indicazione del comune</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAR29</td>
+<td>Soggetto non rettificabile</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAR80</td>
+<td>Codice fiscale presente in AT ma non utilizzabile</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAR92</td>
+<td>Richiesta incongruente - soggetto validato in Agenzia Entrate</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAR93</td>
+<td>Rettifica non consentita per superamento numero campi variati</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAR94</td>
+<td>Richiesta incongruente - nessun campo variato</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAR95</td>
+<td>CF già rettificato</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>EAR12</td>
+<td>Soggetto non individuato in AT</td>
+</tr>
+<tr class="row-odd"><td>Validazione CF</td>
+<td>EAV21</td>
 <td>Dati anagrafici incongruenti con CF</td>
 </tr>
-<tr class="row-odd"><td>EAV22</td>
-<td>Dati anagrafici incongruenti con CF</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAV80</td>
+<td>Codice fiscale presente in AT ma non utilizzabile</td>
 </tr>
-<tr class="row-even"><td>EAV23</td>
-<td>Dati anagrafici incongruenti con CF</td>
-</tr>
-<tr class="row-odd"><td>EAV24</td>
-<td>Dati anagrafici incongruenti con CF</td>
-</tr>
-<tr class="row-even"><td>EAV30</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAV30</td>
 <td>CF presente ma dati anagrafici non congruenti</td>
 </tr>
-<tr class="row-odd"><td>EAV31</td>
-<td>CF presente ma dati anagrafici non congruenti</td>
-</tr>
-<tr class="row-even"><td>EAV32</td>
-<td>CF presente ma dati anagrafici non congruenti</td>
-</tr>
-<tr class="row-odd"><td>EAV33</td>
-<td>CF presente ma dati anagrafici non congruenti</td>
-</tr>
-<tr class="row-even"><td>EAV34</td>
-<td>CF presente ma dati anagrafici non congruenti</td>
-</tr>
-<tr class="row-odd"><td>EAV40</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAV40</td>
 <td>Codice fiscale individuato in AT come collegato, il CF fornito è congruente</td>
 </tr>
-<tr class="row-even"><td>EAV41</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAV41</td>
 <td>Codice fiscale individuato in AT come collegato, il CF fornito NON è congruente</td>
 </tr>
-<tr class="row-odd"><td>EAV42</td>
-<td>Codice fiscale individuato in AT come collegato, il CF fornito è congruente</td>
-</tr>
-<tr class="row-even"><td>EAV43</td>
-<td>Codice fiscale individuato in AT come collegato, il CF fornito NON è congruente</td>
-</tr>
-<tr class="row-odd"><td>EAV44</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAV44</td>
 <td>Codice fiscale presente in AT ma non utilizzabile</td>
 </tr>
-<tr class="row-even"><td>EAV45</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV46</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV47</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV50</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>EAV50</td>
 <td>Più codici fiscali individuati in AT</td>
 </tr>
-<tr class="row-even"><td>EAV51</td>
-<td>Più codici fiscali individuati in AT</td>
-</tr>
-<tr class="row-odd"><td>EAV80</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV81</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV82</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV83</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV84</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV85</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV86</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV87</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-odd"><td>EAV88</td>
-<td>Codice fiscale presente in AT ma non utilizzabile</td>
-</tr>
-<tr class="row-even"><td>EAV91</td>
+<tr class="row-even"><td>&#160;</td>
+<td>EAV91</td>
 <td>Soggetto non presente in Agenzia Entrate</td>
 </tr>
-<tr class="row-odd"><td>EAV92</td>
-<td>&#8220;Richiesta incongruente - soggetto validato&#8221;</td>
+<tr class="row-odd"><td>Errore generico</td>
+<td>AEE97</td>
+<td>Operazione non effettuabile</td>
 </tr>
-<tr class="row-even"><td>EE999</td>
-<td>Servizio Agenzia Entrate momentaneamente non disponibile</td>
+<tr class="row-even"><td>&#160;</td>
+<td>AEE96</td>
+<td>Operazione non effettuabile</td>
 </tr>
 </tbody>
 </table>
@@ -370,10 +393,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tab_elenco_delle_funzionalita__disponibili.html" class="btn float-right" title="Elenco delle funzionalita’ disponibili" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tab_tabella_03___comuni.html" class="btn float-right" title="Tabella 03 - Comuni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tab_utilizzo_del_webservice.html" class="btn" title="Utilizzo del WebService" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tab_elenco_errori_anpr.html" class="btn" title="Elenco Errori ANPR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -383,7 +406,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Team per la Trasformazione Digitale.
-      Ultimo aggiornamento 03/05/2017.
+      Ultimo aggiornamento 12/05/2017.
 
     </p>
   </div>
