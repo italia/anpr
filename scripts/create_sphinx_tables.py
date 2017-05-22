@@ -1,8 +1,28 @@
 import sys
 import os
 import codecs
+import xlrd
 from openpyxl import load_workbook
 from os import listdir
+
+def cvt_xls_to_xlsx(src_file_path, dst_file_path):
+    book_xls = xlrd.open_workbook(src_file_path)
+    book_xlsx = Workbook()
+
+    sheet_names = book_xls.sheet_names()
+    for sheet_index in range(0,len(sheet_names)):
+        sheet_xls = book_xls.sheet_by_name(sheet_names[sheet_index])
+        if sheet_index == 0:
+            sheet_xlsx = book_xlsx.active()
+            sheet_xlsx.title = sheet_names[sheet_index]
+        else:
+            sheet_xlsx = book_xlsx.create_sheet(title=sheet_names[sheet_index])
+
+        for row in range(0, sheet_xls.nrows):
+            for col in range(0, sheet_xls.ncols):
+                sheet_xlsx.cell(row = row+1 , column = col+1).value = sheet_xls.cell_value(row, col)
+
+    book_xlsx.save(dst_file_path)
 
 def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers = []):
     wb = load_workbook(infn)
@@ -109,7 +129,7 @@ if __name__ == "__main__":
         quit()
     xlxs_folder =sys.argv[1]
     xlsx= getXlsxFiles(xlxs_folder)
-    
+
     for xls in xlsx:
         file_name = (xls[0:-5]).lower()
 

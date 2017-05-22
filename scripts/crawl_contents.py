@@ -42,7 +42,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
         tds = tr.getchildren()
         href_url = tds[1].getchildren()[0].get("href")
         xls_url = href_url
-        if(Anpr.domain() not in href_url):
+        if((Anpr.domain() not in href_url) and ("/portale/documents/" in href_url) ):
             xls_url = Anpr.domain()+ href_url
 
         title = tds[1].getchildren()[0].text
@@ -120,14 +120,21 @@ def wGetAndRename(xlsxpath,rstpath,url,title,section_prefix):
         return "", ""
 
     file_content = r.raw.read()
+    print file_content
     print "Downloading: [" + url+ "]"
     print "Title:", title
     base_name = section_prefix+"_"+ re.sub(r'([^.a-zA-Z0-9_])','_',title)
     base_name = base_name.lower()
+
     xlsx_name = xlsxpath + "/" + base_name + ".xlsx"
     rst_name = rstpath + "/" + base_name + ".rst"
+
     with open(xlsx_name, 'w') as f:
         f.write(file_content)
+
+    if(url.endswith('.xls')):
+        create_sphinx_tables.cvt_xls_to_xlsx(xlsx_name, "convert"+xlsx_name)
+
     return xlsx_name, rst_name
 
 
@@ -170,8 +177,8 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_11_05_2017.xlsx/877a3673-6318-4d09-a089-11d1d33b7942",
-        title="Elenco Errori ANPR", date="11 Maggio 2017",
+        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_16_05_2017.xlsx/7e7afdbc-2c2a-498c-8100-0a4257e3de57",
+        title="Elenco Errori ANPR", date="16 Maggio 2017",
     ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" ], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
 
 
@@ -183,6 +190,21 @@ if __name__ == "__main__":
     toclist.append(createRstFromXlsx(Table(
         id=5, url=Anpr.domain()+"/portale/documents/20182/26001/tabella+3+archivio+comuni+20170413/43d8e1f4-bb22-4aaa-a74a-1e83c334dc6b",
         title="Tabella 03 - Comuni", source="Istat-Agenzia delle Entrate-Ministero dell'Interno", date="13 Aprile 2017",note="Variazioni dovute a operazioni di fusione e/o accorpamento di comuni"
+    ),False))
+
+    toclist.append(createRstFromXlsx(Table(
+        id=5, url=Anpr.domain()+"/portale/documents/20182/50186/Tabella_4.xlsx/128b4cc9-2017-4859-a0ae-7b5be7584c39",
+        title="Tabella 04 - Specie Toponimo", source="Agenzia delle Entrate"
+    ),False))
+
+    toclist.append(createRstFromXlsx(Table(
+        id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Elenco-Consolati_20160531_1.xls",
+        title="Tabella 40 - Elenco dei consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
+    ),False))
+
+    toclist.append(createRstFromXlsx(Table(
+        id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Assoc-StatoTerritConsolato_20160531_0.xls",
+        title="Stati Territori Consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
     ),False))
 
 
