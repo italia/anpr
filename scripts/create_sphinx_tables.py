@@ -2,10 +2,11 @@ import sys
 import os
 import codecs
 import xlrd
-from openpyxl import load_workbook
+from openpyxl import load_workbook,Workbook,worksheet
 from os import listdir
 
-def cvt_xls_to_xlsx(src_file_path, dst_file_path):
+def convert_xls_to_xlsx(src_file_path, dst_file_path):
+    print (src_file_path, dst_file_path)
     book_xls = xlrd.open_workbook(src_file_path)
     book_xlsx = Workbook()
 
@@ -13,7 +14,7 @@ def cvt_xls_to_xlsx(src_file_path, dst_file_path):
     for sheet_index in range(0,len(sheet_names)):
         sheet_xls = book_xls.sheet_by_name(sheet_names[sheet_index])
         if sheet_index == 0:
-            sheet_xlsx = book_xlsx.active()
+            sheet_xlsx = book_xlsx.get_active_sheet()
             sheet_xlsx.title = sheet_names[sheet_index]
         else:
             sheet_xlsx = book_xlsx.create_sheet(title=sheet_names[sheet_index])
@@ -96,7 +97,8 @@ def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers
         if(endRow < 2000):
             print "row_to_print", row
 
-
+        if  not row[0]:
+            continue
         '''if not row[firstDataRow]:
             print "not first data"
             continue

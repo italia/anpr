@@ -42,7 +42,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
         tds = tr.getchildren()
         href_url = tds[1].getchildren()[0].get("href")
         xls_url = href_url
-        if((Anpr.domain() not in href_url) and ("/portale/documents/" in href_url) ):
+        if((Anpr.domain() not in href_url) and ("portale/documents/" in href_url) ):
             xls_url = Anpr.domain()+ href_url
 
         title = tds[1].getchildren()[0].text
@@ -55,6 +55,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
             print "FIXME: data.title is None in file:", data.url
             continue
         tocitem = createRstFromXlsx(data)
+        #print tocitem, data.url
         if tocitem is not None:
             toclist.append(tocitem)
 
@@ -92,15 +93,19 @@ def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, he
         create_sphinx_tables.convertXlsxToRst(xlsx_name, f, startFromRow,endRow,nCols,headers)
     f.close()
 
-    return (data.id, os.path.splitext(os.path.basename(rst_name))[0])
+    return (data.id,"tab/"+os.path.splitext(os.path.basename(rst_name))[0])
 
 
 
 def createtoc(rstpath, toclist):
     # generate toc
-    f = open(rstpath + "/toc.rst", "w")
+    f = open(rstpath + "/toc_tabelle_riferimento.rst", "w")
+
+
+    print >>f, ".. include:: index.rst"
+    print >>f,""
     print >>f, ".. toctree::"
-    print >>f, "    :maxdepth: 2"
+    print >>f, "    :maxdepth: 3"
     print >>f, "    :caption: Contenuti"
     print >>f
 
@@ -113,27 +118,32 @@ def createtoc(rstpath, toclist):
 def wGetAndRename(xlsxpath,rstpath,url,title,section_prefix):
     print "File to download " +url
     try:
-        r = requests.get(url ,stream=True)
+        r = requests.get(url ,stream=True,allow_redirects=True, headers = {'User-agent': 'Mozilla/5.0'})
         r.raise_for_status()
     except requests.ConnectionError:
         print "ERROR: downloading file, skipping"
         return "", ""
 
+
     file_content = r.raw.read()
-    print file_content
+    #print file_content
     print "Downloading: [" + url+ "]"
     print "Title:", title
     base_name = section_prefix+"_"+ re.sub(r'([^.a-zA-Z0-9_])','_',title)
     base_name = base_name.lower()
 
     xlsx_name = xlsxpath + "/" + base_name + ".xlsx"
+    if(url.endswith('.xls')):
+        xlsx_name = xlsxpath + "/" + base_name + ".xls"
+
     rst_name = rstpath + "/" + base_name + ".rst"
 
     with open(xlsx_name, 'w') as f:
         f.write(file_content)
 
     if(url.endswith('.xls')):
-        create_sphinx_tables.cvt_xls_to_xlsx(xlsx_name, "convert"+xlsx_name)
+        print "convert table"
+        #create_sphinx_tables.convert_xls_to_xlsx(xlsx_name, xlsxpath + "/" + base_name + ".xlsx")
 
     return xlsx_name, rst_name
 
@@ -209,4 +219,4 @@ if __name__ == "__main__":
 
 
 
-    createtoc("../src/", toclist)
+    createtoc("../src/tabelle-di-riferimento", toclist)

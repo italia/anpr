@@ -11,7 +11,8 @@ effettuare statistiche.
 Questa pagina intende raccogliere la documentazione di tipo tecnico:
 
 - tabelle di riferimento
-- documentazioni servizi
+- documentazioni dei servizi
+- guida al processo di migrazione per i comuni
 
 
 
