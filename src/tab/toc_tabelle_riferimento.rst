@@ -46,7 +46,6 @@
     tab_motivi_di_non_certificabilit_
     tab_cessazione_unione_civile___convivenze
     tab_stati_di_lavorazione
-    tab_comuni_subentrati
     tab_tabella_04___specie_toponimo
     tab_tabella_40___elenco_dei_consolati
     tab_comuni
