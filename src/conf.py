@@ -145,6 +145,8 @@ texinfo_documents = [
    settings_copyright_year + ', ' + settings_copyright_name, settings_project_name, settings_project_name,
    'Miscellaneous'),
 ]
+'''
 from recommonmark.parser import CommonMarkParser
 source_parsers = {'.md': CommonMarkParser}
 source_suffix = ['.rst', '.md']
+'''
