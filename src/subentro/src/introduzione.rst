@@ -16,7 +16,7 @@ Tali anomalie derivano da controlli formali sui dati trasmessi dal Comune; nel d
 
 .. Important::
 	- **WARNING** *non bloccanti*, si riscontrano difformità tra i dati trasmessi dal Comune e quelli attesi dal sistema ANPR, ma queste possono essere risolte successivamente al subentro (ad esempio: comune di registrazione dell'atto di annullamento di un matrimonio non indicato);
-	- **WARNING** *da rimuovere prima del subentro*, si riscontrano difformità tra i dati trasmessi dal Comune e quelli attesi dal sistema ANPR che richiedono un intervento sui dati suggerito prima del subentro (ad esempio Codice fiscale formalmente non corretto);
+	- **WARNING** *da rimuovere prima del subentro*, si riscontrano difformità tra i dati trasmessi dal Comune e quelli attesi dal sistema ANPR che, sebbene non risultino bloccanti per il subentro, si suggerisce di consolidare prima del subentro (ad esempio Codice fiscale formalmente non corretto);
 	- **ERRORI**, i file inoltrati dal Comune presentano incongruenze tali da rendere non accettabili i dati da parte del sistema ANPR (ad esempio totale schede soggetto dichiarato nel file incongruente con l'effettivo numero di schede soggetto inoltrate).
 
 Relativamente alle anomalie segnalate dal sistema ANPR come **WARNING** *non bloccanti*, l’esperienza maturata ad oggi dai Comuni subentrati suggerisce che la decisione di posticipare la correzione tenga presente anche del differente impegno, in termini organizzativi e di impegno necessario, che il Comune dovrà destinare alla bonifica dei dati in caso di correzione realizzata dopo il subentro. 

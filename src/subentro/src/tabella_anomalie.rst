@@ -9,7 +9,7 @@ La seguenti tabelle riportano le anomalie che il sistema ANPR rileva sui dati tr
 .. Important::
 	Si ribadisce che ad ogni anomalia segnalata da ANPR è associate la relativa severità, dove:
 	
-	- **WARNING**, rappresenta un'anamalia che non impedisce il subentro del Comune in ANPR
+	- **WARNING**, rappresenta un'anomalia che non impedisce il subentro del Comune in ANPR
 	- **ERRORE**, sono anamalie che impedisco il subentro del Comune in ANPR
 
 Relativamente ai **WARNING** si ricorda che **il sistema ANPR assicura la possibilità di riscontrare, anche attraverso le funzionalità assicurate dalla Web Application, le anomalie presenti sui dati di propria competenza**. 

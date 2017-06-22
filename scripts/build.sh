@@ -3,7 +3,6 @@
 cwd=$(pwd)
 echo $cwd #script folder
 
-
 cd /tmp/
 rm -rf ANPR_subentro
 git clone https://github.com/vintra73/ANPR_subentro.git

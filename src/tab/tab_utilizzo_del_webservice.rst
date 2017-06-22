@@ -1,7 +1,7 @@
 Utilizzo del WebService
 =======================
 
-:Aggiornamento: 1 Marzo 2017
+:Aggiornamento: 21 Giugno 2017
 
 `Download <https://www.anpr.interno.it/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx>`_
 

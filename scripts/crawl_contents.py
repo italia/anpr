@@ -158,7 +158,6 @@ if __name__ == "__main__":
     rstpath = sys.argv[2]
     toclist = []
 
-
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
 
 
@@ -169,11 +168,15 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+7+-+Utilizzo+WS+ANPR+totale+13102016.xlsx/1c0c1c2f-7339-44db-bf2e-2ecfce18196b",
+        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="21 Giugno 2017",
+    ),False,4,9,4, ['Servizio', 'Operazione Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
+
+
+    toclist.append(createRstFromXlsx(Table(
         id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
-        title="Utilizzo del WebService", date="1 Marzo 2017",
+        title="Utilizzo del WebService", date="21 Giugno 2017",
     ),False,4,37,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
-
-
 
     toclist.append(createRstFromXlsx(Table(
         id=-3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
@@ -187,8 +190,8 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+06062017.xlsx/153031fa-e6cc-4b31-866e-0a62a6a76cb3",
-        title="Elenco Errori ANPR", date="6 Giugno 2017",
+        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+21062017.xlsx/ccd4200f-2af5-41dd-bcf7-1a4a8b754ce9",
+        title="Elenco Errori ANPR", date="21 Giugno 2017",
     ),False,3,2000,3, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
