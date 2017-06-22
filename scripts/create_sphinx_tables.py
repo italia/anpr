@@ -61,18 +61,21 @@ def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers
             break
         firstHeader = firstHeader+1
 
-    size  = [200]* ncol
-    maxCol = 400
+    size  = [20]* ncol
+    maxCol = 500
 
 
     maxHeader = max([(len(u''+x),x) for x in headers])
 
     for row in rows:
+        '''
+        update the size of the single row to the new max, except for the last one
+        '''
+        for i in range(ncol):
+            size[i] = max(size[i],len(u''+row[i]))
         for i in range((ncol-1),len(headers)-1):
-
-            lenRow_i = len(u''+row[i])
-
-            maxCol=max(maxCol, (lenRow_i+maxHeader[0]+20))
+            lenCol_i = len(u''+row[i])
+            maxCol=max(maxCol, (lenCol_i+maxHeader[0]+20))
 
 
 

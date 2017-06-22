@@ -182,14 +182,14 @@ if __name__ == "__main__":
 
     toclist.append(createRstFromXlsx(Table(
         id=-2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
-        title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
+        title="Elenco delle funzionalita' disponibilini nella web app", date="17 Marzo 2017",
     ),False,0,2000,3))
 
 
     toclist.append(createRstFromXlsx(Table(
         id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+06062017.xlsx/153031fa-e6cc-4b31-866e-0a62a6a76cb3",
         title="Elenco Errori ANPR", date="6 Giugno 2017",
-    ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
+    ),False,3,2000,3, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
     toclist.append(createRstFromXlsx(Table(
