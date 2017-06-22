@@ -10,12 +10,10 @@
     tab_elenco_delle_funzionalita__disponibili
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
-    tab_tabella_04___specie_toponimo
-    tab_tabella_40___elenco_dei_consolati
-    tab_tabella_41___stati_territori_consolati
     tab_stato_civile
     tab_stati_esteri
     tab_comuni
+    tab_tabella_04___specie_toponimo
     tab_relazione_di_parentela___famiglia
     tab_legame____convivenza
     tab_motivi_di_iscrizione_in_anagrafe
@@ -46,6 +44,8 @@
     tab_tipi_di_mutazione
     tab_tipi_cittadinanza
     tab_esenzione_bollo
+    tab_tabella_40___elenco_dei_consolati
+    tab_tabella_41___stati_territori_consolati
     tab_motivi_di_non_certificabilit_
     tab_cessazione_unione_civile___convivenze
     tab_comuni_subentrati

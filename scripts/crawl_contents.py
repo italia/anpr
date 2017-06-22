@@ -93,7 +93,7 @@ def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, he
         create_sphinx_tables.convertXlsxToRst(xlsx_name, f, startFromRow,endRow,nCols,headers)
     f.close()
     print data.id,tablename
-    return (data.id,os.path.splitext(os.path.basename(rst_name))[0])
+    return (int(data.id),os.path.splitext(os.path.basename(rst_name))[0])
 
 
 
@@ -163,42 +163,42 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_11_05_2017.xlsx/8bf91645-f248-4e2d-a40a-e263ccc9d929",
+        id=-5, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_22_05_2017.xlsx/a5a53994-5c1f-4fae-b934-8236fd92369d",
         title="Aggiornamenti alla documentazione tecnica", date="11 Maggio 2017",
-    ),False))
+    ),False,0,2000,4))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
         title="Utilizzo del WebService", date="1 Marzo 2017",
     ),False,4,37,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=1, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
+        id=-3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
         title="Elenco dei web services disponibili", date="17 dicembre 2017",
-    ),False))
+    ),False,0,2000,4))
 
     toclist.append(createRstFromXlsx(Table(
-        id=2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
+        id=-2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
         title="Elenco delle funzionalita' disponibili", date="17 Marzo 2017",
     ),False,0,2000,3))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+06062017.xlsx/153031fa-e6cc-4b31-866e-0a62a6a76cb3",
+        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+06062017.xlsx/153031fa-e6cc-4b31-866e-0a62a6a76cb3",
         title="Elenco Errori ANPR", date="6 Giugno 2017",
     ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=4, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
+        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
         title="Errori Agenzia Entrate", date="27 Aprile 2017",
     ),False,nCols=3))
 
     toclist.append(createRstFromXlsx(Table(
-        id=5, url=Anpr.domain()+"/portale/documents/20182/50186/Tabella_4.xlsx/128b4cc9-2017-4859-a0ae-7b5be7584c39",
+        id=4, url=Anpr.domain()+"/portale/documents/20182/50186/Tabella_4.xlsx/128b4cc9-2017-4859-a0ae-7b5be7584c39",
         title="Tabella 04 - Specie Toponimo", source="Agenzia delle Entrate"
     ),False))
 
