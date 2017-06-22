@@ -6,6 +6,7 @@ from openpyxl import load_workbook,Workbook,worksheet
 from os import listdir
 
 def convert_xls_to_xlsx(src_file_path, dst_file_path):
+
     print (src_file_path, dst_file_path)
     book_xls = xlrd.open_workbook(src_file_path)
     book_xlsx = Workbook()
@@ -24,6 +25,7 @@ def convert_xls_to_xlsx(src_file_path, dst_file_path):
                 sheet_xlsx.cell(row = row+1 , column = col+1).value = sheet_xls.cell_value(row, col)
 
     book_xlsx.save(dst_file_path)
+    return dst_file_path
 
 def convertXlsxToRst(infn,f, startFromRow=0,endRow = 2000,ncol =2,custom_headers = []):
     wb = load_workbook(infn)

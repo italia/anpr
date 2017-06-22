@@ -80,8 +80,8 @@ Riferimenti di interesse
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Nello specifico della presente procedure risultano di interesse:
 
-- `note all'utilizzo <https://docs.google.com/document/d/1QS2-HVwEKXC_vxL3qSrA2eePSDc_qR9TZbhBlKwtw80/edit>`_ della tabella storico Comuni
-- `note all'utilizzo <https://docs.google.com/document/d/1O8XAUMyRRq-YMcjzcuZlvQpQEl5wiq78rdHTRtBzZIs/edit>`_ della tabella storico Stati Esteri
+- `note all'utilizzo della tabella storico Comuni <https://docs.google.com/document/d/1QS2-HVwEKXC_vxL3qSrA2eePSDc_qR9TZbhBlKwtw80/edit>`_ 
+- `note all'utilizzo della tabella storico Stati Esteri <https://docs.google.com/document/d/1O8XAUMyRRq-YMcjzcuZlvQpQEl5wiq78rdHTRtBzZIs/edit>`_ 
 
 
 

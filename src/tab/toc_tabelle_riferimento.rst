@@ -1,7 +1,7 @@
 .. include:: index.rst
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 3
     :caption: Contenuti
 
     tab_aggiornamenti_alla_documentazione_tecnica
@@ -10,9 +10,12 @@
     tab_elenco_delle_funzionalita__disponibili
     tab_elenco_errori_anpr
     tab_errori_agenzia_entrate
-    tab_tabella_03___comuni
+    tab_tabella_04___specie_toponimo
+    tab_tabella_40___elenco_dei_consolati
+    tab_tabella_41___stati_territori_consolati
     tab_stato_civile
     tab_stati_esteri
+    tab_comuni
     tab_relazione_di_parentela___famiglia
     tab_legame____convivenza
     tab_motivi_di_iscrizione_in_anagrafe
@@ -45,5 +48,4 @@
     tab_esenzione_bollo
     tab_motivi_di_non_certificabilit_
     tab_cessazione_unione_civile___convivenze
-    tab_tabella_04___specie_toponimo
-    tab_tabella_40___elenco_dei_consolati
+    tab_comuni_subentrati

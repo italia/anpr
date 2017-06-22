@@ -92,8 +92,8 @@ def createRstFromXlsx(data, table=True, startFromRow=0, endRow=2000, nCols=2, he
     if (os.path.getsize(xlsx_name)<1000000):
         create_sphinx_tables.convertXlsxToRst(xlsx_name, f, startFromRow,endRow,nCols,headers)
     f.close()
-
-    return (data.id,"tab/"+os.path.splitext(os.path.basename(rst_name))[0])
+    print data.id,tablename
+    return (data.id,os.path.splitext(os.path.basename(rst_name))[0])
 
 
 
@@ -108,8 +108,8 @@ def createtoc(rstpath, toclist):
     print >>f, "    :maxdepth: 3"
     print >>f, "    :caption: Contenuti"
     print >>f
-
-    toclist.sort()
+    print toclist
+    toclist.sort(key=lambda x: x[0], reverse=False)
     for id,name in toclist:
         print >>f, "    %s" % name
     f.close()
@@ -143,7 +143,7 @@ def wGetAndRename(xlsxpath,rstpath,url,title,section_prefix):
 
     if(url.endswith('.xls')):
         print "convert table"
-        #create_sphinx_tables.convert_xls_to_xlsx(xlsx_name, xlsxpath + "/" + base_name + ".xlsx")
+        xlsx_name =create_sphinx_tables.convert_xls_to_xlsx(xlsx_name, xlsxpath + "/" + base_name + ".xlsx")
 
     return xlsx_name, rst_name
 
@@ -187,9 +187,9 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr_16_05_2017.xlsx/7e7afdbc-2c2a-498c-8100-0a4257e3de57",
-        title="Elenco Errori ANPR", date="16 Maggio 2017",
-    ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" ], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
+        id=3, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+06062017.xlsx/153031fa-e6cc-4b31-866e-0a62a6a76cb3",
+        title="Elenco Errori ANPR", date="6 Giugno 2017",
+    ),False,3,2000,2, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante"))
 
 
     toclist.append(createRstFromXlsx(Table(
@@ -198,25 +198,20 @@ if __name__ == "__main__":
     ),False,nCols=3))
 
     toclist.append(createRstFromXlsx(Table(
-        id=5, url=Anpr.domain()+"/portale/documents/20182/26001/tabella+3+archivio+comuni+20170413/43d8e1f4-bb22-4aaa-a74a-1e83c334dc6b",
-        title="Tabella 03 - Comuni", source="Istat-Agenzia delle Entrate-Ministero dell'Interno", date="13 Aprile 2017",note="Variazioni dovute a operazioni di fusione e/o accorpamento di comuni"
-    ),False))
-
-    toclist.append(createRstFromXlsx(Table(
         id=5, url=Anpr.domain()+"/portale/documents/20182/50186/Tabella_4.xlsx/128b4cc9-2017-4859-a0ae-7b5be7584c39",
         title="Tabella 04 - Specie Toponimo", source="Agenzia delle Entrate"
     ),False))
+
+
+    toclist.append(createRstFromXlsx(Table(
+        id=41, url="http://servizidemografici.interno.it/sites/default/files/T_Assoc-StatoTerritConsolato_20160531_0.xls",
+        title="Tabella 41 - Stati Territori Consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
+    ),False,2,2000,7,['Codice Stato/Territorio', 'Denominazione Stato/Territorio', 'Codice Consolato', 'Rango', 'Sede', 'Codice Stato di appartenenza', 'Denominazione stato di appartenenza']))
 
     toclist.append(createRstFromXlsx(Table(
         id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Elenco-Consolati_20160531_1.xls",
         title="Tabella 40 - Elenco dei consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
     ),False))
 
-    toclist.append(createRstFromXlsx(Table(
-        id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Assoc-StatoTerritConsolato_20160531_0.xls",
-        title="Stati Territori Consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
-    ),False))
 
-
-
-    createtoc("../src/tabelle-di-riferimento", toclist)
+    createtoc("../src/tab", toclist)
