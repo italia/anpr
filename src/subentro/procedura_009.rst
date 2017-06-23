@@ -3,8 +3,8 @@ Procedura 009 - Errori di quadratura
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
-
-In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie:
+   
+In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EN011 - Totale schede soggetto @ dichiarato nel file @ incongruente con quello calcolato @
 - EN012 - Totale schede soggetto @ dichiarato per l'intera fornitura @ incongruente con quello calcolato @
@@ -46,7 +46,7 @@ Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel 
 
 AZIONE 009_003 – DETERMINA LE CAUSE
 -----------------------------------
-L'ufficiale di anagrafe determina le cause che hanno determinato l'errore di squadratura evidenziato evidenziando le schede soggetto/famiglia/convivenza mancanti e/o inserite in maniera erronea al fine di assicurare la corrisponedenza tra la numerosità dichiarata e quelle inoltrate nel/nei file di subentro.
+L'ufficiale di anagrafe determina le cause che hanno determinato l'errore di squadratura evidenziato evidenziando le schede soggetto/famiglia/convivenza mancanti e/o inserite in maniera erronea al fine di assicurare la corrisponedenza tra la numerosità dichiarata e quelle inoltrate nel/nei file di subentro. 
 
 AZIONE 009_004 - AGGIORNAMENTO E NUOVO INOLTRO
 ----------------------------------------------

@@ -8,7 +8,7 @@ rm -rf ANPR_subentro
 git clone https://github.com/vintra73/ANPR_subentro.git
 rm  ANPR_subentro/conf.py
 rm  ANPR_subentro/src/conf.py
-cp -rf ANPR_subentro/src $cwd/../src/subentro
+cp -rf ANPR_subentro/src/* $cwd/../src/subentro/
 
 
 cd $cwd
