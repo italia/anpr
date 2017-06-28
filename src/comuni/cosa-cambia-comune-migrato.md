@@ -23,7 +23,7 @@ Si continueranno però a ricevere i moduli APR/4 da parte dei comuni non in ANPR
 
 * **Non è più necessario caricare i dati su INA-SAIA.** ANPR sostituisce a tutti gli effetti il sistema INA-SAIA.
 
-* **Al momento del cambio di residenza non è più necessario registrare la targa dei veicoli ed il numero della patente** dei soggetti interessati. La Motorizzazione riceve direttamente la notifica del cambiamento ed invia, alla nuova abitazione,  il contrassegni o da apporre sullea cartea di circolazione dei proveicoli.di ciascun veicolo alla nuova abitazione. E’ necessario informare il cittadino che, in caso di mancato ricevimento deil contrassegnio, egli può contattare il call center della Motororizzazione al n. 800232323  aperto dalltagliando In caso di mancato ricevimento del contrassegno,   
+* **Al momento del cambio di residenza non è più necessario registrare la targa dei veicoli ed il numero della patente** dei soggetti interessati. La Motorizzazione riceve direttamente la notifica del cambiamento ed invia, alla nuova abitazione,  il contrassegni o da apporre sullea cartea di circolazione dei proveicoli.di ciascun veicolo alla nuova abitazione. E’ necessario informare il cittadino che, in caso di mancato ricevimento del contrassegno, egli può contattare il call center della Motorizzazione al n. 800232323.
 
 * **ANPR sostituisce integralmente ANAG AIRE**. A partire dal subentro i dati dei cittadini residenti all’estero sono gestiti direttamente con ANPR.
 
