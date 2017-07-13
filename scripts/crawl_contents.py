@@ -109,7 +109,9 @@ def createtoc(rstpath, toclist):
     print >>f, "    :caption: Contenuti"
     print >>f
     print toclist
+    toclist = filter(None, toclist)
     toclist.sort(key=lambda x: x[0], reverse=False)
+
     for id,name in toclist:
         print >>f, "    %s" % name
     f.close()
@@ -160,22 +162,20 @@ if __name__ == "__main__":
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
 
-
     toclist.append(createRstFromXlsx(Table(
-        id=-5, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_22_05_2017.xlsx/a5a53994-5c1f-4fae-b934-8236fd92369d",
-        title="Aggiornamenti alla documentazione tecnica", date="11 Maggio 2017",
+        id=-5, url=Anpr.domain()+"/portale/documents/20182/26001/aggiornamenti_12_07_2017.xlsx/5032d741-f001-4dea-b653-15ee7999b5cb",
+        title="Aggiornamenti alla documentazione tecnica", date="12 Luglio 2017",
     ),False,0,2000,4))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+7+-+Utilizzo+WS+ANPR+totale+13102016.xlsx/1c0c1c2f-7339-44db-bf2e-2ecfce18196b",
-        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="21 Giugno 2017",
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato_5_Elenco_WS_di_ANPR_12072017.xlsx/01e57b03-5ac4-407c-8cee-f50e61b6e0d6",
+        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="12 Luglio 2017",
     ),False,4,9,4, ['Servizio', 'Operazione Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
 
-
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
-        title="Utilizzo del WebService", date="21 Giugno 2017",
+        id=-4, url=Anpr.domain()+"portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
+        title="Utilizzo del WebService", date="12 Luglio 2017",
     ),False,4,37,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
     toclist.append(createRstFromXlsx(Table(
@@ -190,14 +190,14 @@ if __name__ == "__main__":
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+21062017.xlsx/ccd4200f-2af5-41dd-bcf7-1a4a8b754ce9",
-        title="Elenco Errori ANPR", date="21 Giugno 2017",
+        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+12072017.xlsx/7f4ad304-7b31-4038-adaf-4826dd2a9f9c",
+        title="Elenco Errori ANPR", date="12 Luglio 2017",
     ),False,3,2000,3, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
-        title="Errori Agenzia Entrate", date="27 Aprile 2017",
+        id=0, url=Anpr.domain()+"portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
+        title="Errori Agenzia Entrate", date="12 Maggio 2017",
     ),False,nCols=3))
 
     toclist.append(createRstFromXlsx(Table(
@@ -211,10 +211,10 @@ if __name__ == "__main__":
         title="Tabella 41 - Stati Territori Consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
     ),False,2,2000,7,['Codice Stato/Territorio', 'Denominazione Stato/Territorio', 'Codice Consolato', 'Rango', 'Sede', 'Codice Stato di appartenenza', 'Denominazione stato di appartenenza']))
 
+
     toclist.append(createRstFromXlsx(Table(
         id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Elenco-Consolati_20160531_1.xls",
         title="Tabella 40 - Elenco dei consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
     ),False))
-
 
     createtoc("../src/tab", toclist)

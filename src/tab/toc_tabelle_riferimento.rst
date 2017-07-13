@@ -6,11 +6,9 @@
 
     tab_aggiornamenti_alla_documentazione_tecnica
     tab_elenco_dei_web_services_da_utilizzare_per_aggiornamento_delle_basi_dati_locali
-    tab_utilizzo_del_webservice
     tab_elenco_dei_web_services_disponibili
     tab_elenco_delle_funzionalita__disponibilini_nella_web_app
     tab_elenco_errori_anpr
-    tab_errori_agenzia_entrate
     tab_stato_civile
     tab_stati_esteri
     tab_comuni

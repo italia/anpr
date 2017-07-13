@@ -10,7 +10,6 @@ rm  ANPR_subentro/conf.py
 rm  ANPR_subentro/src/conf.py
 cp -rf ANPR_subentro/src/* $cwd/../src/subentro/
 
-
 cd $cwd
 pip install -r requirements.txt
 rm -rf ../src/tab/tab_*

@@ -5,7 +5,7 @@ Introduzione
 	Il documento è da ritenersi in versione beta.
 
 
-La procedure di subentro dei Comuni in ANPR rappresenta l'insieme delle attività che i Comuni devono realizzare per assicurare il trasferimento dei dati anagrafici dall'APR e AIRE locali al database centrale di ANPR, cosi come previsto dal `DPCM 194/2014 <http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.del.consiglio.dei.ministri:2014-11-10;194>`_.
+La procedura di subentro dei Comuni in ANPR rappresenta l'insieme delle attività che i Comuni devono realizzare per assicurare il trasferimento dei dati anagrafici dall'APR e AIRE locali al database centrale di ANPR, cosi come previsto dal `DPCM 194/2014 <http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.del.consiglio.dei.ministri:2014-11-10;194>`_.
 
 
 Per agevolare le attività dei Comuni nella gestione delle anomalie, sono state individuate le procedure operative che i Comuni debbono adottare. Tali procedure sono di ausilio, in particolare,  durante la fase di pre-subentro che consente al comune di simulare il subentro vero e proprio  per rilevare, preliminarmente al subentro, la presenza di eventuali criticità nella base dati. I passaggi delle  procedure nelle quali si indica di ripetere l’invio dopo aver sanato le anomalie sono riferite eclusivamente a tale fase di pre-subentro: si ricorda che il subentro è un’operazione non ripetibile; le residue anomalie (o eventuali errori di estrazione) saranno sanate esclusivamente con i servizi di ANPR.
