@@ -23,7 +23,7 @@ Si continueranno però a ricevere i moduli APR/4 da parte dei comuni non in ANPR
 
 * **Non è più necessario caricare i dati su INA-SAIA.** ANPR sostituisce a tutti gli effetti il sistema INA-SAIA.
 
-* **Al momento del cambio di residenza non è più necessario registrare la targa dei veicoli ed il numero della patente** dei soggetti interessati. La Motorizzazione riceve direttamente la notifica del cambiamento ed invia, alla nuova abitazione,  il contrassegni o da apporre sullea cartea di circolazione dei proveicoli.di ciascun veicolo alla nuova abitazione. E’ necessario informare il cittadino che, in caso di mancato ricevimento del contrassegno, egli può contattare il call center della Motorizzazione al n. 800232323.
+* **Al momento del cambio di residenza non è più necessario registrare la targa dei veicoli ed il numero della patente** dei soggetti interessati. La Motorizzazione riceve direttamente la notifica del cambiamento ed invia, alla nuova abitazione, i contrassegni da apporre sulla carta di circolazione di ciascun veicolo alla nuova abitazione. E’ necessario informare il cittadino che, in caso di mancato ricevimento del contrassegno, egli può contattare il call center della Motorizzazione al n. 800232323.
 
 * **ANPR sostituisce integralmente ANAG AIRE**. A partire dal subentro i dati dei cittadini residenti all’estero sono gestiti direttamente con ANPR.
 
@@ -52,7 +52,7 @@ I comuni che ad oggi sono già migrati ad ANPR dovranno attendere conferma diret
 
 * L’allineamento con l’Anagrafe Tributaria e l’emissione dei **codici fiscali** avviene normalmente in automatico, secondo le operazioni anagrafiche effettuate.
 
-È importante evidenziare però che in fase di subentro, o durante la modifica di una scheda, il software di ANPR può segnalare problemi di consistenza dei dati con quanto contenuto nel database dell’Anagrafe Tributaria. In questo caso, l’emissione o l’aggiornamento del codice fiscale non avverrà in automatico fino alla risoluzione dell’inconsistenza. È responsabilità del comune prendere contatti con il cittadino ed adoperarsi per risolvere il problema. La guida online fornita a questo indirizzo: … fornisce indicazioni sulle procedure raccomandate per la bonifica dei dati.
+È importante evidenziare però che in fase di subentro, o durante la modifica di una scheda, il software di ANPR può segnalare problemi di consistenza dei dati con quanto contenuto nel database dell’Anagrafe Tributaria. In questo caso, l’emissione o l’aggiornamento del codice fiscale non avverrà in automatico fino alla risoluzione dell’inconsistenza. È responsabilità del comune prendere contatti con il cittadino ed adoperarsi per risolvere il problema. La [guida online](../subentro/index.html) fornisce indicazioni sulle procedure raccomandate per la bonifica dei dati.
 
 In caso il codice fiscale venga emesso prima della registrazione in Anagrafe, per esempio presso l’Agenzia delle Entrate, o durante l’ottenimento del permesso di soggiorno, il codice fiscale verrà reso automaticamente a disposizione all’interno di ANPR.
 Si raccomanda all’operatore di anagrafe di chiedere al Cittadino conferma del possesso di un codice fiscale e verificare in ANPR, prima dell’emissione di un nuovo codice, al fine di prevenire duplicazioni.
@@ -65,7 +65,7 @@ Rimane la possibilità per il comune di sottoscrivere convenzioni per consentire
 
 Ricordiamo inoltre che ognuno degli enti che fruiscono di ANPR potrebbe richiedervi di verificare la consistenza di specifiche posizioni anagrafiche di vostra competenza. In questo caso, occorre verificare la posizione con i dati di ANPR, e consigliamo quindi di verificare quello che risulta dal vostro gestionale con la Web Application.
 
-Nel caso uno di questi enti richieda di effettuare procedure o operazioni e da quanto indicato all’interno di questo documento, o reputate necessario l’aggiunta o rimozione di informazioni, vi preghiamo di segnalarcelo a questo indirizzo email [segnalazioni-anpr@teamdigitale.governo.it](mailto:segnalazioni-anpr@teamdigitale.governo.it).
+Nel caso uno di questi enti richieda di effettuare procedure o operazioni ulteriori rispetto a quanto indicato all’interno di questo documento, o reputate necessario l’aggiunta o rimozione di informazioni, vi preghiamo di segnalarcelo a questo indirizzo email [segnalazioni-anpr@teamdigitale.governo.it](mailto:segnalazioni-anpr@teamdigitale.governo.it).
 
 
 Utilizzeremo le vostre segnalazioni per migliorare la documentazione fornita o per assicurarci che le procedure utilizzate vengano prontamente aggiornate.

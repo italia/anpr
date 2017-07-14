@@ -19,13 +19,13 @@ Tali anomalie derivano da controlli formali sui dati trasmessi dal Comune; nel d
 	- **WARNING** *da rimuovere prima del subentro*, si riscontrano difformità tra i dati trasmessi dal Comune e quelli attesi dal sistema ANPR che, sebbene non risultino bloccanti per il subentro, si suggerisce di consolidare prima del subentro (ad esempio Codice fiscale formalmente non corretto);
 	- **ERRORI**, i file inoltrati dal Comune presentano incongruenze tali da rendere non accettabili i dati da parte del sistema ANPR (ad esempio totale schede soggetto dichiarato nel file incongruente con l'effettivo numero di schede soggetto inoltrate).
 
-Relativamente alle anomalie segnalate dal sistema ANPR come **WARNING** *non bloccanti*, l’esperienza maturata ad oggi dai Comuni subentrati suggerisce che la decisione di posticipare la correzione tenga presente anche del differente impegno, in termini organizzativi e di impegno necessario, che il Comune dovrà destinare alla bonifica dei dati in caso di correzione realizzata dopo il subentro. 
+Relativamente alla bonifica delle anomalie segnalate dal sistema ANPR come **WARNING** *non bloccanti*, l’esperienza maturata ad oggi dai Comuni subentrati suggerisce di valutare la posticipazione delle correzioni, in quanto presenta un differente impegno in termini organizzativi e di tempo.
 A titolo esemplificativo si consideri la circostanza di disallineamento della denominazione dei Comuni indicanti il luogo di matrimonio che preservi il codice Belfiore (condizione che preserva anche il codice fiscale) tra l’APR locale e le tabelle di codifica dei Comuni utilizzate da ANPR; in questo caso provvedere alla correzione delle anomalie degli errori prima del subentro, troverà il vantaggio di poter utilizzare procedure automatiche implementate ad uopo, permettendo di ridurre il tempo uomo impegnato se realizzate successivamente e singolarmente dopo il subentro.
 
 Si precisa che la correzione del nominativo dei Comuni potrà avvenire solo contestualmente al subentro: infatti, INA SAIA non ha recepito integralmente la nuova tabella dei Comuni, per cui se le correzioni vengono effettuate in precedenza, si rischia di avere dei messaggi di errore a fronte delle trasmissioni dati giornaliere, dovuti all’incongruenza dei dati del Comune di nascita.
 
 
-In sintesi le azioni di verifica realizzate da ANPR, fatti salvi gli errori che afferiscono la creazione del file che determinato lo scarto dell’interno invio, i controlli formali riguardano:
+In sintesi le azioni di verifica realizzate da ANPR, fatti salvi gli errori che che determinato lo scarto dell’intero invio, riguardano:
 
 - il contenuto delle schede individuali, famiglia e convivenza, la coerenza dei vari attributi tra loro, la correttezza rispetto ai valori ammessi per i campi codificati;
 - la validazione del codice fiscale, eseguita dall’Agenzia delle Entrate.
