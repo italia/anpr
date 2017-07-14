@@ -181,7 +181,7 @@ if __name__ == "__main__":
     toclist.append(createRstFromXlsx(Table(
         id=-3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
         title="Elenco dei web services disponibili", date="17 dicembre 2017",
-    ),False,0,2000,4))
+    ),False,0,2000,5))
 
     toclist.append(createRstFromXlsx(Table(
         id=-2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
@@ -215,6 +215,6 @@ if __name__ == "__main__":
     toclist.append(createRstFromXlsx(Table(
         id=40, url="http://servizidemografici.interno.it/sites/default/files/T_Elenco-Consolati_20160531_1.xls",
         title="Tabella 40 - Elenco dei consolati", source="Servizi demografici del Ministero dell'Interno", date="17 Giugno 2016"
-    ),False))
+    ),False,nCols=4,startFromRow=1))
 
     createtoc("../src/tab", toclist)
