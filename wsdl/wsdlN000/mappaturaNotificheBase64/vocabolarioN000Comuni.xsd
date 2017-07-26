@@ -7,8 +7,8 @@
 
 <xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>	
 
-<!-- tipoNotificheN010 -->
-	<xs:complexType name="tipoNotificaN010">
+<!-- tipoNotificaCambioResidenza -->
+	<xs:complexType name="tipoNotificaCambioResidenza">
 		<xs:sequence>
 			<xs:element name="generalitaSoggetto" 		type="tpdt:tipoGeneralita" 				minOccurs="1" maxOccurs="1"/>
 			<xs:element name="comuneRichiesta" 			type="tpdt:tipoComuneRichiesta" 		minOccurs="1" maxOccurs="1"/>
@@ -16,7 +16,7 @@
 			<xs:element name="dataDecorrenza" 			type="xs:date" 							minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>	
 	</xs:complexType>
-<!-- Fine tipoNotificheN010 -->
+<!-- Fine tipoNotificaCambioResidenza -->
 
 <!-- tipoNotificheN030 -->
 	<xs:complexType name="tipoNotificheN030">

@@ -138,10 +138,12 @@
 				type="anpr:tipoAnnullamentoMatrimonio" minOccurs="0" maxOccurs="1" />
 			<xs:element name="convivenzaDiFatto"
 				type="anpr:tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1">
-			</xs:element>
+			</xs:element>
+
 			<xs:element name="unioneCivile" type="anpr:tipoUnioneCivile"
 				minOccurs="0" maxOccurs="1">
-			</xs:element>
+			</xs:element>
+
 			<xs:element name="cartaIdentita"
 				type="anpr:tipoCartaIdentita" minOccurs="0" maxOccurs="1" />
 			<xs:element name="permessoSoggiorno"
@@ -248,6 +250,93 @@
 </xs:element>
 <!-- fine servizio 5012 -->
 
+<!-- servizio 5007 -->
+<!--
+	Task 11733:5007 - annullamento/revoca carta identità (xsd) 
+ -->
+<xs:element name="Richiesta5007">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta annullamento/revoca carta identita
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta"
+				type="anpr:tipoTestataRichiesta" minOccurs="1" maxOccurs="1" />
+
+			<xs:element name="generalitaPerRicerca"
+				type="anpr:tipoGeneralita" maxOccurs="1" minOccurs="1">
+			</xs:element>
+			<xs:element name="datiCartaIdentita"
+				type="anpr:tipoCartaIdentita" maxOccurs="1" minOccurs="1">
+			</xs:element>
+			<xs:element name="datiControllo" type="anpr:tipoDatiControllo5007" maxOccurs="1" minOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta5007">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta annullamento/revoca carta identita
+				</xs:documentation>
+			</xs:annotation>		
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>	
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 5007 -->
+
+
+<!-- servizio 5013 -->
+<xs:element name="Richiesta5013">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta di annullamento oggetto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta"
+				type="anpr:tipoTestataRichiesta" minOccurs="1" maxOccurs="1" />
+		    
+		    <xs:choice>
+				<xs:element name="schedaSoggetto" type="anpr:tipoSchedaSoggetto" minOccurs="0" maxOccurs="1" />
+				<xs:element name="famigliaConvivenza" type="anpr:tipoFamigliaConvivenza" minOccurs="0" maxOccurs="1"/>
+			</xs:choice>	
+			
+
+			<xs:element name="motivoAnnullamento"
+				type="anpr:tipoRevocaDato" minOccurs="1" maxOccurs="1">
+			</xs:element>
+
+			<xs:element name="datiControllo" type="anpr:tipoDatiControllo5013" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta5013">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta servizio di annullamento oggetto
+				</xs:documentation>
+			</xs:annotation>		
+			<xs:choice>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+			</xs:choice>	
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 5013 -->
 
 
 </xs:schema>

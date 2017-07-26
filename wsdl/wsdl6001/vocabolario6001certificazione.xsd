@@ -109,8 +109,10 @@
 			<xs:element name="esenzioneDiritti"      		type="tpdt:tipoEsenzioneDiritti"   	 minOccurs="0" maxOccurs="1"/>
 			<xs:element name="diritti"             			type="tpdt:tipoDiritti"        		 minOccurs="1" maxOccurs="1"/>
 			<xs:element name="esenzioneBollo"      			type="tpdt:tipoEsenzione"      		 minOccurs="0" maxOccurs="1"/>
+			<!--Se 99=motivo esenzione bollo il campo descrizioneEsenzioneBollo è obbligatorio e max 256 caratteri -->
 			<xs:element name="descrizioneEsenzioneBollo"    type="tpdt:charMax256"      		 minOccurs="0" maxOccurs="1"/>
 			<xs:element name="listaAnnotazioni"    			type="tpdt:tipoListaAnnotazioni"     minOccurs="0" maxOccurs="1"/>
+			<!--0=certificato normale|1=certificato con warning (alcuni errori bloccanti diventano warning ed il certificato viene emesso) -->
 			<xs:element name="forzaCertificazione"    		type="tpdt:numerico1"     			 minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>	
 	</xs:complexType>

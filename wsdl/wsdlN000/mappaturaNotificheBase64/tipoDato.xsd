@@ -582,6 +582,12 @@
 			<xs:maxLength value="20"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="charMax50">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="charMax4">
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
@@ -1007,7 +1013,7 @@
 			<xs:element name="noteSoggiorno" 			 type="charMax240" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataRilascio" 			 type="xs:date" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataScadenza" 			 type="xs:date" 			minOccurs="0" maxOccurs="1"/>
-			<xs:element name="questuraRilascioSoggiorno" type="charMax20" 			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="questuraRilascioSoggiorno" type="charMax50" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="comune"   				 type="tipoComune" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="numeroPassaporto" 		 type="charMax30" 			minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
@@ -1045,6 +1051,19 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- Fine tipoDatiEvento -->
+	
+	<!-- tipoDatiEventoEsteso -->
+	<xs:complexType name="tipoDatiEventoEsteso">
+		<xs:complexContent>
+			<xs:extension base="tipoDatiEvento">
+				<xs:sequence>
+					<xs:element name="luogoEvento" 	type="tipoLuogoEvento" 		minOccurs="0" maxOccurs="1"/>			
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiEventoEsteso -->
+	
 	<!-- tipoProvenienzaDestinazione -->
 	<xs:complexType name="tipoProvenienzaDestinazione">
 		<xs:sequence>

@@ -325,7 +325,12 @@
 
 <!-- tipoDatiControllo5001 -->
    <xs:complexType name="tipoDatiControllo5001">
-		<xs:sequence>			
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>codice mutazione  2 - listaControlli: nome = FC - valore = S:  famiglia certificabile</xs:documentation>
+				<xs:documentation>codice mutazione  3 - listaControlli: nome = FI - valore = 1:  famiglia incompleta</xs:documentation>
+				<xs:documentation>codice mutazione  3 - listaControlli: nome = FI - valore = 0:  famiglia completa (DEFAULT)</xs:documentation>
+			</xs:annotation>			
 			<xs:element name="tipoMutazione"           type="tpdt:numerico1"             minOccurs="1" maxOccurs="1"/>
 			<xs:element name="tipoScheda"              type="tpdt:tipoScheda"            minOccurs="1" maxOccurs="1"/>		
 			<xs:element name="listaControlli"		   type="tpdt:tipoListaControlli"    minOccurs="0" maxOccurs="1"/>									
@@ -372,6 +377,17 @@
 	</xs:complexType>
 <!-- Fine tipoListe -->
 
+<!-- tipoDatiControllo5007 -->
+<!--
+	Task 11733:5007 - annullamento/revoca carta identità (xsd) 
+ -->
+   <xs:complexType name="tipoDatiControllo5007">
+		<xs:sequence>			
+			<xs:element name="tipoMutazione"     type="tpdt:numerico2"     		 minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoDatiControllo5007 -->
+
 <!-- tipoDatiControllo5008 -->
    <xs:complexType name="tipoDatiControllo5008">
 		<xs:sequence>			
@@ -397,7 +413,11 @@
 
 <!-- tipoDatiControllo5012 -->
 	<xs:complexType name="tipoDatiControllo5012">
-		<xs:sequence>			
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>listaControlli: nome = RA - valore = 1:  ripristino posizione anagrafica</xs:documentation>
+				<xs:documentation>listaControlli: nome = RP - valore = 1:  ripristino parziale</xs:documentation>
+			</xs:annotation>		
 			<xs:element name="tipoScheda"  				   	     type="tpdt:tipoSchedaAnn"     	  minOccurs="1" maxOccurs="1"/>
 			<xs:element name="annullamentoAttribuzioneCF"    	 type="tpdt:tipoSN1"    		  minOccurs="1" maxOccurs="1"/>
 			<xs:element name="listaControlli"		             type="tpdt:tipoListaControlli"   minOccurs="0" maxOccurs="1"/>
@@ -406,5 +426,30 @@
 <!-- Fine tipoDatiControllo5012 -->
 
 <!-- ################################################################# Fine usati in 5012 ###########################################################-->
+
+<!-- ################################################################# Inizio usati in 5013 ###########################################################-->
+	
+	<xs:complexType name="tipoSchedaSoggetto">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoSchedaSoggetto"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRevocaDato">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoRevocaDato"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		
+	<!-- tipoDatiControllo5013 -->
+   <xs:complexType name="tipoDatiControllo5013">
+		<xs:sequence>			
+			<xs:element name="tipoRevoca"     type="tpdt:numerico2"     		 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"     minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoDatiControllo5013 -->
+<!-- ################################################################# Fine usati in 5013 ###########################################################-->
+
 
 </xs:schema>

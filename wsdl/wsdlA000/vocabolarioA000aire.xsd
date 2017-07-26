@@ -322,6 +322,10 @@
 <!-- tipoDatiControlloA001 -->
 	<xs:complexType name="tipoDatiControlloA001">
 		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>listaControlli: nome = FI - valore = 1:  famiglia incompleta</xs:documentation>
+				<xs:documentation>listaControlli: nome = FI - valore = 0:  famiglia completa (valore di default)</xs:documentation>
+			</xs:annotation>		
 			<xs:element name="attribuzioneFamigliaAIRE" 	type="tpdt:tipoAttribuzioneFamigliaAire" 	minOccurs="1" maxOccurs="1"/>
 			<xs:element name="gestioneCF" 					type="tpdt:tipoGestioneCF" 					minOccurs="0" maxOccurs="1"/>
 			<xs:element name="listaControlli"		        type="tpdt:tipoListaControlli"              minOccurs="0" maxOccurs="1"/>
@@ -335,7 +339,7 @@
 
 <!-- tipoGeneralitaIscrizioneA002 -->
   <xs:complexType name="tipoGeneralitaIscrizioneA002">
-		<xs:sequence>
+		<xs:sequence>		
 			<xs:element name="generalita" 					type="tpdt:tipoGeneralita" 				minOccurs="1" maxOccurs="1"/>
 			<xs:element name="statoCivile" 					type="tpdt:tipoStatoCivile" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="attributiSoggetto" 			type="tpdt:tipoAttributiSoggetto" 		minOccurs="0" maxOccurs="1"/>			
@@ -345,7 +349,7 @@
 
 <!-- tipoFamigliaA002 -->
 	<xs:complexType name="tipoFamigliaA002">
-		<xs:sequence>
+		<xs:sequence>	
 			<xs:element name="famiglia" 					type="tpdt:tipoFamigliaConvivenza"			minOccurs="1" maxOccurs="1"/>			
 			<xs:element name="legameSoggetto" 				type="tpdt:tipoLegameSoggetto"			minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>	
@@ -355,6 +359,10 @@
 <!-- tipoDatiControlloA002 -->
 	<xs:complexType name="tipoDatiControlloA002">
 		<xs:sequence>
+			<xs:annotation>
+					<xs:documentation>listaControlli: nome = FI - valore = 1:  famiglia incompleta</xs:documentation>
+					<xs:documentation>listaControlli: nome = FI - valore = 0:  famiglia completa (valore di default)</xs:documentation>
+			</xs:annotation>			
 			<xs:element name="attribuzioneFamigliaAIRE" 	type="tpdt:tipoAttribuzioneFamigliaAire" 	minOccurs="1" maxOccurs="1"/>
 			<xs:element name="gestioneCF" 				    type="tpdt:tipoGestioneCF" 					minOccurs="0" maxOccurs="1"/>
 			<xs:element name="listaControlli"		        type="tpdt:tipoListaControlli"              minOccurs="0" maxOccurs="1"/>

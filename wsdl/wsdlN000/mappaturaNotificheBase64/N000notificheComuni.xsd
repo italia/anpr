@@ -9,7 +9,15 @@
 <xs:import namespace="http://sogei.it/ANPR/vocabolarioN000Comuni"  schemaLocation="vocabolarioN000Comuni.xsd"/>
 
 <!-- NotificaN010 residenza -->
-<xs:element name="NotificaN010" type="vcbl:tipoNotificaN010"  />
+<xs:element name="NotificaN010" type="vcbl:tipoNotificaCambioResidenza"  />
+<!-- Fine NotificaN010 -->
+
+<!-- NotificaN014 ripristino (prov. non subentrato) -->
+<xs:element name="NotificaN014" type="vcbl:tipoNotificaCambioResidenza"  />
+<!-- Fine NotificaN014 -->
+
+<!-- NotificaN015 ripristino (prov. subentrato) -->
+<xs:element name="NotificaN015" type="vcbl:tipoNotificaCambioResidenza"  />
 <!-- Fine NotificaN010 -->
 
 <!-- NotificaN031 subentro -->

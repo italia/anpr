@@ -101,17 +101,16 @@
 <!-- tipoBollo -->
 	<xs:simpleType name="tipoBollo">
 		<xs:annotation>
-			<xs:documentation></xs:documentation>
+			<xs:documentation>importo del bollo in centesimi di euro (per esempio per mettere 1 euro occorre scrivere 100)</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numericoMax5">
-					
 		</xs:restriction>
 	</xs:simpleType>
 <!-- Fine tipoBollo -->
 <!-- tipoDiritti -->
 	<xs:simpleType name="tipoDiritti">
 		<xs:annotation>
-			<xs:documentation></xs:documentation>
+			<xs:documentation>Se 0 non presente; se i diritti di segreteria vengono riscossi dal comune, indicare l'importo  in centesimi di euro (per esempio per mettere 1 euro occorre scrivere 100)</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numericoMax5">
 					
@@ -121,9 +120,7 @@
 <!-- tipoDiritti -->
 	<xs:simpleType name="tipoEsenzioneDiritti">
 		<xs:annotation>
-			<xs:documentation>0 = Non esente 
-							  1 = Esente
-			</xs:documentation>
+			<xs:documentation>0=Non esente|1=Esente</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numerico1">
 				<!-- <xs:pattern value="0|1"/>	-->	
@@ -133,7 +130,7 @@
 <!-- tipoEsenzione -->
 	<xs:simpleType name="tipoEsenzione">
 		<xs:annotation>
-			<xs:documentation>Tab Esenzioni</xs:documentation>
+			<xs:documentation>0=non esente|da 1 a 10 esente(si rimanda a tab. 39 Esenzione bollo)|99=Altro motivo esenzione</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numericoMax2">
 		</xs:restriction>
@@ -142,7 +139,7 @@
 <!-- tipoBolloVirtuale -->
 	<xs:simpleType name="tipoBolloVirtuale">
 		<xs:annotation>
-			<xs:documentation>1=Bollo Assolto In Modo Virtuale|2=Bollo Ordinario</xs:documentation>
+			<xs:documentation>1=Bollo Assolto In Modo Virtuale|2=Bollo assolto tramite contrassegno |9=Altra modalita' di assolvimento del bollo</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numerico1">
 		</xs:restriction>
@@ -151,7 +148,7 @@
 <!-- tipoEmissione -->
 	<xs:simpleType name="tipoEmissione">
 		<xs:annotation>
-			<xs:documentation>1=Sportello|2=Internet</xs:documentation>
+			<xs:documentation>1=Certificato emesso allo Sportello|2=certificato emesso via Internet|3=Richiesta di Anteprima certificato</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numerico1">
 		</xs:restriction>
@@ -160,7 +157,7 @@
 <!-- tipoRichiesta -->
 	<xs:simpleType name="tipoRichiesta">
 		<xs:annotation>
-			<xs:documentation>1=Emissione Certificato |2=Richiesta Dati</xs:documentation>
+			<xs:documentation>1=Emissione Certificato|2=Richiesta Dati</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="numerico1">
 		</xs:restriction>
@@ -347,7 +344,13 @@
 		<xs:restriction base="numericoMax2">
 		</xs:restriction>
 	</xs:simpleType>
-<!-- Fine tipoMotivoCostituzione -->	
+<!-- Fine tipoMotivoCostituzione -->
+<!-- tipoMotivoRevoca -->
+	<xs:simpleType name="tipoMotivoRevoca">		
+		<xs:restriction base="numericoMax2">
+		</xs:restriction>
+	</xs:simpleType>
+<!-- Fine tipoMotivoRevoca -->		
 <!-- tipoDenominazioneConvivenza -->
 	<xs:simpleType name="tipoDenominazioneConvivenza">		
 		<xs:restriction base="charMax100" />
@@ -629,6 +632,10 @@
 <!-- Fine tipoLingua -->
 <!-- tipoPaEstera -->	
 	<xs:simpleType name="tipoPaEstera">
+		<xs:annotation>
+			<xs:documentation>0=No paEstera|1=paEstera|2= destinazione d'uso CERTIFICATO RILASCIATO PER PROCEDIMENTI DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE|3=destinazione d'uso CERTIFICATO RILASCIATO PER PROCEDIMENTI
+DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE</xs:documentation>
+		</xs:annotation>	
 		<xs:restriction base="numericoMax2">			
 		</xs:restriction>
 	</xs:simpleType>
@@ -641,6 +648,9 @@
 <!-- Fine tipoCertificato -->
 <!-- tipoRichiedente -->
 	<xs:simpleType name="tipoRichiedente">
+		<xs:annotation>
+			<xs:documentation>Richiedente=1 chi richiede il certificato è diverso dall'Intestatario|Richiedente=2 il richiedente coincide con l'intestatario del certificato</xs:documentation>
+		</xs:annotation>	
 		<xs:restriction base="numerico1">
 		</xs:restriction>
 	</xs:simpleType>
@@ -811,7 +821,7 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="120"/>
-			<xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/>
+			<xs:pattern value="([0-9À-ža-zA-Z\- &apos;.,])*"/>
 		</xs:restriction>
 	</xs:simpleType>
 <!-- Fine alfanumerico80char -->
@@ -985,7 +995,6 @@
 	</xs:simpleType>
 	<xs:simpleType name="charMax256">
 		<xs:restriction base="xs:string">
-			<!--<xs:minLength value="1"/>-->
 			<xs:maxLength value="256"/>
 		</xs:restriction>
 	</xs:simpleType>	
@@ -1208,10 +1217,13 @@ Se esiste in ANPR, il comune riceve come esito la risposta in precedenza fornita
 			<xs:element name="tipoOperazione"
 				type="tipoRichiedenteOperazione" minOccurs="1" maxOccurs="1" >
 				<xs:annotation>
-					<xs:documentation>C=richiesta del cittadino
-V= variazione per correzioni di errori o anomalie dei dati
+					<xs:documentation>C=richiesta del cittadino
+
+V= variazione per correzioni di errori o anomalie dei dati
+
 R =rettifica di una precedente operazione
-
+
+
 </xs:documentation>
 				</xs:annotation></xs:element>
 			<xs:element name="protocolloComune" type="charMax20"
@@ -1256,7 +1268,8 @@ Se il parametro non è compatibile con l'ambiente di riferimento il servizio ter
 				minOccurs="0" maxOccurs="1" >
 				<xs:annotation>
 					<xs:documentation>Fornitore del software</xs:documentation>
-				</xs:annotation></xs:element>
+				</xs:annotation></xs:element>
+
 		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoDatoTestataRichiesta -->
@@ -1490,7 +1503,7 @@ Se il parametro non è compatibile con l'ambiente di riferimento il servizio ter
 			<xs:element name="noteSoggiorno" 			 type="charMax240" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataRilascio" 			 type="xs:date" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataScadenza" 			 type="xs:date" 			minOccurs="0" maxOccurs="1"/>
-			<xs:element name="questuraRilascioSoggiorno" type="charMax20" 			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="questuraRilascioSoggiorno" type="charMax50" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="comune"   				 type="tipoComune" 			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="numeroPassaporto" 		 type="charMax30" 			minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
@@ -1511,7 +1524,7 @@ Se il parametro non è compatibile con l'ambiente di riferimento il servizio ter
 <!-- tipoDatiSoggiorno30XX -->
 	<xs:complexType name="tipoDatiSoggiorno3000">
 		<xs:sequence>			
-			<xs:element name="questuraRilascioSoggiorno" type="charMax20" 			minOccurs="0" maxOccurs="1"	/>
+			<xs:element name="questuraRilascioSoggiorno" type="charMax50" 			minOccurs="0" maxOccurs="1"	/>
 			<xs:element name="numeroSoggiorno" 			 type="charMax20" 			minOccurs="0" maxOccurs="1"	/>				
 		</xs:sequence>
 	</xs:complexType>
@@ -1748,7 +1761,7 @@ se impostato deve valere 1</xs:documentation>
 	<xs:complexType name="tipoIscrizioneResidente">
 		<xs:sequence>
 			<xs:element name="motivoIscrizione" 				type="tipoMotivoIscrizione" 	minOccurs="1" maxOccurs="1"/>
-			<xs:element name="descrizioneMotivoIscrizione" 		type="charMax30" 				minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="descrizioneMotivoIscrizione" 		type="charMax240" 				minOccurs="0" maxOccurs="1"/>		
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoIscrizioneResidente-->
@@ -1821,7 +1834,7 @@ se impostato deve valere 1</xs:documentation>
 				</xs:annotation></xs:element>
 			<xs:element name="tipoErroreAnomalia" 		type="char1" 			minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>E= errore bloccante; A = anomalia non bloccante
+					<xs:documentation>E= errore bloccante; W = anomalia non bloccante
 </xs:documentation></xs:annotation></xs:element>
 			<xs:element name="testoErroreAnomalia"      type="charMax240"		minOccurs="1" maxOccurs="1">
 				<xs:annotation>
@@ -2155,10 +2168,21 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
     			minOccurs="0" maxOccurs="1">
     		</xs:element>
     		<xs:element name="cittadinanza" type="tipoCittadinanza" minOccurs="0" maxOccurs="1"></xs:element>
+    		<!--
+   				dati delle convivenza (data costituzione, dati dell’eventuale contratto ) :
+	    			- il campo 'data' rappresenta la data di costituzione della convivenza
+	    			- il campo 'dataDocumento' la data di stipula del contratto.
+	    			- il campo 'dataNotifica' la data in cui il contratto viene notificato al comune    	    		 
+    		 -->
     		<xs:element name="contrattoStipula"
     			type="tipoDocumentoProtocollato" minOccurs="0" maxOccurs="1">
     		</xs:element>
-
+    		<!--
+				dati della risoluzione della convivenza (data risoluzione e dati dell'eventuale contratto) : 
+	    			- il campo 'data' rappresenta la data di risoluzione
+	    			- il campo 'dataDocumento' la data del contratto 
+	    			- il campo 'dataNotifica' la data in cui il contratto viene notificato al comune       		 
+    		 -->
     		<xs:element name="contrattoRisoluzione"
     			type="tipoRisoluzioneConvivenza" minOccurs="0" maxOccurs="1">
     		</xs:element>
@@ -2172,13 +2196,15 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 <!-- tipoContrattoConvivenza -->
     <xs:complexType name="tipoDocumentoProtocollato">
     	<xs:sequence>
-
     		<xs:element name="data" type="xs:date" minOccurs="0"
     			maxOccurs="1">
     		</xs:element>
     		<xs:element name="dataNotifica" type="xs:date" minOccurs="0"
     			maxOccurs="1">
     		</xs:element>
+    		<xs:element name="dataDocumento" type="xs:date" minOccurs="0" 
+    			maxOccurs="1">
+			</xs:element>
     		<xs:element name="protocollo" type="xs:string" minOccurs="0"
     			maxOccurs="1">
     		</xs:element>
@@ -2234,7 +2260,8 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
     		</xs:element>
     		<xs:element name="contratto"
     			type="tipoDocumentoProtocollato" minOccurs="0" maxOccurs="1">
-    		</xs:element>
+    		</xs:element>
+
     	</xs:sequence>
     </xs:complexType>
 <!-- Fine tipoRisoluzioneConvivenza -->
@@ -2444,10 +2471,12 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 				type="tipoAnnullamentoMatrimonio" minOccurs="0" maxOccurs="1" />
 			<xs:element name="convivenzaDiFatto"
 				type="tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1">
-			</xs:element>
+			</xs:element>
+
 			<xs:element name="unioneCivile" type="tipoUnioneCivile"
 				minOccurs="0" maxOccurs="1">
-			</xs:element>
+			</xs:element>
+
 			<xs:element name="cartaIdentita" type="tipoCartaIdentita"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="permessoSoggiorno"
@@ -2668,5 +2697,43 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 		</xs:sequence>
 	</xs:complexType>
 <!-- fine tipoDatiRispostaInterrCittadinoEnte -->	
+
+<!-- inizio tipoSchedaSoggetto utilizzato per il 5013 -->
+<xs:complexType name="tipoSchedaSoggetto">
+		<xs:sequence>
+			<xs:element name="generalitaPerRicerca" type="tipoGeneralita"
+				minOccurs="1" maxOccurs="1" />
+			
+			<xs:element name="matrimonio" type="tipoMatrimonio"
+				minOccurs="0" maxOccurs="1" />
+
+			<xs:element name="convivenzaDiFatto"
+				type="tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1">
+			</xs:element>
+
+			<xs:element name="unioneCivile" type="tipoUnioneCivile"
+				minOccurs="0" maxOccurs="1">
+			</xs:element>
+
+			<xs:element name="permessoSoggiorno"
+				type="tipoPermessoSoggiorno" minOccurs="0" maxOccurs="1" />
+
+			<xs:element name="censimento" type="tipoCensimento"
+				minOccurs="0" maxOccurs="1" />
+
+			<xs:element name="domicilioDigitale"
+				type="tipoDomicilioDigitale" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+<!-- fine tipoSchedaSoggetto -->
+
+<!-- tipoRevocaDato -->
+		<xs:complexType name="tipoRevocaDato">
+			<xs:sequence>
+				<xs:element name="motivoRevoca" type="tipoMotivoCancellazione"    minOccurs="1" maxOccurs="1"/>
+				<xs:element name="noteRevoca"	type="charMax80" 				   minOccurs="0" maxOccurs="1"/>				
+			</xs:sequence>
+		</xs:complexType>
+<!-- Fine tipoRevocaDato -->
 
 </xs:schema>

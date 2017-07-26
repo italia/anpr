@@ -153,7 +153,8 @@
 			<xs:element name="autoveicoli" 							type="tpdt:tipoAutoveicoli"   							minOccurs="0" maxOccurs="1"/>					
 			<xs:element name="altriDati" 							type="tpdt:tipoAltriDati"			 		  			minOccurs="0" maxOccurs="1"/>
 			<xs:element name="unioneCivile" 						type="tpdt:tipoUnioneCivile"			 		  		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="convivenzaDiFatto" 					type="tpdt:tipoConvivenzaDiFatto"			 		  	minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="convivenzaDiFatto" 					type="tpdt:tipoConvivenzaDiFatto"			 		  	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="altraCittadinanza" 					type="tpdt:tipoCittadinanza" 							minOccurs="0" maxOccurs="unbounded"/>			
 		</xs:sequence>		
 	</xs:complexType>	
 <!-- Fine GENERALITA -->
