@@ -21,24 +21,8 @@ Per aggevolare l'individuazione da parte dei Comuni delle anomalie da sanare pri
 	
 Per semplificare la lettura si sono classificate le anomalie in due macro-categorie, nel dettaglio:
 
-- **Anomalie sui dati anagrafici** la cui correzione vedrà direttamente coinvolto gli ufficiali anagrafici nel dare seguito alle necessarie istruttorie per constatare la corretta valorizzazione dei dati anagrafici stessi
+- **Anomalie sui dati anagrafici** la cui correzione vedrà direttamente coinvolto gli ufficiali anagrafici nel dare seguito alle necessarie istruttorie per constatare la corretto valorizzazione dei dati anagrafici stessi
 - **Anomalie sui file di subentro** che riguardano la formazione dei file per il trasferimento dall’APR locale all’ANPR e, per la loro natura, vedano direttamente interessati i tecnici informatici che predispongono i file
-
-
-.. Note::
-	**@** - segnaposto sostituito con valore rilevato nel file di subentro
-	
-	**Codice-Tabella** - segnaposto sostituito con il riferimento alla tabella di codifica da utilizzare
-	
-	**CF** - abbreviazione di Codice Fiscale
-	
-	**AT** - abbreviazione di Anagrafe Tributaria
-	
-	**DA** - abbreviazione di Dati Anagrafici
-	
-	**MAE** - abbreviazione di Ministero degli Affari Esteri
-	
-	**AIRE** - abbrezione di Anagrafe Italiani Residenti all'Estero
 
 
 Anomalie sui dati anagrafici
@@ -291,3 +275,19 @@ Anomalie sui file di subentro
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 | EN362           | Prima di effettuare l'invio, occorre indicare l'indirizzo di PEC cui recapitare l'esito (funzione Amministrazione)                                                                                                                                  | **ERRORE**  |                                                                          | :doc:`Procedura 010 - Inoltro file di subentro disabilitato <procedura_010>`             | 
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+
+
+.. Note::
+	**@** - segnaposto sostituito con valore rilevato nel file di subentro
+	
+	**Codice-Tabella** - segnaposto sostituito con il riferimento alla tabella di codifica da utilizzare
+	
+	**CF** - abbreviazione di Codice Fiscale
+	
+	**AT** - abbreviazione di Anagrafe Tributaria
+	
+	**DA** - abbreviazione di Dati Anagrafici
+	
+	**MAE** - abbreviazione di Ministero degli Affari Esteri
+	
+	**AIRE** - abbrezione di Anagrafe Italiani Residenti all'Estero
