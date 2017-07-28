@@ -1,8 +1,4 @@
-# Manuale operativo per i comuniPrima attivazione di utenti e smart card ANPR
-
-
-# Premessa
-
+## Premessa
 Il presente documento sintetizza  il flusso delle attività necessarie per il primo censimento, per l’attivazione degli utenti e delle smart card, propedeutico al subentro in ANPR.  subentro in ambiente di produzione per i Comuni.
 
 Per un maggior dettaglio sulle operazioni occorre consultare la  Guida operativa disponibile sul Portale ANPR disponibile al link :

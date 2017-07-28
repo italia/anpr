@@ -1,8 +1,8 @@
-ANPR - Manuale di attivazione delle smart card
-================================
+ANPR - Censimento utenti e postazioni - Guida essenziale per i  Comuni
+======================================================================
 
 
-In questo documento sono contenute le istruzioni essenziali per l'attivazione della smart card
+In questo documento sono contenute le istruzioni essenziali per il centimento degli utenti e delle postazioni riservato ai comuni
 
 
 Indice dei contenuti

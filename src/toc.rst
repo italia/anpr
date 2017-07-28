@@ -6,4 +6,5 @@
     comuni/index
     subentro/index
     smart-card/index
+    smart-card-prefetture/index
     tab/toc_tabelle_riferimento
