@@ -9,7 +9,9 @@ I soggetti coinvolti nella procedura descritta sono:
 
 - il Ministero dell’Interno quale amministrazione presso cui è istituito l’ANPR;
 - le Prefetture, l’ufficio territoriale del governo che interviene nel processo di consegna ai Comuni della Smart Card e relativi lettori, per permettere l’accesso agli operatori al Comune;
-- il Comune che richiede e riceve gli strumenti necessari per garantire, ai propri operatori, l’accesso al sistema ANPR:
+- il Comune che richiede e riceve gli strumenti necessari per garantire, ai propri operatori.
+
+Relativamente al Comune si identificano i seguenti ruoli:
   
 1 il Sindaco del Comune, che rappresenta il primo referente; dell’amministrazione verso gli altri attori coinvolti, di specie Ministero dell’Interno, Prefettura e SOGEI;
 2 il responsabile CNSD, il soggetto indicato dall’Amministrazione, indipendentemente dal progetto ANPR, per l’accesso ai servizi web del CNSD;
