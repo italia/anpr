@@ -9,6 +9,7 @@ La presente guida, predisposto per agevolare le attività necessarie per l’uti
 Quanto descritto di seguito assicura ai Comuni i necessari dispositivi per dare seguito alle “Garanzie e misure di sicurezza nel trattamento dei dati personali” così come previsto dal `DPCM 194/2014 <http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2014-11-10;194>`_.
 
 Si precisa che quanto di seguito esposto, relativamente alla predisposizione delle postazioni e l’utilizzo delle Smart Card, si applica per l’autenticazione di tutti gli operatori comunali, che sulla base delle scelte dei singoli Comuni, utilizzano la Web Application ANPR. Di contro, nel caso in cui l’operatore comunale utilizza l’APR locale integrata con il sistema ANPR tramite Web Services, le procedure di autenticazione sono specifiche delle APR locali e l’azione di autenticazione dell’operatore comunale da parte del sistema ANPR è del tutto trasparente a quest’ultimo. Anche in questa ipotesi si ricorda che:
+
 - gli operatori del comune devono in ogni caso essere registrati e profilati nel sistema ANPR;
 - alcune funzionalità sono disponibili esclusivamente nella Web Application ANPR ed occorre pertanto prevedere utenti in possesso di smart card per il loro utilizzo.
 
