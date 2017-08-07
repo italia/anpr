@@ -1,8 +1,6 @@
-ANPR - Censimento utenti e postazioni, guida rapida per i comuni
-================================================================
-
 Procedura operativa
-^^^^^^^^^^^^^^^^^^^
+===================
+
 La procedura operative riportata nella seguente figura sintetizza le azioni che un Comune e gli altri attori coinvolti realizzano per assicurarsi gli strumenti necessari per effettuare l’accesso al sistema ANPR. 
 
 .. image:: image/PROCEDURA.png
@@ -25,7 +23,8 @@ Nei seguenti paragrafi si descrive con un maggiore dettaglio le azioni che reali
 
 
 Censimento utenti e postazioni
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 L’attività di censimento degli utenti e delle postazioni è effettuata dal Comune con l’obiettivo di comunicare al sistema ANPR le informazioni necessarie - operatori comunali, numero di postazioni, ecc. - alla produzione dei dispositivi di sicurezza certificati di postazioni, credenziali e Smart Card.
 
 A valle del censimento interno all’Amministrazione, il responsabile comunale degli accessi a `Centro Nazionale Servizi Demografici (CNSD) <http://servizidemografici.interno.it/>`_ accede alla funzionalità Censimento ANPR predisposta nella sezione SERVIZI PRINCIPALI / Area privata.
@@ -40,7 +39,8 @@ I dati che il Comune deve fornire per completare il censimento sono:
 Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 dal task denominato “Censimento utenti e postazioni” in carico del Comune.
 
 Approvvigionamento dei dispositivi di sicurezza
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Il Ministero dell’Interno acquisisce i dati inoltrati dal Comune è assicura l'approvvigionamento dei dispositivi di sicurezza: certificati di postazioni, credenziali, Smart Card e lettori di Smart Card.
 
 Nello specifico provvede a garantire la personalizzazione delle Smart Card ed al loro inoltro alle Prefetture, individuato quale organo di governo periferico per assicurare la consegna delle Smart Card ai Comuni. La produzione delle Smart Card prevede che le stesse siano custodite in una busta che contiene la prima parte del PIN, del PUK e metà della password di accesso da utilizzare in caso di impossibilità di utilizzo della Smart Card.
@@ -53,7 +53,8 @@ Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 nei s
 - “Ritiro delle Smart Card” in carico al Comune. 
 
 Nomina Amministratori Locali
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Contestualmente alla comunicazione di avvenuta consegna da parte della Prefettura, il sindaco riceve alla sua casella di posta elettronica, indicata nella fase di censimento, la restante metà del PIN del PUK e metà della password di accesso. 
 
 Di seguito occorre
@@ -74,7 +75,8 @@ Contestualmente alla registrazione sulla Web Application ANPR dell’Amministrat
 Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 dal task denominato “Nomina ALS e ALP” in carico al Comune.
 
 Distribuzione Smart Card
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 L’Amministratore Locale della Sicurezza accede alla Web Application ANPR, all’URL `https://dp.anpr.interno.it/com <https://dp.anpr.interno.it/com>`_, effettuando il login con la propria Smart Card dalla postazione configurata con il relativo certificato o in alternativa da altra postazione purché si dia seguito alla procedura di installazione del certificato di postazione.
 
 Le funzionalità per dare seguito all’azione di assegnazione delle Smart Card agli operatori comunali da parte dell’Amministratore Locale della Sicurezza sono disponibili nella sezione Sicurezza della Web Application ANPR, e nel dettaglio “Gestione Smart Card” e “Registra Smart Card Comune”.
@@ -85,7 +87,8 @@ Nel dettaglio:
 Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
 
 Installazione dei certificati di postazione
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 L’Amministratore Locale delle Postazioni, a valle della nomina e della ricezione della Smart Card, accede alla Web Application ANPR, all’URL `https://dp.anpr.interno.it/com <https://dp.anpr.interno.it/com>`_, effettuando il login con la propria Smart Card dalla postazione configurata con il relativo certificato o in alternativa da altra postazione purché si dia seguito alla procedura di installazione del certificato di postazione.
 
 Per dare seguito alle proprie azioni, l’Amministratore Locale delle Postazioni, utilizza la funzione “Gestione postazione – Ricerca postazione” nella sezione Sicurezza della Web Application ANPR.
@@ -101,3 +104,6 @@ E' possibile effettuare il download di tutti i certificati da installare con una
 Il file contiene tutti i certificati e un file .txt con le relative password.
 
 Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione si rimanda al successivo paragrafo 3.2. 
+
+Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
+
