@@ -22,7 +22,8 @@ SO compatibili:
 - Mac OS X sia a 32 che a 64 bit. 
 - Distribuzioni di Linux maggiormente diffuse sia a 32 che a 64 bit.
 
-Interfaccia: 	
+Interfaccia: 
+	
 - USB 2.0 Type A connector
 
 Installazione driver Smart Card
