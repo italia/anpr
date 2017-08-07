@@ -66,20 +66,20 @@ Le postazioni che saranno utilizzate dagli operatori comunali per interagire con
  
 L’azione di configurazione è fortemente dipendente del browser in uso, di seguito si riportano alcune indicazioni di massima, rimandando le necessarie precisazioni alla documentazione del browser in uso.
 
-- Chrome (verificato su Versione 59)
-  1 accedere alla sezione “Impostazioni”
-  2 individuare la voce “Gestione Certificati”
-  3 importare il certificato attraverso la funzione “Importa”
+Chrome (verificato su Versione 59)
+1. accedere alla sezione “Impostazioni”
+2. individuare la voce “Gestione Certificati”
+3. importare il certificato attraverso la funzione “Importa”
 
-- Internet Explorer (verificato su Versione 11)
-  1 accedere alla sezione “Opzioni Internet”
-  2 selezionare la funzione “Certificati” dal tab “Contenuto”
-  3 importare il certificato attraverso la funzione “Importa”
+Internet Explorer (verificato su Versione 11)
+1. accedere alla sezione “Opzioni Internet”
+2. selezionare la funzione “Certificati” dal tab “Contenuto”
+3. importare il certificato attraverso la funzione “Importa”
 
-- Firefox (verificato su Versione 54)
-  1 accedere alla sezione “Opzioni”
-  2 selezionare la funzione “Mostra Certificati” dal tab “Avanzate”
-  3 importare il certificato attraverso la funzione “Importa”
+Firefox (verificato su Versione 54)
+1. accedere alla sezione “Opzioni”
+2. selezionare la funzione “Mostra Certificati” dal tab “Avanzate”
+3. importare il certificato attraverso la funzione “Importa”
 
 
 
