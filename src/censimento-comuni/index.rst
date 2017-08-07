@@ -12,8 +12,8 @@ Si precisa che quanto di seguito esposto, relativamente alla predisposizione del
 - gli operatori del comune devono in ogni caso essere registrati e profilati nel sistema ANPR;
 - alcune funzionalità sono disponibili esclusivamente nella Web Application ANPR ed occorre pertanto prevedere utenti in possesso di smart card per il loro utilizzo.
 
-
-Per maggiori dettagli si rimanda alla consultazione della documentazione tecnica presente sul sito istituzionale del progetto ANPR `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
+.. Important::
+	Per maggiori dettagli si rimanda alla consultazione della documentazione tecnica presente sul sito istituzionale del progetto ANPR `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
 
 
 Indice dei contenuti
