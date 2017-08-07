@@ -1,6 +1,10 @@
 Procedura operativa
 ===================
 
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
+
+
 La procedura operative riportata nella seguente figura sintetizza le azioni che un Comune e gli altri attori coinvolti realizzano per assicurarsi gli strumenti necessari per effettuare l’accesso al sistema ANPR. 
 
 .. image:: image/PROCEDURA.png
