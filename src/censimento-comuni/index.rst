@@ -24,3 +24,4 @@ Indice dei contenuti
    :maxdepth: 5
 
    procedura-operativa.rst
+   procedure-strumentali.rst

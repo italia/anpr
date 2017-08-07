@@ -48,9 +48,11 @@ Per effettuare tale verifica occorre:
 - verificare l’accensione della spia luminosa dello stesso;
 - avviare l’applicazione “IDProtect Manager” per verificare che le informazioni contenute all’interno della Smart Card siano lette correttamente, in particolare il dato relativo al Serial Number del certificato;
 
-.. image:: image/PROCEDURA.png
+.. image:: image/IMAGE01.png
 
 - selezionando il Tab Certificati & Chiavi e utilizzando il PIN fornito, è possibile verificare le informazioni riguardanti il codice fiscale dell’utente titolare della Smart Card.
+
+.. image:: image/IMAGE02.png
 
 Configurazione delle postazioni
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
