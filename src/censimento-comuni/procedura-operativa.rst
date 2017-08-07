@@ -26,7 +26,10 @@ Nei seguenti paragrafi si descrive con un maggiore dettaglio le azioni che reali
 Censimento utenti e postazioni
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-L’attività di censimento degli utenti e delle postazioni è effettuata dal Comune con l’obiettivo di comunicare al sistema ANPR le informazioni necessarie - operatori comunali, numero di postazioni, ecc. - alla produzione dei dispositivi di sicurezza certificati di postazioni, credenziali e Smart Card.
+L’attività di censimento degli utenti e delle postazioni è effettuata dal Comune con l’obiettivo di comunicare al sistema ANPR le informazioni necessarie 
+
+- operatori comunali, numero di postazioni, ecc. 
+- alla produzione dei dispositivi di sicurezza certificati di postazioni, credenziali e Smart Card.
 
 A valle del censimento interno all’Amministrazione, il responsabile comunale degli accessi a `Centro Nazionale Servizi Demografici (CNSD) <http://servizidemografici.interno.it/>`_ accede alla funzionalità Censimento ANPR predisposta nella sezione SERVIZI PRINCIPALI / Area privata.
 
