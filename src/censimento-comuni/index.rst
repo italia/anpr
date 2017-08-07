@@ -1,8 +1,5 @@
-ANPR - Censimento utenti e postazioni 
-=====================================
-
-Guida rapida per i comuni
-^^^^^^^^^^^^^^^^^^^^^^^^^
+ANPR - Censimento utenti e postazioni, guida rapida per i comuni
+================================================================
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
@@ -19,11 +16,10 @@ Si precisa che quanto di seguito esposto, relativamente alla predisposizione del
 Per maggiori dettagli si rimanda alla consultazione della documentazione tecnica presente sul sito istituzionale del progetto ANPR `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
 
 
+Indice dei contenuti
+--------------------
 
+.. toctree::
+   :maxdepth: 5
 
-   
-
-
-
-
-
+   procedura-operativa.rst
