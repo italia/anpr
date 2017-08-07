@@ -38,11 +38,12 @@ A valle del censimento interno all’Amministrazione, il responsabile comunale d
 
 L'accesso alla funzionalità indicata in precedenza è assicurato ai Comuni che hanno avviato la procedura di subentro in ANPR nel rispetto del piano di migrazione predisposto nell’ambito del progetto ANPR. 
 
-I dati che il Comune deve fornire per completare il censimento sono:
-
-- riferimento degli operatori e numero di postazioni censite;
-- PEC istituzionale del Comune utilizzata per le comunicazioni; 
-- riferimenti del responsabile ANPR individuato dall’amministrazione.
+.. Important::
+    I dati che il Comune deve fornire per completare il censimento sono:
+    
+    - riferimento degli operatori e numero di postazioni censite;
+    - PEC istituzionale del Comune utilizzata per le comunicazioni; 
+    - riferimenti del responsabile ANPR individuato dall’amministrazione.
 
 Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 dal task denominato “Censimento utenti e postazioni” in carico del Comune.
 
@@ -53,7 +54,8 @@ Il Ministero dell’Interno acquisisce i dati inoltrati dal Comune è assicura l
 
 Nello specifico provvede a garantire la personalizzazione delle Smart Card ed al loro inoltro alle Prefetture, individuato quale organo di governo periferico per assicurare la consegna delle Smart Card ai Comuni. La produzione delle Smart Card prevede che le stesse siano custodite in una busta che contiene la prima parte del PIN, del PUK e metà della password di accesso da utilizzare in caso di impossibilità di utilizzo della Smart Card.
 
-La Prefettura, dopo aver ricevuto il plico delle Smart Card, convoca il sindaco per la consegna delle Smart Card e provvede alla consegna delle stesse al sindaco o un suo delegato.
+.. Important::
+    La Prefettura, dopo aver ricevuto il plico delle Smart Card, convoca il sindaco per la consegna delle Smart Card e provvede alla consegna delle stesse al sindaco o un suo delegato.
 
 Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 nei seguenti task:
 
@@ -71,13 +73,14 @@ Contestualmente alla comunicazione di avvenuta consegna da parte della Prefettur
 
 Tali attività sono necessarie per le successive azioni di assegnazione dei diritti di Amministratore Locale della Sicurezza (ALS) e Amministratore Locale delle Postazioni (ALP), i soggetti individuati dall’amministrazione comunale a cui sono assegnate, rispettivamente, le funzioni per la gestione degli utenti e, in particolare, la consegna delle Smart Card agli operatori comunali e la gestione/installazione dei certificati delle postazioni abilitate ad interagire con il sistema ANPR.
 
-Il Sindaco accede alla Web Application ANPR, all’URL `https://dp.anpr.interno.it/com <https://dp.anpr.interno.it/com>`_, effettuando il login con la propria Smart Card.
-Attraverso le funzionalità presenti nella sezione Sicurezza il Sindaco :
-
--	nomina l’Amministrazione Locale della Sicurezza e l’Amministratore Locale delle Postazioni assicurandogli i relativi ruoli;
--	consegna della Smart Card all’Amministrazione Locale della Sicurezza ed alla sua registrazione attraverso l’utilizzo della funzionalità “Registra Smart Card Comune”;
--	consegna la busta con metà del PIN, del PUK e della password di accesso della Smart Card all’Amministrazione Locale della Sicurezza
--	consegna, all’Amministrazione Locale della Sicurezza, il plico che contiene le restanti SC del comune con relative buste che l’ALS consegnerà successivamente ai rispettivi titolari.
+.. Important::
+    Il Sindaco accede alla Web Application ANPR, all’URL `https://dp.anpr.interno.it/com <https://dp.anpr.interno.it/com>`_, effettuando il login con la propria Smart Card.
+    Attraverso le funzionalità presenti nella sezione Sicurezza il Sindaco :
+    
+    - nomina l’Amministrazione Locale della Sicurezza e l’Amministratore Locale delle Postazioni assicurandogli i relativi ruoli;
+    - consegna della Smart Card all’Amministrazione Locale della Sicurezza ed alla sua registrazione attraverso l’utilizzo della funzionalità “Registra Smart Card Comune”;
+    - consegna la busta con metà del PIN, del PUK e della password di accesso della Smart Card all’Amministrazione Locale della Sicurezza
+    - consegna, all’Amministrazione Locale della Sicurezza, il plico che contiene le restanti SC del comune con relative buste che l’ALS consegnerà successivamente ai rispettivi titolari.
 
 Contestualmente alla registrazione sulla Web Application ANPR dell’Amministratore Locale della Sicurezza, questi riceve alla sua casella di posta elettronica la restante metà del PIN del PUK e della password di accesso. 
 
@@ -88,7 +91,9 @@ Distribuzione Smart Card
 
 L’Amministratore Locale della Sicurezza accede alla Web Application ANPR, all’URL `https://dp.anpr.interno.it/com <https://dp.anpr.interno.it/com>`_, effettuando il login con la propria Smart Card dalla postazione configurata con il relativo certificato o in alternativa da altra postazione purché si dia seguito alla procedura di installazione del certificato di postazione.
 
-Le funzionalità per dare seguito all’azione di assegnazione delle Smart Card agli operatori comunali da parte dell’Amministratore Locale della Sicurezza sono disponibili nella sezione Sicurezza della Web Application ANPR, e nel dettaglio “Gestione Smart Card” e “Registra Smart Card Comune”.
+.. Important::
+    Le funzionalità per dare seguito all’azione di assegnazione delle Smart Card agli operatori comunali da parte dell’Amministratore Locale della Sicurezza sono disponibili nella sezione Sicurezza della Web Application ANPR, e nel dettaglio “Gestione Smart Card” e “Registra Smart Card Comune”.
+
 Nel dettaglio:
 
 - l’Amministratore Locale della Sicurezza consegna agli operatori comunali, tra cui anche l’Amministratore Locale delle Postazioni, la Smart Card unitamente alla busta con la metà del PIN, del PUK e della password di accesso e, attraverso le funzionalità esposte dalla Web Application ANPR, provvede alla comunicazione della consegna/assegnazione delle Smart Card;
@@ -105,7 +110,8 @@ Per dare seguito alle proprie azioni, l’Amministratore Locale delle Postazioni
 
 E’ possibile ricercare tutti i certificati di postazione selezionando il bottone Ricerca.
 
-I certificati presenti nella lista della sezione Elenco postazioni coincidono con il numero di postazioni dichiarate dal comune al momento del censimento utenti. 
+.. Important::
+    I certificati presenti nella lista della sezione Elenco postazioni coincidono con il numero di postazioni dichiarate dal comune al momento del censimento utenti. 
 
 Selezionando l’icona lente presente nella colonna dettaglio è possibile visualizzare la password del relativo certificato e scaricare il file tramite il bottone Scarica certificato.
 
@@ -113,9 +119,10 @@ E' possibile effettuare il download di tutti i certificati da installare con una
 
 Il file contiene tutti i certificati e un file .txt con le relative password.
 
-Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi `procedure strumentali <procedure-strumentali>`_). 
-
-L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi `procedure strumentali <procedure-strumentali>`_)
+.. Important::
+    Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi `procedure strumentali <procedure-strumentali>`_). 
+    
+    L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi `procedure strumentali <procedure-strumentali>`_)
 
 Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
 
