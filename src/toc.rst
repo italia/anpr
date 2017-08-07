@@ -5,6 +5,6 @@
     faq/index
     comuni/index
     subentro/index
-	censimento-comuni/index
+    censimento-comuni/index
     smart-card-prefetture/index
     tab/toc_tabelle_riferimento
