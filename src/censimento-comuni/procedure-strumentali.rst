@@ -3,9 +3,13 @@ Procedura strumentali
 
 Di seguito sono descritte in maggior dettaglio le principali procedure da seguire per il completamento di quanto previsto nel processo operativo.
 
+Configurazione lettore Smart Card
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+L’utilizzo delle Smart Card, oltre alla conoscenza dei PIN, PUK e password per l’accesso, necessità delle attività di seguito descritte da realizzarsi sulle postazioni da cui gli operatori comunali accederanno alla Web Application ANPR.
 
 Installazione lettore Smart Card
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
+
 Il lettore fornito ai Comune per l’utilizzo delle Smart Card si caratterizza per tecnologia plug&play che, nei moderni sistemi operativi, possono essere messe in uso all'interno di un sistema hardware o/e software senza che l'utente del sistema conosca o metta in atto una specifica procedura di installazione o configurazione.
 
 Dopo aver collegato il lettore al connettore USB del computer attendere che il sistema operativo comunichi all’utente che il dispositivo è installato e correttamente funzionante.
@@ -23,6 +27,7 @@ Interfaccia:
 
 Installazione driver Smart Card
 -------------------------------
+
 L’installazione del drive della Smart Card dipende dal sistema operativo presente sulla postazione; è possibile prelevare i relativi driver accedendo alla URL: `https://www.pec.it/download-software-driver.aspx <https://www.pec.it/download-software-driver.aspx>`_
 
 Sotto la voce “Driver Smart/SIM Card” selezionando “CARD produttore Athena”, si potrà effettuare il download delle ultime versioni per Microsoft Windows, Linux e Apple MAC OS X.
