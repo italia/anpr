@@ -1,5 +1,8 @@
-ANPR - Buone pratiche per le attività di pre-subentro dei Comuni in ANPR
-========================================================================
+ANPR - Censimento utenti e postazioni 
+=====================================
+
+Guida rapida per i comuni
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
