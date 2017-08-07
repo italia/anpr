@@ -113,7 +113,9 @@ E' possibile effettuare il download di tutti i certificati da installare con una
 
 Il file contiene tutti i certificati e un file .txt con le relative password.
 
-Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione si rimanda al successivo paragrafo 3.2. 
+Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi `procedure strumentali <procedure-strumentali>`_). 
+
+L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi `procedure strumentali <procedure-strumentali>`_)
 
 Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
 
