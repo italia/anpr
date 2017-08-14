@@ -73,7 +73,7 @@ Nomina Amministratori Locali
 Contestualmente alla comunicazione di avvenuta consegna da parte della Prefettura, il sindaco riceve alla sua casella di posta elettronica, indicata nella fase di censimento, la restante metà del PIN del PUK e metà della password di accesso. Di seguito occorre:
 
 - configurare la postazione;
-- installare il certificato e la Smart Card (vedi `procedure strumentali <procedure-strumentali>`_).
+- installare il certificato e la Smart Card (vedi :doc:`procedure strumentali <procedure-strumentali>`).
 
 Tali attività sono necessarie per le successive azioni di assegnazione dei diritti di Amministratore Locale della Sicurezza (ALS) e Amministratore Locale delle Postazioni (ALP), i soggetti individuati dall’amministrazione comunale a cui sono assegnate, rispettivamente, le funzioni per la gestione degli utenti e, in particolare, la consegna delle Smart Card agli operatori comunali e la gestione/installazione dei certificati delle postazioni abilitate ad interagire con il sistema ANPR.
 
@@ -124,9 +124,9 @@ E' possibile effettuare il download di tutti i certificati da installare con una
 Il file contiene tutti i certificati e un file .txt con le relative password.
 
 .. Important::
-    Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi `procedure strumentali <procedure-strumentali>`_). 
+    Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`procedure strumentali <procedure-strumentali>`). 
     
-    L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi `procedure strumentali <procedure-strumentali>`_)
+    L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi :doc:`procedure strumentali <procedure-strumentali>`)
 
 Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
 
