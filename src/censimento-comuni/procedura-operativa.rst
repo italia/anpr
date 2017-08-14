@@ -1,5 +1,5 @@
-Procedura operativa
-===================
+Procedura di attivazione utenti e smart card
+============================================
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
