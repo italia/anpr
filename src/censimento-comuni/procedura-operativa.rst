@@ -82,9 +82,9 @@ Tali attività sono necessarie per le successive azioni di assegnazione dei diri
     Attraverso le funzionalità presenti nella sezione Sicurezza il Sindaco :
     
     - nomina l’Amministrazione Locale della Sicurezza e l’Amministratore Locale delle Postazioni assicurandogli i relativi ruoli;
-    - consegna della Smart Card all’Amministrazione Locale della Sicurezza ed alla sua registrazione attraverso l’utilizzo della funzionalità “Registra Smart Card Comune”;
+    - consegna della Smart Card all’Amministratore Locale della Sicurezza ed alla sua registrazione attraverso l’utilizzo della funzionalità “Registra Smart Card Comune”;
     - consegna la busta con metà del PIN, del PUK e della password di accesso della Smart Card all’Amministrazione Locale della Sicurezza
-    - consegna, all’Amministrazione Locale della Sicurezza, il plico che contiene le restanti SC del comune con relative buste che l’ALS consegnerà successivamente ai rispettivi titolari.
+    - consegna, all’Amministratore Locale della Sicurezza, il plico che contiene le restanti SC del comune con relative buste che l’ALS consegnerà successivamente ai rispettivi titolari.
 
 Contestualmente alla registrazione sulla Web Application ANPR dell’Amministratore Locale della Sicurezza, questi riceve alla sua casella di posta elettronica la restante metà del PIN del PUK e della password di accesso. 
 
@@ -124,9 +124,9 @@ E' possibile effettuare il download di tutti i certificati da installare con una
 Il file contiene tutti i certificati e un file .txt con le relative password.
 
 .. Important::
-    Successivamente al download dei certificati, l’Amministrazione Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`procedure strumentali <procedure-strumentali>`). 
+    Successivamente al download dei certificati, l'Amministratore Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`procedure strumentali <procedure-strumentali>`). 
     
-    L'Amministrazione Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi :doc:`procedure strumentali <procedure-strumentali>`)
+    L'Amministratore Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi :doc:`procedure strumentali <procedure-strumentali>`)
 
 Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna Smart Card” e “Riceve Smart Card” in carico al Comune.
 
