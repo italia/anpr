@@ -171,12 +171,12 @@ if __name__ == "__main__":
     toclist.append(createRstFromXlsx(Table(
         id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato_5_Elenco_WS_di_ANPR_12072017.xlsx/01e57b03-5ac4-407c-8cee-f50e61b6e0d6",
         title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="12 Luglio 2017",
-    ),False,4,9,4, ['Servizio', 'Operazione Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
+    ),False,4,9,4, ['Servizio', 'Op. Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
 
     toclist.append(createRstFromXlsx(Table(
         id=-4, url=Anpr.domain()+"portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
         title="Utilizzo del WebService", date="12 Luglio 2017",
-    ),False,4,37,3, ['Servizio', 'Operazione Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
+    ),False,4,37,3, ['Servizio', 'Op. Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
     toclist.append(createRstFromXlsx(Table(
         id=-3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
