@@ -119,9 +119,7 @@ E’ possibile ricercare tutti i certificati di postazione selezionando il botto
 
 Selezionando l’icona lente presente nella colonna dettaglio è possibile visualizzare la password del relativo certificato e scaricare il file tramite il bottone Scarica certificato.
 
-E' possibile effettuare il download di tutti i certificati da installare con una sola operazione selezionando il bottone “Scarica tutti” e salvando il file compresso. 
-
-Il file contiene tutti i certificati e un file .txt con le relative password.
+E' possibile effettuare il download di tutti i certificati da installare con una sola operazione selezionando il bottone “Scarica tutti” e salvando il file compresso. Il file ottenuto contiene tutti i certificati e un file .txt con le relative password.
 
 .. Important::
     Successivamente al download dei certificati, l'Amministratore Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`procedure strumentali <procedure-strumentali>`). 
