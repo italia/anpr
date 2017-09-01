@@ -188,15 +188,15 @@ if __name__ == "__main__":
         title="Elenco delle funzionalita' disponibilini nella web app", date="17 Marzo 2017",
     ),False,0,2000,3))
 
+    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+31082017_bis.xlsx/5699b8aa-7ba3-411b-91bf-6013ac1e6dab"
 
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=Anpr.domain()+"/portale/documents/20182/26001/errori_anpr+12072017.xlsx/7f4ad304-7b31-4038-adaf-4826dd2a9f9c",
-        title="Elenco Errori ANPR", date="12 Luglio 2017",
-    ),False,3,2000,3, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="31 Agosto 2017",
+    ),False,3,2000,4, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
+        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
         title="Errori Agenzia Entrate", date="12 Maggio 2017",
     ),False,nCols=3))
 
