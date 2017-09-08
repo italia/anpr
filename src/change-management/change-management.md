@@ -231,7 +231,9 @@ oppure su
 
 È inoltre possibile consultare l’elenco delle versioni supportate in tutti gli
 ambienti nella seguente pagina:
-[https://docs.anpr.it/status](https://docs.anpr.it/status)
+[https://docs.anpr.it/status](https://docs.anpr.it/status) (Nota: La pagina al
+momento è accessibile poichè il processo di change management è in fase di
+implementazione).
 
 Nota: Nel caso della web application, si assume che sia associata ad una
 specifica versione delle API di backend, e verrà indicato chiaramente nel
@@ -246,7 +248,9 @@ viene implementato tramite [ChangeLog](http://keepachangelog.com/) : un file di
 testo contenente un sommario dei cambiamenti presenti in ogni versione di ANPR.
 
 È possibile consultare lo storico delle versioni all’indirizzo:
-[https://docs.anpr.it/changelog](https://docs.anpr.it/changelog).
+[https://docs.anpr.it/changelog](https://docs.anpr.it/changelog) (Nota: La pagina al
+momento è accessibile poichè il processo di change management è in fase di
+implementazione).
 
 Al rilascio di una nuova versione lo storico dei cambiamenti della versione
 stessa verrà anche pubblicato nella newsletter (nome newsletter ancora da
@@ -301,7 +305,9 @@ sostanziale (major/minor) e/o (2) bugfix che richiedono lunghi tempi per essere
 sistemati.
 
 È possibile consultare i cambiamenti pianificati all’indirizzo:
-[https://docs.anpr.it/roadmap](https://docs.anpr.it/roadmap).
+[https://docs.anpr.it/roadmap](https://docs.anpr.it/roadmap) (Nota: La pagina
+al momento è accessibile poichè il processo di change management è in fase di
+implementazione).
 
 Lo scopo della Roadmap è duplice: Da un lato permette di facilitare la
 comunicazione su quando verranno introdotte nuove funzionalità, da un altro
