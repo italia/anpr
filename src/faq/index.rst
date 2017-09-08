@@ -1,4 +1,4 @@
-ANPR - Domande frequenti
+Domande frequenti
 ================================
 
 .. WARNING::

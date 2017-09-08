@@ -1,4 +1,4 @@
-ANPR - Censimento utenti e postazioni, guida rapida per i comuni
+Censimento utenti e postazioni, guida rapida per i comuni
 ================================================================
 
 .. WARNING::
