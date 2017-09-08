@@ -1,4 +1,4 @@
-Change Managerment
+Change Management
 ================================
 
 .. WARNING::
