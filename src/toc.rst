@@ -7,4 +7,5 @@
     subentro/index
     censimento-comuni/index
     smart-card-prefetture/index
+    change-management/index
     tab/toc_tabelle_riferimento
