@@ -8,6 +8,7 @@ In quanto segue si riporta la procedura suggerita ai Comuni per la gestione dell
 
 - EF004 - Progressivo ordine gia' assegnato ad altro soggetto della scheda famiglia/convivenza
 - EF008 - Intestatario della scheda famiglia/convivenza assente
+- EF009 - Intestatario della scheda famiglia/convivenza non univoco
 - EF010 - Scheda famiglia senza alcun soggetto associato
 
 
