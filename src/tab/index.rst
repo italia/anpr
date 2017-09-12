@@ -1,10 +1,11 @@
-ANPR - Specifiche tecniche e tabelle di riferimento
+Specifiche tecniche e tabelle di riferimento
 =====================================================
 **Specifiche Tecniche**
-  - `Specifiche generali di interfaccia [PDF] (aggiornate al 12 Luglio 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_12_07_2017.pdf/b0f6a1f9-123c-44f7-87ba-40f5203ec4b8>`_
+  - `Specifiche di interfaccia dei servizi di ANPR per i comuni – documento generale  - [PDF] (aggiornate al 12 Luglio 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_12_07_2017.pdf/b0f6a1f9-123c-44f7-87ba-40f5203ec4b8>`_
      Documento esteso di specifiche tecniche, inclusi la configurazione di sicurezza (SAML) dei servizi, la struttura dei messaggi, l'integrazione con Agenzia delle Entrate.
 
-  - `Specifiche di accesso per i Web Services [RAR] (aggiornate al 12 Luglio 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+12072017.rar/617119c5-b580-4fc4-8c56-af8a24ff3c41>`_
+
+  - `Specifiche di interfaccia dei servizi di ANPR per i comuni – documentazione tecnica - [RAR] (aggiornate al 31 Agosto 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/SPECIFICHE+DI+INTERFACCIA+31082017.rar/301acc00-059e-4e3e-b604-5a4f369e9343>`_
      Specifiche dei singoli Web Services
 
   - `Appendice - Validazione del codice fiscale e dei dati anagrafici e risoluzione disallineamenti con l’Agenzia delle Entrate - pdf  <https://www.anpr.interno.it/portale/documents/20182/26001/Risoluzione+disallineamenti+con+lAgenzia+delle+Entrate+12_07_2017.pdf/4e20d751-4d3f-4a53-b23a-65b15686fffc>`_

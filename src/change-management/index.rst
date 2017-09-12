@@ -1,11 +1,11 @@
-Domande frequenti
+Change Management
 ================================
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
 
-In quanto segue sono riportati  alcuni documenti utili ai comuni per comprendere
-meglio i cambiamenti ed i vantaggi di ANPR, in particolare dopo il subentro.
+In quanto segue vengono descritte le convenzioni e i processi da adottare per
+gestire i cambiamenti software di ANPR.
 
 
 Per maggiori informazioni su `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
@@ -17,4 +17,4 @@ Indice dei contenuti
 .. toctree::
    :maxdepth: 5
 
-   faq
+   change-management
