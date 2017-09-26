@@ -188,10 +188,10 @@ if __name__ == "__main__":
         title="Elenco delle funzionalita' disponibilini nella web app", date="17 Marzo 2017",
     ),False,0,2000,3))
 
-    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+31082017_bis.xlsx/5699b8aa-7ba3-411b-91bf-6013ac1e6dab"
+    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+22092017.xlsx/35d72c11-5d75-42a8-bc3f-37a9badb7221"
 
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=errori_path, title="Elenco Errori ANPR", date="31 Agosto 2017",
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="22 Settembre 2017",
     ),False,3,2000,4, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
