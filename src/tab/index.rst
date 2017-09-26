@@ -1,4 +1,4 @@
-ANPR - Specifiche tecniche e tabelle di riferimento
+Specifiche tecniche e tabelle di riferimento
 =====================================================
 **Specifiche Tecniche**
   - `Specifiche di interfaccia dei servizi di ANPR per i comuni – documento generale  - [PDF] (aggiornate al 5 Settembre 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_05_09_2017.pdf/5adea755-69f5-4f9a-b29d-1f0f3e3c10bf>`_

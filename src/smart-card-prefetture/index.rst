@@ -1,4 +1,4 @@
-ANPR - Censimento utenti e postazioni - Guida essenziale per le Prefetture
+Censimento utenti e postazioni - Guida essenziale per le Prefetture
 ==========================================================================
 
 

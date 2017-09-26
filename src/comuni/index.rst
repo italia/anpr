@@ -1,4 +1,4 @@
-ANPR - Cosa Cambia per i comuni
+Cosa Cambia per i comuni
 ================================
 
 .. WARNING::
