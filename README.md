@@ -13,6 +13,7 @@ https://www.anpr.interno.it/portale/guida-anpr
 
 Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e domande degli utenti relative all'integrazione con ANPR:
 
+  - [NEW: Come cercare le issue](cercare_issue.md)
   - [Documentazione](https://anpr.readthedocs.io)
   - [WSDL  (versione 1 Marzo 2017)](wsdl)
   - [Domande e segnalazioni](https://github.com/italia/anpr/issues?q=is%3Aissue+is%3Aclosed)
