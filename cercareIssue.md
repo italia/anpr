@@ -17,7 +17,7 @@ Issue non commentate affatto
 https://github.com/italia/anpr/issues?utf8=✓&q=is:issue is:open comments:0
 
 Issue che sono state commentate da un da un utente
-[q=is:issue is:open commenter:gcarbonin](https://github.com/italia/anpr/issues?utf8=✓&q=is:issue is:open commenter:gcarbonin)
+[https://github.com/italia/anpr/issues?utf8=✓&q=is:issue%20is:open%20commenter:gcarbonin](q=is:issue is:open commenter:gcarbonin)
 
 Issue non commentate che NON appartengono ad alcune categorie (-label)
 [q=is:issue is:open comments:0 -label:chiarimento-normativo -label:"help wanted"](https://github.com/italia/anpr/issues?utf8=✓&q=is:issue is:open comments:0 -label:chiarimento-normativo -label:"help wanted")
