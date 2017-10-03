@@ -27,6 +27,7 @@
     tab_dati_richiesti
     tab_prospetti_statistici
     tab_righe_dettaglio_prospetti_statistici
+    tab_motivi_iscrizione_aire
     tab_iniziativa_iscrizione_aire
     tab_individuazione_del_comune_di_iscrizione_aire
     tab_stato_validazione_del_codice_fiscale
