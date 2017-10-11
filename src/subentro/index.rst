@@ -1,5 +1,5 @@
-ANPR - Buone pratiche per le attività di pre-subentro dei Comuni in ANPR
-========================================================================
+Buone pratiche per le attività di pre-subentro dei Comuni in ANPR
+=================================================================
 
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
