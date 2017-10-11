@@ -86,7 +86,11 @@ Controlli specifici
 
 
 
+<<<<<<< HEAD
 - Se i dati della cittadinanza sono integralmente assenti
+=======
+- il soggetto è in possessoe di più cittadinanze;
+>>>>>>> d27269282a466d70a343653b242ba37bbc184c35
 
 
 
