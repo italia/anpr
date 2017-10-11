@@ -17,7 +17,30 @@ Indice dei contenuti
 .. toctree::
    :maxdepth: 5
 
-   anagrafico_nascita.rst
+   CERTIFICATO_anagrafico_nascita.rst
+   CERTIFICATO_esistenza_in_vita.rst
+   CERTIFICATO_anagrafico_morte.rst
+   CERTIFICATO_anagrafico_matrimonio.rst
+   CERTIFICATO_cancellazione_anagrafica.rst
+   CERTIFICATO_stato_libero.rst
+   CERTIFICATO_stato_di_famiglia.rst
+   CERTIFICATO_stato_di_famiglia_con_relazioni_di_parentela.rst
+   CERTIFICATO_stato_di_famiglia_e_stato_civile.rst
+   CERTIFICATO_stato_civile.rst
+   CERTIFICATO_cittadinanza.rst
+   CERTIFICATO_storico_cittadinanza.rst
+   CERTIFICATO_residenza.rst
+   CERTIFICATO_residenza_in_convivenza.rst
+   CERTIFICATO_storico_residenza.rst
+   CERTIFICATO_residenza_aire.rst
+   CERTIFICATO_stato_di_famiglia_aire.rst
+   CERTIFICATO_unione_civile.rst
+   CERTIFICATO_contratto_di_convivenza.rst
+
+
+
+
+
    
 
 
