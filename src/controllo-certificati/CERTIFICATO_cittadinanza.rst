@@ -86,7 +86,7 @@ Se:
 
 
 
--il soggetto è in possessoe di più cittadinanze;
+- il soggetto è in possessoe di più cittadinanze;
 
 
 
