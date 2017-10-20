@@ -5,6 +5,7 @@
     :caption: Contenuti
 
     tab_aggiornamenti_alla_documentazione_tecnica
+    tab_utilizzo_del_webservice
     tab_elenco_dei_web_services_disponibili
     tab_elenco_delle_funzionalita__disponibilini_nella_web_app
     tab_elenco_errori_anpr

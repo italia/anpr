@@ -174,8 +174,8 @@ if __name__ == "__main__":
     ),False,4,9,4, ['Servizio', 'Op. Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
-        title="Utilizzo del WebService", date="12 Luglio 2017",
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
+        title="Utilizzo del WebService", date="11 Ottobre 2017",
     ),False,4,37,3, ['Servizio', 'Op. Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
     toclist.append(createRstFromXlsx(Table(
@@ -190,8 +190,8 @@ if __name__ == "__main__":
 
     errori_path="https://www.anpr.interno.it/portale/documents/20182/50186/errori_anpr+19102017.xlsx/d966e1ad-df37-4d50-bec9-720d96175c8b"
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=errori_path, title="Elenco Errori ANPR", date="28 Settembre 2017",
-    ),False,3,2000,4, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="19 Ottobre 2017",
+    ),False,3,2000,6, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
     toclist.append(createRstFromXlsx(Table(
