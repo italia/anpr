@@ -10,7 +10,7 @@ Le convenzioni che si adottano tengono conto della necessità di:
 * comunicare con il minimo sforzo la risoluzione di problemi e l’introduzione
   di nuove funzionalità tra comuni, software house, e SOGEI;
 
-* coordinare con il minimo sforzo il collaudo di nuove versioni di ANPR tra
+* coordinare con il minimo sforzo il test di nuove versioni di ANPR tra
   comuni, software house, e SOGEI;
 
 * garantire la compatibilità delle nuove versioni di ANPR con quelle precedenti
@@ -202,8 +202,8 @@ anagrafici con le nuove versioni di ANPR. Il rilascio di ogni nuova versione di
 ANPR avviene in modo graduale per consentire di effettuare test di integrazione
 con i software anagrafici e di riportare problemi:
 
-* Una nuova versione di ANPR viene rilasciata inizialmente solo nell’ambiente
-  di test, dove vi rimane per almeno 15 giorni.
+* Una nuova versione di ANPR viene rilasciata inizialmente solo negli ambienti
+  di test e pre-subentro, dove vi rimane per almeno 15 giorni.
 
 * Trascorsi i 15 giorni, se non vi sono segnalazioni aperte che riportino gravi
   problemi, la versione viene promossa alla fase di collaudo del Ministero e
@@ -236,9 +236,9 @@ momento è accessibile poichè il processo di change management è in fase di
 implementazione).
 
 Nota: Nel caso della web application, si assume che sia associata ad una
-specifica versione delle API di backend, e verrà indicato chiaramente nel
-footer la versione (in ambiente test e test comuni anche con un link al
-changelog).
+specifica versione delle API dei webservices di backend, e verrà indicato
+chiaramente nel footer la versione (in ambiente test e test comuni anche con un
+link al changelog).
 
 ### Storico delle versioni
 
@@ -250,7 +250,7 @@ testo contenente un sommario dei cambiamenti presenti in ogni versione di ANPR.
 È possibile consultare lo storico delle versioni all’indirizzo:
 [https://docs.anpr.it/changelog](https://docs.anpr.it/changelog) (Nota: La pagina al
 momento è accessibile poichè il processo di change management è in fase di
-implementazione).
+implementazione.)
 
 Al rilascio di una nuova versione lo storico dei cambiamenti della versione
 stessa verrà anche pubblicato nella newsletter (nome newsletter ancora da
@@ -307,7 +307,7 @@ sistemati.
 È possibile consultare i cambiamenti pianificati all’indirizzo:
 [https://docs.anpr.it/roadmap](https://docs.anpr.it/roadmap) (Nota: La pagina
 al momento è accessibile poichè il processo di change management è in fase di
-implementazione).
+implementazione.)
 
 Lo scopo della Roadmap è duplice: Da un lato permette di facilitare la
 comunicazione su quando verranno introdotte nuove funzionalità, da un altro
