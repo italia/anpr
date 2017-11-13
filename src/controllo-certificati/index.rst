@@ -36,6 +36,7 @@ Indice dei contenuti
    CERTIFICATO_stato_di_famiglia_aire.rst
    CERTIFICATO_unione_civile.rst
    CERTIFICATO_contratto_di_convivenza.rst
+   CERTIFICATO_storico_residenza_alla_data.rst
 
 
 
