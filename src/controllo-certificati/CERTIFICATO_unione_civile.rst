@@ -92,4 +92,6 @@ Controlli specifici
 
 - Se i dati della parte unita civilmente sono integralmente assenti
 
- 
+
+
+- Se il soggetto è iscritto all'AIRE e l'unione è successiva all'espatrio. 

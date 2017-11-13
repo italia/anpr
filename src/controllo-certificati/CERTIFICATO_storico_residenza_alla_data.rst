@@ -1,4 +1,4 @@
-Storico residenza 
+Storico residenza alla data 
 =========================================================================================
 
 .. WARNING::
@@ -20,9 +20,7 @@ Certificabilità soggetto
 
 
 
-- Se Soggetto parzialmente certificabile. e forzaCertificazione assente o uguale a 0
-
- 
+- Se Soggetto parz. cert. e forzaCertificazione assente o uguale a 0 
 
 Procedimento amministrativo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,7 +62,7 @@ Esenzione bolli
 
 Combinazioni certificati su cumulativi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- Se richiesto con altri certificati (può essere richiesto solo singolarmente) 
+- Se richiesto con altri certificati (puo' essere richiesto solo singolarmente) 
 
 Controlli soggetto APR/AIRE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -78,20 +76,20 @@ Soggetto cancellato
 
 Controlli specifici
 ^^^^^^^^^^^^^^^^^^^
-- Se la data di riferimento del certificato è antecedente alla data di prima iscrizione del soggetto
+- Se la data di riferimento del certificato è antecedente alla data di prima iscrizione del soggetto;
 
 
 
-- Se la data di riferimento del certificato è antecedente alla data di subentro del comune di residenza del soggetto al momento del subentro stesso (prima residenza del soggetto registrata in ANPR)
+- Se la data di riferimento del certificato è antecedente alla data di subentro del comune di residenza del soggetto al momento del subentro stesso (prima residenza del soggetto registrata in ANPR);
 
 
 
-- Se la data decorrenza della residenza è antecedente alla data di prima iscrizione del soggetto
+- Se la data decorrenza della residenza è antecedente alla data di prima iscrizione del soggetto;
 
 
 
-- Se la data di riferimento del certificato è antecedente alla data di cancellazione anagrafica o di decesso del soggetto
+- Se la data di riferimento del certificato è antecedente alla data di cancellazione anagrafica o di decesso del soggetto;
 
 
 
-- Se la data di decorrenza della residenza è assente 
+- Se la data di decorrenza della residenza è assente. 

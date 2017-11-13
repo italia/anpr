@@ -88,4 +88,6 @@ Controlli specifici
 
 - Se il certificato è richiesto da un soggetto diverso da uno dei due conviventi, il controllo si basa sul codice fiscale del richiedente; se non indicato, il certificato comunque non viene emesso in quanto il controllo non è effettuabile
 
- 
+
+
+- Se il soggetto è iscritto all'AIRE e il contratto di convivenza è registrato successivamente all'espatrio 
