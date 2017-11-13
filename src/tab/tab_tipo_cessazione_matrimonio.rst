@@ -1,7 +1,7 @@
 Tabella 31 - Tipo cessazione matrimonio
 =======================================
 
-:Note: Per i valori da 1 a 4 occorre indicare:
+:Note: Per i valori da 1 a 4 occorre indicare: - fino al 3/11/2000, gli estremi dell'atto; - successivamente al 3/11/2000, gli estremi della sentenza; - per le sentenze provenienti da Tribunali esteri ed Ecclesiastico , gli estremi dell'atto. Per il valore 5 non è previsto un numero di atto Per i valori da 6 a 10,  è necessario indicare gli estremi dell'atto.
 
 `Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella_31.xlsx/d08064d9-f755-4f48-9c59-0e7788f3f8d8>`_
 

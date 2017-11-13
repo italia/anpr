@@ -1,9 +1,9 @@
 Tabella 03 - Comuni
 ===================
 
-:Aggiornamento:  14 luglio 2017
+:Aggiornamento: 5 ottobre 2017
 :Fonte: Istat-Agenzia delle Entrate-Ministero 
-:Note: Variazioni dovute a operazioni di fusione e/o accorpamento di comuni
+:Note: Modificati MONTEBELLO JONICO, CASALI DEL MANCO, OLGIATE CALCO
 
-`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella+3+archivio+comuni+20170714.xlsx/b3779215-db17-44d8-9eeb-2e834cc092d5>`_
+`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella+3+archivio+comuni+20171005.xlsx/396c0021-f1b3-4fcb-9c85-32ed2bb6d409>`_
 

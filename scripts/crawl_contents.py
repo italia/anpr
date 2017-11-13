@@ -47,7 +47,7 @@ def scrapeHtml(xlsxpath,rstpath,url,section_prefix):
 
         title = tds[1].getchildren()[0].text
 
-        files_array.append(Table(tds[0].text,xls_url,tds[2].text,title,tds[3].text,tds[4].text))
+        files_array.append(Table(tds[0].text,xls_url,tds[2].text,title,tds[3].text,"".join([x for x in tds[4].itertext()])))
 
     toclist = []
     for data in files_array:
@@ -161,21 +161,21 @@ if __name__ == "__main__":
     toclist = []
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
-    aggiornamento_doc_tecnica="https://www.anpr.interno.it/portale/documents/20182/26001/aggiornamenti_28_09_2017.xlsx/f07cd32d-2e95-4eed-9efa-14fba46e1a44"
+    aggiornamento_doc_tecnica="https://www.anpr.interno.it/portale/documents/20182/50186/aggiornamenti_19_10_2017.xlsx/a3602570-2a67-4a18-84ca-1c54cde66b5a"
     toclist.append(createRstFromXlsx(Table(
         id=-5, url=aggiornamento_doc_tecnica,
-        title="Aggiornamenti alla documentazione tecnica", date="28 Settembre 2017",
+        title="Aggiornamenti alla documentazione tecnica", date="19 Ottobre 2017",
     ),False,0,2000,4))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato_5_Elenco_WS_di_ANPR_12072017.xlsx/01e57b03-5ac4-407c-8cee-f50e61b6e0d6",
-        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="12 Luglio 2017",
+        id=-4, url=Anpr.domain()+"portale/documents/20182/50186/Allegato+7+-+Utilizzo+WS+ANPR+totale+19102017.xlsx/66f5befe-ddf7-4a1f-b5e1-f94947032000",
+        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="19 Ottobre 2017",
     ),False,4,9,4, ['Servizio', 'Op. Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
-        title="Utilizzo del WebService", date="12 Luglio 2017",
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
+        title="Utilizzo del WebService", date="11 Ottobre 2017",
     ),False,4,37,3, ['Servizio', 'Op. Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
 
     toclist.append(createRstFromXlsx(Table(
@@ -184,15 +184,14 @@ if __name__ == "__main__":
     ),False,0,2000,5))
 
     toclist.append(createRstFromXlsx(Table(
-        id=-2, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+2+-+Elenco+funzioni+WEB2772016.xlsx",
-        title="Elenco delle funzionalita' disponibilini nella web app", date="17 Marzo 2017",
+        id=-2, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+2+-+Elenco+funzioni+WEB19102017.xlsx/fa626e37-b3d3-4724-8c86-cc5b3efec217",
+        title="Elenco delle funzionalita' disponibilini nella web app", date="19 Ottobre 2017",
     ),False,0,2000,3))
 
-    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+28092017.xlsx/88075662-10c0-479e-8824-f00e5755e792"
-
+    errori_path="https://www.anpr.interno.it/portale/documents/20182/50186/errori_anpr+19102017.xlsx/d966e1ad-df37-4d50-bec9-720d96175c8b"
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=errori_path, title="Elenco Errori ANPR", date="28 Settembre 2017",
-    ),False,3,2000,4, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="19 Ottobre 2017",
+    ),False,3,2000,6, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
     toclist.append(createRstFromXlsx(Table(

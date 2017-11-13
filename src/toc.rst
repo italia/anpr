@@ -5,8 +5,9 @@
     faq/index
     comuni/index
     subentro/index
+    controllo-certificati/index
     censimento-comuni/index
     smart-card-prefetture/index
     change-management/index
-    web-app/index
     tab/toc_tabelle_riferimento
+    web-app/index
