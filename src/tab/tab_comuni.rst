@@ -1,9 +1,9 @@
 Tabella 03 - Comuni
 ===================
 
-:Aggiornamento: 5 ottobre 2017
+:Aggiornamento: 13 novembre 2017
 :Fonte: Istat-Agenzia delle Entrate-Ministero 
-:Note: Modificati MONTEBELLO JONICO, CASALI DEL MANCO, OLGIATE CALCO
+:Note: Le variazioni (comuni della Sardegna e date di cessazione di alcuni comuni) saranno operative dal prossimo lunedì 13 novembre.
 
-`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella+3+archivio+comuni+20171005.xlsx/396c0021-f1b3-4fcb-9c85-32ed2bb6d409>`_
+`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella+3+archivio+comuni_20171113.xlsx/af6bc4b5-2578-4e7c-82a7-5bdd454c4804>`_
 

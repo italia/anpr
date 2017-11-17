@@ -161,10 +161,10 @@ if __name__ == "__main__":
     toclist = []
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
-    aggiornamento_doc_tecnica="https://www.anpr.interno.it/portale/documents/20182/50186/aggiornamenti_19_10_2017.xlsx/a3602570-2a67-4a18-84ca-1c54cde66b5a"
+    aggiornamento_doc_tecnica="https://www.anpr.interno.it/portale/documents/20182/26001/aggiornamenti_16_11_2017.xlsx/de3f64c2-45b1-4ad3-8ba0-61e35d992f3b"
     toclist.append(createRstFromXlsx(Table(
         id=-5, url=aggiornamento_doc_tecnica,
-        title="Aggiornamenti alla documentazione tecnica", date="19 Ottobre 2017",
+        title="Aggiornamenti alla documentazione tecnica", date="16 Novembre 2017",
     ),False,0,2000,4))
 
 
@@ -188,15 +188,16 @@ if __name__ == "__main__":
         title="Elenco delle funzionalita' disponibilini nella web app", date="19 Ottobre 2017",
     ),False,0,2000,3))
 
-    errori_path="https://www.anpr.interno.it/portale/documents/20182/50186/errori_anpr+19102017.xlsx/d966e1ad-df37-4d50-bec9-720d96175c8b"
+    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+16112017.xlsx/30e1fdcf-f97e-4f0c-99d3-e571aa021158"
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=errori_path, title="Elenco Errori ANPR", date="19 Ottobre 2017",
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="16 novembre 2017",
     ),False,3,2000,6, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 
+    errori_ae="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+16112017.xlsx/30e1fdcf-f97e-4f0c-99d3-e571aa021158"
     toclist.append(createRstFromXlsx(Table(
-        id=0, url=Anpr.domain()+"/portale/documents/20182/26001/errori_ae_11_05_2017.xlsx/eb45d775-21f1-4436-9a86-b8ab0169aee6",
-        title="Errori Agenzia Entrate", date="12 Maggio 2017",
+        id=0, url=errori_ae,
+        title="Errori Agenzia Entrate", date="16 novembre 2017",
     ),False,nCols=3))
 
     toclist.append(createRstFromXlsx(Table(

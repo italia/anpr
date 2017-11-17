@@ -49,3 +49,5 @@
     tab_motivi_di_non_certificabilit_
     tab_cessazione_unione_civile___convivenze
     tab_comuni_subentrati
+    tab_tipo_mutazione_famiglia_convivenza
+    tab_tipo_mutazione_residenza

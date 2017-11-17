@@ -3,7 +3,7 @@ Specifiche tecniche e tabelle di riferimento
 **Specifiche Tecniche**
 
 
-  - `Specifiche di interfaccia dei servizi di ANPR per i comuni – documento generale  - [PDF] (aggiornate al 5 Settembre 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_05_09_2017.pdf/5adea755-69f5-4f9a-b29d-1f0f3e3c10bf>`_
+  - `Specifiche di interfaccia dei servizi di ANPR per i comuni – documento generale  - [PDF] (aggiornate al 3 novembre 2017) <https://www.anpr.interno.it/portale/documents/20182/26001/MI-14-AN-01+SPECIFICHE+DI+INTERFACCIA+WS_03_11_2017.pdf/db4fea93-5dd3-4291-9c26-88f8bc9c8bb3>`_
      Documento esteso di specifiche tecniche, inclusi la configurazione di sicurezza (SAML) dei servizi, la struttura dei messaggi, l'integrazione con Agenzia delle Entrate.
 
 
