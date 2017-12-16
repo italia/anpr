@@ -28,22 +28,18 @@ L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attivi
 	L'esperienza maturata dalla software house permette ai Comuni di concentrano sull'azione di **bonifica**.
 	
 .. Note::
-	**983 Comuni hanno esperienza di ANPR**
-	12,32 dei Comuni italiani
+	**983 Comuni hanno esperienza di ANPR** pari al 12,32% dei Comuni italiani
 	
-	**948 Comuni in pre-subentro**
-	11,88% dei Comuni italiani
+	*948 Comuni in pre-subentro* pari al 11,88% dei Comuni italiani
 	
-	*35 Comuni subentrati*
-	0,44% dei Comuni italiani
+	*35 Comuni subentrati* pari al 0,44% dei Comuni italiani
 	
-	*7.617.298 Schede soggetto trattate da ANPR*
-	12,57% della popolazione italiana
+	**7.617.298 Schede soggetto trattate da ANPR** pari al 12,57% della popolazione italiana
 	
-	*860.843 Cittadini subentrati**
-	1,42% della popolazione italiana
+	*860.843 Cittadini subentrati** pari al 1,42% della popolazione italiana
 	  
-	*Dati raccolti al 16/12/2017 dal sistema ANPR*
+	  
+	* *Dati raccolti al 16/12/2017 dal sistema ANPR*
 	 
 	
 L'insieme di task che i Comuni devono realizzare per dare seguito alla **bonifica** dei dati anagrafici per cui sia riscontrata un'anomalia è sintetizzato nella seguente figura.
@@ -66,54 +62,53 @@ Nel dettaglio le 119 anomalie tracciate da ANPR nella fase di pre-subentro e sub
 - **88 anomalie WARNING** sui dati anagrafici (ad esempio: EC030 - Stato estero di nascita inesistente sulla tabella di riferimento).
 
 .. Important::
-	Le uniche anomalie che impediscono ad comune di subentrare sono quelle classificate come ERRORE. 
+	*Le uniche anomalie che impediscono ad comune di subentrare sono quelle classificate come ERRORE.*
 	
 	Vi è un'**unica anomalia sui dati anagrafici che impedisce ad un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente* (DPR 223/1989), è viene segnalata nel caso un cui sia presente una persona senza scheda famiglia/convivenza associata.
 
-Relativamente al task **valutazione anomalie** che il Comune realizza a partire dalle anomalie riscontrate da ANPR sui dati inviati dai Comune tramite il file di subentro, si ricorda che i Comuni possono decidire di dare seguito alla bonifica dei dati, fatto salve le anomalie ERRORE, sia ex-ante che ex-post il subentro. Il sistema ANPR assicura ai Comuni il controllo delle anomalie a valle del subentro impedendo la generazione di certificati con dati per cui è tracciata un'anomalia. 
+Relativamente al task **valutazione anomalie** in cui il Comune analizza le anomalie segnalate da ANPR, si ricorda che i Comuni possono decidire di dare seguito alla bonifica dei dati, fatto salve le anomalie ERRORE, sia ex-ante che ex-post il subentro. *Il sistema ANPR assicura ai Comuni il controllo delle anomalie a valle del subentro impedendo la generazione di certificati con dati per cui è tracciata un'anomalia*. 
 
-Sulla base dei dati raccolti al 16/12/2017 dal sistema ANPR si rileva che:
+Sulla base dei dati raccolti al 16/12/2017 dal sistema ANPR si rileva i seguenti tassi:
 
-- 8,73% tasso di scheda anagrafica con altre anomalie
-- 1,36% tasso di scheda anagrafica con anomalia nel CF
 
-**La probabilità che una scheda anagrafica presenti un'anomalie che impedisce il subentro in ANPR è 0,01%.**
-
-**La probabilità che una scheda anagrafica presenti un'anomalie che impedisce il subentro in ANPR è 0,53%.**
+- **schede anagrafiche con un'anomalie che impedisce il subentro è 0,01%**;
+- **schede anagrafiche con un'anomalie che si suggerisce di corregere prima del subentro è 0,53%**;
+- schede anagrafiche con anomalia nel CF è pari al 1,36%.
+- schede anagrafiche con altre anomalie è pari al 8,73%;
 
 .. Note::
-	**7.617.298 Schede soggetto trattate da ANPR**
-	12,57% della popolazione italiana
+	**7.617.298 Schede soggetto trattate da ANPR** 
 	
 	**768.929 Totale anomalie riscontrate**, di cui:
-
-	- *103.905 anomalie legate al codice fiscale*
-	- *665.024 altre anomalie*
-	
-	ed inoltre:
 	
 	- **381 anomalie ERRORE**
 	- **40.729 anomalie WARNING che si suggerisce di "rimuovere prima del subentro"**
+
+	ed inoltre:
 	
-	*Dati raccolti al 16/12/2017 dal sistema ANPR*
+	- *103.905 anomalie legate al codice fiscale*
+	- *665.024 altre anomalie*	
 	
 	
-Il tempo necessario al subentro
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	* *Dati raccolti al 16/12/2017 dal sistema ANPR*
+	
+	
+Stima del tempo necessario al subentro
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Il tempo necessario al subentro del Comune dipende dalla:
 
-1. capacità di **coinvolgimento della software house alle attività** da realizzarsi, in merito si evidenzia che le software house hanno e stanno maturando esperienza nell'iterazione con ANPR;
+1. capacità di **coinvolgere la software house alle attività** da realizzarsi, in merito si evidenzia che le software house hanno e stanno maturando esperienza nell'iterazione con ANPR;
 2. **qualità dei dati anagrafici attualmente presenti nelle APR locali**, le schede anagrafiche fin qui inoltrate ad ANPR evidenziano un tasso di anomalie di circa il 10% pienamente accettabile; 
 3. realizzazione delle **attività una tantum da realizzarsi per il subentro**, quali censimento degli operatori e delle postazioni e successiva richiesta delle smart-card, stimabile in circa 20gg;
 4. attività di **bonifica delle anomalie riscontrate**, attraverso cui si provvede alla bonifica delle posizioni critiche rimandando le altre, cosi come l'attuale "modus operandi" dei Comuni, al riscontro con il cittadino interessato.
 
-Relativamente al precedente punto 4 assumendo: 
+Relativamente al precedente punto 4 evendo ipotizzato: 
 
 - una capacità di risoluzione delle anomalie riscontrate pari a 1/10.000 abitati del Comune avendo assunto che la capacità di delivery del Comune aumenti con il numero di abitanti;
 - che il Comuni sia interessato a risolvere prima del subentro le sole anomalie segnalate da ANPR come ERRORE o WARNING che si suggerisce di "rimuovere prima del subentro", pari allo 0,53% della popolazione;
 
-nella seguente tabelle riportiamo alcuni scenari.
+sono state elaborate le stime riportate nella seguente tabella.
 
 +--------------------+------------+------------+-----------------------------------+-------------+--------+
 | Popolazione Comune | % Anomalie | # Anomalie | # Anomalie trattate per gg lavoro | # gg lavoro | # mesi | 
