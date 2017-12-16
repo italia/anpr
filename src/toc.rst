@@ -5,6 +5,7 @@
     faq/index
     comuni/index
     subentro/index
+    attivita-subentro/index
     controllo-certificati/index
     censimento-comuni/index
     smart-card-prefetture/index
