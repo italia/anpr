@@ -19,22 +19,25 @@ L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attivi
 - **Predisposizione delle procedure di ETL** (estrazione, trasformazione e caricamento) per la predisposizione dei file di subentro da inoltrare al sistema ANPR.
 - **Bonifica delle anomalie**, ove necessario dei dati anagrafici, segnalate dal sistema ANPR a valle dell'elaborazione del file di subentro inoltrato dal Comune.
 	
-.. Important:
-	I 35 Comuni che sono subentrati in ANPR e i 951 che sono in fase di pre-subentro ha coinvolto la quasi totalità delle software house interessate.
+.. Important::
+	I *35 Comuni che sono subentrati* in ANPR e i *951 che sono in fase di pre-subentro* ha coinvolto la quasi totalità delle software house interessate.
 	L'esperienza maturata dalla software house permette ai Comuni di concentrano sull'azione di **bonifica**.
 
 La anomalie tracciate da ANPR sono suddivisibili in due macro-categorie, nel dettaglio:
-- 89 Anomalie sui dati anagrafici, la cui correzione vedrà direttamente coinvolto gli ufficiali anagrafici nel dare seguito alle necessarie istruttorie per constatare la corretto valorizzazione dei dati anagrafici stessi
-- 30 Anomalie sui file di subentro, che riguardano la formazione dei file per il trasferimento dall’APR locale all’ANPR e, per la loro natura, vedano direttamente interessati i tecnici informatici che predispongono i file
+
+- *89 Anomalie sui dati anagrafici*, la cui correzione vedrà direttamente coinvolto gli ufficiali anagrafici nel dare seguito alle necessarie istruttorie per constatare la corretto valorizzazione dei dati anagrafici stessi
+- *30 Anomalie sui file di subentro*, che riguardano la formazione dei file per il trasferimento dall’APR locale all’ANPR e, per la loro natura, vedano direttamente interessati i tecnici informatici che predispongono i file
 
 Nel dettaglio ANPR per il subentro evidenzia 119 anomalie, di cui:
 
-- 1 anomalia ERRORE sui dati anagrafici (ES092 - Soggetto senza scheda famiglia/convivenza associata)
-- 30 anomalie ERRORE sui file di subentro (ad esempio: EN012 - Totale schede soggetto dichiarato per l'intera fornitura incongruente con quello calcolato)
-- 88 anomalie WARNING sui dati anagrafici (ad esempio: EC030 - Stato estero di nascita inesistente sulla tabella di riferimento)
+- **1 anomalia ERRORE** sui dati anagrafici (ES092 - Soggetto senza scheda famiglia/convivenza associata)
+- **30 anomalie ERRORE** sui file di subentro (ad esempio: EN012 - Totale schede soggetto dichiarato per l'intera fornitura incongruente con quello calcolato)
+- **88 anomalie WARNING** sui dati anagrafici (ad esempio: EC030 - Stato estero di nascita inesistente sulla tabella di riferimento)
 
-.. Important:
-	Le uniche anomalie che impediscono ad comune di subentrare sono quelle classificate come ERRORE. L'**unica anomalia sui dati anagrafici che impedisce ad un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente* (DPR 223/1989), è viene segnalata nel caso un cui sia presente una persona senza scheda famiglia/convivenza associata.
+.. Important::
+	Le uniche anomalie che impediscono ad comune di subentrare sono quelle classificate come ERRORE. 
+	
+	L'**unica anomalia sui dati anagrafici che impedisce ad un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente* (DPR 223/1989), è viene segnalata nel caso un cui sia presente una persona senza scheda famiglia/convivenza associata.
 	
 
 
