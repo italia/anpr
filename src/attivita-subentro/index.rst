@@ -4,7 +4,7 @@ Stima dei tempi per il subentro di un Comune
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
 	
-L’esperienza dei Comuni subentrati dimostra che **è possibile passare ad ANPR**, anzi che ANPR funziona. Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrante sulle schede soggetto inoltrate da parte dei Comuni, permette di individuare le attività che i Comuni realizzano e l'effort necessario per permettere il *completamento del subentro in circa 2 mesi**. 
+L’esperienza dei Comuni subentrati dimostra che **è possibile passare ad ANPR**, anzi che ANPR funziona. Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrante sulle schede soggetto inoltrate da parte dei Comuni, permette di individuare le attività che i Comuni realizzano e l'effort necessario per permettere il **completamento del subentro in circa 2 mesi**. 
 
 
 Attività per il subentro
@@ -39,7 +39,7 @@ L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attivi
 	*860.843 Cittadini subentrati** pari al 1,42% della popolazione italiana
 	  
 	  
-	* *Dati raccolti al 16/12/2017 dal sistema ANPR*
+	\* *Dati raccolti al 16/12/2017 dal sistema ANPR*
 	 
 	
 L'insieme di task che i Comuni devono realizzare per dare seguito alla **bonifica** dei dati anagrafici per cui sia riscontrata un'anomalia è sintetizzato nella seguente figura.
@@ -90,7 +90,7 @@ Sulla base dei dati raccolti al 16/12/2017 dal sistema ANPR si rileva i seguenti
 	- *665.024 altre anomalie*	
 	
 	
-	* *Dati raccolti al 16/12/2017 dal sistema ANPR*
+	\* *Dati raccolti al 16/12/2017 dal sistema ANPR*
 	
 	
 Stima del tempo necessario al subentro
@@ -110,16 +110,16 @@ Relativamente al precedente punto 4 evendo ipotizzato:
 
 sono state elaborate le stime riportate nella seguente tabella.
 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-| Popolazione Comune | % Anomalie | # Anomalie | # Anomalie trattate per gg lavoro | # gg lavoro | # mesi | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-|            200.000 |      0,53% |      1.080 |                              20,0 |          54 |      2 | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-|            100.000 |      0,53% |        540 |                              10,0 |          54 |      2 | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-|             50.000 |      0,53% |        270 |                               5,0 |          54 |      2 | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-|             10.000 |      0,53% |         54 |                               1,0 |          54 |      2 | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
-|              5.000 |      0,53% |         27 |                               0,5 |          54 |      2 | 
-+--------------------+------------+------------+-----------------------------------+-------------+--------+
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+| Popolazione Comune | % Anomalie | # Anomalie | # Anomalie trattate per gg lavoro | # gg lavoro | stima mesi | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+|            200.000 |      0,53% |      1.080 |                              20,0 |          54 |          2 | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+|            100.000 |      0,53% |        540 |                              10,0 |          54 |          2 | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+|             50.000 |      0,53% |        270 |                               5,0 |          54 |          2 | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+|             10.000 |      0,53% |         54 |                               1,0 |          54 |          2 | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
+|              5.000 |      0,53% |         27 |                               0,5 |          54 |          2 | 
++--------------------+------------+------------+-----------------------------------+-------------+------------+
