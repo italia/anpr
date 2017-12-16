@@ -24,10 +24,20 @@ L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attivi
 	L'esperienza maturata dalla software house permette ai Comuni di concentrano sull'azione di **bonifica**.
 	
 .. Note::
-	948 Comuni in pre-subentro (11,88% dei Comuni italiani)
+	*983 Comuni hanno esperienza di ANPR*
+	12,32 dei Comuni italiani
 	
-	35 Comuni subentrati (0,44% dei Comuni italiani)
-	860.843 Cittadini subentrati (1,42% della popolazione italiana)
+	*948 Comuni in pre-subentro* 
+	11,88% dei Comuni italiani
+	
+	*35 Comuni subentrati*
+	0,44% dei Comuni italiani
+	
+	*7.617.298 Schede soggetto trattate da ANPR*
+	12,57% della popolazione italiana
+	
+	*860.843 Cittadini subentrati*
+	1,42% della popolazione italiana
 	  
 	*Dati raccolti al 16/12/2017 dal sistema ANPR*
 	 
@@ -57,21 +67,22 @@ Nel dettaglio le 119 anomalie tracciate da ANPR nella fase di pre-subentro e sub
 	
 	Vi è un'**unica anomalia sui dati anagrafici che impedisce ad un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente* (DPR 223/1989), è viene segnalata nel caso un cui sia presente una persona senza scheda famiglia/convivenza associata.
 
-.. Note::
-	7.617.298 Schede soggetto trattate da ANPR (12,57% della popolazione italiana)
-	
-	768.929 Totale anomalie riscontrate, di cui:
 
-	- 103.905 anomalie legate al codice fiscale
-	- 665.024 altre anomalie
+Sulla base dei dati raccolti al 16/12/2017 dal sistema ANPR si rileva che:
+
+- 8,73% probabilità di scheda anagrafica con altre anomalie
+- 1,36% probabilità di scheda anagrafica con anomalia nel CF
+
+**La probabilità che una scheda anagrafica presenti un'anomalie che impedisce il subentro in ANPR è 0,01%**
+
+.. Note::
+	*7.617.298 Schede soggetto trattate da ANPR*
+	12,57% della popolazione italiana
+	
+	*768.929 Totale anomalie riscontrate*, di cui:
+
+	- *103.905 anomalie legate al codice fiscale*
+	- *665.024 altre anomalie*
 	
 	*Dati raccolti al 16/12/2017 dal sistema ANPR*
- 
 	
-	
-
-
-	
-
-
-
