@@ -4,7 +4,8 @@ Stima dei tempi per il subentro di un Comune
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
 
-L’esperienza dei Comuni subentrati dimostra che **è possibile passare ad ANPR**, anzi che ANPR funziona. Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrante sulle schede soggetto inoltrate da parte dei Comuni, permette di individuare le attività che i Comuni realizzano e l'effort necessario per permettere il **completamento del subentro in circa 2 mesi**.
+L’esperienza dei Comuni subentrati, che hanno eseguito sulla piattforma 1.7 milioni di operazioni anagrafiche nell'ultimo anno, dimostra che **è possibile passare ad ANPR** .
+Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrate sulle schede soggetto inoltrate da parte dei Comuni, permetteno di individuare le attività che i Comuni realizzano e l'effort necessario per permettere il **completamento del subentro in circa 2 mesi**.
 
 
 Attività per il subentro
@@ -15,9 +16,9 @@ Gli obiettivi del subentro sono:
 - **Migrazione dei dati dalle APR / AIRE locali ad ANPR.** I dati presenti nelle APR / AIRE locali sono trasferiti al sistema ANPR, favororendo l’allineamento dei codici fiscali associati ai soggetti così come attribuiti dall’Agenzia delle Entrate.
 - **Integrazione degli APR locali con il sistema ANPR.** I Comuni che decidono di utilizzare le APR locali si assicurano che al momento della migrazione dei dati i propri sistemi siano integrati tramite i web services esposti dal sistema ANPR al fine di garantire l'immediata registrazione degli eventi anagrafici relativi ai cittadini residenti nel proprio territorio in ANPR.
 
-L'esperienza dei Comuni subentrati forniscono indicazioni sulle attività che i Comuni devono realizzare per raggiungere gli obiettivi del subentro.
+L'esperienza che dei Comuni subentrati forniscono indicazioni sulle attività che i Comuni devono realizzare per raggiungere gli obiettivi del subentro.
 
-L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attività che i Comuni realizzano, insieme alle loro software house, sono:
+Le attività che i Comuni devono realizzare, insieme alle loro software house, sono:
 
 - **Aggiornamento del software** delle APR locali per l'integrazione con il sistema ANPR attraverso i web services esposti da quest'ultimo.
 - **Predisposizione delle procedure di ETL** (estrazione, trasformazione e caricamento) per la predisposizione dei file di subentro da inoltrare al sistema ANPR.
@@ -25,7 +26,7 @@ L'esperienza realizzata dai Comuni subentrati in ANPR si evidenzia che le attivi
 
 .. Important::
 	I *35 Comuni che sono subentrati* in ANPR e i *951 che sono in fase di pre-subentro* ha coinvolto la quasi totalità delle software house interessate.
-	L'esperienza maturata dalla software house permette ai Comuni di concentrano sull'azione di **bonifica**.
+	Abbiamo analizzato tutti i dati relativi ai pre subentri dei comuni che sono i seguenti:
 
 .. Note::
 	**983 Comuni hanno esperienza di ANPR** pari al 12,32% dei Comuni italiani
