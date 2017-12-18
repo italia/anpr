@@ -4,9 +4,9 @@ Stima dei tempi per il subentro di un Comune
 .. WARNING::
 	Il documento è da ritenersi in versione beta.
 
-L’esperienza dei Comuni subentrati, che hanno eseguito sulla piattaforma 1.7 milioni di operazioni anagrafiche nell’ultimo anno, dimostra che **è possibile passare ad ANPR**. 
+L’esperienza dei Comuni subentrati, che hanno eseguito sulla piattaforma 1.7 milioni di operazioni anagrafiche nell’ultimo anno, dimostra che **è possibile passare ad ANPR**.
 Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrate sulle schede individuali soggetto, che sono di fatto tutte le informazioni anagrafiche del cittadino, permettono di individuare le attività che i Comuni realizzano e l’effort necessario per permettere il **completamento del subentro in circa 2 mesi**.
-	
+
 
 Attività per il subentro
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,16 +29,16 @@ L’insieme di task che i Comuni realizzano per dare seguito alla bonifica dei d
 
 .. Note::
 	**Il nostro campione**
-	
+
 	Abbiamo reperito tutti i dati disponibili al 16 Dicembre, rispetto ai quali sappiamo che:
-	
+
 	* 948 Comuni sono in pre-subentro pari al 11,88% dei Comuni italiani
 	* 35 Comuni sono subentrati pari al 0,44% dei Comuni italiani
 	* 860.843 Cittadini subentrati pari all'1,42% della popolazione italiana
-	* 7.617.298 schede individualisoggetto, quindi informazioni anagrafiche di altrettanti cittadini, sono state esaminate complessivamente da ANPR
-	
+	* 7.617.298 schede individuali soggetto, quindi informazioni anagrafiche di altrettanti cittadini, sono state esaminate complessivamente da ANPR
+
 	L’analisi quindi si basa su un campione di posizioni anagrafiche rappresentativo pari al 12,57% della popolazione italiana.
-	
+
 	I *35 Comuni che sono subentrati* in ANPR e i *951 che sono in fase di pre-subentro* hanno coinvolto la quasi totalità delle software house interessate.
 
 
@@ -58,9 +58,9 @@ Nel dettaglio i 119 tipi di anomalia tracciati da ANPR nella fase di pre-subentr
 
 .. Important::
 	*Le uniche anomalie che impediscono ad comune di subentrare sono quelle classificate come ERRORE.*
-	
+
 	*Le anomalie di tipo ERRORE sul file di subentro implicano un difetto nel software usato dal Comune e devono quindi essere risolte dal fornitore del software.   Si può assumere che, se il fornitore è lo stesso usato da un altro Comune che è già subentrato, l'incidenza di queste anomalia sarà zero in quanto il software sarà già stato verificato e corretto nel subentro precedente.*
-	
+
 	Vi è un'**unica anomalia sui dati anagrafici che impedisce ad un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente (DPR 223/1989)*, e viene segnalata nel caso in cui sia presente una persona senza scheda famiglia/convivenza associata. Questa tipologia di errore va risolta dal personale Comunale e si può ripresentare in corrispondenza di ogni subentro, per tutti i Comuni gestiti da uno stesso fornitore.
 
 Relativamente all’attività di **valutazione anomalie** in cui il Comune analizza le anomalie segnalate da ANPR, si ricorda che i Comuni possono decidere di dare seguito alla bonifica dei dati, fatto salve le anomalie ERRORE, sia *prima* che *dopo* il subentro. *Il sistema ANPR assicura ai Comuni il controllo delle anomalie a valle del subentro impedendo la generazione di certificati con dati per cui è tracciata un’anomalia.* A seguito della valutazione del risultato indicante le anomalie, il Comune organizza la bonifica dei dati sulla base delle risorse disponibili (forze lavoro ed economiche), individuando le anomalie da risolvere prima del subentro e quelle da realizzarsi successivamente al subentro stesso.
@@ -74,7 +74,7 @@ Sulla base dei dati raccolti al 16/12/2017 dal sistema ANPR si rilevano i seguen
 
 .. Note::
 	**I numeri delle anomalie in dettaglio**
-	
+
 	**7.617.298 Schede individuali trattate da ANPR**
 
 	**768.929 Totale anomalie riscontrate**, di cui:
@@ -97,7 +97,7 @@ Il tempo necessario al subentro del Comune dipende dalla:
 3. realizzazione delle **attività una tantum da realizzarsi per il subentro**, quali censimento degli operatori e delle postazioni e successiva richiesta delle smart-card che richiedono un tempo di produzione ed invio di 20 gg, che si può svolgere in parallelo alle altre attività;
 4. attività di **bonifica delle anomalie riscontrate**, nella quale si dà priorità, effettuandola prima del subentro, alla bonifica delle posizioni critiche rimandando le altre ad un momento successivo.
 
-Relativamente al precedente punto 4 si assume che il Comune si organizza per risolvere prima del subentro le sole anomalie segnalate da ANPR come ERRORE e i WARNING accompagnati dalla dizione  “rimuovere prima del subentro”: complessivamente queste anomalie sono , pari allo 0,54% della popolazion;
+Relativamente al precedente punto 4 si assume che il Comune si organizza per risolvere prima del subentro le sole anomalie segnalate da ANPR come ERRORE e i WARNING accompagnati dalla dizione  “rimuovere prima del subentro”: complessivamente queste anomalie sono , pari allo 0,54% della popolazione;
 
 Sono state elaborate le stime (teoriche) riportate nella seguente tabella:
 
@@ -121,12 +121,12 @@ Il dettaglio dei tempi
 In conclusione gli step necessari al comune per il subentro:
 
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
-| Attività                                                                                   | Attività per il Comune                                                                          | Effort per il Comune (gg)  | Tempo (gg)                                 |             
+| Attività                                                                                   | Attività per il Comune                                                                          | Effort per il Comune (gg)  | Tempo (gg)                                 |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Prova di subentro. La sw house fa una prova di subentro ed indica le anomalie da risolvere | Contattare la propria sw house                                                                  | 0                          | 1                                          |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Censimento e produzione delle smart card                                                   | Censimento  degli operatori comunali sul sito del Ministero                                     | 1                          | 20                                         |
-+--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+  
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Bonifica dei dati prima del subentro                                                       | Gli operatori anagrafici correggono le anomalie secondo una pianificazione desunta dall’’effort | 0-60                       | Dipendente dal numero di risorse impiegate |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Ritiro e configurazione smart card                                                         |                                                                                                 | 1                          | 1                                          |
@@ -135,7 +135,7 @@ In conclusione gli step necessari al comune per il subentro:
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 
 
-Conclusioni 
+Conclusioni
 ^^^^^^^^^^^
 
 Dall’analisi dei dati si evince che i comuni, soprattutto quelli fino a 10.000 abitanti (oltre l’80% dei Comuni italiani), hanno un tempo stimato di risoluzione delle anomalie anagrafiche bloccanti  inferiore ai 10 giorni. Si precisa che le stime sono state realizzate assumendo che le risorse siano assegnate completamente alla bonifica dei dati; pertanto, l’organizzazione del singolo comune dovrà tenere conto della effettiva disponibilità delle risorse. Comunque è oltremodo realistico prevedere che, anche nei casi peggiori, il completamento della bonifica delle anomalie bloccanti è di gran lunga inferiore ai 2 mesi.
@@ -151,4 +151,3 @@ Ulteriori ottimizzazioni possibili
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 E’ utile ricordare che le operazioni di pre subentro e subentro possono essere fatte in modalità remota attraverso una chiamata alle relative API (Web Service). In questo scenario al comune sarebbe richiesto, oltre alla bonifica dei dati, di fatto solo l’attivazione delle smart card.
-
