@@ -111,6 +111,8 @@ Sono state elaborate le stime (teoriche) riportate nella seguente tabella:
 |  5.000             |                                       5.574 |                                      69,87% |    0,54%   |         27 |                                7 |           4 |
 +--------------------+---------------------------------------------+---------------------------------------------+------------+------------+----------------------------------+-------------+
 
+|ggCalculator|
+
 
 Il dettaglio dei tempi
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -148,3 +150,18 @@ Al fine di facilitare l’organizzazione delle attività dei comuni per la bonif
 .. |dashboard_link| raw:: html
 
    <a href="https://dashboard.teamdigitale.governo.it/public/dashboard/2414d40b-9273-4e54-83ae-df346826fc53" target="_blank">9 fornitori tecnologici</a>
+   
+   
+.. |ggCalculator| raw:: html
+
+	Popolazione Comune
+	<input type="number " name="popolazione" id="popolazione">
+	<button onclick="myFunction()">Calcola</button>
+	# gg uomo
+	<input type="number " name="ggCalcolati" id="ggCalcolati" readonly>
+
+	<script>
+	function myFunction() {
+		document.getElementById("ggCalcolati").value = document.getElementById("popolazione").value*0.54;
+	}
+	</script>
