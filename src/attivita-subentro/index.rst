@@ -1,10 +1,7 @@
 Stima dei tempi per il subentro di un Comune
 ============================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
-L’esperienza dei Comuni subentrati, che hanno eseguito sulla piattaforma 1.7 milioni di operazioni anagrafiche nell’ultimo anno, dimostra che **è possibile passare ad ANPR**. 
+L’esperienza dei Comuni subentrati, che hanno eseguito sulla piattaforma 1.7 milioni di operazioni anagrafiche nell’ultimo anno, dimostra che **è possibile passare ad ANPR**.
 
 Le informazioni raccolte da ANPR, relativamente alle anomalie riscontrate sulle schede individuali, che sono di fatto tutte le informazioni anagrafiche del cittadino, permettono di individuare le attività che i Comuni realizzano e l’effort necessario per permettere il **completamento del subentro in circa 2 mesi**.
 
@@ -43,7 +40,7 @@ L’insieme di task che i Comuni realizzano per dare seguito alla bonifica dei d
 
 	**L’analisi quindi si basa su un campione di posizioni anagrafiche rappresentativo pari al 12,57% della popolazione italiana.**
 
-	
+
 Gestione delle anomalie
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -150,8 +147,8 @@ Al fine di facilitare l’organizzazione delle attività dei comuni per la bonif
 .. |dashboard_link| raw:: html
 
    <a href="https://dashboard.teamdigitale.governo.it/public/dashboard/2414d40b-9273-4e54-83ae-df346826fc53" target="_blank">9 fornitori tecnologici</a>
-   
-   
+
+
 .. |ggCalculator| raw:: html
 
 	Popolazione Comune
