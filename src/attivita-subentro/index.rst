@@ -155,10 +155,10 @@ Al fine di facilitare l’organizzazione delle attività dei comuni per la bonif
 .. |ggCalculator| raw:: html
 
 	Popolazione Comune
-	<input type="number " name="popolazione" id="popolazione">
+	<input type="number " name="popolazione" id="popolazione" width="10">
 	<button onclick="myFunction()">Calcola</button>
 	# gg uomo
-	<input type="number " name="ggCalcolati" id="ggCalcolati" readonly>
+	<input type="number " name="ggCalcolati" id="ggCalcolati" width="10" readonly>
 
 	<script>
 	function myFunction() {
