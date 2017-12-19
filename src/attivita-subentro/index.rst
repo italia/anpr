@@ -162,6 +162,6 @@ Al fine di facilitare l’organizzazione delle attività dei comuni per la bonif
 
 	<script>
 	function myFunction() {
-		document.getElementById("ggCalcolati").value = document.getElementById("popolazione").value*0.0054/7;
+		document.getElementById("ggCalcolati").value = Math.round(document.getElementById("popolazione").value*0.0054/7);
 	}
 	</script>
