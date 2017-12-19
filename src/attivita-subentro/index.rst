@@ -13,7 +13,7 @@ Attività per il subentro
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Si assume che il comune abbia un software già compatibile con ANPR e che quindi sia tecnicamente in grado di eseguire il subentro.
 
-Ad oggi ci sono `9 fornitori tecnologici <https://dashboard.teamdigitale.governo.it/public/dashboard/2414d40b-9273-4e54-83ae-df346826fc53>`_ dei comuni che hanno adeguato il loro software gestionale ad ANPR, hanno fatto subentrare almeno un comune in ANPR e coprono 44% della popolazione italiana (26 milioni).
+Ad oggi ci sono |dashboard_link| dei comuni che hanno adeguato il loro software gestionale ad ANPR, hanno fatto subentrare almeno un comune in ANPR e coprono 44% della popolazione italiana (26 milioni).
 
 Gli obiettivi del subentro sono:
 
@@ -142,3 +142,9 @@ In considerazione che per il subentro vanno considerati anche i tempi tecnici di
 **Nel caso il comune avviasse la richiesta delle smart card in anticipo rispetto alle date previste di subentro in tempi potrebbero essere ulteriormente ridotti.**
 
 Al fine di facilitare l’organizzazione delle attività dei comuni per la bonifica dei dati anagrafici, si ricorda che il **completamento del subentro agevola le amministrazioni nella azione di correzione delle anomalie, in considerazione che ANPR offre una integrazione privilegiata con l’anagrafe tributaria**, l’adozione di tabelle di decodifica riconosciute a livello nazionale e non da meno una riduzione delle esigenze dell’impegno di risorse per soddisfare il debito informativo dei comuni verso istituzioni centrali, quali: INPS, ISTAT, MCTC, ed altri.
+
+
+
+.. |dashboard_link| raw:: html
+
+   <a href="https://dashboard.teamdigitale.governo.it/public/dashboard/2414d40b-9273-4e54-83ae-df346826fc53" target="_blank">9 fornitori tecnologici</a>
