@@ -6,11 +6,11 @@ Procedura 005 - Duplicazione scheda anagrafica
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
-- EA030 - CF di un soggetto residente  in piu' comuni
+- EA030 - CF di un soggetto residente  in più comuni
 - EA031 - CF di un soggetto residente  sia in Italia che all'estero (AIRE)
-- EA036 - Soggetto registrato piu' volte sia con il CF base che con quello che risolve l'omocodia
-- EA040 - Soggetto registrato piu' volte  sia con il CF collegato che con l'ultimo
-- EF003 - Sono presenti piu' schede famiglia/convivenza con lo stesso identificativo attribuito dal comune
+- EA036 - Soggetto registrato più volte sia con il CF base che con quello che risolve l'omocodia
+- EA040 - Soggetto registrato più volte  sia con il CF collegato che con l'ultimo
+- EF003 - Sono presenti più schede famiglia/convivenza con lo stesso identificativo attribuito dal comune
 
 
 Precondizione
@@ -36,11 +36,11 @@ L'ufficiale d'anagrafe verifica i dati anagrafici associati al soggetto interess
 
 AZIONE 005_002 – NUOVO INOLTRO
 ------------------------------
-Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 005_003 – IDENTIFICAZIONE SOGGETTO
 -----------------------------------------
-L'ufficiale di anagrafe, o se necessario perchè coinvolti più comuni gli ufficiali di anagrafe (come per l'EA030), realizzano le necessarie verifiche al fine di individuare quale sia la scheda soggetto e/o dati da considerare corretti.
+L'ufficiale di anagrafe, o se necessario perché coinvolti più comuni gli ufficiali di anagrafe (come per l'EA030), realizzano le necessarie verifiche al fine di individuare quale sia la scheda soggetto e/o dati da considerare corretti.
 
 AZIONE 005_004 - CONSOLIDAMENTO E NUOVO INOLTRO
 -----------------------------------------------

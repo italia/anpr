@@ -12,10 +12,10 @@ In quanto segue si riporta la procedura suggerita ai Comuni per la gestione dell
 
 - EN001 - Nome file @ formalmente non corretto
 - EN002 - La dimensione del file  @ compresso supera il valore consentito @
-- EN007 - E' gia' presente un file con lo stesso nome @
+- EN007 - E' già presente un file con lo stesso nome @
 - EN008 - Il numero progressivo @ indicato nel nome del file supera il totale previsto @
-- EN009 - Il formato del file APR decompresso non e' XML
-- EN010 - Il formato del file AIRE decompresso non e' TXT
+- EN009 - Il formato del file APR decompresso non è XML
+- EN010 - Il formato del file AIRE decompresso non è TXT
 - EN031 - I dati del gruppo "Dati Invio" devono essere obbligatoriamente impostati quando il totale invii >1
 - EN033 - La data di inizio @ deve essere <= della data fine @
 - EN035 - File piano subentro errato o incompleto
@@ -44,17 +44,17 @@ In quanto segue si riporta una descrizione delle azioni previsti per la presente
 
 AZIONE 008_001 - CORREZIONE
 ---------------------------
-I referenti tecnico informatici del Comune in base alla specifica anomalia segnalata provvedede a correggere la stessa, ad esempio nel caso dell'anomalia *EN009 - Il formato del file APR decompresso non e' XML* assicura che il file di presubentro sia un file xml ben formato, cioè:
+I referenti tecnico informatici del Comune in base alla specifica anomalia segnalata provvede a correggere la stessa, ad esempio nel caso dell'anomalia *EN009 - Il formato del file APR decompresso non è XML* assicura che il file di presubentro sia un file xml ben formato, cioè:
 
-- Il documento XML contiene un unico elemento root (“radice” dell’albero);
+- Il documento XML contiene un unico elemento root (“radice” dell'albero);
 - Gli elementi devono essere sempre chiusi con tag di chiusura o, se vuoti, tramite chiusura abbreviata (/>);
-- Bisogna rispettare l’ordine di nidificazione: un elemento padre non può essere chiuso prima di un elemento figli;
+- Bisogna rispettare l'ordine di nidificazione: un elemento padre non può essere chiuso prima di un elemento figli;
 - XML è case sensitive: bisogna ricordarlo quando usiamo maiuscone e minuscole per nomi dei tag e attributi
 - Gli attributi devono essere racchiusi tra singoli o doppi apici.
 
 Inoltre assicura che il file rispetti lo schema xsd previsto. 
 
-Si suggerisce che l’ufficiale d’anagrafe segnala al proprio fornitore l’errore rilevato da ANPR. 
+Si suggerisce che l'ufficiale d'anagrafe segnala al proprio fornitore l'errore rilevato da ANPR. 
 
 Si ricorda che in ambiente di test-comuni nella sezione Strumenti di supporto, che compare in alto a destra sulla home page, è disponibile un client che consente la verifica del file xml per la migrazione dei dati dall'APR locale alla base dati ANPR.
 
