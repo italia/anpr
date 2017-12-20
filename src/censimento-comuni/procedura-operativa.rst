@@ -54,18 +54,18 @@ Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 dal t
 Approvvigionamento dei dispositivi di sicurezza
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il Ministero dell’Interno acquisisce i dati inoltrati dal Comune è assicura l'approvvigionamento dei dispositivi di sicurezza: certificati di postazioni, credenziali, smart card e lettori di smart card.
+Il Ministero dell’Interno acquisisce i dati inoltrati dal Comune e assicura l'approvvigionamento dei dispositivi di sicurezza: certificati di postazioni, credenziali, smart card e lettori di smart card.
 
-Nello specifico provvede a garantire la personalizzazione delle smart card ed al loro inoltro alle Prefetture, individuato quale organo di governo periferico per assicurare la consegna delle smart card ai Comuni. La produzione delle smart card prevede che le stesse siano custodite in una busta che contiene la prima parte del PIN, del PUK e metà della password di accesso da utilizzare in caso di impossibilità di utilizzo della smart card.
+Nello specifico provvede a garantire la personalizzazione delle smart card e al loro inoltro alle Prefetture, individuato quale organo di governo periferico per assicurare la consegna delle smart card ai Comuni. La produzione delle smart card prevede che le stesse siano custodite in una busta che contiene la prima parte del PIN, del PUK e metà della password di accesso da utilizzare in caso di impossibilità di utilizzo della smart card.
 
 .. Important::
     La Prefettura, dopo aver ricevuto il plico delle smart card, convoca il sindaco per la consegna delle smart card e provvede alla consegna delle stesse al sindaco o un suo delegato.
 
 Le azioni descritte nel presente paragrafo sono rappresentate nella fig. 1 nei seguenti task:
 
-- “Ricezione dati utenti e postazioni” e “Personalizzazione smart card ed inoltro” in carico del Ministero dell’Interno, 
-- “Riceve plico delle smart card” in carico della Prefettura 
-- “Ritiro delle smart card” in carico al Comune. 
+- "Ricezione dati utenti e postazioni" e “Personalizzazione smart card ed inoltro” in carico del Ministero dell’Interno, 
+- "Riceve plico delle smart card" in carico della Prefettura 
+- "Ritiro delle smart card" in carico al Comune. 
 
 Nomina Amministratori Locali
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,19 +112,19 @@ L’Amministratore Locale delle Postazioni, a valle della nomina e della ricezio
 
 Per dare seguito alle proprie azioni, l’Amministratore Locale delle Postazioni, utilizza la funzione “Gestione postazione – Ricerca postazione” nella sezione Sicurezza della Web Application ANPR.
 
-E’ possibile ricercare tutti i certificati di postazione selezionando il bottone Ricerca.
+È possibile ricercare tutti i certificati di postazione selezionando il bottone Ricerca.
 
 .. Important::
     I certificati presenti nella lista della sezione Elenco postazioni coincidono con il numero di postazioni dichiarate dal comune al momento del censimento utenti. 
 
 Selezionando l’icona lente presente nella colonna dettaglio è possibile visualizzare la password del relativo certificato e scaricare il file tramite il bottone Scarica certificato.
 
-E' possibile effettuare il download di tutti i certificati da installare con una sola operazione selezionando il bottone “Scarica tutti” e salvando il file compresso. Il file ottenuto contiene tutti i certificati e un file .txt con le relative password.
+È possibile effettuare il download di tutti i certificati da installare con una sola operazione selezionando il bottone “Scarica tutti” e salvando il file compresso. Il file ottenuto contiene tutti i certificati e un file .txt con le relative password.
 
 .. Important::
-    Successivamente al download dei certificati, l'Amministratore Locale delle Postazione provvede ad installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`procedure strumentali <procedure-strumentali>`). 
+    Successivamente al download dei certificati, l'Amministratore Locale delle Postazione provvede a installare i certificati sulle postazioni che saranno utilizzate dagli operatori comunali per accedere ad ANPR. Per maggiori dettagli su come installare i certificati di postazione (vedi :doc:`Procedure strumentali <procedure-strumentali>`). 
     
     L'Amministratore Locale delle Postazione completa la configurazione delle postazioni provvedendo all'installare il lettore di smart-card (vedi :doc:`procedure strumentali <procedure-strumentali>`)
 
-Le azioni descritte nel seguente presente sono rappresentate nella fig. 1 dai task denominati “Consegna smart card” e “Riceve smart card” in carico al Comune.
+Le azioni descritte qui sono rappresentate nella fig. 1 dai task denominati “Consegna smart card” e “Riceve smart card” in carico al Comune.
 

@@ -20,7 +20,7 @@ Certificabilità soggetto
 
 
 
-- Se Soggetto parzialmente certificabile. e forzaCertificazione assente o uguale a 0
+- Se Soggetto parzialmente certificabile e forzaCertificazione assente o uguale a 0
 
  
 
@@ -50,7 +50,7 @@ Esenzione bolli
 
 
 
-- Se il campo paEstera=2 ( destinazione d'uso = CERTIFICATO RILASCIATO PER PROCEDIMENTI DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE ) o paEstera=3 (destinazione d'uso = AI SENSI DELL'ART. 40, D.P.R. 445/2000 IL PRESENTE CERTIFICATO E' RILASCIATO PER CAUSE GIUDIZIARIE) ed il certificato non è esente da bollo
+- Se il campo paEstera=2 (destinazione d'uso = CERTIFICATO RILASCIATO PER PROCEDIMENTI DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE) o paEstera=3 (destinazione d'uso = AI SENSI DELL'ART. 40, D.P.R. 445/2000 IL PRESENTE CERTIFICATO E' RILASCIATO PER CAUSE GIUDIZIARIE) e il certificato non è esente da bollo
 
 
 

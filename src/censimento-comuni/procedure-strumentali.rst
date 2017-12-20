@@ -1,4 +1,4 @@
-Procedura strumentali
+Procedure strumentali
 =====================
 
 .. WARNING::
@@ -9,12 +9,16 @@ Di seguito sono descritte in maggior dettaglio le principali procedure da seguir
 
 Configurazione lettore smart card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-L’utilizzo delle smart card, oltre alla conoscenza dei PIN, PUK e password per l’accesso, necessità delle attività di seguito descritte da realizzarsi sulle postazioni da cui gli operatori comunali accederanno alla Web Application ANPR.
+L’utilizzo delle smart card, oltre alla conoscenza dei PIN, PUK e password per l’accesso, necessita delle attività di seguito descritte da realizzarsi sulle postazioni da cui gli operatori comunali accederanno alla Web Application ANPR.
 
 Installazione lettore smart card
 --------------------------------
 
-Il lettore fornito ai Comune per l’utilizzo delle smart card si caratterizza per tecnologia plug&play che, nei moderni sistemi operativi, possono essere messe in uso all'interno di un sistema hardware o/e software senza che l'utente del sistema conosca o metta in atto una specifica procedura di installazione o configurazione.
+Il lettore fornito ai Comuni per l’utilizzo delle smart card si caratterizza
+per tecnologia plug&play. Nei moderni sistemi operativi, tali carte possono
+essere usate in un sistema hardware o/e software senza che
+l'utente del sistema conosca o metta in atto una specifica procedura di
+installazione o configurazione.
 
 Dopo aver collegato il lettore al connettore USB del computer attendere che il sistema operativo comunichi all’utente che il dispositivo è installato e correttamente funzionante.
 
