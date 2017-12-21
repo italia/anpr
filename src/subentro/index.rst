@@ -5,7 +5,7 @@ In quanto segue sono riportati i suggerimenti per gli ufficiali di anagrafe che,
 
 
 
-Per maggiori informazioni su `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
+.. include:: ../fragments/anpr-website.rst
 
 
 .. toctree::
