@@ -37,9 +37,9 @@ Si continueranno però a ricevere i moduli APR/4 da parte dei comuni non in ANPR
 Sono in corso di realizzazione nuove interfacce tra i sistemi CIE e ANPR, che nei comuni migrati consentiranno di leggere in automatico molte informazioni in più, come per esempio i dati dei genitori per i minorenni - quando disponibili e utilizzabili. Queste interfacce poi, per tutti i comuni, consentiranno ai sistemi CIE di utilizzare la migliore fonte dati disponibile (ANPR, INA-SAIA, Anagrafe Tributaria, AIRE).
 
 L'integrazione con l'APR locale via protocollo SAD continuerà a funzionare, anche dopo il subentro in ANPR - almeno fin quando non verranno fornite nuove interfacce funzionalmente equivalenti.
-Fino al completamento delle nuove interfacce di cooperazione CIE-ANPR, il sistema di emissione CIE "CIEOnline" continuerà a effettuare la convalida dei dati prelevati da APR direttamente su INA-SAIA o ANPR e a comunicare al software di anagrafe locale e ANPR il nuovo numero di CIE o l'avvenuto annullamento. A seguito del completamento delle nuove interfacce di cooperazione, le CIE emesse o l'avvenuto annullamento verranno poi automaticamente inviate ad ANPR da “CIEOnline”, indipendentemente dall'APR locale.
+Fino al completamento delle nuove interfacce di cooperazione CIE-ANPR, il sistema di emissione CIE "CIEOnline" continuerà a effettuare la convalida dei dati prelevati da APR direttamente su INA-SAIA o ANPR e a comunicare al software di anagrafe locale e ANPR il nuovo numero di CIE o l'avvenuto annullamento. A seguito del completamento delle nuove interfacce di cooperazione, le CIE emesse o l'avvenuto annullamento verranno poi automaticamente inviate ad ANPR da "CIEOnline", indipendentemente dall'APR locale.
 **
-Con CIE, inoltre, il cartellino elettronico viene emesso e trasmesso automaticamente alla Polizia di Stato, mantenendo comunque una copia a disposizione del comune consultabile sul sistema “CIEOnline”.
+Con CIE, inoltre, il cartellino elettronico viene emesso e trasmesso automaticamente alla Polizia di Stato, mantenendo comunque una copia a disposizione del comune consultabile sul sistema "CIEOnline".
 
 
 * **I sistemi INPS ricevono direttamente i dati da ANPR**.
