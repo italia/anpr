@@ -1,4 +1,4 @@
-Tabella 07 - Motivi di iscrizione in Anagrafe
+Tabella 07. Motivi di iscrizione in Anagrafe
 =============================================
 
 

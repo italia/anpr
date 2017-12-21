@@ -1,4 +1,4 @@
-Tabella 18 - Righe dettaglio Prospetti Statistici
+Tabella 18. Righe dettaglio Prospetti Statistici
 =================================================
 
 

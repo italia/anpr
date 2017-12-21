@@ -1,4 +1,4 @@
-Tabella 20 - Iniziativa iscrizione AIRE
+Tabella 20. Iniziativa iscrizione AIRE
 =======================================
 
 

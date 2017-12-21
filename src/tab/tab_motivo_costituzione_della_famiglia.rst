@@ -1,4 +1,4 @@
-Tabella 26 - Motivo costituzione della famiglia
+Tabella 26. Motivo costituzione della famiglia
 ===============================================
 
 

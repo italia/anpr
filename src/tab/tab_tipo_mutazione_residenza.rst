@@ -1,4 +1,4 @@
-Tabella 47 - Tipo mutazione residenza
+Tabella 47. Tipo mutazione residenza
 =====================================
 
 :Aggiornamento: 24 ottobre 2017

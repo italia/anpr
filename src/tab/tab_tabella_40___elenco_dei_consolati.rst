@@ -1,4 +1,4 @@
-Tabella 40 - Elenco dei consolati
+Tabella 40. Elenco dei consolati
 =================================
 
 :Aggiornamento: 17 Giugno 2016

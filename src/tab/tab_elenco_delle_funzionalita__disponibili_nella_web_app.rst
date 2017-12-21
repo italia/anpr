@@ -1,4 +1,4 @@
-Elenco delle funzionalita' disponibilini nella web app
+Elenco delle funzionalità disponibili nella web app
 ======================================================
 
 :Aggiornamento: 19 Ottobre 2017

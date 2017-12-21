@@ -1,4 +1,4 @@
-Tabella 04 - Specie Toponimo
+Tabella 04. Specie toponimo
 ============================
 
 :Fonte: Agenzia delle Entrate

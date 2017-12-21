@@ -1,4 +1,4 @@
-Tabella 13 - Tipo di certificato
+Tabella 13. Tipo di certificato
 ================================
 
 :Aggiornamento: 09 giugno 2017

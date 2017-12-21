@@ -1,4 +1,4 @@
-Tabella 14 - Lingue
+Tabella 14. Lingue
 ===================
 
 :Note: Contiene le lingue nelle quali potrà essere prodotto un certificato
