@@ -2,7 +2,7 @@
 
 .. toctree::
     :maxdepth: 3
-    :caption: Contenuti
+    :caption: Indice dei contenuti
 
     tab_aggiornamenti_alla_documentazione_tecnica
     tab_utilizzo_del_webservice

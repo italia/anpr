@@ -14,11 +14,10 @@ Si precisa che quanto di seguito esposto, relativamente alla predisposizione del
 	Per maggiori dettagli si rimanda alla consultazione della documentazione tecnica presente sul sito istituzionale del progetto ANPR `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
 
 
-Indice dei contenuti
---------------------
 
 .. toctree::
    :maxdepth: 5
+   :Caption: Indice dei contenuti
 
    procedura-operativa.rst
    procedure-strumentali.rst

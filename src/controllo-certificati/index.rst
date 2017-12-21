@@ -10,11 +10,10 @@ dati** che ne inibiscono l'emissione.
 .. Important::
 	Quando i dati relativi a una specifica scheda anagrafica (persona, famiglia e convicenza) inibiscono l'emissione di uno dei certificati anagrafici prodotti dal sistema ANPR l'ufficiale di anagrafe, grazie ai servizi di *mutazione anagrafica*, provvede alla correzione dei dati.
 	
-Indice dei contenuti
---------------------
 
 .. toctree::
    :maxdepth: 1
+   :Caption: Indice dei contenuti
 
    CERTIFICATO_anagrafico_nascita.rst
    CERTIFICATO_esistenza_in_vita.rst

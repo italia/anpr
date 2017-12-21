@@ -8,10 +8,8 @@ meglio i cambiamenti e i vantaggi di ANPR, in particolare dopo il subentro.
 Per maggiori informazioni su `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
 
 
-Indice dei contenuti
---------------------
-
 .. toctree::
    :maxdepth: 5
+   :Caption: Indice dei contenuti
 
    cosa-cambia-comune-migrato
