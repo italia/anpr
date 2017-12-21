@@ -1,4 +1,4 @@
-## Domande Frequenti
+## Domande frequenti
 
 ### Perché dovrei far passare il mio comune ad ANPR?
 

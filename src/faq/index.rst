@@ -2,7 +2,7 @@ Domande frequenti
 ================================
 
 In quanto segue sono riportati  alcuni documenti utili ai comuni per comprendere
-meglio i cambiamenti ed i vantaggi di ANPR, in particolare dopo il subentro.
+meglio i cambiamenti e i vantaggi di ANPR, in particolare dopo il subentro.
 
 
 Per maggiori informazioni su `https://www.anpr.interno.it/ <https://www.anpr.interno.it/>`_
