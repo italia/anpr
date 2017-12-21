@@ -1,3 +1,6 @@
+|image0|
+
+
 Anagrafe Unica del cittadino
 ==============================
 
@@ -19,3 +22,8 @@ Indice e tabelle
 ----------------
 
 .. include:: toc.rst
+
+
+
+.. |image0| image:: _images/anpr.png
+
