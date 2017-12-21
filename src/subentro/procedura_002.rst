@@ -1,9 +1,5 @@
-Procedura 002 - Soggetto presente in AT con CF non corrispondente
+Procedura 002. Soggetto presente in AT con CF non corrispondente
 =================================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 

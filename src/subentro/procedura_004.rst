@@ -1,8 +1,5 @@
-Procedura 004 - Dati obbligatori popolati non correttamente
+Procedura 004. Dati obbligatori popolati non correttamente
 =================================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 

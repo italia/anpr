@@ -1,9 +1,6 @@
-Procedura 006 - Codice inesistente su tabella di riferimento
+Procedura 006. Codice inesistente su tabella di riferimento
 =================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-   
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EC001 - Codice stato civile @ inesistente sulla tabella di riferimento `Tabella 1 Stato civile <https://anpr.readthedocs.io/en/latest/tab/tab_stato_civile.html>`_

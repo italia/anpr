@@ -1,8 +1,5 @@
-Procedura 010 - Inoltro file di subentro disabilitato
+Procedura 010. Inoltro file di subentro disabilitato
 =====================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 

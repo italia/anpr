@@ -1,9 +1,6 @@
 Cancellazione anagrafica 
 =========================================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-	
 Di seguito sono riportati i **controlli e le condizioni sui dati** che inibiscono l'emissione del presente certificato.
 	
 Certificabilità soggetto

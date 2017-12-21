@@ -1,8 +1,5 @@
-Procedura 008 - Errore predisposizione file di subentro
+Procedura 008. Errore predisposizione file di subentro
 =================================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
 
 .. Important::
 	Si ricorda che in ambiente di test-comuni nella Web Application, sezione Strumenti di supporto, che compare in alto a destra sulla home page, è disponibile un client che consente la verifica preventiva del file xml di subentro.

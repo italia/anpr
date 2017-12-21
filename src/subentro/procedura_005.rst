@@ -1,8 +1,5 @@
-Procedura 005 - Duplicazione scheda anagrafica
+Procedura 005. Duplicazione scheda anagrafica
 ==============================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 

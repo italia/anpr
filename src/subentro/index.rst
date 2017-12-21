@@ -1,9 +1,6 @@
 Buone pratiche per le attività di pre-subentro dei Comuni in ANPR
 ========================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 In quanto segue sono riportati i suggerimenti per gli ufficiali di anagrafe che, in collaborazione con i propri referenti informatici, provvedono alla bonifica dei dati per assicurare il subentro in ANPR.
 
 

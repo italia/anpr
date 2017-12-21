@@ -1,9 +1,6 @@
 Storico cittadinanza 
 =========================================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-	
 Di seguito sono riportati i **controlli e le condizioni sui dati** che inibiscono l'emissione del presente certificato.
 	
 Certificabilità soggetto
@@ -58,7 +55,7 @@ Esenzione bolli
 
 
 
-- Se certificato non esente e importo bollo = 0,00 euro. 
+- Se certificato non esente e importo bollo = 0,00 euro. 
 
 Combinazioni certificati su cumulativi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

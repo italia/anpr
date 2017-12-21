@@ -1,9 +1,6 @@
 Change management
 ================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 In quanto segue vengono descritte le convenzioni e i processi da adottare per
 gestire i cambiamenti software di ANPR.
 

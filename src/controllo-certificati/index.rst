@@ -1,9 +1,6 @@
 Controlli applicati alla produzione di certificati
 ==================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 In quanto segue sono sintetizzati i controlli che il sistema ANPR assicura nella fase di emissione dei certificati.
 
 Per tutti i certificati anagrafici producibili dagli ufficiali di anagrafe

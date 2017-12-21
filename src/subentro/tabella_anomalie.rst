@@ -1,9 +1,6 @@
 Tabella anomalie ANPR
 =====================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 La seguenti tabelle riportano le anomalie che il sistema ANPR rileva sui dati trasmessi dal Comune. 
 
 .. Important::

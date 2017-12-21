@@ -1,10 +1,6 @@
 Introduzione
 ============
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
-
 La procedura di subentro dei Comuni in ANPR rappresenta l'insieme delle attività che i Comuni devono realizzare per assicurare il trasferimento dei dati anagrafici dall'APR e AIRE locali al database centrale di ANPR, così come previsto dal `DPCM 194/2014 <http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.del.consiglio.dei.ministri:2014-11-10;194>`_.
 
 

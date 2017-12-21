@@ -1,9 +1,6 @@
-Procedura 000 - Verifica AT
+Procedura 000. Verifica AT
 ===========================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-   
 In quanto segue si riporta la procedura suggerita ai Comuni per dare seguito alla verfica della presenza di un soggetto nell'Anagrafe Tributaria al fine di riscontrare il Codice Fiscale ad esso attribuito.
 
 Precondizione

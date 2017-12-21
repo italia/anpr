@@ -1,9 +1,6 @@
-Procedura 009 - Errori di quadratura
+Procedura 009. Errori di quadratura
 ====================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-   
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EN011 - Totale schede soggetto @ dichiarato nel file @ incongruente con quello calcolato @

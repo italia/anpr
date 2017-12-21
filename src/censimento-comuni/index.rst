@@ -1,9 +1,6 @@
 Censimento utenti e postazioni, guida rapida per i comuni
 ================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 La presente guida, predisposta per agevolare le attività necessarie per l'utilizzo del sistema ANPR, riassume le azioni che il Comune e gli altri attori coinvolti devono realizzare per assicurare l'attivazione delle Smart Card quali strumenti per l'identificazione degli operatori comunali che necessitano di interagire, a vario titolo, con le funzionalità del sistema ANPR. 
 
 Quanto descritto di seguito assicura ai Comuni i necessari dispositivi per dare seguito alle “Garanzie e misure di sicurezza nel trattamento dei dati personali” così come previsto dal `DPCM 194/2014 <http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2014-11-10;194>`_.

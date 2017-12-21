@@ -1,10 +1,6 @@
 Procedure strumentali
 =====================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
-
 Di seguito sono descritte in maggior dettaglio le principali procedure da seguire per il completamento di quanto previsto nel processo operativo.
 
 Configurazione lettore smart card
