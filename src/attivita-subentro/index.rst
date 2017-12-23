@@ -53,7 +53,7 @@ Nel dettaglio i 119 tipi di anomalia tracciati da ANPR nella fase di pre-subentr
 
 - **1 tipo anomalia ERRORE** sui dati anagrafici (ES092 - Soggetto senza scheda famiglia/convivenza associata);
 - **30 tipi di anomalie ERRORE** sui file di subentro (ad esempio: EN012 - Totale schede soggetto dichiarato per l'intera fornitura incongruente con quello calcolato);
-- **88 tipi di anomalie WARNING** sui dati anagrafici (ad esempio: EC030 - Stato estero di nascita inesistente sulla tabella di riferimento).
+- **88 tipi di anomalie WARNING** sui dati anagrafici (ad esempio: EHR69 - Anno dell'atto di nascita non valido).
 
 .. Important::
 	*Le uniche anomalie che impediscono al comune di subentrare sono quelle classificate come ERRORE.*
@@ -63,6 +63,7 @@ Nel dettaglio i 119 tipi di anomalia tracciati da ANPR nella fase di pre-subentr
 	Vi è un'**unica anomalia sui dati anagrafici che impedisce a un comune di subentrare in ANPR**, determinata dal *Regolamento anagrafico della popolazione residente (DPR 223/1989)*, e viene segnalata nel caso in cui sia presente una persona senza scheda famiglia/convivenza associata. Questa anomalia (ES092 - Soggetto senza scheda famiglia/convivenza associata) richiede un'istruttoria dell'ufficiale di anagrafe mentre le altre anomalie bloccanti (quelle sul file di subentro) richiedono un intervento tecnico per correggere le procedure ETL. Questa tipologia di errore si può ripresentare in corrispondenza di ogni subentro.
 
 Relativamente all'attività di **valutazione anomalie** in cui il Comune analizza le anomalie segnalate da ANPR, si ricorda che i Comuni possono decidere di dare seguito alla bonifica dei dati, fatto salve le anomalie ERRORE, sia *prima* che *dopo* il subentro. *Il sistema ANPR assicura ai Comuni il controllo delle anomalie a valle del subentro impedendo la generazione di certificati con dati per cui è tracciata un'anomalia.* A seguito della valutazione del risultato indicante le anomalie, il Comune organizza la bonifica dei dati sulla base delle risorse disponibili (forze lavoro ed economiche), individuando le anomalie da risolvere prima del subentro e quelle da realizzarsi successivamente al subentro stesso.
+
 
 Sulla base dei dati raccolti al 16/12/2017 per un totale 7.617.298 schede anagrafiche caricate durante i test di pre-subentro, si rilevano i seguenti tassi:
 
@@ -116,6 +117,7 @@ Il dettaglio dei tempi
 
 In conclusione gli step necessari al comune per il subentro sono i seguenti:
 
+
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Attività                                                                                   | Attività per il Comune                                                                          | Effort per il Comune (gg)  | Tempo (gg)                                 |
 +============================================================================================+=================================================================================================+============================+============================================+
@@ -129,7 +131,6 @@ In conclusione gli step necessari al comune per il subentro sono i seguenti:
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
 | Subentro                                                                                   | Chiusura delle attività di sportello ed invio del file presso ANPR e acquisizione dei risultati |                          1 |                                          1 |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------+--------------------------------------------+
-
 
 Conclusioni
 ^^^^^^^^^^^
@@ -148,6 +149,12 @@ Al fine di facilitare l'organizzazione delle attività dei comuni per la bonific
 
    <a href="https://dashboard.teamdigitale.governo.it/public/dashboard/2414d40b-9273-4e54-83ae-df346826fc53" target="_blank">9 fornitori tecnologici</a>
 
+   
+.. |controlli_certificati_link| raw:: html
+
+	<a href="https://anpr.readthedocs.io/en/latest/controllo-certificati/index.html" target="_blank">Controlli applicati alla produzione di certificati</a>
+	
+	
 
 .. |ggCalculator| raw:: html
 
