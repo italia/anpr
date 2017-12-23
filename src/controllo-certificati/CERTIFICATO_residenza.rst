@@ -1,9 +1,6 @@
 Residenza 
 =========================================================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-	
 Di seguito sono riportati i **controlli e le condizioni sui dati** che inibiscono l'emissione del presente certificato.
 	
 Certificabilità soggetto
@@ -46,7 +43,7 @@ Esenzione bolli
 
 
 
-- Se il campo paEstera=2 ( destinazione d'uso = CERTIFICATO RILASCIATO PER PROCEDIMENTI DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE ) o paEstera=3 (destinazione d'uso = AI SENSI DELL'ART. 40, D.P.R. 445/2000 IL PRESENTE CERTIFICATO E' RILASCIATO PER CAUSE GIUDIZIARIE) ed il certificato non è esente da bollo
+- Se il campo paEstera=2 (destinazione d'uso = CERTIFICATO RILASCIATO PER PROCEDIMENTI DISCIPLINATI DALLE NORME SULL'IMMIGRAZIONE) o paEstera=3 (destinazione d'uso = AI SENSI DELL'ART. 40, D.P.R. 445/2000 IL PRESENTE CERTIFICATO E' RILASCIATO PER CAUSE GIUDIZIARIE) e il certificato non è esente da bollo
 
 
 

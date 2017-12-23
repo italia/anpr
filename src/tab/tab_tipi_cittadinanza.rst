@@ -1,4 +1,4 @@
-Tabella 38 - Tipi cittadinanza
+Tabella 38. Tipi cittadinanza
 ==============================
 
 

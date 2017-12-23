@@ -1,4 +1,4 @@
-Tabella 10 - Condizione non professionale
+Tabella 10. Condizione non professionale
 =========================================
 
 :Fonte: Istat

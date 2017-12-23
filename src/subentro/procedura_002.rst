@@ -1,16 +1,12 @@
-Procedura 002 - Soggetto presente in AT con CF non corrispondente
+Procedura 002. Soggetto presente in AT con CF non corrispondente
 =================================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EA002 - Soggetto presente in AT con dati anagrafici uguali a quelli del comune ma CF del comune assente
 - EA003 - Soggetto presente in AT con dati anagrafici uguali a quelli del comune ma CF diverso
-- EAA40 - Soggetto  presente in AT con altri codici fiscali piu' recenti
-- EAA41 - Soggetto  presente in AT con altri codici fiscali piu' recenti
+- EAA40 - Soggetto  presente in AT con altri codici fiscali più recenti
+- EAA41 - Soggetto  presente in AT con altri codici fiscali più recenti
 - EAA50 - Codice fiscale base di omocodice
 - EAA51 - Codice fiscale base di omocodice	
 

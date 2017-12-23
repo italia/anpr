@@ -1,4 +1,4 @@
-Tabella 17 - Prospetti statistici
+Tabella 17. Prospetti statistici
 =================================
 
 :Note: Utilizzata dai servizi di estrazione; i prospetti cui si fa riferimento sono quelli mensili ed annuali trasmessi ad Istat.

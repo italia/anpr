@@ -1,4 +1,4 @@
-Tabella 28 - Motivi di cancellazione AIRE
+Tabella 28. Motivi di cancellazione AIRE
 =========================================
 
 

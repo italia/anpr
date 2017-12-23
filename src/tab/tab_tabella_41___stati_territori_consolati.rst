@@ -1,4 +1,4 @@
-Tabella 41 - Stati Territori Consolati
+Tabella 41. Stati Territori Consolati
 ======================================
 
 :Aggiornamento: 17 Giugno 2016

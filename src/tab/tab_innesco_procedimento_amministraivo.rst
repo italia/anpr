@@ -1,4 +1,4 @@
-Tabella 29 - Innesco procedimento amministraivo
+Tabella 29. Innesco procedimento amministraivo
 ===============================================
 
 

@@ -1,4 +1,4 @@
-Tabella 45 - Comuni subentrati
+Tabella 45. Comuni subentrati
 ==============================
 
 :Aggiornamento: 14 novembre 2017

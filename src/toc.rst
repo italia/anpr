@@ -1,6 +1,6 @@
 .. toctree::
     :maxdepth: 5
-    :caption: Contenuti
+    :caption: Indice dei contenuti
 
     faq/index
     comuni/index

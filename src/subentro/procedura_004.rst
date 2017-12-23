@@ -1,22 +1,19 @@
-Procedura 004 - Dati obbligatori popolati non correttamente
+Procedura 004. Dati obbligatori popolati non correttamente
 =================================================================
-
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
-- EHR41 - I campi comune rilascio carta di identita' @ e  codice consolato rilascio @ devono essere valorizzati in alternativa
+- EHR41 - I campi comune rilascio carta di identità @ e  codice consolato rilascio @ devono essere valorizzati in alternativa
 - EN306 - Presenza del coniuge e assenza del matrimonio
-- ES027 - La descrizione della localita' e' obbligatoria per la residenza estera
+- ES027 - La descrizione della località è obbligatoria per la residenza estera
 - ES028 - Per la residenza estera deve essere presente almeno uno tra i seguenti campi: indirizzo, presso, contea-provincia, CAP
-- ES048 - Occorre impostare in alternativa  il comune o la localita' estera del matrimonio
+- ES048 - Occorre impostare in alternativa  il comune o la località estera del matrimonio
 - ES049 - Indicare almeno il cognome o il nome del soggetto
 - ES050 - Occorre impostare in alternativa codice  comune ISTAT  o stato estero di nascita
-- ES057 - Specificare in alternativa che il soggetto e' senza cognome o senza nome
-- ES061 - Il cognome deve essere assente se il campo SenzaCognome e' impostato
-- ES062 - Il nome deve essere assente se il campo SenzaNome e' impostato
-- ES067 - Occorre impostare in alternativa il  comune o la localita' estera di decesso del coniuge
+- ES057 - Specificare in alternativa che il soggetto è senza cognome o senza nome
+- ES061 - Il cognome deve essere assente se il campo SenzaCognome è impostato
+- ES062 - Il nome deve essere assente se il campo SenzaNome è impostato
+- ES067 - Occorre impostare in alternativa il  comune o la località estera di decesso del coniuge
 - ES092	- Soggetto senza scheda famiglia/convivenza associata
 - EN383 - Presenza dei dati della parte unita civilmente (o convivente)  e assenza dei dati relativi alla unione civile (o convivenza di fatto)
 
@@ -40,8 +37,8 @@ L'ufficiale d'anagrafe verifica i dati anagrafici associati al soggetto interess
 
 AZIONE 004_002 – NUOVO INOLTRO
 ------------------------------
-Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 004_003 – RECUPERO DATI MANCANTI
 ---------------------------------------
-Ove possibile, l’ufficiale di anagrafe provvede a recuperare i dati mancanti e/o a eliminare i dati che risultano erroneamente popolati, se necessario anche attraverso il riscontro con gli atti di stato civile, al fine di assicurare la completezza delle informazioni per la scheda soggetto interessato dall’anomalia, in particolare per quelle anomalie che si consiglia di rimuovere prima del subentro.  Successivamente provvede ad aggiungere i dati sull’APR o AIRE locale per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l’inoltro al sistema ANPR. 
+Ove possibile, l'ufficiale di anagrafe provvede a recuperare i dati mancanti e/o a eliminare i dati che risultano erroneamente popolati, se necessario anche attraverso il riscontro con gli atti di stato civile, al fine di assicurare la completezza delle informazioni per la scheda soggetto interessato dall'anomalia, in particolare per quelle anomalie che si consiglia di rimuovere prima del subentro.  Successivamente provvede ad aggiungere i dati sull'APR o AIRE locale per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR. 

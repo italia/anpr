@@ -1,4 +1,4 @@
-Tabella 30 - Stato Procedimento amministrativo
+Tabella 30. Stato procedimento amministrativo
 ==============================================
 
 

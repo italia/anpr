@@ -1,4 +1,4 @@
-Tabella 19 - Motivi iscrizione AIRE
+Tabella 19. Motivi iscrizione AIRE
 ===================================
 
 

@@ -1,4 +1,4 @@
-Tabella 02 - Stati Esteri
+Tabella 02. Stati esteri
 =========================
 
 :Aggiornamento: 12 ottobre 2017

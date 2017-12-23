@@ -1,4 +1,4 @@
-Tabella 27 - Specie della convivenza
+Tabella 27. Specie della convivenza
 ====================================
 
 

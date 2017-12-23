@@ -1,4 +1,4 @@
-## Change Management
+## Change management
 
 ### Premessa
 
@@ -7,14 +7,14 @@ necessario apportare modifiche software ad ANPR.
 
 Le convenzioni che si adottano tengono conto della necessità di:
 
-* comunicare con il minimo sforzo la risoluzione di problemi e l’introduzione
+* comunicare con il minimo sforzo la risoluzione di problemi e l'introduzione
   di nuove funzionalità tra comuni, software house, e SOGEI;
 
 * coordinare con il minimo sforzo il test di nuove versioni di ANPR tra
   comuni, software house, e SOGEI;
 
 * garantire la compatibilità delle nuove versioni di ANPR con quelle precedenti
-  per un periodo di tempo necessario per l’adeguamento dei software anagrafici.
+  per un periodo di tempo necessario per l'adeguamento dei software anagrafici.
 
 Per far fronte a queste necessità il processo di change management introduce:
 
@@ -23,7 +23,7 @@ Per far fronte a queste necessità il processo di change management introduce:
 
 * una metodologia di aggiornamento del software graduale che consente di
   testare i software anagrafici con le nuove versioni di ANPR e di adeguare i
-  medesimi software all’evoluzione dei contratti WSDL;
+  medesimi software all'evoluzione dei contratti WSDL;
 
 * meccanismi per descrivere in modo succinto e rendere facilmente consultabili
   sia i cambiamenti introdotti in una nuova versione di ANPR che i cambiamenti
@@ -36,7 +36,7 @@ permette di comunicare in modo semplice la natura dei cambiamenti contenuti in
 una nuova versione di ANPR.
 
 La codifica delle versioni segue il [Versionamento
-Semantico](http://semver.org/lang/it/) . Ogni versione di ANPR viene
+Semantico](http://semver.org/lang/it/). Ogni versione di ANPR viene
 rappresentata da tre valori progressivi:
 
 **MAJOR.MINOR.PATCH** (esempio: 2.1.10)
@@ -57,23 +57,23 @@ La semantica di questa codifica è la seguente:
    introdotte correzioni retrocompatibili di bug. Una correzione di un bug è
    definita come una modifica interna che corregge un comportamento errato.
 
-4. La versione Minor Y (x.Y.z | x > 0) DEVE essere incrementata se nell’API
+4. La versione Minor Y (x.Y.z | x > 0) DEVE essere incrementata se nell'API
    pubblica è introdotta una nuova funzionalità retrocompatibile. Essa DEVE
-   essere incrementata se qualsiasi funzionalità dell’API pubblica è marcata
-   come deprecata. Essa DEVE essere incrementata se sono introdotti all’interno
-   del codice privato nuove funzionalità o miglioramenti sostanziali. Essa PUO’
+   essere incrementata se qualsiasi funzionalità dell'API pubblica è marcata
+   come deprecata. Essa DEVE essere incrementata se sono introdotti all'interno
+   del codice privato nuove funzionalità o miglioramenti sostanziali. Essa PUÒ
    includere modifiche di livello patch. La versione Patch DEVE essere
    reimpostata a 0 quando la versione Minor è incrementata. Esempio: La
    versione Minor viene incrementata quando si ha una nuova versione del WSDL,
    retrocompatibile con la versione precedente, che aggiunge dei campi
    opzionali, modifiche ai controlli, ulteriori metodi, o nuovi end point.
 
-5. La versione Major X (X.y.z | X > 0) DEVE essere incrementata se nell’API
-   pubblica è introdotta qualsiasi modifica non retrocompatibile. Essa PUO’
+5. La versione Major X (X.y.z | X > 0) DEVE essere incrementata se nell'API
+   pubblica è introdotta qualsiasi modifica non retrocompatibile. Essa PUÒ
    includere modifiche di livello minor e patch. Le versioni patch e minor
    DEVONO essere reimpostate a 0 quando la versione major è incrementata.
 
-6. Una versione di pre-rilascio PUO’ essere indicata aggiungendo immediatamente
+6. Una versione di pre-rilascio PUÒ essere indicata aggiungendo immediatamente
    dopo la versione patch un trattino e una serie di identificatori separati
    dal punto. Gli identificatori DEVONO essere composti solo da alfanumerici
    ASCII e trattini [0-9A-Za-z-]. Gli identificatori NON DEVONO essere vuoti.
@@ -93,9 +93,9 @@ La semantica di questa codifica è la seguente:
    differiscono solo per i metadati di build, hanno la stessa precedenza.
    Esempi: 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.
 
-8. La precedenza si riferisce a come le versioni sono confrontate l’una con
-   l’altra quando poste in relazione d’ordine. La precedenza DEVE essere
-   calcolata separando gli identificatori nell’ordine seguente: major, minor,
+8. La precedenza si riferisce a come le versioni sono confrontate l'una con
+   l'altra quando poste in relazione d'ordine. La precedenza DEVE essere
+   calcolata separando gli identificatori nell'ordine seguente: major, minor,
    patch e pre-release (i metadati di build non compaiono nella precedenza). La
    precedenza è determinata dalla prima discrepanza quando si confrontano
    ognuno di tali identificatori da sinistra a destra come segue: le versioni
@@ -108,9 +108,9 @@ La semantica di questa codifica è la seguente:
    sinistra a destra finché si trova una discrepanza come segue: gli
    identificatori costituiti da sole cifre sono confrontati numericamente e gli
    identificatori con lettere o trattini sono confrontati lessicalmente secondo
-   l’ordinamento ASCII. Gli identificatori numerici hanno sempre una precedenza
+   l'ordinamento ASCII. Gli identificatori numerici hanno sempre una precedenza
    più bassa rispetto agli identificatori non numerici. Un insieme più grande
-   di identificatori ha una precedenza superiore rispetto ad un insieme più
+   di identificatori ha una precedenza superiore rispetto a un insieme più
    piccolo, se tutti quanti i precedenti identificatori sono uguali. Esempio:
    1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 <
    1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
@@ -118,7 +118,7 @@ La semantica di questa codifica è la seguente:
 ### Classificazione delle modifiche
 
 La codifica delle versioni appena introdotta si basa sul saper discernere quali
-cambiamenti all’API pubblica del servizio devono considerarsi MINOR
+cambiamenti all'API pubblica del servizio devono considerarsi MINOR
 (cambiamenti retrocompatibili) e quali MAJOR (cambiamenti
 non-retrocompatibili).
 
@@ -145,11 +145,11 @@ Cambiamenti retrocompatibili:
 
 Cambiamenti non-retrocompatibili:
 
-* cambiare nome ad un’operazione WSDL esistente
+* cambiare nome a un'operazione WSDL esistente
 
-* rimuovere un’operazione WSDL esistente
+* rimuovere un'operazione WSDL esistente
 
-* aggiungere un fault message ad un’operazione WSDL esistente
+* aggiungere un fault message a un'operazione WSDL esistente
 
 * aggiungere un nuovo elemento/attributo non opzionale allo schema XML di un
   messaggio
@@ -157,7 +157,7 @@ Cambiamenti non-retrocompatibili:
 * aumentare la constraint granularity di un elemento/attributo dello schema XML
   di un messaggio
 
-* cambiare nome ad un elemento/attributo (opzionale o non) dello schema XML di
+* cambiare nome a un elemento/attributo (opzionale o non) dello schema XML di
   un messaggio
 
 * rimuovere un elemento/attributo (opzionale o non) o una wildcard dallo schema
@@ -174,10 +174,10 @@ La metodologia di aggiornamento:
   (rilascio nuova versione MAJOR),
 
 * stabilisce come i software anagrafici possano continuare ad operare durante
-  l’introduzione di cambiamenti non-retrocompatibili,
+  l'introduzione di cambiamenti non-retrocompatibili,
 
 * adotta un processo di testing del software anagrafico con le nuove versioni
-  di ANPR prima che le nuove versioni raggiungano l’ambiente di produzione.
+  di ANPR prima che le nuove versioni raggiungano l'ambiente di produzione.
 
 Ogni qual volta sia necessario rilasciare una nuova versione MAJOR che
 introduce cambiamenti non-retrocompatibili, il servizio deve garantire la
@@ -185,12 +185,12 @@ compatibilità con la versione MAJOR precedente per almeno 90 giorni dalla messa
 in produzione.
 
 A tal fine, nella parte comune a tutti i messaggi (`testataRichiesta`) si
-utilizza l’attributo `codDestinatario` che identifica l’applicazione di
+utilizza l'attributo `codDestinatario` che identifica l'applicazione di
 riferimento cioè quale versione MAJOR supporta il sw anagrafico. Questo
-attributo è già obbligatorio e attuamente contiene il valore "ANPR00"; tale
+attributo è già obbligatorio e attualmente contiene il valore "ANPR00"; tale
 valore verrà impostato ad “ANPR01” al rilascio della prima MAJOR version e
 sarà progressivamente incrementato in corrispondenza di un rilascio di una
-MAJOR version successiva. L’attributo della versione viene controllato prima
+MAJOR version successiva. L'attributo della versione viene controllato prima
 della validazione di tutto il resto del messaggio per permettere ad ANPR di
 validare il messaggio stesso con il WSDL più opportuno.
 
@@ -211,31 +211,31 @@ con i software anagrafici e di riportare problemi:
 
 ### Descrizione della versione
 
-Per garantire compatibilità durante l’aggiornamento è necessario avere una
+Per garantire compatibilità durante l'aggiornamento è necessario avere una
 descrizione puntuale della versione corrente di ANPR, accessibile in modo
 programmatico.
 
 A tal proposito è possibile utilizzare il servizio `Status` per:
 
-* richiedere la versione corrente dell’istanza di ANPR utilizzata chiamando il
+* richiedere la versione corrente dell'istanza di ANPR utilizzata chiamando il
   metodo `GetVersion`. Questo metodo ritorna la versione completa (major, minor,
   patch).
 
 * richiedere tutte le versioni major supportate chiamando il metodo
   `GetSupportedVersions` .
 
-I WSDL di quella versione saranno disponibili su github all’indirizzo
+I WSDL di quella versione saranno disponibili su GitHub all'indirizzo
 [https://github.com/italia/anpr/wsdl/](https://github.com/italia/anpr/wsdl/)
 oppure su
 [https://www.anpr.interno.it/portale/documentazione-tecnica](https://www.anpr.interno.it/portale/documentazione-tecnica).
 
-È inoltre possibile consultare l’elenco delle versioni supportate in tutti gli
+È inoltre possibile consultare l'elenco delle versioni supportate in tutti gli
 ambienti nella seguente pagina:
 [https://docs.anpr.it/status](https://docs.anpr.it/status) (Nota: La pagina al
-momento è accessibile poichè il processo di change management è in fase di
+momento è accessibile poiché il processo di change management è in fase di
 implementazione).
 
-Nota: Nel caso della web application, si assume che sia associata ad una
+Nota: Nel caso della web application, si assume che sia associata a una
 specifica versione delle API dei webservices di backend, e verrà indicato
 chiaramente nel footer la versione (in ambiente test e test comuni anche con un
 link al changelog).
@@ -247,9 +247,9 @@ cambiamenti introdotti da una nuova versione di ANPR. Lo storico delle versioni
 viene implementato tramite [ChangeLog](http://keepachangelog.com/) : un file di
 testo contenente un sommario dei cambiamenti presenti in ogni versione di ANPR.
 
-È possibile consultare lo storico delle versioni all’indirizzo:
+È possibile consultare lo storico delle versioni all'indirizzo:
 [https://docs.anpr.it/changelog](https://docs.anpr.it/changelog) (Nota: La pagina al
-momento è accessibile poichè il processo di change management è in fase di
+momento è accessibile poiché il processo di change management è in fase di
 implementazione.)
 
 Al rilascio di una nuova versione lo storico dei cambiamenti della versione
@@ -269,8 +269,8 @@ Ogni sezione del ChangeLog deve contenere:
 
 * Una lista dei cambiamenti più importanti contenuti nella versione.
 
-Se la nuova versione contiene un cambiamento relativo ad una issue segnalata
-nell’issue tracker, l’url della issue deve essere incluso nel sommario.
+Se la nuova versione contiene un cambiamento relativo a una issue segnalata
+nell'issue tracker, l'url della issue deve essere incluso nel sommario.
 
 Esempio di ChangeLog ANPR:
 
@@ -304,12 +304,12 @@ pianificato si intende qualsiasi intervento (1) cambiamento behavior
 sostanziale (major/minor) e/o (2) bugfix che richiedono lunghi tempi per essere
 sistemati.
 
-È possibile consultare i cambiamenti pianificati all’indirizzo:
+È possibile consultare i cambiamenti pianificati all'indirizzo:
 [https://docs.anpr.it/roadmap](https://docs.anpr.it/roadmap) (Nota: La pagina
-al momento è accessibile poichè il processo di change management è in fase di
+al momento è accessibile poiché il processo di change management è in fase di
 implementazione.)
 
-Lo scopo della Roadmap è duplice: Da un lato permette di facilitare la
+Lo scopo della Roadmap è duplice: da un lato permette di facilitare la
 comunicazione su quando verranno introdotte nuove funzionalità, da un altro
 lato facilita la stesura del file di ChangeLog al momento del rilascio di una
 nuova versione di ANPR.
@@ -318,12 +318,12 @@ Anche il file di Roadmap è diviso in varie sezioni. Ogni sezione corrisponde ad
 una potenziale nuova versione di ANPR, e le sezioni seguono un ordine
 cronologico inverso per facilitare la lettura dei cambiamenti più recenti.
 
-Ogni sezione della Roadmap è strutturata come il ChangeLog, con l’unica
+Ogni sezione della Roadmap è strutturata come il ChangeLog, con l'unica
 differenza che non è obbligatorio specificare il numero di versione.
 
 La Roadmap è particolarmente importante per comunicare quando verranno risolte
-le issue segnalate nell’issue tracker, quindi anche il sommario della roadmap
-dovrà includere l’url della issue segnalata.
+le issue segnalate nell'issue tracker, quindi anche il sommario della roadmap
+dovrà includere l'url della issue segnalata.
 
 Esempio di Roadmap ANPR:
 

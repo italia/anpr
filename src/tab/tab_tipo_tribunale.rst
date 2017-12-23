@@ -1,4 +1,4 @@
-Tabella 32 - Tipo tribunale
+Tabella 32. Tipo tribunale
 ===========================
 
 

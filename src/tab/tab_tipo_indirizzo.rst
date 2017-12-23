@@ -1,4 +1,4 @@
-Tabella 25 - Tipo indirizzo
+Tabella 25. Tipo indirizzo
 ===========================
 
 

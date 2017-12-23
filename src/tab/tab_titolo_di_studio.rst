@@ -1,4 +1,4 @@
-Tabella 11 - Titolo di studio
+Tabella 11. Titolo di studio
 =============================
 
 :Fonte: Istat

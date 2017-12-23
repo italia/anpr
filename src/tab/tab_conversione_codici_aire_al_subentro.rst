@@ -1,4 +1,4 @@
-Tabella 33 - Conversione codici AIRE al subentro
+Tabella 33. Conversione codici AIRE al subentro
 ================================================
 
 

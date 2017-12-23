@@ -1,21 +1,19 @@
 Controlli applicati alla produzione di certificati
 ==================================================
 
-.. WARNING::
-	Il documento è da ritenersi in versione beta.
-
 In quanto segue sono sintetizzati i controlli che il sistema ANPR assicura nella fase di emissione dei certificati.
 
-Per ogni certificato anagrafico, producibili dagli ufficiali di anagrafe attraverso il sistema ANPR, sono riportati i **controlli e le condizioni sui dati** che inibiscono l'emissione dei certificati.
+Per tutti i certificati anagrafici producibili dagli ufficiali di anagrafe
+attraverso il sistema ANPR, sono riportati i **controlli e le condizioni sui
+dati** che ne inibiscono l'emissione.
 
 .. Important::
-	Quando i dati relativi ad una specifica scheda anagrafica (persona, famiglia e convicenza) inibiscono l'emissione di uno dei certificati anagrafici prodotti dal sistema ANPR l'ufficiale di anagrafe, grazie ai servizi di *mutazione anagrafica*, provvede alla correzione dei dati.
+	Quando i dati relativi a una specifica scheda anagrafica (persona, famiglia e convicenza) inibiscono l'emissione di uno dei certificati anagrafici prodotti dal sistema ANPR l'ufficiale di anagrafe, grazie ai servizi di *mutazione anagrafica*, provvede alla correzione dei dati.
 	
-Indice dei contenuti
---------------------
 
 .. toctree::
    :maxdepth: 1
+   :Caption: Indice dei contenuti
 
    CERTIFICATO_anagrafico_nascita.rst
    CERTIFICATO_esistenza_in_vita.rst

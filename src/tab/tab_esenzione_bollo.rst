@@ -1,4 +1,4 @@
-Tabella 39 - Esenzione bollo
+Tabella 39. Esenzione bollo
 ============================
 
 
