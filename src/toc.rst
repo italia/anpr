@@ -1,5 +1,5 @@
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
     :caption: Indice dei contenuti
     
     guida/index
