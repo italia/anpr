@@ -3,7 +3,7 @@
 
 # -- PROJECT Variables ----------------------------------------------------
 settings_project_name = 'ANPR'
-settings_copyright_copyleft = 'Creative Commons Attribution 4.0'
+settings_copyright_copyleft = 'AgID - Team Digitale'
 settings_editor_name = 'AgID - Team Digitale'
 settings_doc_version = 'version: latest'
 settings_doc_release = 'version: latest'
