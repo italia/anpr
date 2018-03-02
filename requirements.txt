@@ -1,2 +1,1 @@
-git+https://github.com/italia/docs-italia-theme.git
-PyYAML==3.12
+git+https://github.com/italia/docs-italia-theme@v1.0-beta

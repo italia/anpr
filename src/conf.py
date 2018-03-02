@@ -137,7 +137,7 @@ else:
     html_context = {
         'css_files': [
             '_static/css/theme.css',
-            '_static/css/table.css',
+            '_static/css/badge_only.css',
         ],
     }
 
