@@ -29,10 +29,6 @@ Una volta registato, puoi aggiungere una nuova _issue_ cliccando sul pulsante in
 
 ![Issue list](/img/issue_list.png)
 
-Per aiutarci a categorizzare le issues correttamente, puoi usare i _labels_ indicati sotto e segliere uno o più categorie:
-
-![Add Issue](/img/issue_add.png)
-
 ## Importante
 Per favore, **non inserire dati sensibili dei cittadini**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
 
