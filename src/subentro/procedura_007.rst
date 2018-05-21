@@ -1,9 +1,12 @@
-Procedura 007. Anomalia in scheda anagrafica
+Procedura 007 - Anomalia in scheda anagrafica
 =================================================================
+
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
-- EF004 - Progressivo ordine già assegnato ad altro soggetto della scheda famiglia/convivenza
+- EF004 - Progressivo ordine gia' assegnato ad altro soggetto della scheda famiglia/convivenza
 - EF008 - Intestatario della scheda famiglia/convivenza assente
 - EF010 - Scheda famiglia senza alcun soggetto associato
 
@@ -33,11 +36,11 @@ L'ufficiale d'anagrafe verifica i dati relativi alla scheda famiglia/convivenza 
 
 AZIONE 007_002 – NUOVO INOLTRO
 ------------------------------
-Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 007_003 – CONSOLIDAMENTO SCHEDA
 --------------------------------------
-L'ufficiale di anagrafe provvede a consolidare i dati relativi alla scheda famiglia/convivenza con errori, assicurando in particolare che:
+L’ufficiale di anagrafe provvede a consolidare i dati relativi alla scheda famiglia/convivenza con errori, assicurando in particolare che:
 - per la scheda famiglia/convivenza esista un unico intestatario;
 - tutte le schede famiglia abbiano almeno un componente;
 - il progressivo ordine dei soggetti in una scheda famiglia/convivenza non è duplicato.

@@ -1,20 +1,23 @@
-Procedura 010. Inoltro file di subentro disabilitato
+Procedura 010 - Inoltro file di subentro disabilitato
 =====================================================
+
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EN003 - Lo stato del subentro attuale @ non consente l'invio del file
 - EN032 - La data di invio del file @ deve essere compresa tra la data di inizio e la data fine subentro pianificate
-- EN034 - Impossibile inviare altri file per un comune già subentrato
-- EN037 - Esiste già una precedente fornitura di file attualmente in elaborazione
-- EN040 - Esiste già una fornitura con progressivo @ in stato OK
-- EN041 - Piano di subentro già presente per il comune
+- EN034 - Impossibile inviare altri file per un comune gia' subentrato
+- EN037 - Esiste gia' una precedente fornitura di file attualmente in elaborazione
+- EN040 - Esiste gia' una fornitura con progressivo @ in stato OK
+- EN041 - Piano di subentro gia' presente per il comune
 - EN362 - Prima di effettuare l'invio, occorre indicare l'indirizzo di PEC cui recapitare l'esito (funzione Amministrazione)
 
 
 Precondizione
 ^^^^^^^^^^^^^
-Creazione dei file che contengono i dati APR e AIRE, nel rispetto delle `modalità definite <https://www.anpr.interno.it/portale/documents/20182/23925/Invio+file+di+Subentro.pdf/e0c98d8d-363a-4ca3-adcf-3e9613632be4>`_ per il sistema ANPR. In merito si evidenzia che il pacchetto per la creazione del file AIRE è scaricabile dall'ambiente di test-comuni nella sezione strumenti di supporto. Si ricorda che in caso di mancato invio di uno dei due file, l'elaborazione di subentro non si avvia
+Creazione dei file che contengono i dati APR e AIRE, nel rispetto delle `modalità definite <https://www.anpr.interno.it/portale/documents/20182/23925/Invio+file+di+Subentro.pdf/e0c98d8d-363a-4ca3-adcf-3e9613632be4>`_ per il sistema ANPR. In merito si evidenzia che il pacchetto per la creazione del file AIRE è scaricabile dall’ambiente di test-comuni nella sezione strumenti di supporto. Si ricorda che in caso di mancato invio di uno dei due file, l’elaborazione di subentro non si avvia
 
 
 Diagramma della procedura
@@ -29,7 +32,7 @@ In quanto segue si riporta una descrizione delle azioni previsti per la presente
 
 AZIONE 010_001 - CONTATTA CALL CENTER
 -------------------------------------
-L'ufficiale d'anagrafe contatta il call center ANPR per avere riscontro sulle cause che impediscono l'inoltro dei file di subentro.
+L'ufficiale d'anagrafe contatta il call center ANPR per avere riscontro sulle cause che inpediscono l'inoltro dei file di subentro.
 
 AZIONE 010_002 – NESSUNA ATTIVITA'
 ----------------------------------

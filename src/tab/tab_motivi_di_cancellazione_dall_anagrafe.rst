@@ -1,4 +1,4 @@
-Tabella 15. Motivi di cancellazione dall'Anagrafe
+Tabella 15 - Motivi di cancellazione dall'Anagrafe
 ==================================================
 
 

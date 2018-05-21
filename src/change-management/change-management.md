@@ -244,7 +244,7 @@ link al changelog).
 
 Lo storico delle versioni permette di rendere facilmente consultabili i
 cambiamenti introdotti da una nuova versione di ANPR. Lo storico delle versioni
-viene implementato tramite [ChangeLog](http://keepachangelog.com/) : un file di
+viene implementato tramite [ChangeLog](changelog) : un file di
 testo contenente un sommario dei cambiamenti presenti in ogni versione di ANPR.
 
 È possibile consultare lo storico delle versioni all'indirizzo:
@@ -305,9 +305,7 @@ sostanziale (major/minor) e/o (2) bugfix che richiedono lunghi tempi per essere
 sistemati.
 
 È possibile consultare i cambiamenti pianificati all'indirizzo:
-[https://docs.anpr.it/roadmap](https://docs.anpr.it/roadmap) (Nota: La pagina
-al momento è accessibile poiché il processo di change management è in fase di
-implementazione.)
+[roadmap](roadmap) 
 
 Lo scopo della Roadmap è duplice: da un lato permette di facilitare la
 comunicazione su quando verranno introdotte nuove funzionalità, da un altro

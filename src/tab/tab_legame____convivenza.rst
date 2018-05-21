@@ -1,4 +1,4 @@
-Tabella 06. Legame - Convivenza
+Tabella 06 - Legame  - Convivenza
 =================================
 
 :Fonte: Istat

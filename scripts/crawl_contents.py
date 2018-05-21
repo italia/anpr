@@ -161,10 +161,10 @@ if __name__ == "__main__":
     toclist = []
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
-    aggiornamento_doc_tecnica="https://www.anpr.interno.it/portale/documents/20182/26001/aggiornamenti_16_11_2017.xlsx/de3f64c2-45b1-4ad3-8ba0-61e35d992f3b"
+    aggiornamento_doc_tecnica="https://anpr.interno.it/portale/documents/20182/239162/aggiornamenti_07_05_2018.xlsx/408ac0f5-6bcc-42f9-834c-82284f7dbb1a"   
     toclist.append(createRstFromXlsx(Table(
         id=-5, url=aggiornamento_doc_tecnica,
-        title="Aggiornamenti alla documentazione tecnica", date="16 Novembre 2017",
+        title="Aggiornamenti alla documentazione tecnica", date="5 Maggio 2018",
     ),False,0,2000,4))
 
 
@@ -188,9 +188,9 @@ if __name__ == "__main__":
         title="Elenco delle funzionalita' disponibilini nella web app", date="19 Ottobre 2017",
     ),False,0,2000,3))
 
-    errori_path="https://www.anpr.interno.it/portale/documents/20182/26001/errori_anpr+16112017.xlsx/30e1fdcf-f97e-4f0c-99d3-e571aa021158"
+    errori_path="https://anpr.interno.it/portale/documents/20182/209632/elenco+segnalazioni+ANPR+operazioni+anagrafiche_07_05_2018_.xlsx/5c50347d-60a8-4ce0-bdd5-4971d32ea4c4"
     toclist.append(createRstFromXlsx(Table(
-        id=-1, url=errori_path, title="Elenco Errori ANPR", date="16 novembre 2017",
+        id=-1, url=errori_path, title="Elenco Errori ANPR", date="7 febbraio 2018",
     ),False,3,2000,6, [ 'Codice', 'Descrizione', "Tabella Di Riferimento", u'Subentro - Severità', "Note", u"Servizi- Severità" ,"Servizi: Note" , "Data Ultima variazione"], "Il simbolo @ viene sostituito dal valore del campo errato/anomalo. W - Anomalia, E- Errore Bloccante."))
 
 

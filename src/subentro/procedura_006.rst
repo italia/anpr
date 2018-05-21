@@ -1,6 +1,9 @@
-Procedura 006. Codice inesistente su tabella di riferimento
+Procedura 006 - Codice inesistente su tabella di riferimento
 =================================================================
 
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
+   
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EC001 - Codice stato civile @ inesistente sulla tabella di riferimento `Tabella 1 Stato civile <https://anpr.readthedocs.io/en/latest/tab/tab_stato_civile.html>`_
@@ -24,7 +27,7 @@ In quanto segue si riporta la procedura suggerita ai Comuni per la gestione dell
 - EC066 - Campo codice titolo di studio @ inesistente sulla tabella di riferimento `Tabella 11 Titolo di studio <https://anpr.readthedocs.io/en/latest/tab/tab_titolo_di_studio.html>`_
 - EC069 - Codice lingua @ inesistente sulla tabella di riferimento `Tabella 14 Lingue <https://anpr.readthedocs.io/en/latest/tab/tab_lingue.html>`_
 - EC075 - Comune/provincia di registrazione atto di nascita @ inesistente o non valido alla data di registrazione `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_
-- EC078 - Comune/provincia di rilascio carta identità @ inesistente o non valido alla data rilascio `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_
+- EC078 - Comune/provincia di rilascio carta identita' @ inesistente o non valido alla data rilascio `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_
 - EC081 - Comune/provincia di registrazione atto di matrimonio @ inesistente
 - EC087 - Comune/provincia di rilascio permesso di soggiorno @ inesistente o non valido alla data di rilascio `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_ 
 - EC096 - Comune/provincia di registrazione atto di cessazione/annullamento matrimonio @ inesistente `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_
@@ -32,9 +35,9 @@ In quanto segue si riporta la procedura suggerita ai Comuni per la gestione dell
 - EC165 - Codice tipo fine matrimonio non presente sulla tabella di riferimento `Tabella 43 Cessazione unione civile – convivenze <https://anpr.readthedocs.io/en/latest/tab/tab_cessazione_unione_civile___convivenze.html>`_
 - EC166 - Comune/provincia di registrazione atto di nascita @ inesistente `Tabella 3 Comuni <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_
 - EC177 - Codice tipo fine legame inesistente sulla tabella di riferimento `Tabella 43   Cessazione unione civile – convivenze <https://anpr.readthedocs.io/en/latest/tab/tab_cessazione_unione_civile___convivenze.html>`_
-- EN064 - Grado di parentela @ - @ non più valido 
+- EN064 - Grado di parentela @ - @ non piu' valido 
 - EN242 - Codice tipo tribunale non valido `Tabella 32 Tipo tribunale <https://anpr.readthedocs.io/en/latest/tab/tab_tipo_tribunale.html>`_
-- EN347 - Codice ISTAT utilizzato corrisponde a un codice di variazione
+- EN347 - Codice istat utilizzato corrisponde a un codice di variazione
 
 
 Precondizione
@@ -61,13 +64,13 @@ L'ufficiale d'anagrafe verifica i dati anagrafici associati al soggetto interess
 
 AZIONE 006_002 – NUOVO INOLTRO
 ------------------------------
-Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 006_003 – IDENTIFICAZIONE CODICE
 ---------------------------------------
 L'ufficiale di anagrafe identifica la corretta codifica del valore presente nell'APR/AIRE con il codice previsto dalla tabella di riferimento adottata da ANPR, ad esempio nel caso per l'indicazione della relazione di parentela in una famiglia nel caso in cui nell'APR/AIRE locali è presente "Nonno / Nonna" lo stesso andrà codificato con il valore 7.
 
-Nello specifico dell'anomalia EN347 - Codice ISTAT utilizzato corrisponde a un codice di variazione si evidenzia che in questo caso il Comune ha utilizzato un codice di denominazione che identifica la denominazione precedente del comune. Tali codici, generati da ISTAT concatenando al codice della provincia a tre cifre un progressivo nell'intervallo 500-620, sono riportati nella colonna COD_DENOM della tabella di riferimento 03 e devono essere sostituiti con il corrispondente codice ISTAT riportato nella stessa tabella alla colonna CODISTAT della `Tabella di riferimento 03 <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_ e devono essere sostituiti con i codici ISTAT riportati nella stessa tabella alla colonna CODISTAT.
+Nello specifico dell'anomalia EN347 - Codice ISTAT utilizzato corrisponde a un codice di variazione si evidenzia che in questo caso il Comune ha utilizzato un codice di denominazione che identifica la denominazione precedente del comune. Tali codici, generati da ISTAT concatenando al codice della provincia a tre cifre un progressivo nell’intervallo 500-620, sono riportati nella colonna COD_DENOM della tabella di riferimento 03 e devono essere sostituiti con il corrispondente codice ISTAT riportato nella stessa tabella alla colonna CODISTAT della `Tabella di riferimento 03 <https://anpr.readthedocs.io/en/latest/tab/tab_tabella_03___comuni.html>`_ e devono essere sostituiti con i codici ISTAT riportati nella stessa tabella alla colonna CODISTAT.
 
 AZIONE 006_004 - AGGIORNAMENTO E NUOVO INOLTRO
 ----------------------------------------------

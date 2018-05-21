@@ -1,0 +1,10 @@
+{# Dynamic page layout, uses `theme_layout` to select an alternate page layout #}
+{%- set layout = "default" %}
+{%- if theme_layout %}
+  {% set layout = theme_layout %}
+{%- endif %}
+{%- set layout_path = "layouts/" ~ layout ~ ".html" %}
+{%- extends layout_path %}
+{% block body %}
+  {{ body }}
+{% endblock %}

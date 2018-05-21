@@ -1,5 +1,8 @@
-Procedura 003. Problemi con riferimento temporale
+Procedura 003 - Problemi con riferimento temporale
 ==================================================
+
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
@@ -8,12 +11,12 @@ In quanto segue si riporta la procedura suggerita ai Comuni per la gestione dell
 - EHR71 - Anno dell'atto di matrimonio @ non  valido
 - EHR73 - Anno dell'atto di annullamento del matrimonio @ non valido
 - ES008 - Data nascita @ successiva alla data di richiesta
-- ES009 - Data  validità cittadinanza @ deve essere maggiore uguale della data di nascita @ e minore uguale della data corrente @
+- ES009 - Data  validita' cittadinanza @ deve essere maggiore uguale della data di nascita @ e minore uguale della data corrente @
 - ES010 - Data matrimonio @ deve essere maggiore della data di nascita @ e minore uguale della data corrente
 - ES012 - Data annullamento matrimonio @ deve essere maggiore della data di nascita @ e minore uguale della data corrente
 - ES013 - Data formazione atto di nascita @ deve essere maggiore uguale della data di nascita @ e minore uguale della data corrente @
-- ES063 - La data nascita @ deve avere solo l'anno se il campo senzaGiornoMese è impostato a 1
-- ES066 - La data nascita @ deve avere solo il mese e l'anno se il campo senzaGiorno è impostato a 1
+- ES063 - La data nascita @ deve avere solo l'anno se il campo senzaGiornoMese e' impostato a 1
+- ES066 - La data nascita @ deve avere solo il mese e l'anno se il campo senzaGiorno e' impostato a 1
 - ES078 - La data di decorrenza iscrizione AIRE @ deve essere maggiore uguale 01/07/1990 e minore uguale della data corrente
 - ES079 - Anno espatrio @ deve essere maggiore uguale anno nascita @ e minore uguale anno corrente
 - ES127 - Data prima iscrizione del soggetto @ deve essere minore o uguale della data decorrenza residenza @  e  della data ultimo aggiornamento @
@@ -40,7 +43,7 @@ L'ufficiale d'anagrafe verifica i dati anagrafici associati al soggetto interess
 
 AZIONE 003_002 – NUOVO INOLTRO
 ------------------------------
-Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 003_003 – VERIFICA DELLA DATA
 ------------------------------------

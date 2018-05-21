@@ -1,4 +1,4 @@
-Tabella 08. Tipo soggiorno
+Tabella 08 - Tipo Soggiorno
 ===========================
 
 

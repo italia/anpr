@@ -1,0 +1,78 @@
+## Changelog
+
+### Versione 3.6.5 (2018-04-30)
+
++ (Bug) Gestione autoveicoli patente
+
++ (Bug) App. WEB A006 errore visualizzazione comune di nascita
+
++ (Bug) WEB 5005 altri recapiti 
+    + Non viene inserito il legame soggetto nella richiesta
+
+### Versione 3.6.6 (2018-05-04)
+
++ (Bug) Ricerca convivente di fatto A002 web (issue: [https://github.com/italia/anpr/issues/656](https://github.com/italia/anpr/issues/656))
+    + Risolve un problema della ricerca convivente di fatto da applicazione web che non trova nulla se viene usato solo il codice fiscale come filtro di ricerca.
+
+### Versione 3.6.7 (2018-05-07)
+
++ (Bug) Gestione scadenza permesso di soggiorno 31/12/3000 webapp (issue: [https://github.com/italia/anpr/issues/662](https://github.com/italia/anpr/issues/662))
+    + La data scadenza del permesso di soggiorno 31/12/3000 non viene considerata valida dall'applicazione web.
+
++ (Bug) Gestione chiamata ad Entrate per comuni bilingue
+
+### Versione 3.6.8 (2018-05-10)
+
++ (Bug) Gestione anomalia EN248 in risolzione disallineamenti AE webapp
+    + Modifica controllo EN248 per escludere dalla ricerca i soggetti cancellati
+
+### Versione 3.6.9 (2018-05-17)
+
++ (Bug) Data decorrenza indirizzo nuovi nati (issue: [https://github.com/italia/anpr/issues/667](https://github.com/italia/anpr/issues/667))
+    + Corretta la data di decorrenza della residenza nella risposta del servizio 1001, iscrizione per nascita
+
+### Versione 3.7.0 (2018-05-18)
+
++ (Requirement) WB 14.1 GESTIONE DATA DECORRENZA LEGAME E RETTIFICA ALTRE DATE
+    + L'intervento include: la gestione data decorrenza legame nei servizi subentro (S001) di registrazione (ws 1001, 1002, 5001, 5005, A001, A002, A006, 2001, 2003) e consultazione (ws 3002)  oltre che da web In particolare nel tracciato di subentro e nel tracciato del servizio 3002 è stata aggiunta  la data di decorrenza legame la rettifica delle seguenti date da ws 5014 e da web: Data ultimo aggiornamento scheda Data di iscrizione nel comune Data di ingresso nella famiglia
+
++ (Requirement) WB 15 Inserimento Comune o Stato Estero di Provenienza in A002
+    + L'intervento prevede l'indicazione del comune o dello stato estero di provenienza nel servizio di iscrizione AIRE sia per il WS A002 che nella funzione accessibile da Web Nel tracciato del servizio A002 è stato aggiunto l'oggetto non obbligatorio relativo alla "Provenienza"
+
++ (Requirement) Semplificazione protocollo di sicurezza per inoltro notifiche verso gli endpoint dei Comuni
+    + Eliminazione della Mutual Authentication che costringeva ad esporre un endpoint del Comune con il relativo certificato Server. Utilizzo del protocollo TLS sbilanciato, per permettere l'esposizione dell'endpoint con un certificato emesso da una CA pubblica. La riservatezza delle informazioni è garantita dalla crittografia del contenuto della notifica con la chiave pubblica del certificato assegnato ad ogni Comune (CO-9999).
+
+
++ (Requirement) WB 10 Integrazione  ws 5008 per completamento dati da subentro di un soggetto AIRE (cod. mutazione = 21)
+    + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
+
+### Versione 4.0.0 (2018-04-30)
+
++ (Requirement) Gestione cod destinatario per versione
+    + Nel campo codDestinatario viene indicata la versione dei tracciati XSD: ANPR00 è la versione di partenza (fino alla release 3.x) ANPR01 dalla release 4.0
+
++ (Requirement) WB 29 - Mutazione dati del decesso (issue: [https://github.com/italia/anpr/issues/510](https://github.com/italia/anpr/issues/510))
+    + Nuova mutazione con codice  22 per il servizio 5008.
+
++ (Requirement) WB 25 Rettifica indirizzo post accertamenti  (issue: [https://github.com/italia/anpr/issues/508](https://github.com/italia/anpr/issues/508))
+    + ws 5001: gestione del nuovo codice mutazione 8 che identifica una rettifica indirizzo  emersa in fase di accertamenti  legati ad una richiesta di cambio residenza. 
+
++ (Requirement) WB 13 - Gestione duplicati (post subentro) (issue: [https://github.com/italia/anpr/issues/401](https://github.com/italia/anpr/issues/401))
+    + Gestione delle posizione duplicate: produzione di liste di soggetti duplicati in ANPR al momento del subentro. Inserimento di controlli bloccanti nei servizi di registrazione che impediscano la coesistenza di due schede differenti per lo stesso soggetto
+
+### Versione 4.0.1 (2018-05-04)
+
++ (Bug) Estensione hotfix 3.6.6 sulla versione 4.0.1
+
+### Versione 4.0.2 (2018-05-07)
+
++ (Bug) Estensione hotfix 3.6.7 sulla versione 4.0.2
+
+### Versione 4.0.3 (2018-05-10)
+
++ (Bug) Estensione hotfix 3.6.8 sulla versione 4.0.3
+
+### Versione 4.0.4 (2018-05-17)
+
++ (Bug) Estensione hotfix 3.6.9 sulla versione 4.0.4
+

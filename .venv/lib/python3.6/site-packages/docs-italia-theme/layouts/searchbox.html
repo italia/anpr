@@ -1,0 +1,12 @@
+{%- if builder != 'singlehtml' %}
+  <div role="search">
+    <form class="Form wy-form" id="rtd-search-form" action="{{ pathto('search') }}" method="get">
+      <div class="Form-field Form-field--withPlaceholder Grid u-background-black u-color-grey-30 u-borderRadius-m" role="search">
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+        <input style="box-shadow: inset 0 0 0 black" class="Form-input Form-input--ultraLean Grid-cell u-sizeFill u-background-black u-color-white u-text-r-xs u-borderHideFocus u-borderRadius-m" required="" id="cerca" type="text" name="q" placeholder="{{ t.search_form_label }}...">
+        <i class="Grid-cell u-sizeFit Icon-search Icon--rotated u-background-black u-color-white u-padding-all-s u-textWeight-700 u-borderRadius-m"></i>
+      </div>
+    </form>
+  </div>
+{%- endif %}

@@ -1,4 +1,4 @@
-Tabella 09. Posizione nella Professione
+Tabella 09 - Posizione nella Professione
 ========================================
 
 :Fonte: Istat

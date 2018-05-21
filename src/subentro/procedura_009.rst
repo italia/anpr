@@ -1,6 +1,9 @@
-Procedura 009. Errori di quadratura
+Procedura 009 - Errori di quadratura
 ====================================
 
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
+   
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
 - EN011 - Totale schede soggetto @ dichiarato nel file @ incongruente con quello calcolato @
@@ -39,11 +42,11 @@ L'ufficiale d'anagrafe verifica i dati relativi alla scheda soggetto/famiglia/co
 
 AZIONE 009_002 – NUOVO INOLTRO
 ------------------------------
-Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 009_003 – DETERMINA LE CAUSE
 -----------------------------------
-L'ufficiale di anagrafe determina le cause che hanno determinato l'errore di squadratura evidenziato evidenziando le schede soggetto/famiglia/convivenza mancanti e/o inserite in maniera erronea al fine di assicurare la corrispondenza tra la numerosità dichiarata e quelle inoltrate nel/nei file di subentro. 
+L'ufficiale di anagrafe determina le cause che hanno determinato l'errore di squadratura evidenziato evidenziando le schede soggetto/famiglia/convivenza mancanti e/o inserite in maniera erronea al fine di assicurare la corrisponedenza tra la numerosità dichiarata e quelle inoltrate nel/nei file di subentro. 
 
 AZIONE 009_004 - AGGIORNAMENTO E NUOVO INOLTRO
 ----------------------------------------------

@@ -1,5 +1,8 @@
-Procedura 001. Errore nel CF
+Procedura 001 - Errore nel CF
 =============================
+
+.. WARNING::
+	Il documento è da ritenersi in versione beta.
 
 In quanto segue si riporta la procedura suggerita ai Comuni per la gestione delle anomalie: 
 
@@ -37,7 +40,7 @@ L'ufficiale d'anagrafe verifica i dati anagrafici associati al soggetto interess
 
 AZIONE 001_002 - NUOVO INOLTRO
 ------------------------------
-Poiché i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilmente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
+Poichè i dati inoltrati al sistema ANPR non coincidono con quelli presenti nel sistema gestionale del Comune (probabilemente per problemi nella procedura di estrazione e predisposizione dei file di subentro utilizzata) è necessario provvedere nuovamente all'estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire l'inoltro al sistema ANPR.
 
 AZIONE 001_003 - VERIFICA AT
 ----------------------------
@@ -47,8 +50,8 @@ L'azione di verifica del soggetto in Anagrafe Tributaria risulta di estrema crit
 
 AZIONE 001_004 - AGGIORNAMENTO CF E NUOVO INOLTRO
 -------------------------------------------------
-L'ufficiale di anagrafe, qualora riscontri che i dati dell'Agenzia delle Entrate sono corretti, li aggiorna sul proprio sistema gestionale del Comune per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire nuovamente l'inoltro al sistema ANPR. 
-Qualora, al contrario, siano esatti i dati del comune, l'ufficiale di anagrafe non effettua alcun aggiornamento rinviando l'allineamento con l'Agenzia delle Entrate a valle del subentro.
+L’ufficiale di anagrafe, qualora riscontri che i dati dell’Agenzia delle Entrate sono corretti, li aggiorna sul proprio sistema gestionale del Comune per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire nuovamente l’inoltro al sistema ANPR. 
+Qualora, al contrario, siano esatti i dati del comune, l’ufficiale di anagrafe non effettua alcun aggiornamento rinviando l’allineamento con l’Agenzia delle Entrate a valle del subentro.
 
 AZIONE 001_005 - CONVOCAZIONE CITTADINO
 ---------------------------------------
@@ -60,7 +63,7 @@ L'ufficiale di anagrafe aggiorna il CF con le informazioni confutate in presenza
 
 AZIONE 001_007 - CANCELLAZIONE CF E NUOVO INOLTRO
 -------------------------------------------------
-L'ufficiale di anagrafe, non avendo la possibilità di riscontrare il *codice fiscale* provvede alla cancellazione dei dati relativi ai CF non corrispondenti sul sistema gestionale del Comune per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire nuovamente l'inoltro al sistema ANPR, rinviando l'allineamento con l'Agenzia delle Entrate a valle del subentro.
+L'ufficiale di anagrafe, non avendo la possibilità di riscontrare il *codice fiscale* provvede alla cancellazione dei dati relativi ai CF non corrispondenti sul sistema gestionale del Comune per dare seguito ad una nuova estrazione dei dati e alla predisposizione dei file di subentro al fine di provvedere ad eseguire nuovamente l'inoltro al sistema ANPR, rinviando l’allineamento con l’Agenzia delle Entrate a valle del subentro.
 
 Riferimenti di interesse
 ^^^^^^^^^^^^^^^^^^^^^^^^

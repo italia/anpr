@@ -1,4 +1,4 @@
-Tabella 42. Motivi di non certificabilità
+Tabella 42 - Motivi di non certificabilità
 ==========================================
 
 

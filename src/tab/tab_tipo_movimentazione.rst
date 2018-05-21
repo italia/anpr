@@ -1,4 +1,4 @@
-Tabella 23. Tipo movimentazione
+Tabella 23 - Tipo movimentazione
 ================================
 
 

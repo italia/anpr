@@ -1,4 +1,4 @@
-Tabella 21. Individuazione del comune di iscrizione AIRE
+Tabella 21 - Individuazione del comune di iscrizione AIRE
 =========================================================
 
 

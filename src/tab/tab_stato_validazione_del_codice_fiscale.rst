@@ -1,4 +1,4 @@
-Tabella 22. Stato validazione del codice fiscale
+Tabella 22 - Stato validazione del codice fiscale
 =================================================
 
 :Aggiornamento: 31 lluglio 2017
