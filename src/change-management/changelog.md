@@ -1,4 +1,4 @@
-## Changelog
+# Changelog
 
 ### Versione 3.6.5 (2018-04-30)
 
@@ -46,6 +46,14 @@
 + (Requirement) WB 10 Integrazione  ws 5008 per completamento dati da subentro di un soggetto AIRE (cod. mutazione = 21)
     + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
 
+### Versione 3.7.1 (2018-05-26)
+
++ (Bug) Gestione autorità sentenza (issue: [https://github.com/italia/anpr/issues/680](https://github.com/italia/anpr/issues/680))
+    + Nel campo autorità della sentenza sono ora ammesse le parentesi tonde
+
++ (Bug) Comune residenza sindaco
+    + In Amministrazione nella funzione di Gestione dati del comune, nella ricerca dati del sindaco è stato modificato il controllo sul comune di nascita quando sono presenti caratteri speciali .
+
 ### Versione 4.0.0 (2018-04-30)
 
 + (Requirement) Gestione cod destinatario per versione
@@ -75,4 +83,20 @@
 ### Versione 4.0.4 (2018-05-17)
 
 + (Bug) Estensione hotfix 3.6.9 sulla versione 4.0.4
+
+### Versione 4.0.5 (2018-05-21)
+
++ (Bug) Controllo tipo emissione / tipo richiesta 6001
+    + Verifica valori ammessi per emissione e tipoRichiesta nei dati controllo dell'operazione 6001.
+
++ (Bug) Modifica regex luogoEccezionale (issue: [https://github.com/italia/anpr/issues/676](https://github.com/italia/anpr/issues/676))
+    + Estensione valori ammessi per elemento luogoEccezionale che si accetta ora gli stessi valori di localitaEstera.
+
++ (Bug) Integrazione versioni 3.7.0 / 3.7.1 su versione 4.0.5
+    + Vengono riportati gli interventi presenti nella version 3.7.0/3.7.1 dell'applicazione anche nella versione 4.0.5
+
++ (Bug) Correzione integrazione gestione duplicati 6001
+
++ (Bug) Modifica regex tipo email xsd (issue: [https://github.com/italia/anpr/issues/670](https://github.com/italia/anpr/issues/670))
+    + Correzione della regex del tipoEmail con la rimozione della negazione iniziale.
 
