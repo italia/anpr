@@ -17,3 +17,4 @@ gestire i cambiamenti software di ANPR.
    Change Management <change-management>
    RoadMap <roadmap>
    ChangeLog <changelog>
+   Versione rilasciata in ogni ambiente <version>
