@@ -61,7 +61,10 @@
 
 ### Versione 4.0.0 (2018-04-30)
 
-+ (Requirement) Gestione cod destinatario per versione
++ (Requirement) Revisione valori ammessi da subentro e servizi (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617))
+    + Viene resa più rigorosa la verifica dei campi a testo libero. Tale restrizione è applicata solo indicando la versione ANPR01 nel tag codDestinatario della richiesta
+
++ (Requirement) WB 5 - Gestione cod destinatario per versione (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617))
     + Nel campo codDestinatario viene indicata la versione dei tracciati XSD: ANPR00 è la versione di partenza (fino alla release 3.x) ANPR01 dalla release 4.0
 
 + (Requirement) WB 29 - Mutazione dati del decesso (issue: [https://github.com/italia/anpr/issues/510](https://github.com/italia/anpr/issues/510))
