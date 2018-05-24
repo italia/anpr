@@ -46,13 +46,18 @@
 + (Requirement) WB 10 Integrazione  ws 5008 per completamento dati da subentro di un soggetto AIRE (cod. mutazione = 21)
     + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
 
-### Versione 3.7.1 (2018-05-26)
+### Versione 3.7.1 (2018-05-22)
 
 + (Bug) Gestione autorità sentenza (issue: [https://github.com/italia/anpr/issues/680](https://github.com/italia/anpr/issues/680))
     + Nel campo autorità della sentenza sono ora ammesse le parentesi tonde
 
 + (Bug) Comune residenza sindaco
     + In Amministrazione nella funzione di Gestione dati del comune, nella ricerca dati del sindaco è stato modificato il controllo sul comune di nascita quando sono presenti caratteri speciali .
+
+### Versione 3.7.2 (2018-05-23)
+
++ (Bug) Webapp Validazione numero sentenza
+    + L'applicazione web bloccava il carattere slash nel numero sentenza.
 
 ### Versione 4.0.0 (2018-04-30)
 
