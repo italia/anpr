@@ -46,7 +46,7 @@
 + (Requirement) WB 10 Integrazione  ws 5008 per completamento dati da subentro di un soggetto AIRE (cod. mutazione = 21)
     + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
 
-### Versione 3.7.1 (2018-05-22)
+### Versione 3.7.1 (2018-05-23)
 
 + (Bug) Gestione autorità sentenza (issue: [https://github.com/italia/anpr/issues/680](https://github.com/italia/anpr/issues/680))
     + Nel campo autorità della sentenza sono ora ammesse le parentesi tonde
@@ -58,6 +58,12 @@
 
 + (Bug) Webapp Validazione numero sentenza
     + L'applicazione web bloccava il carattere slash nel numero sentenza.
+
+### Versione 3.7.3 (2018-05-28)
+
++ (Bug) Correzione esito servizio di rettifica (issue: [https://github.com/italia/anpr/issues/690](https://github.com/italia/anpr/issues/690))
+    + Il servizio restituiva un esito positivo mentre avrebbe dovuto restituire un errore ES127.
+
 
 ### Versione 4.0.0 (2018-04-30)
 
@@ -107,4 +113,11 @@
 
 + (Bug) Modifica regex tipo email xsd (issue: [https://github.com/italia/anpr/issues/670](https://github.com/italia/anpr/issues/670))
     + Correzione della regex del tipoEmail con la rimozione della negazione iniziale.
+
+### Versione 4.0.6 (2018-05-28)
+
++ (Bug) Modifica regex elemento piano dell'indirizzo (issue: [https://github.com/italia/anpr/issues/676](https://github.com/italia/anpr/issues/676))
+    + Estensione valori ammessi per elemento piano. Ora viene accettato anche il trattino.
+
++ (Bug) Integrazione versioni 3.7.2 / 3.7.3 su versione 4.0.6
 

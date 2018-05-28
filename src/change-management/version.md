@@ -1,6 +1,6 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : 4.0.5
-- Test Comuni : 4.0.5
-- Pre subentro : 4.0.5
-- Produzione : 3.7.2
+- Free test : 4.0.6
+- Test Comuni : 4.0.6
+- Pre subentro : 4.0.6
+- Produzione : 3.7.3
