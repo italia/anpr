@@ -3,4 +3,4 @@
 - Free test : 4.0.6
 - Test Comuni : 4.0.6
 - Pre subentro : 4.0.6
-- Produzione : 3.7.3
+- Produzione : 4.0.6
