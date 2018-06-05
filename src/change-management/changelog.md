@@ -1,36 +1,5 @@
 # Changelog
 
-### Versione 3.6.5 (2018-04-30)
-
-+ (Bug) Gestione autoveicoli patente
-
-+ (Bug) App. WEB A006 errore visualizzazione comune di nascita
-
-+ (Bug) WEB 5005 altri recapiti 
-    + Non viene inserito il legame soggetto nella richiesta
-
-### Versione 3.6.6 (2018-05-04)
-
-+ (Bug) Ricerca convivente di fatto A002 web (issue: [https://github.com/italia/anpr/issues/656](https://github.com/italia/anpr/issues/656))
-    + Risolve un problema della ricerca convivente di fatto da applicazione web che non trova nulla se viene usato solo il codice fiscale come filtro di ricerca.
-
-### Versione 3.6.7 (2018-05-07)
-
-+ (Bug) Gestione scadenza permesso di soggiorno 31/12/3000 webapp (issue: [https://github.com/italia/anpr/issues/662](https://github.com/italia/anpr/issues/662))
-    + La data scadenza del permesso di soggiorno 31/12/3000 non viene considerata valida dall'applicazione web.
-
-+ (Bug) Gestione chiamata ad Entrate per comuni bilingue
-
-### Versione 3.6.8 (2018-05-10)
-
-+ (Bug) Gestione anomalia EN248 in risolzione disallineamenti AE webapp
-    + Modifica controllo EN248 per escludere dalla ricerca i soggetti cancellati
-
-### Versione 3.6.9 (2018-05-17)
-
-+ (Bug) Data decorrenza indirizzo nuovi nati (issue: [https://github.com/italia/anpr/issues/667](https://github.com/italia/anpr/issues/667))
-    + Corretta la data di decorrenza della residenza nella risposta del servizio 1001, iscrizione per nascita
-
 ### Versione 3.7.0 (2018-05-18)
 
 + (Requirement) WB 14.1 GESTIONE DATA DECORRENZA LEGAME E RETTIFICA ALTRE DATE
@@ -120,4 +89,12 @@
     + Estensione valori ammessi per elemento piano. Ora viene accettato anche il trattino.
 
 + (Bug) Integrazione versioni 3.7.2 / 3.7.3 su versione 4.0.6
+
+### Versione 4.0.7 (2018-06-01)
+
++ (Bug) Verifica dati soggetto per mutazione
+    + Nei servizi di mutazione, c'era un errore nella gestione dei dati del soggetto ricercato quando i dati non sono congruenti (es. viene passato un cognome relativo ad un identificativo soggetto diverso).
+
++ (Bug) Verifica senza giorno / senza anno in caso di mutazione dati anagrafici
+    + La data di nascita non veniva sempre confrontata correttamente in caso di senza giorno / senza giorno mese.
 
