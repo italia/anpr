@@ -106,3 +106,11 @@
 + (Bug) WS 5008 - controllo comune di nascita
     + Nel WS 5008 il controllo di validità comune di nascita CN332 deve scattare solo se sono cambiati i dati anagrafici. Per verificare se è variato il luogo di nascita utilizzare denominazione e provincia
 
+### Versione 4.0.9 (2018-06-11)
+
++ (Bug) Blocco upload file subentro
+    + Il modulo di upload dei file del subentro ora blocca l'invio se il comune non è inserito correttamente nel piano dei subentri. (in precedenza il messaggio aveva solo valore di avviso).
+
++ (Bug) Modifica controllo di congruenza date in inserimento matrimonio/legame e convivenza (issue: [https://github.com/italia/anpr/issues/705](https://github.com/italia/anpr/issues/705))
+    + Modifica controllo di congruenza date per consentire la chiusura di una convivenza di fatto nella stessa data della stipula di un matrimonio/legame
+
