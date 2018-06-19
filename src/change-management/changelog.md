@@ -119,3 +119,15 @@
 + (Bug) sito web ANPR: errata gestione tipo indrizzi 10 ed 11
     + Mancata  visualizzazione del TAB residenza se l'origine dell'indirizzo è una revisione dell'onomastica comunale o una rettifica post accertamenti, nei servizi di mutazione ed iscrizione.
 
+### Versione 4.0.11 (2018-06-15)
+
+### Versione 4.0.12 (2018-06-18)
+
++ (Bug) Malfunzionamento servizio di mutazione composizione scheda in assenza dei sooggetti
+    + Implementazione controllo bloccante in caso di mancata trasmissione dell'elenco soggetti in  caso di mutazione composizione scheda.
+
++ (Bug) Gestione matrimoni/legami pregressi
+    + Nella mutazione tutti i dati TipoMutazione = 13/14/17/19 è possibile inserire un matrimonio pregresso già chiuso per vedovanza o cessazione, inviando le informazioni complete. Vengono effettuati controlli di congruenza delle date di inizio e fine in modo tale che non vi sia sovrapposizione con matrimoni/legami esistenti
+
+### Versione 4.0.13 (2018-06-20)
+
