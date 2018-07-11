@@ -119,4 +119,59 @@
 + (Bug) sito web ANPR: errata gestione tipo indrizzi 10 ed 11
     + Mancata  visualizzazione del TAB residenza se l'origine dell'indirizzo è una revisione dell'onomastica comunale o una rettifica post accertamenti, nei servizi di mutazione ed iscrizione.
 
+### Versione 4.0.11 (2018-06-15)
+
++ (Bug) Errato blocco generazione certificato di stato civile
+    + E' stato rimosso un blocco che impediva in alcuni casi di generare il certificato di stato civile
+
+### Versione 4.0.12 (2018-06-18)
+
++ (Bug) Implementato blocco mutazione composizione scheda in assenza dell'elenco soggetti
+    + In precedenza le mutazione di composizione scheda famiglia convivenza erano permesse anche senza variare nessun soggetto.
+
++ (Bug) Gestione matrimoni/legami pregressi
+    + Nella mutazione tutti i dati TipoMutazione = 13/14/17/19 è possibile inserire un matrimonio pregresso già chiuso per vedovanza o cessazione, inviando le informazioni complete. Vengono effettuati controlli di congruenza delle date di inizio e fine in modo tale che non vi sia sovrapposizione con matrimoni/legami esistenti
+
+### Versione 4.0.13 (2018-06-20)
+
++ (Bug) Errore generazione messaggio controllo ES077
+    + Corretto un errore nella generazione del testo dell'anomalia ES077
+
++ (Bug) Consultazione scheda soggetto
+    + Ora è possibile inserire anche identificativi scheda comunale alfanumerici.
+
++ (Bug) Escludere CC030 e CC031 dal WS 6001
+    + Da una email del 18/06/2018 del Comune di Novellara subentrato è emersa la necessità di escludere i controlli sullo stato di nascita dall'emissione dei certificati. I controlli sul comune di nascita risultano già esclusi
+
++ (Bug) 6001 - tipoRichiesta 2 (richiesta dati) corretta decodifica del campo tipoIndirizzo 10 ed 11  (issue: [https://github.com/italia/anpr/issues/721](https://github.com/italia/anpr/issues/721))
+    + Servizio di certificazione: tipo richiesta 2 (richiesta dati) correttiva sulla decodifica del tipo di indirizzo 10 (revisione onomastica) ed 11 (rettifica indirizzo post accertamenti) 
+
+### Versione 4.0.14 (2018-07-03)
+
++ (Bug) Web - Validazione denominazione convivenza
+    + La denominazione della convivenza nel web non usava le stesse regole di validazione dei servizi.
+
++ (Bug) Gestione encoding diacritici certificati (issue: [https://github.com/italia/anpr/issues/744](https://github.com/italia/anpr/issues/744))
+    + Alcuni diacritici non venivano trattati correttamente nel PDF dei certificati (6001)
+
++ (Bug) Web - residenti temporanei: gestione soggetti cancellati da ANPR 
+    +  Sito web di ANPR -  residenti temporanei: gestione soggetti cancellati da ANPR
+
++ (Bug) Elenco operazioni soggetto: errore reperimento alcune tipologie di rettifica 5014 (issue: [https://github.com/italia/anpr/issues/725](https://github.com/italia/anpr/issues/725))
+    + L'elenco delle operazioni comunicate da ANPR per un cittadino non riporta  alcune tipologie di rettifica effettuate con il ws 5014
+
+### Versione 4.0.15 (2018-07-09)
+
++ (Bug) Restrizioni versione applicativo (issue: [https://github.com/italia/anpr/issues/696](https://github.com/italia/anpr/issues/696))
+    + Il campo versione applicativo ora accetta gli stessi valori del campo fornitoreApplicativo
+
++ (Bug) Parentesi accettate per tipoRigaAnnotazione (issue: [https://github.com/italia/anpr/issues/754](https://github.com/italia/anpr/issues/754))
+    + Il pattern accettato per il campo tipoRigaAnnotazione passa da ([0-9À-ža-zA-Z\- &apos;/.,])* a ([0-9À-ža-zA-Z\- &apos;/.,()])*.
+
++ (Bug) Modifica visualizzazione monitoraggio operazioni
+    + Corretto il reperimento del valore riportato nella colonna "Data di elaborazione dell'operazione"
+
+
++ (Bug) Regole validazione file aire subentro
+    + La data di iscrizione AIRE diventa abbligatoria nel file AIRE.
 
