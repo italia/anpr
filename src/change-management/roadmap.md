@@ -1,6 +1,8 @@
 # Prossime versioni
 
-### Versione 4.1-RC (2018-05-15)
+### Versione 4.1-RC (2018-09-14)
+
++ (Requirement) WB 24 Bilinguismo
 
 + (Requirement) WB 30 Stampa scheda dati individuale
     + I comuni hanno segnalato la necessità di poter stampare i dati parziali di una persona presente in Anpr. Oltre alla visura completa, già disponibile, viene richiesto quindi di produrre una stampa delle schede individuali limitata ai dati di interesse specifico. Gli interventi riguardano solo il sito web di Anpr e sono descritti nel documento MI-04-AN-13. 
