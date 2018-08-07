@@ -1,6 +1,6 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : 4.0.19
-- Test Comuni : 4.0.19
-- Pre subentro : 4.0.19
-- Produzione : 4.0.19
+- Free test : 4.0.20
+- Test Comuni : 4.0.20
+- Pre subentro : 4.0.20
+- Produzione : 4.0.20
