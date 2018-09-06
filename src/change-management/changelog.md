@@ -3,7 +3,7 @@
 ### Versione 3.7.0 (2018-05-18)
 
 + (Requirement) WB 14.1 GESTIONE DATA DECORRENZA LEGAME E RETTIFICA ALTRE DATE
-    + L'intervento include: la gestione data decorrenza legame nei servizi subentro (S001) di registrazione (ws 1001, 1002, 5001, 5005, A001, A002, A006, 2001, 2003) e consultazione (ws 3002)  oltre che da web In particolare nel tracciato di subentro e nel tracciato del servizio 3002 è stata aggiunta  la data di decorrenza legame la rettifica delle seguenti date da ws 5014 e da web: Data ultimo aggiornamento scheda Data di iscrizione nel comune Data di ingresso nella famiglia
+    + L'intervento include: la gestione data decorrenza legame nei servizi subentro (S001) di registrazione (ws 1001, 1002, 5001, 5005, A001, A002, A006, 2001, 2003) e consultazione (ws 3002)  oltre che da web In particolare nel tracciato di subentro e nel tracciato del servizio 3002 è stata aggiunta  la data di decorrenza legame la rettifica delle seguenti date da ws 5014 e da web: Data ultimo aggiornamento scheda Data di iscrizione nel comune Data di ingresso nella famiglia
 
 + (Requirement) WB 15 Inserimento Comune o Stato Estero di Provenienza in A002
     + L'intervento prevede l'indicazione del comune o dello stato estero di provenienza nel servizio di iscrizione AIRE sia per il WS A002 che nella funzione accessibile da Web Nel tracciato del servizio A002 è stato aggiunto l'oggetto non obbligatorio relativo alla "Provenienza"
@@ -13,7 +13,7 @@
 
 
 + (Requirement) WB 10 Integrazione  ws 5008 per completamento dati da subentro di un soggetto AIRE (cod. mutazione = 21)
-    + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
+    + Per la gestione del completamento dati da subentro di un soggetto AIRE si introduce nel ws 5008 “Mutazione tutti i dati”  e nella funzionalità web il  nuovo codice mutazione 21  (Dati integrativi AIRE). Il tracciato del servizio rimane immutato
 
 ### Versione 3.7.1 (2018-05-23)
 
@@ -21,7 +21,7 @@
     + Nel campo autorità della sentenza sono ora ammesse le parentesi tonde
 
 + (Bug) Comune residenza sindaco
-    + In Amministrazione nella funzione di Gestione dati del comune, nella ricerca dati del sindaco è stato modificato il controllo sul comune di nascita quando sono presenti caratteri speciali .
+    + In Amministrazione nella funzione di Gestione dati del comune, nella ricerca dati del sindaco è stato modificato il controllo sul comune di nascita quando sono presenti caratteri speciali .
 
 ### Versione 3.7.2 (2018-05-23)
 
@@ -37,16 +37,16 @@
 ### Versione 4.0.0 (2018-04-30)
 
 + (Requirement) Revisione valori ammessi da subentro e servizi (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617))
-    + Viene resa più rigorosa la verifica dei campi a testo libero. Tale restrizione è applicata solo indicando la versione ANPR01 nel tag codDestinatario della richiesta
+    + Viene resa più rigorosa la verifica dei campi a testo libero. Tale restrizione è applicata solo indicando la versione ANPR01 nel tag codDestinatario della richiesta
 
 + (Requirement) WB 5 - Gestione cod destinatario per versione (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617))
-    + Nel campo codDestinatario viene indicata la versione dei tracciati XSD: ANPR00 è la versione di partenza (fino alla release 3.x) ANPR01 dalla release 4.0
+    + Nel campo codDestinatario viene indicata la versione dei tracciati XSD: ANPR00 è la versione di partenza (fino alla release 3.x) ANPR01 dalla release 4.0
 
 + (Requirement) WB 29 - Mutazione dati del decesso (issue: [https://github.com/italia/anpr/issues/510](https://github.com/italia/anpr/issues/510))
-    + Nuova mutazione con codice  22 per il servizio 5008.
+    + Nuova mutazione con codice  22 per il servizio 5008.
 
 + (Requirement) WB 25 Rettifica indirizzo post accertamenti  (issue: [https://github.com/italia/anpr/issues/508](https://github.com/italia/anpr/issues/508))
-    + ws 5001: gestione del nuovo codice mutazione 8 che identifica una rettifica indirizzo  emersa in fase di accertamenti  legati ad una richiesta di cambio residenza. 
+    + ws 5001: gestione del nuovo codice mutazione 8 che identifica una rettifica indirizzo  emersa in fase di accertamenti  legati ad una richiesta di cambio residenza. 
 
 + (Requirement) WB 13 - Gestione duplicati (post subentro) (issue: [https://github.com/italia/anpr/issues/401](https://github.com/italia/anpr/issues/401))
     + Gestione delle posizione duplicate: produzione di liste di soggetti duplicati in ANPR al momento del subentro. Inserimento di controlli bloccanti nei servizi di registrazione che impediscano la coesistenza di due schede differenti per lo stesso soggetto
@@ -104,7 +104,7 @@
     + E' necessario permettere la produzione di certificato non solo se ci sia l'atto di annullamento ma in alternativa la sentenza di fine matrimonio.
 
 + (Bug) WS 5008 - controllo comune di nascita
-    + Nel WS 5008 il controllo di validità comune di nascita CN332 deve scattare solo se sono cambiati i dati anagrafici. Per verificare se è variato il luogo di nascita utilizzare denominazione e provincia
+    + Nel WS 5008 il controllo di validità comune di nascita CN332 deve scattare solo se sono cambiati i dati anagrafici. Per verificare se è variato il luogo di nascita utilizzare denominazione e provincia
 
 ### Versione 4.0.9 (2018-06-11)
 
@@ -112,12 +112,12 @@
     + Il modulo di upload dei file del subentro ora blocca l'invio se il comune non è inserito correttamente nel piano dei subentri. (in precedenza il messaggio aveva solo valore di avviso).
 
 + (Bug) Modifica controllo di congruenza date in inserimento matrimonio/legame e convivenza (issue: [https://github.com/italia/anpr/issues/705](https://github.com/italia/anpr/issues/705))
-    + Modifica controllo di congruenza date per consentire la chiusura di una convivenza di fatto nella stessa data della stipula di un matrimonio/legame
+    + Modifica controllo di congruenza date per consentire la chiusura di una convivenza di fatto nella stessa data della stipula di un matrimonio/legame
 
 ### Versione 4.0.10 (2018-06-12)
 
 + (Bug) sito web ANPR: errata gestione tipo indrizzi 10 ed 11
-    + Mancata  visualizzazione del TAB residenza se l'origine dell'indirizzo è una revisione dell'onomastica comunale o una rettifica post accertamenti, nei servizi di mutazione ed iscrizione.
+    + Mancata  visualizzazione del TAB residenza se l'origine dell'indirizzo è una revisione dell'onomastica comunale o una rettifica post accertamenti, nei servizi di mutazione ed iscrizione.
 
 ### Versione 4.0.11 (2018-06-15)
 
@@ -144,7 +144,7 @@
     + Da una email del 18/06/2018 del Comune di Novellara subentrato è emersa la necessità di escludere i controlli sullo stato di nascita dall'emissione dei certificati. I controlli sul comune di nascita risultano già esclusi
 
 + (Bug) 6001 - tipoRichiesta 2 (richiesta dati) corretta decodifica del campo tipoIndirizzo 10 ed 11  (issue: [https://github.com/italia/anpr/issues/721](https://github.com/italia/anpr/issues/721))
-    + Servizio di certificazione: tipo richiesta 2 (richiesta dati) correttiva sulla decodifica del tipo di indirizzo 10 (revisione onomastica) ed 11 (rettifica indirizzo post accertamenti) 
+    + Servizio di certificazione: tipo richiesta 2 (richiesta dati) correttiva sulla decodifica del tipo di indirizzo 10 (revisione onomastica) ed 11 (rettifica indirizzo post accertamenti) 
 
 ### Versione 4.0.14 (2018-07-03)
 
@@ -155,10 +155,10 @@
     + Alcuni diacritici non venivano trattati correttamente nel PDF dei certificati (6001)
 
 + (Bug) Web - residenti temporanei: gestione soggetti cancellati da ANPR 
-    +  Sito web di ANPR -  residenti temporanei: gestione soggetti cancellati da ANPR
+    +  Sito web di ANPR -  residenti temporanei: gestione soggetti cancellati da ANPR
 
 + (Bug) Elenco operazioni soggetto: errore reperimento alcune tipologie di rettifica 5014 (issue: [https://github.com/italia/anpr/issues/725](https://github.com/italia/anpr/issues/725))
-    + L'elenco delle operazioni comunicate da ANPR per un cittadino non riporta  alcune tipologie di rettifica effettuate con il ws 5014
+    + L'elenco delle operazioni comunicate da ANPR per un cittadino non riporta  alcune tipologie di rettifica effettuate con il ws 5014
 
 ### Versione 4.0.15 (2018-07-09)
 
@@ -166,10 +166,10 @@
     + Il campo versione applicativo ora accetta gli stessi valori del campo fornitoreApplicativo
 
 + (Bug) Parentesi accettate per tipoRigaAnnotazione (issue: [https://github.com/italia/anpr/issues/754](https://github.com/italia/anpr/issues/754))
-    + Il pattern accettato per il campo tipoRigaAnnotazione passa da ([0-9À-ža-zA-Z\- &apos;/.,])* a ([0-9À-ža-zA-Z\- &apos;/.,()])*.
+    + Il pattern accettato per il campo tipoRigaAnnotazione passa da ([0-9À-ža-zA-Z\- &apos;/.,])* a ([0-9À-ža-zA-Z\- &apos;/.,()])*.
 
 + (Bug) Modifica visualizzazione monitoraggio operazioni
-    + Corretto il reperimento del valore riportato nella colonna "Data di elaborazione dell'operazione"
+    + Corretto il reperimento del valore riportato nella colonna "Data di elaborazione dell'operazione"
 
 
 + (Bug) Regole validazione file aire subentro
@@ -199,13 +199,13 @@
     + Risoluzione convivenza / scioglimento unione civile: fix per malfunzionamento sui dati di stipula.
 
 + (Bug) Malfunzionamento integrazione dati coniuge
-    + Mutazione matrimonio/legame: correzione malfunzionamento per integrazione dei dati del coniuge non ANPR 
+    + Mutazione matrimonio/legame: correzione malfunzionamento per integrazione dei dati del coniuge non ANPR 
 
 + (Bug) Mutazione altri recapiti (issue: [https://github.com/italia/anpr/issues/769](https://github.com/italia/anpr/issues/769))
     + Corretto il malunzionamento nella mutazione altri recapiti
 
 + (Bug) Controllo correttezza CF
-    + Nelle pagine di ricerca per CF e risoluzione disallineamenti viene restituito un errore in caso di CF con doppia omocodia es BLDMMD88A0MZ34A deve essere rimosso tale controllo
+    + Nelle pagine di ricerca per CF e risoluzione disallineamenti viene restituito un errore in caso di CF con doppia omocodia es BLDMMD88A0MZ34A deve essere rimosso tale controllo
 
 
 + (Bug) WEB Gestione matrimoni pregressi
@@ -221,4 +221,30 @@
 
 + (Bug) Malfunzionamento controllo CN352 per servizio 5012
     + In caso di annullamento di mutazione residenza 5001, il controllo CN352 non deve scattare se il tipo mutazione è 4 oppure 5 (patenti / autoveicoli)
+
+### Versione 4.0.21 (2018-08-24)
+
++ (Requirement) Modifica messaggio pec presubentro / testcomuni
+
+### Versione 4.0.22 (2018-08-30)
+
++ (Bug) Data decorrenza responsabile convivenza
+    + Corregge un errore nella impostazione della data di decorrenza del legame per il responsabile.
+
++ (Bug) web - errore Iscrizione altri motivi AIRE
+    + Si verificava un errore se impostato il campo "trascritto" dell'atto di nascita senza compilare nessun altro dato dell'atto.
+
++ (Bug) Correzione automatica specieFonte = 0
+    + A tutti gli effetti, qualsiasi valore di specieFonte diverso da 1 viene trattato come 2.
+
+### Versione 4.0.23 (2018-09-04)
+
++ (Bug) WA: selezione comune per creazione richiesta elenchi e prospetti
+    + Creazione richiesta xml per elenchi e prospetti: la ricerca non può essere pilotata solo con il codice ISTAT di un  comune perchè potrebbe lo stesso codice può essere appartenuto ad altro comune cessato. 
+
++ (Bug) ws 3007: gestione della casistica di assenza di notifiche nel periodo di riferimento  (issue: [https://github.com/italia/anpr/issues/758](https://github.com/italia/anpr/issues/758))
+    + WS 3007 -  richiesta elenco notifiche riferite ad un determinato arco temporale: in assenza di occorrenze di interesse restituisce le altre tipologie di eventi comunicati nel periodo
+
+
+
 
