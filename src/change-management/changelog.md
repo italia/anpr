@@ -245,6 +245,110 @@
 + (Bug) ws 3007: gestione della casistica di assenza di notifiche nel periodo di riferimento  (issue: [https://github.com/italia/anpr/issues/758](https://github.com/italia/anpr/issues/758))
     + WS 3007 -  richiesta elenco notifiche riferite ad un determinato arco temporale: in assenza di occorrenze di interesse restituisce le altre tipologie di eventi comunicati nel periodo
 
+### Versione 4.1.0 (2018-09-12)
+
++ (Requirement) WB 24 Bilinguismo
+    + L'intervento prevede la gestione delle informazioni relative agli indirizzi in altre lingue al fine di produrre i certificati per i paesi ove vige il bilinguismo. 
+
++ (Requirement) WB 30 Stampa scheda dati individuale
+    + I comuni hanno segnalato la necessità di poter stampare i dati parziali di una persona presente in Anpr. Oltre alla visura completa, già disponibile, viene richiesto quindi di produrre una stampa delle schede individuali limitata ai dati di interesse specifico. Gli interventi riguardano solo il sito web di Anpr e sono descritti nel documento MI-04-AN-13. 
+
+### Versione 4.1.1 (2018-09-30)
+
++ (Requirement) Fine validità major version con codDestinatario ANPR00 (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617)[https://github.com/italia/anpr/issues/775](https://github.com/italia/anpr/issues/775)[https://github.com/italia/anpr/issues/819](https://github.com/italia/anpr/issues/819))
+    + Implementazione meccanismo per gestione fine validità versioni depcrecate.
+
+### Versione 4.1.2 (2018-10-05)
+
++ (Bug) Assenza nome e cognome ufficiale anagrafe certificati
+    + Il nome e cognome dell'ufficiale di anagrafe non era correttamente riportato.
+
++ (Bug) Web Stampa scheda individuale (issue: [https://github.com/italia/anpr/issues/856](https://github.com/italia/anpr/issues/856))
+    + Errore decodifica legami nella convivenza.
+
++ (Bug) Web Iscrizione per altri motivi
+    + Correzione assenza motivo iscrizione : Ripristino posizione anagrafica
+
++ (Requirement) 3002- implementazione ricerca "senzaNome" - "senzaCognome"
+    + Implementare la consultazione scheda individuale del ws 3002 utilizzando come parametri di ricerca anche  i campi "senzaNome"  o "senzaCognome". 
+
++ (Bug) Elenco operazioni soggetto: errore reperimento alcune tipologie di rettifica 5014 (issue: [https://github.com/italia/anpr/issues/725](https://github.com/italia/anpr/issues/725))
+    + L'elenco delle operazioni comunicate da ANPR per un cittadino non riporta  alcune tipologie di rettifica effettuate con il ws 5014
+
+### Versione 4.1.3 (2018-10-14)
+
++ (Bug) Web - Eliminazione dati - Errore creazione richiesta
+    + L'applicazione web generava alcune richieste per il servizio 5013 non corrette.
+
++ (Bug) Web - Errore formattazione data nascita 28 maggio 1978
+    + L'applicazione dell'ora legale non segue regole precise fino ad una certa data (http://toi.inrim.it/it/ienitlt.html). L'applicazione web non formattava bene l'orario per alcuni periodi.
+
++ (Requirement) Modifiche regole upload file APR per subentro
+    + In produzione e presubentro è possibile usare sia le regole ANPR00 che le regole ANPR01. In test comuni e free test solo le nuove regole ANPR01.
+
++ (Bug) Verifica soggetto con procedimento aperto: escludere i soggetti eliminati (issue: [https://github.com/italia/anpr/issues/511](https://github.com/italia/anpr/issues/511))
+    + Eliminare il blocco della certificazione in presenza di un procedimento aperto nel caso in cui sia stata eliminata l'associazione del cittadino dal procedimento. 
+
++ (Requirement) idOperazioneComune nella testata come alfanumerico (issue: [https://github.com/italia/anpr/issues/596](https://github.com/italia/anpr/issues/596)[https://github.com/italia/anpr/issues/814](https://github.com/italia/anpr/issues/814))
+    + L'id operazione comune passa da numerico ad alfanumerico
+
+### Versione 4.1.4 (2018-10-15)
+
++ (Bug) Gestione controllo accessi - mutazione residenza (issue: [https://github.com/italia/anpr/issues/876](https://github.com/italia/anpr/issues/876)[https://github.com/italia/anpr/issues/877](https://github.com/italia/anpr/issues/877))
+    + Il controllo accessi del servizio 5005 non valutava correttamente i permessi nel caso di famiglia nuova.
+
++ (Bug) Adattamento restrizioni diacritici xsd (issue: [https://github.com/italia/anpr/issues/861](https://github.com/italia/anpr/issues/861))
+    + Alcuni dei diacritici da considerare validi non erano inclusi nelle restrizioni degli XSD.
+
+### Versione 4.1.5 (2018-10-16)
+
++ (Bug) Gestione controllo accessi - Incongruenze nei dati del soggetto (issue: [https://github.com/italia/anpr/issues/876](https://github.com/italia/anpr/issues/876))
+    + In caso di dati incongruenti su uno o più soggetti non era gestito correttamente il risultato.
+
+### Versione 4.1.6 (2018-10-18)
+
++ (Bug) Controllo certificati cumulativi AIRE
+    + Permetteva alcune combinazioni di certificate non ammessi per i soggetti AIRE.
+
++ (Bug) Web - Errore cancellazione altri motivi su intestatario famiglia
+    + La richiesta per il servizio non veniva preparata correttamente e portava ad un errore EN489
+
++ (Bug) Intestazione comune esiti subentro
+    + Nel report esiti del subentro per alcuni comuni, quando il codice istat è variato nel tempo, l'intestazione poteva essere errata.
+
+### Versione 4.1.7 (2018-10-19)
+
++ (Requirement) Web - Strumenti di supporto test comuni - esempio validatore XSD (issue: [https://github.com/italia/anpr/issues/819](https://github.com/italia/anpr/issues/819))
+    + Aggiunto download di un tool di validazione dei file xsd dall'area strumenti di supporto in test comuni.
+
+### Versione 4.1.8 (2018-10-22)
+
++ (Bug) Gestione controllo accessi - Errore gestione operazione 2009 (issue: [https://github.com/italia/anpr/issues/876](https://github.com/italia/anpr/issues/876))
+    + Non implementata correttamente la gestione accessi del servizio di archiviazione convivenza.
+
++ (Bug) Errore rettifica 101 per soggetto riconciliato tra due subentri
+    + La rettifica in oggetto viene bloccata anche quando andrebbe permessa nel caso venga eseguita su un soggetto riconciliato tra due subentri di comuni diversi.
+
++ (Bug) Gestione controllo accessi - Errore nella ricerca per più generalità soggetto (issue: [https://github.com/italia/anpr/issues/876](https://github.com/italia/anpr/issues/876))
+    + Non era implementata correttamente la gestione accessi quando presenti più soggetti.
+
++ (Bug) Gestione controllo accessi - Errore nella ricerca della famiglia per identificativo comunale (issue: [https://github.com/italia/anpr/issues/876](https://github.com/italia/anpr/issues/876)[https://github.com/italia/anpr/issues/877](https://github.com/italia/anpr/issues/877))
+    + A volte viene restituito l'errore di mancata autorizzazione (EN493) quando una famiglia viene ricercata per id comunale e non per id ANPR.
+
++ (Requirement) Filtro per comune di residenza servizio interrogazione 3002 (issue: [https://github.com/italia/anpr/issues/565](https://github.com/italia/anpr/issues/565)[https://github.com/italia/anpr/issues/576](https://github.com/italia/anpr/issues/576))
+    + Permette di filtrare per comune di residenza il servizio 3002
 
 
+### Versione 4.1.9 (2018-10-24)
+
++ (Bug) Certificato di stato civile per unito civilmente
+    + Nel caso in cui un soggetto presenta stato civile unito civilmente (codice 6), non viene emesso il certificato di stato civile sebbene siano presenti tutti i dati relativi all'unione civile stipulata dal soggetto; l'errore sollevato è EN404
+
+### Versione 4.1.10 (2018-10-25)
+
++ (Bug) Certificato AIRE - Stringa errata
+    + Su alcuni certificati aire può comparire la dicitura errata 'sez_cum_stato_famiglia_header_senza_ind_m'
+
++ (Requirement) Estensione delle restrizioni XSD per versione ANPR01 (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617)[https://github.com/italia/anpr/issues/819](https://github.com/italia/anpr/issues/819))
+    + In vista del fatto che dopo il 5 novembre sarà saranno rese obsolete le versioni degli XSD inferiori alla 4.0.0 (codDestintario = ANPR00), viene pubblicata un'ultima revisione degli XSD per minimizzare l'impatto sui valori già acquisiti.
 
