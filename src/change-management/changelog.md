@@ -352,3 +352,7 @@
 + (Requirement) Estensione delle restrizioni XSD per versione ANPR01 (issue: [https://github.com/italia/anpr/issues/617](https://github.com/italia/anpr/issues/617)[https://github.com/italia/anpr/issues/819](https://github.com/italia/anpr/issues/819))
     + In vista del fatto che dopo il 5 novembre sarà saranno rese obsolete le versioni degli XSD inferiori alla 4.0.0 (codDestintario = ANPR00), viene pubblicata un'ultima revisione degli XSD per minimizzare l'impatto sui valori già acquisiti.
 
+### Versione 4.1.11 (2018-10-26)
+
++ (Bug) 3002 - Filtro ricerca per soggetto AIRE e per  tipo scheda (famiglia/convivenza) (issue: [https://github.com/italia/anpr/issues/871](https://github.com/italia/anpr/issues/871))
+    + La consultazione ignorava i criteri di ricerca: soggetto AIRE e tipo scheda (famiglia/convivenza)
