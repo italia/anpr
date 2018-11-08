@@ -1,5 +1,27 @@
 # Changelog
 
+### Versione 4.1.13 (2018-11-08)
+
++ (Bug) Certificati bug testo normativo sigillo digitale (issue: [https://github.com/italia/anpr/issues/915](https://github.com/italia/anpr/issues/915))
+    + Nei certificati in ambiente di produzione per emissione=2 appare il testo normativo previsto per il sigillo digitale che non è ancora previsto.
+
++ (Requirement) Possibilità di upload file subentro solo con nuove regole in tutti gli ambienti (issue: [https://github.com/italia/anpr/issues/819](https://github.com/italia/anpr/issues/819))
+    + In nessun ambiente (in particolare anche produzione) sarà possibile l'upload delle forniture del subentro con le regole precedenti.
+
++ (Bug) Carattere euro nell'annotazione certificato (issue: [https://github.com/italia/anpr/issues/807](https://github.com/italia/anpr/issues/807))
+    + Nelle righe di annotazione dei certificati deve essere permesso anche il carattere euro.
+
++ (Bug) Web - Ricerca per codice fiscale con omocodia specie 4+
+    + Ora la validazione dell'applicazione web per il codice fiscale è allineata a quella dei servizi [lunghezza minima (11), massima (16) e valori che siano lettere minuscole, maiuscole, numeri]
+
+
++ (Bug) Controllo presenza dati unione per certificato stato civile
+    + In alcuni casi veniva emesso il certificato di unione civile anche in mancanza dei dati.
+
+
++ (Requirement) Nuova gestione annullamento carta identità
+    + Sul sito web è stata inserita la possibilità di revocare o annullare una carta di identità emessa dal sito web di ANPR o acquisita tramite i servizi di registrazione
+
 ### Versione 4.1.12 (2018-11-05)
 
 + (Bug) stampa "colore" sui certificati (issue: [https://github.com/italia/anpr/issues/892](https://github.com/italia/anpr/issues/892))
