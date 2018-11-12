@@ -29,6 +29,9 @@
 
 ### Versione 4.1.11 (2018-10-26)
 
++ (Bug) 3002 - consultazione carta identità
+    + Aggiunto elemento dataAnnullamento al tipoCartaIdentita.
+
 + (Bug) 3002 - Filtro ricerca per soggetto AIRE e per  tipo scheda (famiglia/convivenza) (issue: [https://github.com/italia/anpr/issues/871](https://github.com/italia/anpr/issues/871))
     + La consultazione ignorava i criteri di ricerca: soggetto AIRE e tipo scheda (famiglia/convivenza)
 
