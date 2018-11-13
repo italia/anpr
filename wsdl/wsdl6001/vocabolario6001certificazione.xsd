@@ -57,7 +57,7 @@
 <!-- tipoLinguaCertificato6001 -->
 	<xs:complexType name="tipoLinguaCertificato6001" >
 		<xs:sequence>
-			<xs:element name="tipoLinguaCertificato"	  	type="tpdt:tipoLinguaCertificato" 		minOccurs="1" maxOccurs="1"/>					
+			<xs:element name="tipoLinguaCertificato"	  	type="tpdt:tipoLinguaCertificato" 		minOccurs="1" maxOccurs="unbounded"/>					
 		</xs:sequence>	
 	</xs:complexType>
 <!-- Fine tipoLinguaCertificato6001 -->

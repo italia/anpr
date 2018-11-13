@@ -60,6 +60,15 @@
 	</xs:complexType>
 <!-- Fine tipoResidenza -->
 
+<!-- tipoAltreLingue -->
+	<xs:complexType name="tipoAltraLingua">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAltraLingua">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoAltreLingue -->
+
 <!-- tipoAutoveicoli -->
 	<xs:complexType name="tipoAutoveicoli">
 		<xs:complexContent>
@@ -342,7 +351,7 @@
 	<xs:complexType name="tipoMotivoIscrizione1002">
 		<xs:sequence>
 			<xs:element name="idMotivoIscrizione" 	type="tpdt:tipoMotivoIscrizione" 	   	   minOccurs="1" maxOccurs="1"/>
-			<xs:element name="note" 	 			type="tpdt:charMax240" 	   				   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="note" 	 			type="tpdt:tipoNoteMotivoIscrizione" 	   				   minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoMotivoIscrizione1002 -->

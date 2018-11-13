@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.sogei.it/ANPR/S001subentro" 
+		   targetNamespace="http://www.sogei.it/ANPR/S001subentro" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolarioSubentro"  
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+ 
+<xs:import namespace="http://sogei.it/ANPR/vocabolarioSubentro"  schemaLocation="vocabolarioSubentro.xsd"/>
+	
+<xs:element name="RichiestaS001">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta S001
+				</xs:documentation>
+			</xs:annotation>			
+			<xs:element name="testataRichiesta" type="anpr:tipoTestataRichiesta" 	 minOccurs="1" maxOccurs="1"/>    			
+			<xs:element name="nomeFile" 		type="xs:string" 				 	 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fileXml" 	    	type="xs:base64Binary"	 		 	 minOccurs="0" maxOccurs="1"/>
+			<!--<xs:element name="fileXml"      type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" minOccurs="0" maxOccurs="1"/>-->    
+	</xs:sequence>  
+</xs:complexType>
+</xs:element>
+
+<xs:element name="RispostaS001">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta S001
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="rispostaOK" 	minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 	minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	 type="anpr:tipoTestataRisposta"  minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		 type="anpr:tipoListaErrori" 	  minOccurs="1" maxOccurs="1"/>        						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- risposta OK -->
+<xs:element name="rispostaOK">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaOK
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 		minOccurs="1" maxOccurs="1"/> 
+			<xs:element name="datiDettaglioRisposta" 	type="anpr:tipoDatiDettaglioRisposta" 	minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+	
+</xs:schema>

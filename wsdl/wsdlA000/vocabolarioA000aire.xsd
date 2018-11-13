@@ -51,6 +51,15 @@
 	</xs:complexType>
 <!-- Fine tipoGenitore -->
 
+<!-- tipoProvenienza -->
+	<xs:complexType name="tipoProvenienza">
+		<xs:complexContent>
+		<xs:extension base="tpdt:tipoProvenienzaDestinazione">
+		</xs:extension>	
+	 </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoProvenienza -->
+
 <!-- tipoResidenza -->
 	<xs:complexType name="tipoResidenza">
 		<xs:complexContent>

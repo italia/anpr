@@ -14,7 +14,10 @@
 
 <!-- rispostaKO -->
 <xs:element name="rispostaKO">
-	<xs:complexType>
+        <xs:annotation>
+        	<xs:documentation>Risposta in caso di errore del servizio</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
 		<xs:sequence>
 			<xs:annotation>
 				<xs:documentation>
@@ -40,11 +43,32 @@
 				</xs:documentation>
 			</xs:annotation>
 			<xs:element name="testataRichiesta"    									type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="motivoCancellazione" 									type="anpr:tipoMotivoCancellazione2001" 	minOccurs="1" maxOccurs="1"/>
-			<xs:element name="generalitaPerRicerca" 								type="anpr:tipoGeneralita" 					minOccurs="1" maxOccurs="1"/>
-			<xs:element name="datiDecesso" 											type="anpr:tipoDatiEvento" 					minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="datiSentenza" 	   									type="anpr:tipoSentenza" 					minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="elencoSoggettiFamiglia" 								type="anpr:tipoElencoSoggettiFamiglia" 	    minOccurs="0" maxOccurs="unbounded"/>					
+			<xs:element name="motivoCancellazione" 									type="anpr:tipoMotivoCancellazione2001" 	minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il motivo di cancellazione.
+Usare tipoMotivoCancellazione per il cittadino APR 
+Usare tipoMotivoCancellazioneAIRE per il cittadino AIRE
+Valori ammessi: 1=morte accertata 2=morte presunta giudizialmente dichiarata indipendentemente dal fatto che sia un soggetto AIRE o APR.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="generalitaPerRicerca" 								type="anpr:tipoGeneralita" 					minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Le generalità del soggetto deceduto.</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="datiDecesso" 											type="anpr:tipoDatiEvento" 					minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dati relativi al decesso.
+Obbligatorio se motivoCancellazione = 1</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="datiSentenza" 	   									type="anpr:tipoSentenza" 					minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dati relativi alla sentenza con cui è stato giuridicamente dichiarato il decesso.
+Obbligatorio se motivoCancellazione = 2</xs:documentation>
+				</xs:annotation></xs:element>			
+			<xs:element name="elencoSoggettiFamiglia" 								type="anpr:tipoElencoSoggettiFamiglia" 	    minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Elenco dei soggetti della famiglia cui il deceduto apparteneva.
+Obbligatorio se il soggetto deceduto era l'intestatario della famiglia (variazione dell'intestatario e dei legami).</xs:documentation>
+				</xs:annotation></xs:element>					
 			<xs:element name="altriDati" 											type="anpr:tipoAltriDati" 	   				minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="datiDelProcedimento" 									type="anpr:tipoDatiProcedimento"			minOccurs="0" maxOccurs="1"/> 
 			<xs:element name="datiControllo"  										type="anpr:tipoDatiControllo2001" 			minOccurs="1" maxOccurs="1"/>
@@ -53,7 +77,7 @@
 </xs:element>
 
 <xs:element name="Risposta2001">  
-	<xs:complexType>    
+        <xs:complexType>    
 		<xs:sequence>
 			<xs:annotation>
 				<xs:documentation>
@@ -61,8 +85,14 @@
 				</xs:documentation>
 			</xs:annotation>		
 			<xs:choice>
-				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
-				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>Risposta data in caso di esito positivo del servizio</xs:documentation>
+					</xs:annotation></xs:element>	
+				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>risposta data in caso di errore</xs:documentation>
+					</xs:annotation></xs:element>
 			</xs:choice>	
 		</xs:sequence>
 	</xs:complexType>

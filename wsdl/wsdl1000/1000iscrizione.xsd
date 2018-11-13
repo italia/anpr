@@ -124,6 +124,8 @@
 						type="anpr:tipoProvenienza" minOccurs="0" maxOccurs="1" />
 					<xs:element name="residenza"
 						type="anpr:tipoResidenza" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element name="altraLingua"
+						type="anpr:tipoAltraLingua" minOccurs="0" maxOccurs="unbounded" />	
 					<xs:element name="famiglia"
 						type="anpr:tipoFamiglia1002" minOccurs="0" maxOccurs="1" />
 					<xs:element name="convivenza"
@@ -218,6 +220,7 @@
 					<xs:element name="generalitaSchedaConvivenza" 		  			type="anpr:tipoFamigliaConvivenza" 				minOccurs="1" maxOccurs="1"/>
 					<xs:element name="tutoreIntestatario" 		  					type="anpr:tipoTutoreIntestatario"              minOccurs="1" maxOccurs="1"/>	
 					<xs:element name="residenzaConvivneza" 		  					type="anpr:tipoResidenza"   					minOccurs="1" maxOccurs="1"/>
+					<xs:element name="altraLingua"  								type="anpr:tipoAltraLingua" 					minOccurs="0" maxOccurs="unbounded" />	
 					<xs:element name="datiDelProcedimento"							type="anpr:tipoDatiProcedimento"		   		minOccurs="0" maxOccurs="1"/>
 					<xs:element name="datiControllo"			  					type="anpr:tipoDatiControllo1010"			    minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>  
@@ -287,7 +290,7 @@
 				</xs:annotation>			
 				<xs:element name="testataRichiesta"			  		type="anpr:tipoTestataRichiesta"			  minOccurs="1" maxOccurs="1"/>
 				<xs:element name="procedimentoIstruttoria"			type="anpr:tipoDatiProcedimentoIstruttoria"	  minOccurs="1" maxOccurs="1"/>				
-				<xs:element name="generalitaPerRicerca"				type="anpr:tipoGeneralita"	 				  minOccurs="0" maxOccurs="1"/>				
+				<xs:element name="generalitaPerRicerca"				type="anpr:tipoGeneralita"  				  minOccurs="0" maxOccurs="unbounded"/>				
 				<!--<xs:element name="attoNascita"			 	 		type="anpr:tipoAttoNascita"		  		      minOccurs="0" maxOccurs="1"/> -->	
 				<!--<xs:element name="cittadinanza"			  			type="anpr:tipoCittadinanza"		  		  minOccurs="0" maxOccurs="1"/>	-->				
 				<!--<xs:element name="paternita"			  		    type="anpr:tipoGenitore"			  		  minOccurs="0" maxOccurs="1"/> -->	

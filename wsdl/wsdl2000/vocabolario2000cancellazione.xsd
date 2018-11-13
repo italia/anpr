@@ -332,8 +332,14 @@
 	<xs:complexType name="tipoMotivoCancellazione2001">
 		<xs:sequence>			
 			<xs:choice>
-				<xs:element name="tipoMotivoCancellazione"             type="tpdt:tipoMotivoCancellazione"   			/>
-				<xs:element name="tipoMotivoCancellazioneAIRE"         type="tpdt:tipoMotivoCancellazioneAIRE" 			/>
+				<xs:element name="tipoMotivoCancellazione"             type="tpdt:tipoMotivoCancellazione"   			>
+					<xs:annotation>
+						<xs:documentation>valori ammessi censiti nella tabella motivi cancellazione</xs:documentation>
+					</xs:annotation></xs:element>
+				<xs:element name="tipoMotivoCancellazioneAIRE"         type="tpdt:tipoMotivoCancellazioneAIRE" 			>
+					<xs:annotation>
+						<xs:documentation>valori ammessi censiti nella tabella motivi cancellazione AIRE</xs:documentation>
+					</xs:annotation></xs:element>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
@@ -352,8 +358,18 @@
 <!-- tipoDatiControllo2001 -->	
 	<xs:complexType name="tipoDatiControllo2001">
 		<xs:sequence>			
-			<xs:element name="ruoloSoggetto" 				type="tpdt:tipoRuoloSoggetto"		minOccurs="1" maxOccurs="1"/>
-			<xs:element name="listaControlli"		        type="tpdt:tipoListaControlli"             minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ruoloSoggetto" 				type="tpdt:tipoRuoloSoggetto"		minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>ruolo del soggetto deceduto all'interno della scheda famiglia o convivenza.
+1=intestatario
+ 
+2=altro componente
+</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="listaControlli"		        type="tpdt:tipoListaControlli"             minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Lista di dati aggiuntivi, attualmente non previsti.</xs:documentation>
+				</xs:annotation></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoDatiControllo2001 -->	

@@ -1,42 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sogei.it/ANPR/A000AnprService" xmlns:schema="http://sogei.it/ANPR/A000aire" xmlns:tns="http://sogei.it/ANPR/A000AnprService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/A000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/A000AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/A000aire" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 	
 	<wsdl:types> 
 		<xsd:schema targetNamespace="http://sogei.it/ANPR/A000AnprService">    
-			<xsd:import namespace="http://sogei.it/ANPR/A000aire" schemaLocation="A000aire.xsd"/>  
+			<xsd:import namespace="http://sogei.it/ANPR/A000aire" schemaLocation="A000aire.xsd" />  
 		</xsd:schema>
 	</wsdl:types>
 	
 	<wsdl:message name="RichiestaA001">
-		<wsdl:part element="schema:RichiestaA001" name="request"/>  
+		<wsdl:part name="request" element="schema:RichiestaA001"/>  
 	</wsdl:message>
 	<wsdl:message name="RispostaA001">  
-		<wsdl:part element="schema:RispostaA001" name="response"/>  
+		<wsdl:part name="response" element="schema:RispostaA001"/>  
 	</wsdl:message>
 	<wsdl:message name="RichiestaA002">
-		<wsdl:part element="schema:RichiestaA002" name="request"/>  
+		<wsdl:part name="request" element="schema:RichiestaA002"/>  
 	</wsdl:message>
 	<wsdl:message name="RispostaA002">  
-		<wsdl:part element="schema:RispostaA002" name="response"/>  
+		<wsdl:part name="response" element="schema:RispostaA002"/>  
 	</wsdl:message>
 	<wsdl:message name="RichiestaA006">  
-		<wsdl:part element="schema:RichiestaA006" name="request"/>  
+		<wsdl:part name="request" element="schema:RichiestaA006"/>  
 	</wsdl:message>
 	<wsdl:message name="RispostaA006">  
-		<wsdl:part element="schema:RispostaA006" name="response"/>  
+		<wsdl:part name="response" element="schema:RispostaA006"/>  
 	</wsdl:message>
 	
 	<wsdl:portType name="AnprPortTypeA000">  
 		<wsdl:operation name="AIRE_iscrizione_nascita">    
-			<wsdl:input message="tns:RichiestaA001"/>    
-			<wsdl:output message="tns:RispostaA001"/>  
+			<wsdl:input   message="tns:RichiestaA001"/>    
+			<wsdl:output  message="tns:RispostaA001" />  
 		</wsdl:operation>
 		<wsdl:operation name="AIRE_iscrizione_altriMotivi">    
-			<wsdl:input message="tns:RichiestaA002"/>    
-			<wsdl:output message="tns:RispostaA002"/>  
+			<wsdl:input   message="tns:RichiestaA002"/>    
+			<wsdl:output  message="tns:RispostaA002" />  
 		</wsdl:operation>
 		<wsdl:operation name="AIRE_mutazione">    
-			<wsdl:input message="tns:RichiestaA006"/>    
-			<wsdl:output message="tns:RispostaA006"/>  
+			<wsdl:input   message="tns:RichiestaA006"/>    
+			<wsdl:output  message="tns:RispostaA006" />  
 		</wsdl:operation>
 	</wsdl:portType>
 	

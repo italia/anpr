@@ -146,6 +146,8 @@
 					type="anpr:tipoDomicilioDigitale" minOccurs="0" maxOccurs="1" />
 				<xs:element name="datiDelProcedimento"
 					type="anpr:tipoDatiProcedimento" minOccurs="0" maxOccurs="1" />
+				<xs:element name="provenienza"
+						type="anpr:tipoProvenienza" minOccurs="0" maxOccurs="1" />
 				<xs:element name="datiControllo"
 					type="anpr:tipoDatiControlloA002" minOccurs="1" maxOccurs="1" />
 			</xs:sequence>

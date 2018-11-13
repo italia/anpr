@@ -24,23 +24,11 @@
 	<wsdl:message name="Risposta5005">  
 		<wsdl:part name="response" element="schema:Risposta5005"/>  
 	</wsdl:message>
-	<wsdl:message name="Richiesta5007">  
-		<wsdl:part name="request" element="schema:Richiesta5007"/>  
-	</wsdl:message>
-	<wsdl:message name="Risposta5007">  
-		<wsdl:part name="response" element="schema:Risposta5007"/>  
-	</wsdl:message>	
 	<wsdl:message name="Richiesta5008">  
 		<wsdl:part name="request" element="schema:Richiesta5008"/>  
 	</wsdl:message>
 	<wsdl:message name="Risposta5008">  
 		<wsdl:part name="response" element="schema:Risposta5008"/>  
-	</wsdl:message>
-	<wsdl:message name="Richiesta5009">  
-		<wsdl:part name="request" element="schema:Richiesta5009"/>  
-	</wsdl:message>
-	<wsdl:message name="Risposta5009">  
-		<wsdl:part name="response" element="schema:Risposta5009"/>  
 	</wsdl:message>
 	<wsdl:message name="Richiesta5012">  
 		<wsdl:part name="request" element="schema:Richiesta5012"/>  
@@ -48,6 +36,9 @@
 	<wsdl:message name="Richiesta5013">  
 		<wsdl:part name="request" element="schema:Richiesta5013"/>  
 	</wsdl:message>
+	<wsdl:message name="Richiesta5014">  
+		<wsdl:part name="request" element="schema:Richiesta5014"/>  
+	</wsdl:message>	
 	
 	<wsdl:message name="Risposta5012">  
 		<wsdl:part name="response" element="schema:Risposta5012"/>  
@@ -56,6 +47,10 @@
 	<wsdl:message name="Risposta5013">  
 		<wsdl:part name="response" element="schema:Risposta5013"/>  
 	</wsdl:message>		
+	
+	<wsdl:message name="Risposta5014">  
+		<wsdl:part name="response" element="schema:Risposta5014"/>  
+	</wsdl:message>			
 	
 	<wsdl:portType name="AnprPortType5000">  
 		<wsdl:operation name="mutazione_famiglia_convivenza">    
@@ -66,30 +61,23 @@
 			<wsdl:input   message="tns:Richiesta5005"/>    
 			<wsdl:output  message="tns:Risposta5005" />  
 		</wsdl:operation>
-		<wsdl:operation name="annullamento_revoca_ci">    
-			<wsdl:input   message="tns:Richiesta5007"/>    
-			<wsdl:output  message="tns:Risposta5007" />  
-		</wsdl:operation>						
 		<wsdl:operation name="mutazione_scheda">    
 			<wsdl:input   message="tns:Richiesta5008"/>    
 			<wsdl:output  message="tns:Risposta5008" />  
 		</wsdl:operation>	
-		<wsdl:operation name="mutazione_di_rettifica_dati_AE">    
-			<wsdl:input   message="tns:Richiesta5009"/>    
-			<wsdl:output  message="tns:Risposta5009" />  
-		</wsdl:operation>		
 		<wsdl:operation name="annullamento_mutazione">    
 			<wsdl:input   message="tns:Richiesta5012"/>    
 			<wsdl:output  message="tns:Risposta5012" />  
-		</wsdl:operation>		
-		
+		</wsdl:operation>				
 		<wsdl:operation name="revoca_dato">    
 			<wsdl:input   message="tns:Richiesta5013"/>    
 			<wsdl:output  message="tns:Risposta5013" />  
 		</wsdl:operation>	
+		<wsdl:operation name="rettifica_dati">    
+			<wsdl:input   message="tns:Richiesta5014"/>    
+			<wsdl:output  message="tns:Risposta5014" />  
+		</wsdl:operation>			
 	</wsdl:portType>
-	
-	
 	
 	<wsdl:binding name="AnprBinding5000" type="tns:AnprPortType5000">    
 		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
@@ -111,15 +99,6 @@
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
 		</wsdl:operation>
-		<wsdl:operation name="annullamento_revoca_ci">      
-			<wsdlsoap:operation soapAction=""/>      
-			<wsdl:input>        
-				<wsdlsoap:body use="literal"/>      
-			</wsdl:input>      
-			<wsdl:output>        
-				<wsdlsoap:body use="literal"/>      
-			</wsdl:output>   
-		</wsdl:operation> 			 			  
 		<wsdl:operation name="mutazione_scheda">      
 			<wsdlsoap:operation soapAction=""/>      
 			<wsdl:input>        
@@ -129,15 +108,6 @@
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
 		</wsdl:operation> 	
-		<wsdl:operation name="mutazione_di_rettifica_dati_AE">      
-			<wsdlsoap:operation soapAction=""/>      
-			<wsdl:input>        
-				<wsdlsoap:body use="literal"/>      
-			</wsdl:input>      
-			<wsdl:output>        
-				<wsdlsoap:body use="literal"/>      
-			</wsdl:output>   
-		</wsdl:operation>		
 		<wsdl:operation name="annullamento_mutazione">      
 			<wsdlsoap:operation soapAction=""/>      
 			<wsdl:input>        
@@ -155,12 +125,21 @@
 			<wsdl:output>        
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
-		</wsdl:operation> 		
+		</wsdl:operation>
+		<wsdl:operation name="rettifica_dati">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>		 		
 	</wsdl:binding>  
 	
 	<wsdl:service name="AnprService5000">    
 		<wsdl:port binding="tns:AnprBinding5000" name="AnprServicePort5000">      
-			<wsdlsoap:address location="http://www.sogei.it/Interno/ANPR/AnprService5000"/>    
+			<wsdlsoap:address location="https://ws.anpr.interno.it/ANPR5000ServiziMutazione/AnprService5000"/>    
 		</wsdl:port>  
 	</wsdl:service>
 	

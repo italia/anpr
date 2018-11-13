@@ -76,4 +76,101 @@
 
 <!-- fine servizio 7001 -->
 
+<!-- servizio 7002 -->	
+<xs:element name="Richiesta7002">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta 7002
+				</xs:documentation>
+			</xs:annotation>			
+			<xs:element name="testataRichiesta" 	type="anpr:tipoTestataRichiesta"	 minOccurs="1" maxOccurs="1"/> 
+			<xs:element name="datiRichiesta"  		type="anpr:tipoDatiRichiesta7002" 	minOccurs="1" maxOccurs="1"/>			  
+	</xs:sequence>  
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta7002">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta di iscrizione per nascita
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla7002" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaMultipla7002">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta 7002
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 		minOccurs="1" maxOccurs="1"/> 
+			<xs:element name="datiRichiesta"  		type="anpr:tipoDatiRichiesta7002" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="file"  		        type="anpr:tipofile7002" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="formato"              type="xs:string" 			minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- fine servizio 7002 -->
+
+<!-- servizio 7003 -->
+<xs:element name="Richiesta7003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta di rivestimento liste di codici fiscali
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  		type="anpr:tipoTestataRichiesta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta" 				type="anpr:tipoDatiRichiesta7003" 		   minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta7003">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Rispsota Elenco Versioni
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla7003" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaMultipla7003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla elenco versioni
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta"
+				type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />
+			<xs:element name="statoVersioni" type="anpr:tipoStatoVersioni" maxOccurs="unbounded" minOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 7003 -->
+
+
 </xs:schema>

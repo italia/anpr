@@ -30,6 +30,12 @@
 	<wsdl:message name="Risposta3003">  
 		<wsdl:part name="response" element="schema:Risposta3003"/>  
 	</wsdl:message>
+	<wsdl:message name="Richiesta3004">  
+		<wsdl:part name="request" element="schema:Richiesta3004"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta3004">  
+		<wsdl:part name="response" element="schema:Risposta3004"/>  
+	</wsdl:message>
 	<wsdl:message name="Richiesta3005">  
 		<wsdl:part name="request" element="schema:Richiesta3005"/>  
 	</wsdl:message>
@@ -41,7 +47,7 @@
 	</wsdl:message>
 	<wsdl:message name="Risposta3006">
 		<wsdl:part name="response" element="schema:Risposta3006"/>
-	</wsdl:message>
+	</wsdl:message>	
 	<wsdl:message name="Richiesta3007">  
 		<wsdl:part name="request" element="schema:Richiesta3007"/>  
 	</wsdl:message>
@@ -62,6 +68,10 @@
 			<wsdl:input   message="tns:Richiesta3003"/>    
 			<wsdl:output  message="tns:Risposta3003" />  
 		</wsdl:operation>
+		<wsdl:operation name="consultazione_procedimento_amministrativo">    
+			<wsdl:input   message="tns:Richiesta3004"/>    
+			<wsdl:output  message="tns:Risposta3004" />  
+		</wsdl:operation>
 		<wsdl:operation name="visualizzazione_eleaborati">    
 			<wsdl:input   message="tns:Richiesta3005"/>    
 			<wsdl:output  message="tns:Risposta3005" />  
@@ -69,10 +79,10 @@
 		<wsdl:operation name="interrogazioneCittadino_enti">
 			<wsdl:input   message="tns:Richiesta3006"/>
 			<wsdl:output  message="tns:Risposta3006" />
-		</wsdl:operation>
-		<wsdl:operation name="ricerca_identificativi_anpr">
-			<wsdl:input   message="tns:Richiesta3007"/>
-			<wsdl:output  message="tns:Risposta3007" />
+		</wsdl:operation>		
+		<wsdl:operation name="ricerca_identificativi_anpr">    
+			<wsdl:input   message="tns:Richiesta3007"/>    
+			<wsdl:output  message="tns:Risposta3007" />  
 		</wsdl:operation>
 	</wsdl:portType>
 	
@@ -105,6 +115,15 @@
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
 		</wsdl:operation>   
+		<wsdl:operation name="consultazione_procedimento_amministrativo">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>   
 		<wsdl:operation name="visualizzazione_eleaborati">      
 			<wsdlsoap:operation soapAction=""/>      
 			<wsdl:input>        
@@ -122,7 +141,7 @@
 			<wsdl:output>        
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
-		</wsdl:operation>
+		</wsdl:operation>		
 		<wsdl:operation name="ricerca_identificativi_anpr">      
 			<wsdlsoap:operation soapAction=""/>      
 			<wsdl:input>        
@@ -131,7 +150,7 @@
 			<wsdl:output>        
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
-		</wsdl:operation>  
+		</wsdl:operation>   
 	</wsdl:binding>  
 	
 	<wsdl:service name="AnprService3000">    

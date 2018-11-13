@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/S001AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/S001AnprService" 
+				  xmlns:schema="http://www.sogei.it/ANPR/S001subentro" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/S001AnprService">    
+			<xsd:import namespace="http://www.sogei.it/ANPR/S001subentro" schemaLocation="S001subentro.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaS001">
+		<wsdl:part name="request" element="schema:RichiestaS001"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaS001">  
+		<wsdl:part name="response" element="schema:RispostaS001"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortTypeS001">
+		<wsdl:operation name="subentroS001">    
+			<wsdl:input   message="tns:RichiestaS001"/>    
+			<wsdl:output  message="tns:RispostaS001" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingS001" type="tns:AnprPortTypeS001">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="subentroS001">
+				<wsdlsoap:operation soapAction=""/>
+				<wsdl:input>        
+					<wsdlsoap:body use="literal"/>      
+				</wsdl:input>      
+				<wsdl:output>        
+					<wsdlsoap:body use="literal"/>      
+				</wsdl:output>   
+		</wsdl:operation>  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceS001">    
+		<wsdl:port binding="tns:AnprBindingS001" name="AnprServicePortS001">      
+			<wsdlsoap:address location="http://sogei.it/ANPR/AnprServiceS001"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

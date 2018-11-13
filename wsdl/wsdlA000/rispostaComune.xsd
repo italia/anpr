@@ -18,7 +18,10 @@
 				</xs:documentation>
 			</xs:annotation>	
 			<xs:element name="testataRisposta" 						type="anpr:tipoTestataRisposta"						 minOccurs="0" maxOccurs="1"/> 			
-			<xs:element name="listaSoggettiVariati" 				type="anpr:tipoListaSoggettiVariati"				 minOccurs="0" maxOccurs="1"/> 
+			<xs:element name="listaSoggettiVariati" 				type="anpr:tipoListaSoggettiVariati"				 minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Lista dei soggetti variati con l'operazione richiesta</xs:documentation>
+				</xs:annotation></xs:element> 
 			<xs:element name="listaAnomalie" 						type="anpr:tipoListaAnomalie"						 minOccurs="0" maxOccurs="1"/> 				
 	</xs:sequence>  
 </xs:complexType>

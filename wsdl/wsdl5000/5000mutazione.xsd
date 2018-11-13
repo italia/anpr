@@ -43,7 +43,8 @@
 			<xs:element name="testataRichiesta"   			type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>    						
 			<xs:element name="famigliaConvivenza"  	  		type="anpr:tipoFamigliaConvivenza" 			minOccurs="1" maxOccurs="1"/>					
 			<xs:element name="elencoSoggettiFamiglia" 		type="anpr:tipoSoggettoFamiglia" 			minOccurs="0" maxOccurs="unbounded"/>				
-			<xs:element name="residenzaFamigliaConvivenza" 	type="anpr:tipoResidenza" 					minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="residenzaFamigliaConvivenza" 	type="anpr:tipoResidenza" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="altraLingua"					type="anpr:tipoAltraLingua" 				minOccurs="0" maxOccurs="unbounded" />				
 			<xs:element name="datiDelProcedimento"	    	type="anpr:tipoDatiProcedimento" 			minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="datiControllo"       			type="anpr:tipoDatiControllo5001"      		minOccurs="1" maxOccurs="1"/>				 
 	</xs:sequence>  
@@ -79,6 +80,7 @@
 			<xs:element name="testataRichiesta" 		type="anpr:tipoTestataRichiesta"				minOccurs="1" maxOccurs="1"/>  
 			<xs:element name="generalitaSchedaFamiglia" type="anpr:tipoFamigliaConvivenza" 	 		 	minOccurs="1" maxOccurs="1"/>  			
 			<xs:element name="residenzaFamiglia"  		type="anpr:tipoResidenza" 					    minOccurs="0" maxOccurs="unbounded"/> 
+			<xs:element name="altraLingua"				type="anpr:tipoAltraLingua" 				    minOccurs="0" maxOccurs="unbounded" />		
 			<xs:element name="elencoSoggettiFamiglia" 	type="anpr:tipoSoggettoFamiglia" 				minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="datiDelProcedimento"	    type="anpr:tipoDatiProcedimento" 				minOccurs="0" maxOccurs="1"/>
 			<xs:element name="datiControllo"  		    type="anpr:tipoDatiControllo5005"				minOccurs="1" maxOccurs="1"/>
@@ -158,6 +160,7 @@
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="domicilioDigitale"
 				type="anpr:tipoDomicilioDigitale5008" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiDecesso" 	type="anpr:tipoDatiDecesso" 	minOccurs="0" maxOccurs="1" />
 			<xs:element name="datiDelProcedimento"
 				type="anpr:tipoDatiProcedimento" minOccurs="0" maxOccurs="1" />
 			<xs:element name="datiControllo"
@@ -182,39 +185,6 @@
 	</xs:complexType>
 </xs:element>
 <!-- fine servizio 5008 -->
-
-<!-- servizio 5009 -->
-<xs:element name="Richiesta5009">      
-	<xs:complexType>    
-		<xs:sequence>
-			<xs:annotation>
-				<xs:documentation>
-					Richiesta di rettifica dati AE
-				</xs:documentation>
-			</xs:annotation>			
-			<xs:element name="testataRichiesta"  							type="anpr:tipoTestataRichiesta" 		    minOccurs="1" maxOccurs="1"/>
-			<xs:element name="generalitaDatiAE"       						type="anpr:tipoGeneralita"   				minOccurs="1" maxOccurs="1"/>			
-			<xs:element name="generalitaDatiComune"     					type="anpr:tipoGeneralita"	 			    minOccurs="1" maxOccurs="1"/>							
-		</xs:sequence>  
-</xs:complexType>
-</xs:element>
-
-<xs:element name="Risposta5009">  
-	<xs:complexType>    
-		<xs:sequence>
-			<xs:annotation>
-				<xs:documentation>
-					Risposta di rettifica dati AE
-				</xs:documentation>
-			</xs:annotation>		
-			<xs:choice>
-				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
-				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
-			</xs:choice>	
-		</xs:sequence>
-	</xs:complexType>
-</xs:element>
-<!-- fine servizio 5009 -->
 
 <!-- servizio 5012 -->
 <xs:element name="Richiesta5012">      
@@ -249,50 +219,6 @@
 	</xs:complexType>
 </xs:element>
 <!-- fine servizio 5012 -->
-
-<!-- servizio 5007 -->
-<!--
-	Task 11733:5007 - annullamento/revoca carta identità (xsd) 
- -->
-<xs:element name="Richiesta5007">      
-	<xs:complexType>    
-		<xs:sequence>
-			<xs:annotation>
-				<xs:documentation>
-					Richiesta annullamento/revoca carta identita
-				</xs:documentation>
-			</xs:annotation>
-			<xs:element name="testataRichiesta"
-				type="anpr:tipoTestataRichiesta" minOccurs="1" maxOccurs="1" />
-
-			<xs:element name="generalitaPerRicerca"
-				type="anpr:tipoGeneralita" maxOccurs="1" minOccurs="1">
-			</xs:element>
-			<xs:element name="datiCartaIdentita"
-				type="anpr:tipoCartaIdentita" maxOccurs="1" minOccurs="1">
-			</xs:element>
-			<xs:element name="datiControllo" type="anpr:tipoDatiControllo5007" maxOccurs="1" minOccurs="1"></xs:element>
-		</xs:sequence>
-	</xs:complexType>
-</xs:element>
-
-<xs:element name="Risposta5007">  
-	<xs:complexType>    
-		<xs:sequence>
-			<xs:annotation>
-				<xs:documentation>
-					Risposta annullamento/revoca carta identita
-				</xs:documentation>
-			</xs:annotation>		
-			<xs:choice>
-				<xs:element ref="risp:Risposta_Comune" 	minOccurs="0" maxOccurs="1"/>	
-				<xs:element ref="rispostaKO" 	 		minOccurs="0" maxOccurs="1"/>
-			</xs:choice>	
-		</xs:sequence>
-	</xs:complexType>
-</xs:element>
-<!-- fine servizio 5007 -->
-
 
 <!-- servizio 5013 -->
 <xs:element name="Richiesta5013">      
@@ -338,5 +264,49 @@
 </xs:element>
 <!-- fine servizio 5013 -->
 
+<!-- inizio servizio 5014 -->
+
+	<xs:element name="Richiesta5014">      
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta rettifica dati
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" minOccurs="1" maxOccurs="1" />
+				<xs:element name="generalitaPerRicerca"
+				type="anpr:tipoGeneralita" minOccurs="1" maxOccurs="1" />
+				<xs:element name="tipoRettifica"
+					type="anpr:tipoRichiestaRettifica" maxOccurs="1"
+					minOccurs="1">
+				</xs:element>
+				<xs:element name="datiControllo" type="anpr:tipoDatiControllo5014" minOccurs="0" maxOccurs="1"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	 <xs:element name="Risposta5014">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta rettifica dati
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="risp:Risposta_Comune" 	     minOccurs="0" maxOccurs="1" />
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+					<xs:element 
+						name="tipoRispostaRettifica" 
+						type="anpr:tipoRispostaRettifica" 	     
+						minOccurs="0" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- fine servizio 5014 -->
 
 </xs:schema>

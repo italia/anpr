@@ -1,55 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sogei.it/ANPR/2000AnprService" xmlns:schema="http://sogei.it/ANPR/2000cancellazione" xmlns:tns="http://sogei.it/ANPR/2000AnprService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/2000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/2000AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/2000cancellazione" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 	
 	<wsdl:types> 
 		<xsd:schema targetNamespace="http://sogei.it/ANPR/2000AnprService">    
-			<xsd:import namespace="http://sogei.it/ANPR/2000cancellazione" schemaLocation="2000cancellazione.xsd"/>  
+			<xsd:import namespace="http://sogei.it/ANPR/2000cancellazione" schemaLocation="2000cancellazione.xsd" />  
 		</xsd:schema>
 	</wsdl:types>
 	
 	<wsdl:message name="Richiesta2001">
-		<wsdl:part element="schema:Richiesta2001" name="request"/>  
+		<wsdl:part name="request" element="schema:Richiesta2001"/>  
 	</wsdl:message>
 	<wsdl:message name="Risposta2001">  
-		<wsdl:part element="schema:Risposta2001" name="response"/>  
+		<wsdl:part name="response" element="schema:Risposta2001"/>  
 	</wsdl:message>
 	
 	<wsdl:message name="Richiesta2003">
-		<wsdl:part element="schema:Richiesta2003" name="request"/>  
+		<wsdl:part name="request" element="schema:Richiesta2003"/>  
 	</wsdl:message>
 	<wsdl:message name="Risposta2003">  
-		<wsdl:part element="schema:Risposta2003" name="response"/>  
+		<wsdl:part name="response" element="schema:Risposta2003"/>  
 	</wsdl:message>
 	
 	<wsdl:message name="Richiesta2009">
-		<wsdl:part element="schema:Richiesta2009" name="request"/>  
+		<wsdl:part name="request" element="schema:Richiesta2009"/>  
 	</wsdl:message>
 	<wsdl:message name="Risposta2009">  
-		<wsdl:part element="schema:Risposta2009" name="response"/>  
+		<wsdl:part name="response" element="schema:Risposta2009"/>  
 	</wsdl:message>
 	
 	<wsdl:message name="Richiesta2011">
-		<wsdl:part element="schema:Richiesta2011" name="request"/>  
+		<wsdl:part name="request" element="schema:Richiesta2011"/>  
 	</wsdl:message>
 	<wsdl:message name="Risposta2011">  
-		<wsdl:part element="schema:Risposta2011" name="response"/>  
+		<wsdl:part name="response" element="schema:Risposta2011"/>  
 	</wsdl:message>
 	
 	<wsdl:portType name="AnprPortType2000">  
 		<wsdl:operation name="decesso">    
-			<wsdl:input message="tns:Richiesta2001"/>    
-			<wsdl:output message="tns:Risposta2001"/>  
+			<wsdl:input   message="tns:Richiesta2001"/>    
+			<wsdl:output  message="tns:Risposta2001" />  
 		</wsdl:operation>
 		<wsdl:operation name="cancellazione_AltriMotivi">    
-			<wsdl:input message="tns:Richiesta2003"/>    
-			<wsdl:output message="tns:Risposta2003"/>  
+			<wsdl:input   message="tns:Richiesta2003"/>    
+			<wsdl:output  message="tns:Risposta2003" />  
 		</wsdl:operation>
 		<wsdl:operation name="cancellazione_Archiviazione_Scheda_Convivenza">    
-			<wsdl:input message="tns:Richiesta2009"/>    
-			<wsdl:output message="tns:Risposta2009"/>  
+			<wsdl:input   message="tns:Richiesta2009"/>    
+			<wsdl:output  message="tns:Risposta2009" />  
 		</wsdl:operation>
 		<wsdl:operation name="annullamento_Cancellazione">    
-			<wsdl:input message="tns:Richiesta2011"/>    
-			<wsdl:output message="tns:Risposta2011"/>  
+			<wsdl:input   message="tns:Richiesta2011"/>    
+			<wsdl:output  message="tns:Risposta2011" />  
 		</wsdl:operation>		
 	</wsdl:portType>
 	

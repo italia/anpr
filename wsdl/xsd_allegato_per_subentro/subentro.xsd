@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/subentro" 
+		   targetNamespace="http://sogei.it/ANPR/subentro" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anprSub="http://sogei.it/ANPR/vocabolarioSubentro"
+		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
+ 
+ 	<xs:import namespace="http://sogei.it/ANPR/vocabolarioSubentro"  schemaLocation="vocabolarioSubentro.xsd"/>
+
+ 	<!-- SUBENTRO -->
+	<xs:element name="subentro">	
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Subentro
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="datiFornitura" 						type="anprSub:tipoDatiFornitura" 			minOccurs="1" maxOccurs="1"/>
+				<xs:element name="datiInvio" 							type="anprSub:tipoDatiInvio" 				minOccurs="0" maxOccurs="1"/>				
+				<xs:element name="generalitaSoggetti"					type="anprSub:tipoSoggetti"							minOccurs="1" maxOccurs="1"/>								
+				<xs:element name="famiglie" 							type="anprSub:tipoFamiglie"       					minOccurs="0" maxOccurs="1"/>				
+				<xs:element name="convivenze" 							type="anprSub:tipoConvivenze"						minOccurs="0" maxOccurs="1"/>														
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

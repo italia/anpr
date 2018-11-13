@@ -236,8 +236,6 @@
 		<xs:annotation>
 			<xs:documentation>S=Si|
 							  N=No per assenza dei requisiti|
-						 <!-- P=No per perdita definitiva dei requisiti| --> 
-						 <!-- T=No per perdita temporanea dei requisiti| -->
 			</xs:documentation>
 		</xs:annotation>	
 		<xs:restriction base="tpdt:char1">		
@@ -300,6 +298,21 @@
 	</xs:complexType>
 <!-- Fine tipoDatiElaborati -->
 
+<!-- ################################################################# Fine usati in 4003 ###########################################################-->
+
+<!-- ################################################################# Inizio usati in 4003 ###########################################################-->
+
+<!-- tipoDatiRichiesta4003 -->
+	<xs:complexType name="tipoDatiRichiesta4004">
+		<xs:sequence>
+			<xs:element name="comune"  	  		            type="tpdt:tipoComuneRichiesta"		 	   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tipoElenco"  type="tpdt:numericoMax3" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataRiferimentoIniziale"  type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataRiferimentoFinale"  type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tipologiaCittadini"  type="tpdt:numericoMax2" minOccurs="0" maxOccurs="1"/>	
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta4004 -->
 <!-- ################################################################# Fine usati in 4003 ###########################################################-->
 
 
