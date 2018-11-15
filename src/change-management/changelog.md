@@ -1,5 +1,25 @@
 # Changelog
 
+### Versione 4.1.14 (2018-11-15)
+
++ (Bug) 1010 Istituzione convivenza - Errori ES008 (issue: [https://github.com/italia/anpr/issues/932](https://github.com/italia/anpr/issues/932))
+    + Nell'istituzione della Convivenza,  viene rimosso il controllo ES008 che verifica l'uguaglianza tra la data decorrenza dell'operazione  e la data di nascita del responsabile della convivenza
+
++ (Bug) 6001 richiesta dati, noteIndirizzo vuote (issue: [https://github.com/italia/anpr/issues/924](https://github.com/italia/anpr/issues/924))
+    + Quando il campo noteIndirizzo non contiene valori significativi non viene più restituito dal servizio 6001 come già avviene per il servizio 3002.
+
++ (Bug) Correzione encoding wsdl da distribuire per i comuni (issue: [https://github.com/italia/anpr/issues/807](https://github.com/italia/anpr/issues/807))
+    + L'encoding dell tipoDato.xsd non era sempre corretto per gli ultimi diacritici aggiunti.
+
++ (Bug) Web - Blocco mutazione tutti i dati per validazione data scadenza permesso di soggiorno
+    + Alcune date formalmente valide non impedivano (come il 31/12/8999) bloccavano la possibilità di eseguire una mutazione tutti i dati da web.
+
++ (Requirement) Estensione caratteri amessi per alcuni tipi XSD (slash e cancelletto) (issue: [https://github.com/italia/anpr/issues/902](https://github.com/italia/anpr/issues/902)[https://github.com/italia/anpr/issues/907](https://github.com/italia/anpr/issues/907))
+    + Verranno accettati il carattere "/" per l'elemento descrizioneLocalita del tipo Località e il carattere "#" per gli elementi denominazione e numeroCivico del tipoToponimoEstero.
+
++ (Bug) Ricerca di convivenza senza responsabile nè soggetti restituisce EN122
+    + Solo l'applicazione web adesso restituisce un soggetto fittizio con cognome e nome "RESPONSABILE CONVIVENZA ASSENTE" al fine di poter restituire gli altri dati sulla convivenza.
+
 ### Versione 4.1.13 (2018-11-08)
 
 + (Bug) Certificati bug testo normativo sigillo digitale (issue: [https://github.com/italia/anpr/issues/915](https://github.com/italia/anpr/issues/915))
