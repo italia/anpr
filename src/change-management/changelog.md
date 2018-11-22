@@ -1,5 +1,23 @@
 # Changelog
 
+
+### Versione 4.1.15 (2018-11-22)
+
++ (Bug) Web - Errore chiusura procedimento
+    + L'identificativo del procedimento a volte veniva convertito in modo anomalo.
+
++ (Bug) Web - Validazione nome / cognome allineata ai servizi
+    + Consentita la presenza di spazi precedenti o successivi al carattere trattino ('-') .
+
++ (Bug) Estensione a 20 della lunghezza del tipoIsolato
+    + Il campo tipoIsolato è stato adeguato a 20 caratteri nelle specifiche XSD come già previsto nella [documentazione](https://www.anpr.interno.it/portale/documentazione-tecnica) 
+
++ (Bug) 5008 tipo muatazione 4 - Permesso di soggiorno
+    + Nel servizio di mutazione tutti i dati, per il tipo mutazione 4 Permesso di soggiorno, viene attivato il controllo bloccante CN368 se inserito per un cittadino italiano.
+
++ (Requirement) Subentro: controllo dell'indirizzo principale
+    + In assenza, nell'indirizzo principale, della descrizione della specie o in alternativa del codiceSpecie, viene restituita un'anomalia non bloccante CN524. 
+
 ### Versione 4.1.14 (2018-11-15)
 
 + (Bug) 1010 Istituzione convivenza - Errori ES008 (issue: [https://github.com/italia/anpr/issues/932](https://github.com/italia/anpr/issues/932))
