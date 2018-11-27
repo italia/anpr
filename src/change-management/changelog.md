@@ -1,5 +1,12 @@
 # Changelog
 
+### Versione 4.1.16 (2018-11-27)
+
++ (Bug) Certificato contestuale di residenza e residenza in convivenza - Stringa errata
+    + Su alcuni certificati aire può comparire la dicitura errata.
+
++ (Bug) Verifica congruenza dati comune di nascita (issue: [https://github.com/italia/anpr/issues/949](https://github.com/italia/anpr/issues/949))
+    + In alcuni casi il controllo sulla congruenza del luogo di nascita era errato producendo un esito EN185 in fase di re iscrizione del soggetto.
 
 ### Versione 4.1.15 (2018-11-22)
 
