@@ -1,5 +1,18 @@
 # Changelog
 
+
+### Versione 4.1.17 (2018-11-30)
+
++ (Bug) Consultazione convivenza senza residenza
+    + La consultazione di convivenze inserite da subentro senza residenza generava un errore
+
++ (Bug) Mutazione convivenza senza residenza
+    + All'atto di un 5001 per una residenza senza convivenza poteva generarsi un errore 999
+
++ (Requirement) Correzione denominazione comune di VENARIA REALE
+    + Su segnalazione del comune di Venaria Reale, è stato verificato che il comune, sin dalla sua istituzione, ha avuto questa denominazione. L’archivio storico dei comuni utilizzato da ANPR riportava la situazione seguente:  DATAISTITUZIONE|DATACESSAZIONE|CODISTAT|CODCATASTALE|DENOMINAZIONE_IT<br/> 17/03/1861     |19/11/1987    |001292  |L727        |VENARIA<br/> 20/11/1987     |31/12/9999    |001292  |L727        |VENARIA REALE<br/> Si procederà, pertanto, a modifica la denominazione Venaria con quella ufficiale, desumibile dagli atti forniti dal comune interessato. Tale variazione, già disponibile in ambiente di test-comuni e pre-subentro, sarà apportata anche in ambiente di produzione a partire dal prossimo 12 dicembre. 
+    
+
 ### Versione 4.1.16 (2018-11-27)
 
 + (Bug) Certificato contestuale di residenza e residenza in convivenza - Stringa errata
