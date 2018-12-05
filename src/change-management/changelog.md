@@ -1,6 +1,22 @@
 # Changelog
 
 
+### Versione 4.1.18 (2018-12-05)
+
++ (Bug) Errore cancellazione altri motivi
+    + Per il servizio 2003 non era stato trattato un correttamente un esito.
+
++ (Requirement) Estensione idSchedaSoggettoANPR da 15 a 16 cifre
+    + Il dominio utile per l'id scheda soggetto ANPR è stato esteso da 15 a 16 cifre.
+
++ (Requirement) Ordinamento richiesta cancellazione subentro
+    + Negli ambienti di presubentro / test comuni è possibile richiedere la cancellazione dei dati della simulazione di subentro. L'elenco delle richieste precedentemente inserite viene ora ordinato per data inserimento.
+
++ (Bug) Upload tracciato AIRE con le nuove regole di validazione ANPR01
+    + L'upload del tracciato AIRE è stato adeguato alle nuove regole di validazione già presenti negli XSD. Inoltre nella denominazione toponimo estero verranno accettati anche i due punti e nel presso le parentesi.
+ Fino al 31 Dicembre 2018 sarà consentito l'upload del tracciato AIRE anche senza questo adeguamento.
+
+
 ### Versione 4.1.17 (2018-11-30)
 
 + (Bug) Consultazione convivenza senza residenza
