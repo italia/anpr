@@ -1,6 +1,12 @@
 # Changelog
 
 
+### Versione 4.1.19 (2018-12-07)
+
++ (Bug) Abilitazione elenchi ausilio ambiente di produzione (issue: [https://github.com/italia/anpr/issues/985](https://github.com/italia/anpr/issues/985))
+    + La funzione consultazione e estrazione - Elenchi di ausilio non era stata attivata in ambiente di produzione.
+
+
 ### Versione 4.1.18 (2018-12-05)
 
 + (Bug) Errore cancellazione altri motivi
