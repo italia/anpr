@@ -1,6 +1,12 @@
 # Changelog
 
 
+### Versione 4.1.20 (2018-12-10)
+
++ (Bug) Controllo EC083 in assenza data formazione atto matrimonio (issue: [https://github.com/italia/anpr/issues/981](https://github.com/italia/anpr/issues/981))
+    + In assenza della data formazione atto del matrimonio, il controllo EC083 si poteva attivare anche su codistat validi se variati nel corso dell'anno dell'atto.
+
+
 ### Versione 4.1.19 (2018-12-07)
 
 + (Bug) Abilitazione elenchi ausilio ambiente di produzione (issue: [https://github.com/italia/anpr/issues/985](https://github.com/italia/anpr/issues/985))
