@@ -3,6 +3,9 @@
 
 ### Versione 4.1.20 (2018-12-10)
 
++ (Bug) Web - Errore encoding in validazione in file subentro AIRE  (issue: [https://github.com/italia/anpr/issues/995](https://github.com/italia/anpr/issues/995))
+    + Nella validazione eseguita in fase di upload è stato necessario correggere l'encoding del file AIRE per evitare di segnalare come errori anche dei record validi.
+
 + (Bug) Controllo EC083 in assenza data formazione atto matrimonio (issue: [https://github.com/italia/anpr/issues/981](https://github.com/italia/anpr/issues/981))
     + In assenza della data formazione atto del matrimonio, il controllo EC083 si poteva attivare anche su codistat validi se variati nel corso dell'anno dell'atto.
 
