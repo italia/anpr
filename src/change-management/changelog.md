@@ -1,6 +1,12 @@
 # Changelog
 
 
+### Versione 4.1.21 (2018-12-13)
+
++ (Bug) Errore salvataggio mutazione residenza (issue: [https://github.com/italia/anpr/issues/1001](https://github.com/italia/anpr/issues/1001))
+    + Il cambio di residenza poteva andare in errore in caso di numeri soggetti e contestuale trasmissione dei dati su patente e autoveicoli.
+
+
 ### Versione 4.1.20 (2018-12-10)
 
 + (Bug) Web - Errore encoding in validazione in file subentro AIRE  (issue: [https://github.com/italia/anpr/issues/995](https://github.com/italia/anpr/issues/995))
