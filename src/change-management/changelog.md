@@ -1,6 +1,16 @@
 # Changelog
 
 
+### Versione 4.2.0 (2019-01-14)
+
++ (Requirement) ws 6001:  nuovi certificati per bilinguismo (lingua tedesca)
+    + Aggiunta di due nuovi certificati per il bilinguismo - lingua tedesca:  a) stato libero (codice identificativo tipo certificato 17); b) stato civile (codice identificativo tipo certificato 11)
+
++ (Requirement) Ottimizzazione risposta servizio consultazione 3002
+    + In conseguenza della decisione di permettere l'accesso al servizio 3002 anche per i comuni non subentrati e nell'ambito dell'ottimizzazione delle prestazioni rese necessarie dall'aumento del carico si è reso necessario modificare il comportamento del servizio di consultazione soggetto / famiglia / convivenza.
+ Con riferimento alle sezioni della risposta de servizio 3002, vedi [tabella decodifica 16](https://www.anpr.interno.it/portale/tabelle-di-riferimento), qualora la ricerca trovi più di un soggetto, verrà restituita solo la sezione generalità (senza tenere conto delle eventuali altre sezioni indicate, compresa la scheda individuale completa). Le ricerche che si traducono in un solo soggetto continuano a comportarsi come prima.
+
+
 ### Versione 4.1.23 (2018-12-27)
 
 + (Bug) Correzione controllo EHR78
