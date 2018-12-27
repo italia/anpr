@@ -1,5 +1,15 @@
 # Changelog
 
+
+### Versione 4.1.23 (2018-12-27)
+
++ (Bug) Correzione controllo EHR78
+    + Il controllo EHR78 non si attivava per le richieste 3003/3007 in caso di date uguali (la data iniziale deve essere sempre strettamente minore della finale).
+
++ (Bug) Errore nella gestione della risposta 5001 in caso di dati sporchi
+    + In alcuni casi il servizio 5001 poteva andare in errore se in subentro non era stata inviata correttamente la residenza.
+    
+
 ### Versione 4.1.22 (2018-12-19)
 
 + (Bug) A006 - verifica presenza cittadinanza italiana (issue: [https://github.com/italia/anpr/issues/982](https://github.com/italia/anpr/issues/982))
