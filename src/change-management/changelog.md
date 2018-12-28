@@ -1,7 +1,7 @@
 # Changelog
 
 
-### Versione 4.2.0 (2019-01-14)
+### Versione 4.2.0 (2019-12-27)
 
 + (Requirement) ws 6001:  nuovi certificati per bilinguismo (lingua tedesca)
     + Aggiunta di due nuovi certificati per il bilinguismo - lingua tedesca:  a) stato libero (codice identificativo tipo certificato 17); b) stato civile (codice identificativo tipo certificato 11)
