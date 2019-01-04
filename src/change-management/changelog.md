@@ -3,6 +3,9 @@
 
 ### Versione 4.1.24 (2019-01-04)
 
++ (Bug) Accettazione numeri in nome e cognomi (issue: [https://github.com/italia/anpr/issues/1036](https://github.com/italia/anpr/issues/1036))
+    + Il tipo dato alfabeticoNomiCognomi accettava erroneamente anche i numeri.
+
 + (Bug) Errore gestione mutazione famiglia convivenza - cambio residenza con patente e autoveicoli (issue: [https://github.com/italia/anpr/issues/1033](https://github.com/italia/anpr/issues/1033))
     + E' stato corretto un bug nella gestione del cambio residenza famiglia con patente e autoveicoli.
 
