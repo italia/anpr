@@ -12,6 +12,10 @@
 + (Bug) Web - Etichette criteri ricerca consultazione soggetto / famiglia
     + Nella consultazione da webapp veniva usata la stessa etichetta per la i criteri ricerca dell' identificato soggetto attribuito da ANPR e identificativo famiglia attribuito da ANPR.
 
++ (Bug) Web - Validazione campo autorità sentenza
+    + Il campo autorità della sentenza deve accettare anche lo slash
+
+
 
 ### Versione 4.2.0 (2019-12-27)
 
