@@ -1,6 +1,15 @@
 # Changelog
 
 
+### Versione 4.1.24 (2019-01-04)
+
++ (Bug) Errore gestione mutazione famiglia convivenza - cambio residenza con patente e autoveicoli (issue: [https://github.com/italia/anpr/issues/1033](https://github.com/italia/anpr/issues/1033))
+    + E' stato corretto un bug nella gestione del cambio residenza famiglia con patente e autoveicoli.
+
++ (Bug) Web - Etichette criteri ricerca consultazione soggetto / famiglia
+    + Nella consultazione da webapp veniva usata la stessa etichetta per la i criteri ricerca dell' identificato soggetto attribuito da ANPR e identificativo famiglia attribuito da ANPR.
+
+
 ### Versione 4.2.0 (2019-12-27)
 
 + (Requirement) ws 6001:  nuovi certificati per bilinguismo (lingua tedesca)
