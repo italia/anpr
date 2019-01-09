@@ -1,6 +1,20 @@
 # Changelog
 
 
+### Versione 4.2.1 (2019-01-08)
+
++ (Requirement) 3003 - Gestione richieste - rimozione N031 dal risultato in caso di interrogazione per data
+    + La notifica N031 è stata rimossa dal risultato della gestione richieste nel caso di interrogazione per data.
+
++ (Bug) Web - Port hotfix 4.1.23 / 4.1.24 / 4.1.25 su ramo 4.2.X
+
+
+### Versione 4.1.25 (2019-01-08)
+
++ (Bug) Web - Validazione note permesso soggiorno
+    + Deve accettare anche il doppio apice
+
+
 ### Versione 4.1.24 (2019-01-04)
 
 + (Bug) Accettazione numeri in nome e cognomi (issue: [https://github.com/italia/anpr/issues/1036](https://github.com/italia/anpr/issues/1036))
@@ -14,7 +28,6 @@
 
 + (Bug) Web - Validazione campo autorità sentenza
     + Il campo autorità della sentenza deve accettare anche lo slash
-
 
 
 ### Versione 4.2.0 (2019-12-27)
