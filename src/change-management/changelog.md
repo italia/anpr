@@ -1,12 +1,25 @@
 # Changelog
 
 
-### Versione 4.2.1 (2019-01-08)
-
-+ (Requirement) 3003 - Gestione richieste - rimozione N031 dal risultato in caso di interrogazione per data
+### Versione 5.0.0 (2019-01-10)
+ 
++ (Requirement) Abilitazione codDestintario ANPR02 (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031)) [La versione 5.0.0 sostituisce le 4.2.0 / 4.2.1]
+    + Le funzionalità specifiche della major version 5.0 vengono attivate indicando il codDestintario ANPR02, che comporterà :  
+Dettaglio risposte del 3002 ridotte se la ricerca produce più di un soggetto nel risultato
+Se non indicata espressamente la ricerca nazionale, la ricerca è limitata ai soggetti residenti nel comune che sta eseguendo l'interrogazione.
+ 
++ (Requirement) 3003 - Gestione richieste - rimozione N031 dal risultato in caso di interrogazione per data (issue: [https://github.com/italia/anpr/issues/1037](https://github.com/italia/anpr/issues/1037))
     + La notifica N031 è stata rimossa dal risultato della gestione richieste nel caso di interrogazione per data.
+ 
++ (Bug) Port hotfix 4.1.23 / 4.1.24 / 4.1.25 su ramo 5.0
+ 
++ (Requirement) ws 6001:  nuovi certificati per bilinguismo (lingua tedesca)
+    + Aggiunta di due nuovi certificati per il bilinguismo - lingua tedesca:  a) stato libero (codice identificativo tipo certificato 17); b) stato civile (codice identificativo tipo certificato 11)
+ 
++ (Requirement) Ottimizzazione risposta servizio consultazione 3002
+    + In conseguenza della decisione di permettere l'accesso al servizio 3002 anche per i comuni non subentrati e nell'ambito dell'ottimizzazione delle prestazioni rese necessarie dall'aumento del carico si è reso necessario modificare il comportamento del servizio di consultazione soggetto / famiglia / convivenza.
+Con riferimento alle sezioni della risposta de servizio 3002, vedi [tabella decodifica 16](https://www.anpr.interno.it/portale/tabelle-di-riferimento), qualora la ricerca trovi più di un soggetto, verrà restituita solo la sezione generalità (senza tenere conto delle eventuali altre sezioni indicate, compresa la scheda individuale completa). Le ricerche che si traducono in un solo soggetto continuano a comportarsi come prima.
 
-+ (Bug) Web - Port hotfix 4.1.23 / 4.1.24 / 4.1.25 su ramo 4.2.X
 
 
 ### Versione 4.1.25 (2019-01-08)
@@ -28,16 +41,6 @@
 
 + (Bug) Web - Validazione campo autorità sentenza
     + Il campo autorità della sentenza deve accettare anche lo slash
-
-
-### Versione 4.2.0 (2019-12-27)
-
-+ (Requirement) ws 6001:  nuovi certificati per bilinguismo (lingua tedesca)
-    + Aggiunta di due nuovi certificati per il bilinguismo - lingua tedesca:  a) stato libero (codice identificativo tipo certificato 17); b) stato civile (codice identificativo tipo certificato 11)
-
-+ (Requirement) Ottimizzazione risposta servizio consultazione 3002
-    + In conseguenza della decisione di permettere l'accesso al servizio 3002 anche per i comuni non subentrati e nell'ambito dell'ottimizzazione delle prestazioni rese necessarie dall'aumento del carico si è reso necessario modificare il comportamento del servizio di consultazione soggetto / famiglia / convivenza.
- Con riferimento alle sezioni della risposta de servizio 3002, vedi [tabella decodifica 16](https://www.anpr.interno.it/portale/tabelle-di-riferimento), qualora la ricerca trovi più di un soggetto, verrà restituita solo la sezione generalità (senza tenere conto delle eventuali altre sezioni indicate, compresa la scheda individuale completa). Le ricerche che si traducono in un solo soggetto continuano a comportarsi come prima.
 
 
 ### Versione 4.1.23 (2018-12-27)
