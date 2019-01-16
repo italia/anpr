@@ -1,6 +1,15 @@
 # Changelog
 
 
+### Versione 5.0.1 (2019-01-16)
+
++ (Requirement) Aggiunta sezione datiCancellazione alla risposta sintetica del servizio 3002 (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031)[https://github.com/italia/anpr/issues/1064](https://github.com/italia/anpr/issues/1064))
+    + Quando il servizio 3002 restituisce la nuova risposta sintetica (versione 5.0, codDestintario ANPR02) è stata aggiunta la sezione dei datiCancellazione alle sezioni già restituite (generalita, legame, residenza, famiglia).
+
++ (Requirement) Gestione risposta completa 3002 in caso di ricerca per famiglia o codice fiscale (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031)[https://github.com/italia/anpr/issues/1064](https://github.com/italia/anpr/issues/1064))
+    + Nel caso in cui tra i parametri di ricerca sia indicata una ricerca codice fiscale o per famiglia (ma non per convivenza) non viene restituita la nuova risposta sintetica ma quella completa della versione 4.X
+
+
 ### Versione 5.0.0 (2019-01-10)
  
 + (Requirement) Abilitazione codDestintario ANPR02 (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031)) [La versione 5.0.0 sostituisce le 4.2.0 / 4.2.1]
