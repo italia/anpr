@@ -21,6 +21,9 @@
 + (Requirement) Estensione del servizio revoca dato (issue: [https://github.com/italia/anpr/issues/1077](https://github.com/italia/anpr/issues/1077))
     + Estensione del servizio revoca dato per i seguenti dati: - Matrimonio / Convivenza / Unione civile - Permesso di soggiorno - Carta di identità - Atto di nascita
 
++ (Requirement) Inibizione invio validazione file AIRE con precedenti regole (issue: [https://github.com/italia/anpr/issues/1060](https://github.com/italia/anpr/issues/1060))
+    + Viene da adesso accettata solo la nuova validazione del tracciato AIRE per evitare di acquisire dati non congruenti con le regole di validazione XSD.
+
 
 ### Versione 5.0.1 (2019-01-16)
 
