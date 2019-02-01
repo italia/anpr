@@ -1,5 +1,12 @@
 # Changelog
 
+### Versione 5.1.1 (2019-04-01)
+
++ (Bug) Malfunzionamento annullamento di un cambio residenza (5012) (issue: [https://github.com/italia/anpr/issues/1092](https://github.com/italia/anpr/issues/1092))
+    + Sebbene la risposta del servizio sia positiva, di fatto non viene annullata l'operazione.
+
++ (Bug) [2003] malfunzionamento controllo di conformità evento (EN344) (issue: [https://github.com/italia/anpr/issues/1097](https://github.com/italia/anpr/issues/1097))
+    + Rimozione controllo EN344 in caso di cancellazione per ripristino posizione anagrafica.
 
 ### Versione 5.1.0 (2019-01-17)
 
