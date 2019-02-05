@@ -2,7 +2,7 @@
 
 NOTA : Le date riportate si riferiscono alla previsione orientativa di disponibilità in produzione.
 
-### Versione 5.1-RC (2019-02-05)
+### Versione 5.1-RC (2019-02-07)
 
 + (Requirement) Superamento vincoli annullamento (issue: [https://github.com/italia/anpr/issues/1077](https://github.com/italia/anpr/issues/1077))
     + E' stato reso possibile effettuare annullamenti per ripristino posizione anagrafica anche se la mutazione di residenza non è l’ultima operazione effettuata sul soggetto (ma non vi siano altre mutazioni di residenza) Sono stati eliminati i vincoli sugli annullamenti impediti da operazioni su soggetti collegati (es. coniugi o legami parentela)
