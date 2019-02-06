@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.1.2 (2019-02-06)
+
++ (Requirement) Aggiungere scala esterna ai certificati di residenza (issue: [https://github.com/italia/anpr/issues/1115](https://github.com/italia/anpr/issues/1115))
+    + Aggiungere se presente ai certificati di residenza (normale e storico) la scala esterna (scala est. + valore)
+
+### Versione 5.0.2 (2019-02-06)
+
++ (Bug) WEB - Correzione validazione note indirizzo
+    + Non veniva accettato il carattere due punti dall'applicazione web per il campo note indirizzo
+
 ### Versione 5.1.1 (2019-04-01)
 
 + (Bug) Malfunzionamento annullamento di un cambio residenza (5012) (issue: [https://github.com/italia/anpr/issues/1092](https://github.com/italia/anpr/issues/1092))
