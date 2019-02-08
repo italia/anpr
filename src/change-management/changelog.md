@@ -1,5 +1,18 @@
 # Changelog
 
+### Versione 5.1.3 (2019-02-08)
+
++ (Bug) Gestione annullamenti parziali multipli su diversi soggetti ma stessa operazione (999) (issue: [https://github.com/italia/anpr/issues/1133](https://github.com/italia/anpr/issues/1133))
+    + Non era possibile eseguire più annullamento parziali sulla stessa operazione anche quando riguardavano soggetti diversi.
+
+
++ (Bug) Gestione esito annullamenti in caso di operazione già annullata (999) (issue: [https://github.com/italia/anpr/issues/1133](https://github.com/italia/anpr/issues/1133))
+    +  Ora viene restituito un diagnostico quando l'operazione è già stata annullata.
+
+
++ (Bug) Gestione esito annullamenti in caso di comune non competente (999) (issue: [https://github.com/italia/anpr/issues/1133](https://github.com/italia/anpr/issues/1133))
+    +  Ora viene restituito un diagnostico quando il comune non è competente per l'annullamento.
+
 ### Versione 5.1.2 (2019-02-06)
 
 + (Requirement) Aggiungere scala esterna ai certificati di residenza (issue: [https://github.com/italia/anpr/issues/1115](https://github.com/italia/anpr/issues/1115))
