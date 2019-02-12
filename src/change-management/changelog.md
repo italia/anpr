@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.1.4 (2019-02-11)
+
++ (Bug) Errore associazione comune di emissione CIE
+    + Alcune CIE non veniva visualizzate in consultazione per anomalia di associazione del comune di emissione.
+
 ### Versione 5.1.3 (2019-02-08)
 
 + (Bug) Gestione annullamenti parziali multipli su diversi soggetti ma stessa operazione (999) (issue: [https://github.com/italia/anpr/issues/1133](https://github.com/italia/anpr/issues/1133))
