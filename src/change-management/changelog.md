@@ -1,5 +1,21 @@
 # Changelog
 
+### Versione 5.2.0 (2019-02-13)
+
++ (Requirement) Diagnostico in caso di scheda anagrafica individuale sintetica (issue: [https://github.com/italia/anpr/issues/1079](https://github.com/italia/anpr/issues/1079))
+    + Nella consultazione individuale, qualora venga restituita la scheda sintetica, sarà presente anche il diagnostico EN528.
+
++ (Requirement) Diagnostico EN527 con informazioni sull'operazione effettuata
+    + Alcuni servizi (in particolare i servizi di registrazione) restituiscono adesso un diagnostico per fornire informazioni utili sulle operazioni fallite.
+
+
++ (Requirement) Presentazione dettaglio soggetto nella consultazione della webapp (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031)[https://github.com/italia/anpr/issues/1064](https://github.com/italia/anpr/issues/1064)[https://github.com/italia/anpr/issues/1079](https://github.com/italia/anpr/issues/1079))
+    + A fronte del nuovo prospetto sintetico della consultazione, sarà possibile accedere anche al dettaglio completo.
+
++ (Requirement) Revisione risposte servizi di registrazione (solo ANPR02) (issue: [https://github.com/italia/anpr/issues/1079](https://github.com/italia/anpr/issues/1079))
+    + Anche la risposta dei servizi di registrazione diventa sintetica. Vale a dire che invece di tutti i dati dei soggetti variati, vengono fornite solo la sintesi del risultato e gli eventuali dati generati da ANPR (idanpr, codice fiscale ecc).
+
+
 ### Versione 5.1.4 (2019-02-11)
 
 + (Bug) Errore associazione comune di emissione CIE
