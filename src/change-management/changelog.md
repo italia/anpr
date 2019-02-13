@@ -2,6 +2,9 @@
 
 ### Versione 5.1.5 (2019-02-13)
 
++ (Bug) Web - Validazione numero sentenza
+    + L'applicazione web non accettava il carattere '-' nel numero sentenza.
+
 + (Bug) Malfunzionamento mutazione padre/madre in caso di rettifica cognome (case insensitive) (issue: [https://github.com/italia/anpr/issues/1102](https://github.com/italia/anpr/issues/1102))
     + In caso di mutazione padre/madre per rettifica cognome, non viene correttamente gestita la rettifica da maiuscolo a minuscolo e viceversa.
 
