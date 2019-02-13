@@ -1,6 +1,16 @@
 # Changelog
 
+### Versione 5.1.5 (2019-02-13)
+
++ (Bug) Malfunzionamento mutazione padre/madre in caso di rettifica cognome (case insensitive) (issue: [https://github.com/italia/anpr/issues/1102](https://github.com/italia/anpr/issues/1102))
+    + In caso di mutazione padre/madre per rettifica cognome, non viene correttamente gestita la rettifica da maiuscolo a minuscolo e viceversa.
+
++ (Requirement) Gestione consolati cessati
+    + L'intervento prevede il caricamento dei consolati cessati nelle tabelle di servizio e la loro gestione nei WS interessati e nelle corrispondenti funzioni della web app.
+
 ### Versione 5.2.0 (2019-02-13)
+
++ (Bug) Port hotfix 5.1.5 su ramo 5.2
 
 + (Requirement) Diagnostico in caso di scheda anagrafica individuale sintetica (issue: [https://github.com/italia/anpr/issues/1079](https://github.com/italia/anpr/issues/1079))
     + Nella consultazione individuale, qualora venga restituita la scheda sintetica, sarà presente anche il diagnostico EN528.
