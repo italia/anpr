@@ -1,5 +1,20 @@
 # Changelog
 
+### Versione 5.2.1 (2019-02-19)
+
++ (Bug) Port hotfix 5.1.6 su ramo 5.2
+
++ (Bug) Errore gestione risposta (ANPR02) per 1014 (issue: [https://github.com/italia/anpr/issues/1151](https://github.com/italia/anpr/issues/1151))
+    + Per il servizio 1014 i dati controllo non sono obbligatori. 
+
++ (Requirement) Rettifica indirizzo per errore materiale o per integrazione
+    + Utilizzo del codice mutazione 9  del servizio di mutazione famiglia/residenza  per comunicare la rettifica su un indirizzo per errore materiale.  Confermati dal Ministero i requisiti riportati  di seguito (cfr. e-mail della Dott.ssa Toscano 19.12.2018). Comunicata agli enti l’introduzione del nuovo codice mutazione per il ws 5001 (e-mail del 26.10.2018 ad AE, MCTC, INPS, ISTAT).   Attività previste:   -          ws 5001 : eliminazione del controllo sull’utilizzo del codice mutazione 9  per gli indirizzi in lingua italiana; inserimento  di un controllo sulla data decorrenza residenza: deve essere uguale a quella corrente, non può essere modificata  La  La nuova selezione va aggiunta anche sulla Web App.  n    N.b. --> cambiamo la descrizione del codice mutazione  9 sulla tabella  di decodifica                   "RETTIFICA/INTEGRAZIONE INDIRIZZO"  (già effettuato in SVILUPPO)
+
+### Versione 5.1.6 (2019-02-19)
+
++ (Bug) WEB: data nascita del coniuge può essere non congruente
+    + Se la data di nascita del coniuge era stata inviata con una time zone non corretta poteva essere visualizzata una data diversa.
+
 ### Versione 5.1.5 (2019-02-13)
 
 + (Bug) Web - Validazione numero sentenza
