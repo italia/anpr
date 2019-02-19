@@ -12,6 +12,9 @@
 
 ### Versione 5.1.6 (2019-02-19)
 
++ (Bug) Certificati - Richiesta dati storico di residenza soggetto AIRE diventato APR (issue: [https://github.com/italia/anpr/issues/1155](https://github.com/italia/anpr/issues/1155))
+    + La richiesta dati storico residenza per i soggetti APR che sono stati AIRE nel passato poteva fallire.
+
 + (Bug) WEB: data nascita del coniuge può essere non congruente
     + Se la data di nascita del coniuge era stata inviata con una time zone non corretta poteva essere visualizzata una data diversa.
 
