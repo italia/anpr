@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.2.2 (2019-02-24)
+
++ (Bug) Port hotfix 5.1.7 su ramo 5.2
+
++ (Bug) Lista soggetti variati servizio 1014 (issue: [https://github.com/italia/anpr/issues/1165](https://github.com/italia/anpr/issues/1165))
+
+### Versione 5.1.7 (2019-02-24)
+
++ (Bug) Web - Ricerca procedimento amministrativo per protocollo comunale
+    + La ricerca dei procedimenti da web accettava solo numeri per il protocollo comunale del provvedimento. Ora sono accettati lettere, numeri, spazi e '-'
+
 ### Versione 5.2.1 (2019-02-19)
 
 + (Bug) Port hotfix 5.1.6 su ramo 5.2
