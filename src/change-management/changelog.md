@@ -6,6 +6,10 @@
 
 + (Bug) Lista soggetti variati servizio 1014 (issue: [https://github.com/italia/anpr/issues/1165](https://github.com/italia/anpr/issues/1165))
 
++ (Requirement) Consultazione per comune di residenza e identificativo o codice fiscale (issue: [https://github.com/italia/anpr/issues/1159](https://github.com/italia/anpr/issues/1159)[https://github.com/italia/anpr/issues/1162](https://github.com/italia/anpr/issues/1162))
+    + In caso di consultazione per comune di residenza (ricercaNazionale=0) era stato deciso inizialmente di restituire comunque il soggetto qualora i criteri di ricerca fossero per id soggetto anpr o codice fiscale. Adesso invece il filtro per comune di residenza verrà applicato sempre.
+
+
 ### Versione 5.1.7 (2019-02-24)
 
 + (Bug) Web - Ricerca procedimento amministrativo per protocollo comunale
