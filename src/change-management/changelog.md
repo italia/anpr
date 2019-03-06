@@ -1,5 +1,22 @@
 # Changelog
 
+### Versione 5.2.5 (2019-03-06)
+
++ (Bug) Web - Anomalia Intestatario convivenza con comune nascita non esistente alla data
+
++ (Bug) EC099 - Verifica denominazione sede consolato
+    + Anche una differenza solo nella maiuscole / minuscole della sede del consolato (rispetto alla tabella di riferimento) portava alla segnalazione EC099 (consolato inesistente alla data).
+
+### Versione 5.2.4 (2019-03-01)
+
++ (Bug) Errore ultimo indirizzo di residenza riportato  su stampa certificato
+    + In alcuni casi nei quali c'erano state più cancellazioni e reiscrizioni l'ultimo indirizzo riportato sul certificati non era corretto.
+
+### Versione 5.2.3 (2019-02-27)
+
++ (Bug) Errore risposta 5014
+    + E' stato corretto un errore di composizione della risposta 5014
+
 ### Versione 5.2.2 (2019-02-24)
 
 + (Bug) Port hotfix 5.1.7 su ramo 5.2
