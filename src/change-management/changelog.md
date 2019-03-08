@@ -7,7 +7,7 @@
 + (Bug) EC099 - Verifica denominazione sede consolato
     + Anche una differenza solo nella maiuscole / minuscole della sede del consolato (rispetto alla tabella di riferimento) portava alla segnalazione EC099 (consolato inesistente alla data).
     
-+ (Bug) Controllo EC168 in assenza data formazione atto nascita (issue: [https://github.com/italia/anpr/issues/981](https://github.com/italia/anpr/issues/1187))
++ (Bug) Controllo EC168 in assenza data formazione atto nascita (issue: [https://github.com/italia/anpr/issues/1187](https://github.com/italia/anpr/issues/1187))
     + In assenza della data formazione atto dell'atto di nascita, il controllo EC168 si poteva attivare anche su codistat validi se variati nel corso dell'anno dell'atto.
 
 ### Versione 5.2.4 (2019-03-01)
