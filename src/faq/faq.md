@@ -157,6 +157,63 @@ processi cui erano abituati, nonché di realizzare nuove integrazioni in futuro,
 Questo è evidenziato anche nel Piano Triennale della Pubblica Amministrazione,
 nonché nella nuova edizione del CAD.
 
+
+### Richiesta abilitazione indirizzo IP
+
+L’utilizzo dei web services ANPR in ambiente di produzione prevede che
+venga preventivamente abilitato l’indirizzo ip del comune dal quale si
+inviano tali richieste.
+
+Le richieste di abilitazione dell’ip devono essere effettuate al momento
+del censimento degli utenti nell’area riservata dei servizi demografici
+al link:
+
+[*http://areaprivata.servizidemografici.interno.it/sitoCNSD/security/logon.jsp*](http://areaprivata.servizidemografici.interno.it/sitoCNSD/security/logon.jsp)
+
+Si accede con le credenziali dell’area riservata e si seleziona la voce
+sulla sinistra Censimento ANPR
+
+![](image1.png)
+
+Oltre ai dati generali del Comune è previsto che sia l’indirizzo/i IP
+e/o la NET di provenienza con il quale il comune intende connettersi ai
+servizi ANPR. Nel caso non si fosse a conoscenza di tale indirizzo, si
+suggerisce di contattare il proprio fornitore di connettività o in
+alternativa di accedere, con un qualsiasi browser collegato alla rete
+internet, al link https://www.myip.com. Lo stesso sito mostrerà in breve
+
+l’indirizzo IP di provenienza. Si ricorda che l’indirizzo deve essere
+pubblico e statico. Una volta inserito occorrerà premere il tasto
+Aggiungi IP.
+
+![](media/image2.png)
+
+Tali ip, comunicati nel momento del censimento, vengono successivamente
+resi disponibili sul sito web di ANPR, alla voce
+Amministrazione-&gt;Gestione dati del comune, nella sezione
+“Informazioni Aggiuntive” , in modo che possano essere eventualmente
+eliminati e/o aggiunti ad altri ip
+
+![](media/image3.png)
+
+In caso di problemi o di particolari urgenze è possibile scrivere alla
+casella di posta
+
+[*ass.abilit\_ip.anpr@sogei.it*](mailto:ass.abilit_ip.anpr@sogei.it)
+
+L’applicazione non consente l’inserimento di indirizzi privati quali :
+
+-   192.168.\*
+
+-   10.\*
+
+-   172.16.\*
+
+Le normali richieste di abilitazione ip effettuate attraverso questa
+casella di posta non saranno prese in considerazione
+
+
+
 ### Le informazioni fornite in questo (o altri) documenti non corrispondono, cosa devo fare?
 
 Stiamo lavorando per sistemare la documentazione e per avere tutte le informazioni
