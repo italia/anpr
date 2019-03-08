@@ -161,27 +161,41 @@ if __name__ == "__main__":
     toclist = []
 
     toclist = scrapeHtml(xlsxpath, rstpath, "/portale/tabelle-di-riferimento","tab")
-    aggiornamento_doc_tecnica="https://anpr.interno.it/portale/documents/20182/239162/aggiornamenti_07_05_2018.xlsx/408ac0f5-6bcc-42f9-834c-82284f7dbb1a"   
+    aggiornamento_doc_tecnica="https://anpr.interno.it/portale/documents/20182/239162/aggiornamenti_06_03_2019.xlsx/082ba94b-f63e-40b0-9445-ee831d3ce35f"   
     toclist.append(createRstFromXlsx(Table(
         id=-5, url=aggiornamento_doc_tecnica,
-        title="Aggiornamenti alla documentazione tecnica", date="5 Maggio 2018",
+        title="Aggiornamenti alla documentazione tecnica", date="5 Maggio 2019",
     ),False,0,2000,4))
 
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"portale/documents/20182/50186/Allegato+7+-+Utilizzo+WS+ANPR+totale+19102017.xlsx/66f5befe-ddf7-4a1f-b5e1-f94947032000",
-        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="19 Ottobre 2017",
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+7+-+Utilizzo+WS+ANPR+totale+19102017.xlsx/66f5befe-ddf7-4a1f-b5e1-f94947032000",
+        title="Elenco dei web services da utilizzare per aggiornamento delle basi dati locali", date="7 Novembre 2017",
     ),False,4,9,4, ['Servizio', 'Op. Anagrafica','Descrizione', u'Servizio Esposto','Note','',''],u"Il comune che non espone il servizio per acquisizione delle notifiche effettua una richiesta utilizzando il servizio 3003 o 3007, specificando il tipo di notifica da consultare."))
 
     toclist.append(createRstFromXlsx(Table(
-        id=-4, url=Anpr.domain()+"/portale/documents/20182/26001/Utilizzo+WS+ANPR+27072016.xlsx",
-        title="Utilizzo del WebService", date="11 Ottobre 2017",
-    ),False,4,37,3, ['Servizio', 'Op. Anagrafica','Descrizione', u'WS da Utilizzare - modalità ws', u'WS da Utilizzare - modalità wa',u'Notifiche - modalità ws',u'Notifiche - modalità wa','Note',"- ","- "]))
+        id=-4, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+2+-+Elenco+funzioni+WEB17112017.xlsx/c50c0534-a41c-443e-ab86-f706950e1a0b",
+        title="elenco funzionalita disponibili", date="17 Novembre 2019",
+    ),False,0,2000,5))
 
     toclist.append(createRstFromXlsx(Table(
         id=-3, url=Anpr.domain()+"/portale/documents/20182/26001/Allegato+5+-+Elenco+WS+di+ANPR+13102016.xlsx/a787b18d-a271-482c-bbb4-c3559d2b93c0",
-        title="Elenco dei web services disponibili", date="17 dicembre 2017",
+        title="Elenco dei web services da utilizzare per l’aggiornamento delle basi dati locali di servizio", date="19 ottobre 2017",
     ),False,0,2000,5))
+
+
+    toclist.append(createRstFromXlsx(Table(
+        id=-3, url=Anpr.domain()+"/portale/documents/20182/239162/Mappatura_controlli_servizio_certificazione.xlsx/77881a9f-2477-4e88-91a5-a5fffe66ae83",
+        title="Appendice - Mappatura controlli servizi di certificazione", date="15 febbraio 2018",
+    ),False,0,2000,5))
+
+
+    toclist.append(createRstFromXlsx(Table(
+        id=-2, url=Anpr.domain()+"/portale/documents/20182/239162/Allegato_5_Elenco_WS_di_ANPR_27092018.xlsx/09973722-3ca5-4464-8195-7dce9168b342",
+        title="Elenco dei web services disponibili", date="19 Ottobre 2017",
+    ),False,0,2000,3))
+
+
 
     toclist.append(createRstFromXlsx(Table(
         id=-2, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+2+-+Elenco+funzioni+WEB19102017.xlsx/fa626e37-b3d3-4724-8c86-cc5b3efec217",
