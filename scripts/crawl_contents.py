@@ -164,7 +164,7 @@ if __name__ == "__main__":
     aggiornamento_doc_tecnica="https://anpr.interno.it/portale/documents/20182/239162/aggiornamenti_06_03_2019.xlsx/082ba94b-f63e-40b0-9445-ee831d3ce35f"   
     toclist.append(createRstFromXlsx(Table(
         id=-5, url=aggiornamento_doc_tecnica,
-        title="Aggiornamenti alla documentazione tecnica", date="5 Maggio 2019",
+        title="Aggiornamenti alla documentazione tecnica", date="6 Marzo 2019",
     ),False,0,2000,4))
 
 
@@ -175,7 +175,7 @@ if __name__ == "__main__":
 
     toclist.append(createRstFromXlsx(Table(
         id=-4, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+2+-+Elenco+funzioni+WEB17112017.xlsx/c50c0534-a41c-443e-ab86-f706950e1a0b",
-        title="elenco funzionalita disponibili", date="17 Novembre 2019",
+        title="elenco funzionalità disponibili", date="17 Novembre 2019",
     ),False,0,2000,5))
 
     toclist.append(createRstFromXlsx(Table(
@@ -199,7 +199,7 @@ if __name__ == "__main__":
 
     toclist.append(createRstFromXlsx(Table(
         id=-2, url=Anpr.domain()+"/portale/documents/20182/50186/Allegato+2+-+Elenco+funzioni+WEB19102017.xlsx/fa626e37-b3d3-4724-8c86-cc5b3efec217",
-        title="Elenco delle funzionalita' disponibilini nella web app", date="19 Ottobre 2017",
+        title="Elenco delle funzionalità disponibilini nella web app", date="19 Ottobre 2017",
     ),False,0,2000,3))
 
     errori_path="https://anpr.interno.it/portale/documents/20182/209632/elenco+segnalazioni+ANPR+operazioni+anagrafiche_07_05_2018_.xlsx/5c50347d-60a8-4ce0-bdd5-4971d32ea4c4"
