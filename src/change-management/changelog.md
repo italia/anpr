@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.2.6 (2019-03-11)
+
++ (Bug) Web - Controllo soggetto deceduto per certificato di morte
+    + In caso di emissione certificato di morte, se la ricerca non era effettuata in modo puntuale l'emissione potrebbe essere bloccata.
+
++ (Requirement) Abilitazione feature Rettifica indirizzo per errore materiale o per integrazione
+    + La rettifica indirizzo per errore materiale o per integrazione è stata abilitata anche in produzione.
+
 ### Versione 5.2.5 (2019-03-06)
 
 + (Bug) Web - Anomalia Intestatario convivenza con comune nascita non esistente alla data
