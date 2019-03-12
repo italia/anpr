@@ -1,9 +1,10 @@
 Tabella 43 - Cessazione unione civile - convivenze
 ==================================================
 
-:Aggiornamento: 18 settembre 2017
+:Aggiornamento: 08 gennaio 2019
+:Note: Inserite note per l'utilizzo delle codifiche
 
-`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella_43_tipo_cessazione_unioneCivile-convivenze.xlsx/c75b7a0d-86f1-4898-9ec2-63e12339d75c>`_
+`Download <https://www.anpr.interno.it/portale/documents/20182/50186/tabella_43_tipo_cessazione_unioneCivile-convivenze+20190108.xlsx/789c292a-fc89-4b0b-ac63-0250cf468597>`_
 
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |ID                  |DESCRIZIONE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
