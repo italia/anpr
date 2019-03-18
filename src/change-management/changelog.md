@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.3.0 (2019-03-18)
+
++ (Requirement) Refactor servizio di consultazione/estrazione
+    + I servizi 3003 e 3007 vengono spostati nella famiglia 4000. Il servizio 3005 nella famiglia 7000.
+
+### Versione 5.2.7 (2019-03-18)
+
++ (Bug) Errore servizio mutazione in caso di duplicati
+    + In alcuni casi il servizio poteva impedire la modifica di un soggetto in caso di due schede duplicate anche se tutte cancellate tranne una.
+
 ### Versione 5.2.6 (2019-03-11)
 
 + (Bug) Web - Controllo soggetto deceduto per certificato di morte
