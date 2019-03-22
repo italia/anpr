@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.3.1 (2019-03-20)
+
++ (Bug) Anomalia ricerca elenco operazione per soggetto (issue: [https://github.com/italia/anpr/issues/1204](https://github.com/italia/anpr/issues/1204))
+    + L'anomalia portava il servizio 3003 a non restituire risultati per la ricerca soggetto in alcuni casi. Nel web invece a volte non era possibile accedere al dettaglio xml delle operazioni nella consultazione soggetto.
+
 ### Versione 5.3.0 (2019-03-18)
 
 + (Requirement) Refactor servizio di consultazione/estrazione
