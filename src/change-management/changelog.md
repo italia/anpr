@@ -2,6 +2,9 @@
 
 ### Versione 5.3.1 (2019-03-20)
 
++ (Requirement) Aggiornamento tool validazione subentro (test comuni - Strumenti supporto)
+    + Il comportamento del controllo EN009 su ambienti windows a volte è diverso dagli ambienti linux.  Viene ora offerta la possibilità di escludere tale controllo dalla validazione.
+
 + (Bug) Web - Decodifica colore in consultazione
     + Nella consultazione da applicazione web il colore del civico non veniva decodificato.
 
