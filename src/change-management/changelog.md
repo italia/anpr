@@ -2,6 +2,12 @@
 
 ### Versione 5.3.1 (2019-03-20)
 
++ (Bug) Web - Decodifica colore in consultazione
+    + Nella consultazione da applicazione web il colore del civico non veniva decodificato.
+
++ (Bug) Mancata presenza scioglimento in consultazione unione civile (issue: [https://github.com/italia/anpr/issues/1218](https://github.com/italia/anpr/issues/1218))
+    + In caso di decesso, i dati dello scioglimento potevano essere mancanti quando incompleti.
+
 + (Bug) Anomalia ricerca elenco operazione per soggetto (issue: [https://github.com/italia/anpr/issues/1204](https://github.com/italia/anpr/issues/1204))
     + L'anomalia portava il servizio 3003 a non restituire risultati per la ricerca soggetto in alcuni casi. Nel web invece a volte non era possibile accedere al dettaglio xml delle operazioni nella consultazione soggetto.
 
