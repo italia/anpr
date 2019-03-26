@@ -1,5 +1,19 @@
 # Changelog
 
+### Versione 5.3.2 (2019-03-26)
+
++ (Bug) Correzione controllo EHR16 data finale periodo di riferimento (issue: [https://github.com/italia/anpr/issues/1219](https://github.com/italia/anpr/issues/1219))
+    + Il controllo EHR16 per il servizio 4005 era molto restrittivo sull'orario di sistema e non formattava correttamente le date controllate.
+
++ (Bug) Web - Gestione preferenza certificati stampa frazione in produzione
+    + La preferenza dei certificati stampa della frazione non era attiva in produzione.
+
++ (Bug) Errore estrazione 3003 in caso di assenza comune richiesta (issue: [https://github.com/italia/anpr/issues/1223](https://github.com/italia/anpr/issues/1223))
+    + In alcuni casi in assenza del comune richiesta non veniva usato il comune mittente come predefinito.
+
++ (Requirement) Certificati - gestione interno1 ed espInterno1 a '0' per il comune di GENOVA
+    + I campi interno1 ed espInterno1 vengono mostrati per  gli indirizzi relativi al comune di Genova anche quando il valore è '0'.
+
 ### Versione 5.3.1 (2019-03-20)
 
 + (Requirement) Aggiornamento tool validazione subentro (test comuni - Strumenti supporto)
