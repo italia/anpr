@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.3.3 (2019-03-26)
+
++ (Bug) 3003 - Richiesta elenco notifiche non fruite (issue: [https://github.com/italia/anpr/issues/1227](https://github.com/italia/anpr/issues/1227))
+    + Correzione gestione stato delle richieste elenco notifiche del servizio di gestione richieste.
+
 ### Versione 5.3.2 (2019-03-26)
 
 + (Bug) Correzione controllo EHR16 data finale periodo di riferimento (issue: [https://github.com/italia/anpr/issues/1219](https://github.com/italia/anpr/issues/1219))
