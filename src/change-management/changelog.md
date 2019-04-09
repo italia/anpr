@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.3.4 (2019-04-08)
+
++ (Bug) Anomalia download elaborazioni 4005 con servizio 7002 (issue: [https://github.com/italia/anpr/issues/1260](https://github.com/italia/anpr/issues/1260))
+    + Ora il 7002 blocca con anomalia i tentativi di scaricare le elaborazioni 4005.
+
 ### Versione 5.3.3 (2019-03-26)
 
 + (Bug) 3003 - Richiesta elenco notifiche non fruite (issue: [https://github.com/italia/anpr/issues/1227](https://github.com/italia/anpr/issues/1227))
