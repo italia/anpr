@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.3.5 (2019-04-10)
+
++ (Requirement) Web - Ricerca per comune di residenza (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031))
+    + Implementazione del filtro per comune di residenza anche sull'applicazione web.
+
++ (Bug) Stato civile con codice 99 (issue: [https://github.com/italia/anpr/issues/1261](https://github.com/italia/anpr/issues/1261))
+    + Il servizio di consultazione non restituisce più il codice stato civile 99
+    
++ (Bug) WEB - malfunzionamento visualizzazione comune nascita coniuge non valido alla data nascita
+    + Gestione dei comuni non validi alla data di nascita.
+
 ### Versione 5.3.4 (2019-04-08)
 
 + (Bug) Anomalia download elaborazioni 4005 con servizio 7002 (issue: [https://github.com/italia/anpr/issues/1260](https://github.com/italia/anpr/issues/1260))
