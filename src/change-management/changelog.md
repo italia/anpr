@@ -5,6 +5,9 @@
 + (Requirement) Web - Ricerca per comune di residenza (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031))
     + Implementazione del filtro per comune di residenza anche sull'applicazione web.
 
++ (Requirement) 3003/3007  - Aggiunta ricerca operazioni soggetto per id soggetto (issue: [https://github.com/italia/anpr/issues/1234](https://github.com/italia/anpr/issues/1234))
+    + I servizio di ricerca identificativi (3007) e gestione richieste (3003) accettano anche l'idSchedaSoggettoANPR come parametro di ricerca nella ricerca per soggetto.
+
 + (Bug) Stato civile con codice 99 (issue: [https://github.com/italia/anpr/issues/1261](https://github.com/italia/anpr/issues/1261))
     + Il servizio di consultazione non restituisce più il codice stato civile 99
     
