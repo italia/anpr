@@ -14,6 +14,9 @@
 + (Bug) WEB - malfunzionamento visualizzazione comune nascita coniuge non valido alla data nascita
     + Gestione dei comuni non validi alla data di nascita.
 
++ (Bug) Web - Validazione denominazioneConvivenza deve accettare numeri ordinali
+    + La validazione della denominazione convivenza non accettava il carattere °
+
 ### Versione 5.3.4 (2019-04-08)
 
 + (Bug) Anomalia download elaborazioni 4005 con servizio 7002 (issue: [https://github.com/italia/anpr/issues/1260](https://github.com/italia/anpr/issues/1260))
