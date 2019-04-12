@@ -20,6 +20,9 @@
 + (Bug) Se il tipoRichiedente è 1 e gli estremi del documento del superano i 20 caratteri c'era un errore nella verifica del documento
     + Richiesta certificato con estremi del documento richiedente lunghi
 
++ (Bug) Hotfix Gestione Certificabilità famiglia
+    + A volte i servizi 3002 e 6001 restituivano impropriamente le anomalie rispettivamente EN212, EN222.
+
 ### Versione 5.3.4 (2019-04-08)
 
 + (Bug) Anomalia download elaborazioni 4005 con servizio 7002 (issue: [https://github.com/italia/anpr/issues/1260](https://github.com/italia/anpr/issues/1260))
