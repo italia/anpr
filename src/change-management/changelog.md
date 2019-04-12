@@ -17,6 +17,9 @@
 + (Bug) Web - Validazione denominazioneConvivenza deve accettare numeri ordinali
     + La validazione della denominazione convivenza non accettava il carattere °
 
++ (Bug) Se il tipoRichiedente è 1 e gli estremi del documento del superano i 20 caratteri c'era un errore nella verifica del documento
+    + Richiesta certificato con estremi del documento richiedente lunghi
+
 ### Versione 5.3.4 (2019-04-08)
 
 + (Bug) Anomalia download elaborazioni 4005 con servizio 7002 (issue: [https://github.com/italia/anpr/issues/1260](https://github.com/italia/anpr/issues/1260))
