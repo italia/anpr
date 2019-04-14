@@ -1,5 +1,14 @@
 # Changelog
 
+### Versione 5.3.6 (2019-04-14)
+
++ (Requirement) Verifica congruenza statoLaborazione servizio 4005 (issue: [https://github.com/italia/anpr/issues/1275](https://github.com/italia/anpr/issues/1275))
+    + Qualora siano specificati sia l'operazioneRichiesta che lo statoLavorazione ne verrà verificata la congruenza (per le notifiche vanno usati solo gli stati 7,8,9 - per le operazioni gli stati 1,2,3,6)
+
++ (Requirement) Retrocompatibilità 3003/3007 per notifica specifica e statoLavorazione non congruente (issue: [https://github.com/italia/anpr/issues/1275](https://github.com/italia/anpr/issues/1275)[https://github.com/italia/anpr/issues/1273](https://github.com/italia/anpr/issues/1273)
+[https://github.com/italia/anpr/issues/1227](https://github.com/italia/anpr/issues/1227))
+    + Qualora venga richiesta una notifica specifica (es. operazioneRichiesta N014, N015) e uno statoLaborazione 1 o 2 questo verrà considerato 9 (tutte le notifiche) come erroneamente avveniva per un bug. Questo comportamento verrà mantenuto solo per il periodo di supporto alla versione ANPR01.
+
 ### Versione 5.3.5 (2019-04-10)
 
 + (Requirement) Web - Ricerca per comune di residenza (issue: [https://github.com/italia/anpr/issues/1031](https://github.com/italia/anpr/issues/1031))
