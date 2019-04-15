@@ -2,6 +2,9 @@
 
 ### Versione 5.3.6 (2019-04-14)
 
++ (Requirement) Servizi di estrazione 3003/3007 – fine supporto della ricerca per procedimento (issue: [https://github.com/italia/anpr/issues/1279](https://github.com/italia/anpr/issues/1279))
+    + Con la versione ANPR02, viene deprecata la funzionalità di ricerca elenchi 3007 e ricerca 3003 per procedimento, essendo in vigore la ricerca dei procedimenti tramite servizio 3004 più esaustiva.
+
 + (Requirement) Verifica congruenza statoLaborazione servizio 4005 (issue: [https://github.com/italia/anpr/issues/1275](https://github.com/italia/anpr/issues/1275))
     + Qualora siano specificati sia l'operazioneRichiesta che lo statoLavorazione ne verrà verificata la congruenza (per le notifiche vanno usati solo gli stati 7,8,9 - per le operazioni gli stati 1,2,3,6)
 
