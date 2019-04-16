@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.3.7 (2019-04-16)
+
++ (Requirement) Stima data disponibilità elaborazioni 4005 (issue: [https://github.com/italia/anpr/issues/1277](https://github.com/italia/anpr/issues/1277))
+    + La stima della data disponibilità è stata abbassata a 1 ora.
+
++ (Bug) Anomalia ricerca 3003/3007 per soggetto (issue: [https://github.com/italia/anpr/issues/1282](https://github.com/italia/anpr/issues/1282))
+    + In alcuni casi la ricerca 3003/3007 poteva non generare la risposta correttamente.
+
++ (Bug) Elaborazione richieste 4005 in caso di dettaglio non impostato (issue: [https://github.com/italia/anpr/issues/1277](https://github.com/italia/anpr/issues/1277))
+    + Se il dettaglio non era impostato nella richiesta, l'elaborazione poteva andava in errore invece di usare il dettaglio di default (RISPOSTA). Inoltre veniva valorizzato impropriamente anche il campo contenutoRichiesta.
+
 ### Versione 5.3.6 (2019-04-14)
 
 + (Requirement) Servizi di estrazione 3003/3007 – fine supporto della ricerca per procedimento (issue: [https://github.com/italia/anpr/issues/1279](https://github.com/italia/anpr/issues/1279))
