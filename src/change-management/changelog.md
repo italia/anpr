@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.3.8 (2019-04-18)
+
++ (Bug) Permesso di soggiorno non consultabile nella data di inserimento (issue: [https://github.com/italia/anpr/issues/1269](https://github.com/italia/anpr/issues/1269))
+    + Il permesso di soggiorno inserito con data decorrenza uguale a quella di sistema, era consultabile solo dal giorno seguente.
+
++ (Requirement) EN212 / EN222 - Revisione controllo famiglia certificabile
+    + Evoluzione dei controlli sulla certificabilità della famiglia in base ai rapporti tra l'intestatario e gli altri componenti.
+
 ### Versione 5.3.7 (2019-04-16)
 
 + (Requirement) Stima data disponibilità elaborazioni 4005 (issue: [https://github.com/italia/anpr/issues/1277](https://github.com/italia/anpr/issues/1277))
