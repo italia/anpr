@@ -1,5 +1,17 @@
 # Changelog
 
+# Changelog
+
+### Versione 5.4.0 (2019-04-23)
+
++ (Requirement) Web - Scarico massivo comune per motivata richiesta
+    + Nella sezione di amministrazione del comune è possibile richiedere uno scarico complessivo dei dati del comune per CAMBIO CASA SOFTWARE DI RIFERIMENTO o PERDITA DELLA BASE DATI LOCALE. Le richieste elaborate con successo potranno essere scaricate con il servizio 7002 usando l'id della richiesta come identificativo. (per questioni di sicurezza, questa funzione non sarà disponibile in ambiente di presubentro).
+
+### Versione 5.3.9 (2019-04-23)
+
++ (Bug) Verifica controllo EN212 e EN222 certificabilità famiglia
+    + Il controllo è stato temporaneamente disabilitato in quanto si attivava impropriamente in alcuni casi.
+
 ### Versione 5.3.8 (2019-04-18)
 
 + (Bug) Permesso di soggiorno non consultabile nella data di inserimento (issue: [https://github.com/italia/anpr/issues/1269](https://github.com/italia/anpr/issues/1269))
