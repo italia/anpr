@@ -1,7 +1,5 @@
 # Changelog
 
-# Changelog
-
 ### Versione 5.4.0 (2019-04-23)
 
 + (Requirement) Web - Scarico massivo comune per motivata richiesta
