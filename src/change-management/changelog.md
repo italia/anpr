@@ -8,6 +8,9 @@
 + (Bug) Verifica controllo EN212 e EN222 certificabilità famiglia
     + Il controllo è stato temporaneamente disabilitato in quanto si attivava impropriamente in alcuni casi.
 
++ (Requirement) Servizio 4005 : Aggiunti controlli obbligatorietà
+    + Ora viene verificato che in caso di richieste di elaborazione, siano valorizzati sempre le sezioni ricercaElenchiRichieste, statoLavorazione e almeno uno dei range periodoRiferimentoRichieste o identificativiANPR.
+
 ### Versione 5.4.0 (2019-04-23)
 
 + (Requirement) Web - Scarico massivo comune per motivata richiesta
