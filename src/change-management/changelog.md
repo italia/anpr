@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.4.1 (2019-05-06)
+
++ (Bug) Port hotfix 5.3.11 su ramo 5.4
+
 ### Versione 5.4.0 (2019-04-23)
 
 + (Requirement) Web - Scarico massivo comune per motivata richiesta
