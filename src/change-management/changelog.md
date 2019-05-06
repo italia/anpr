@@ -1,5 +1,30 @@
 # Changelog
 
+### Versione 5.4.0 (2019-04-23)
+
++ (Requirement) Web - Scarico massivo comune per motivata richiesta
+    + Nella sezione di amministrazione il sindaco, con la propria smart card, può richiedere uno scarico complessivo dei dati del comune per CAMBIO CASA SOFTWARE DI RIFERIMENTO o PERDITA DELLA BASE DATI LOCALE. Le richieste elaborate con successo potranno essere scaricate con il servizio 7002 usando l'id della richiesta come identificativo. (per questioni di sicurezza, questa funzione non sarà disponibile in ambiente di presubentro).
+
+### Versione 5.3.11 (2019-05-06)
+
++ (Bug) AE03 mutazione dati anagrafici per collegamento CF - errore civicoFonte
+    + Risolto il bug presente nell'operazione di collegamento CF, nel caso in cui il civicoFonte è impostato a zero, 
+
++ (Requirement) Certificato di stato di famiglia: introduzione forza certificato su errore EN222
+    + E' necessario rendere warning il controllo CN222 nei certificati di stato di famiglia lì dove il comune vuole comunque stampare i certificati di stato di famiglia a prescindere dai legami parentela ecc.
+
+
++ (Bug) Mancata gestione del motivo fine matrimonio non censito (issue: [https://github.com/italia/anpr/issues/891](https://github.com/italia/anpr/issues/891))
+    + Implementazione del controllo EN525 per la verifica di validità del motivo di fine matrimonio.
+
+### Versione 5.3.10 (2019-04-30)
+
++ (Bug) AE03 mutazione dati anagrafici per collegamento CF - errore nell'impostazione località
+    + Risolto il bug che generava errore nella funzione di collegamento CF (AEE97)
+
++ (Bug) Malfunzionamento gestione comune nascita non valido alla data
+    + Risolto il malfunzionamento presente nel servizio di mutazione anagrafica (comune nascita) nel caso in cui si volesse modificare il comune di nascita da uno valido ad un non valido alla data di nascita.
+
 ### Versione 5.3.9 (2019-04-24)
 
 + (Bug) Errore estrazione notifica singola 3003 (issue: [https://github.com/italia/anpr/issues/1295](https://github.com/italia/anpr/issues/1295))
