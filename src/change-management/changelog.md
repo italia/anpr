@@ -1,5 +1,32 @@
 # Changelog
 
+### Versione 5.4.2 (2019-05-15)
+
++ (Requirement) Recupero richieste 4005 non elaborate correttamente (issue: [https://github.com/italia/anpr/issues/1320](https://github.com/italia/anpr/issues/1320))
+    + Gestione automatica recupero e monitoraggio delle richieste 4005 la cui elaborazione sia fallita.
+
++ (Bug) Annullamento cancellazione - soggetto competenza del comune (issue: [https://github.com/italia/anpr/issues/1311](https://github.com/italia/anpr/issues/1311))
+    + Non veniva permessa l'annullamento della cancellazione di un soggetti il cui coniuge sia residente in altro comune.
+
++ (Bug) Stampa Visura - Stampa certificato: errore nella gestione dei diacritici (issue: [https://github.com/italia/anpr/issues/1304](https://github.com/italia/anpr/issues/1304))
+    + Nella visura anagrafica il carattere Č non viene stampato e nei certificati non è accettato come carattere valido per l'xsd. Effettuare l'intervento anche sulla carte di identità e cartellini e su tutte le stampe riepilogative alla fine delle variazioni anagrafiche
+
++ (Requirement) Web - Filtro comune di residenza in certificazione
+    + Nella ricerca dei soggetti per cui emettere certificati è stato aggiunta la possibilità di selezionare il comune di residenza.
+
++ (Bug) Mancato controllo di congruenza tra stati del procedimento ed l'operazione di apertura/chiusura
+    + Nel caso in cui un procedimento/istruttoria viene chiuso dalla funzionalità 'Gestione procedimenti', non viene effettuato alcun controllo di congruenza sul motivo di chiusura utilizzato.
+
++ (Bug) Mancata visualizzazione della data di annullamento carta di identità (issue: [https://github.com/italia/anpr/issues/1100](https://github.com/italia/anpr/issues/1100))
+    + Adeguamento dell'applicazione WEB per la visualizzazione del dato acquisito e già restituito dal servizio di interrogazione 3002.
+
+
+### Versione 5.3.12 (2019-05-13)
+
++ (Bug) Errore elaborazione 4005 in caso di notifiche e dettaglio TUTTO (issue: [https://github.com/italia/anpr/issues/1313](https://github.com/italia/anpr/issues/1313))
+    + A volte l'elaborazione delle richieste 4005 falliva in caso di notifiche per cui viene richiesto il livello dettaglio TUTTO. (In tale caso adesso per le notifiche viene generata solo la sezione del contenutoRisposta)
+
+
 ### Versione 5.4.1 (2019-05-06)
 
 + (Bug) Port hotfix 5.3.11 su ramo 5.4
