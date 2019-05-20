@@ -1,6 +1,18 @@
 # Changelog
 
+### Versione 5.4.3 (2019-05-20)
+
++ (Bug) 3002 - Valore 99 specieConvivenza (issue: [https://github.com/italia/anpr/issues/1262](https://github.com/italia/anpr/issues/1262)[https://github.com/italia/anpr/issues/1335](https://github.com/italia/anpr/issues/1335))
+    + Adesso, qualora sia stato inviato un valore non valido di specieConvivenza, questo non viene restituito dal servizio di interrogazione.
+
++ (Requirement) Iscrizione AIRE, validazione cap estero (issue: [https://github.com/italia/anpr/issues/1333](https://github.com/italia/anpr/issues/1333))
+    + Adesso il punto viene accettato come valore del CAP estero.
+
+
 ### Versione 5.4.2 (2019-05-15)
+
++ (Bug) WS4005 - Verifica stato non controllo il tipo di operazione
+    + La funzione di verifica stato non segnalava se viene richiesta la verifica su una operazione diversa da un 4005.
 
 + (Requirement) Recupero richieste 4005 non elaborate correttamente (issue: [https://github.com/italia/anpr/issues/1320](https://github.com/italia/anpr/issues/1320))
     + Gestione automatica recupero e monitoraggio delle richieste 4005 la cui elaborazione sia fallita.
