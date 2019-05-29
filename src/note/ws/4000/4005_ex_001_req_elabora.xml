@@ -1,0 +1,25 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns2:Richiesta4005 xmlns:ns2="http://sogei.it/ANPR/4000estrazione">
+         <testataRichiesta>
+            <idOperazioneComune>20190520001</idOperazioneComune>
+            <codMittente>040007</codMittente>
+            <codDestinatario>ANPR02</codDestinatario>
+            <operazioneRichiesta>4005</operazioneRichiesta>
+            <dataOraRichiesta>2019-05-20T12:15:40.053+02:00</dataOraRichiesta>
+            <tipoOperazione>C</tipoOperazione>
+            <tipoInvio>TEST</tipoInvio>
+         </testataRichiesta>
+         <elaborazione>
+            <dettaglioDati>RISPOSTA</dettaglioDati>
+            <ricercaElenchiRichieste>
+               <statoLavorazione>1</statoLavorazione>
+               <periodoRiferimentoRichieste>
+                  <dataOraIniziale>2019-03-23T12:15:40.053+01:00</dataOraIniziale>
+                  <dataOraFinale>2019-03-26T12:15:40.053+02:00</dataOraFinale>
+               </periodoRiferimentoRichieste>
+            </ricercaElenchiRichieste>
+      </ns2:Richiesta4005>
+   </soapenv:Body>
+</soapenv:Envelope>

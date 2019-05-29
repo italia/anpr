@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <a:Risposta4005 xmlns:a="http://sogei.it/ANPR/4000estrazione">
+         <a:RispostaMultipla4005>
+            <testataRisposta>
+               <idOperazioneComune>20190520002</idOperazioneComune>
+               <codMittente>040007</codMittente>
+               <codDestinatario>ANPR02</codDestinatario>
+               <operazioneRichiesta>4005</operazioneRichiesta>
+               <dataOraRichiesta>2018-04-06T12:15:40.053+02:00</dataOraRichiesta>
+               <idOperazioneANPR>303107</idOperazioneANPR>
+               <esitoOperazione>0000</esitoOperazione>
+            </testataRisposta>
+            <statoRichiesta>1</statoRichiesta>
+            <idOperazioneANPR>303104</idOperazioneANPR>
+            <!-- Si consiglia di effettuare la prima verifica disponibilita'
+            	Dopo un'ora. Qualora la richiesta non sia pronta riprovare
+            	non prima della data disponibilita' fornita -->
+            <dataDisponibilita>2019-05-30T16:22:57.000+02:00</dataDisponibilita>
+         </a:RispostaMultipla4005>
+      </a:Risposta4005>
+   </soapenv:Body>
+</soapenv:Envelope>
