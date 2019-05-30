@@ -1,5 +1,20 @@
 # Changelog
 
+
+### Versione 5.4.4 (2019-05-29)
+
++ (Requirement) Ampliamento dettaglio esiti errore ricerca soggetti cancellati per altri motivi (issue: [https://github.com/italia/anpr/issues/1349](https://github.com/italia/anpr/issues/1349))
+    + I controlli effettuati dal servizio di mutazione scheda soggetto sono stati resi più dettagliati, come ad esempio il controllo inerente il comune di competenza sul soggetto.
+
+
++ (Bug) 3002 - data annullamento carta identità (issue: [https://github.com/italia/anpr/issues/1307](https://github.com/italia/anpr/issues/1307))
+    + Risolve il problema del servizio di interrogazione relativo dell'assenza dei dati della carta di identità se annullata 
+
+
++ (Bug) Reiscrizione per ripristino posizione precedente (issue: [https://github.com/italia/anpr/issues/1292](https://github.com/italia/anpr/issues/1292))
+    + Risolto problema verificato in caso di soggetto subentrato come residente e cancellato per ripristino posizione precedente: in caso di reiscrizione AIRE non era consentito reiscriverlo ad una data antecedente all'ultima data di decorrenza registrata
+
+
 ### Versione 5.4.3 (2019-05-20)
 
 + (Bug) 3002 - Valore 99 specieConvivenza (issue: [https://github.com/italia/anpr/issues/1262](https://github.com/italia/anpr/issues/1262)[https://github.com/italia/anpr/issues/1335](https://github.com/italia/anpr/issues/1335))
