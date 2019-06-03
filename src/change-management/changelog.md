@@ -14,6 +14,10 @@
 + (Bug) Reiscrizione per ripristino posizione precedente (issue: [https://github.com/italia/anpr/issues/1292](https://github.com/italia/anpr/issues/1292))
     + Risolto problema verificato in caso di soggetto subentrato come residente e cancellato per ripristino posizione precedente: in caso di reiscrizione AIRE non era consentito reiscriverlo ad una data antecedente all'ultima data di decorrenza registrata
 
++ (Bug) Congruenza data origine famiglia / data appartenenza componenti
+    + La data origine della famiglia convivenza veniva aggiornata impropriamente a fronte di una mutazione residenza dell'intera famiglia tra comuni diversi. 
+
+
 
 ### Versione 5.4.3 (2019-05-20)
 
