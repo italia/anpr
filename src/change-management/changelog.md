@@ -16,6 +16,9 @@
 
 + (Bug) Congruenza data origine famiglia / data appartenenza componenti
     + La data origine della famiglia convivenza veniva aggiornata impropriamente a fronte di una mutazione residenza dell'intera famiglia tra comuni diversi. 
+    
++ (Bug) Rimosso aggiornamento data origine famiglia convivenza per 5001 mutazione 3
+    + Per alcuni giorno il tipo mutazione 3 ha permesso di aggiornare la data origine famiglia convivenza, questo portava a volte a segnalare l'anomalia EF031. Per il momento non è più possibile aggiornare la data origine famiglia convivenza. 
 
 
 
