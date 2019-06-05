@@ -43,7 +43,7 @@ E della risposta :
 
 Ecco alcuni esempi di richieste e risposte : 
 - Es 001 - Richiesta elaborazione operazioni stato lavorazione 1, [richiesta](4005_ex_001_req_elabora.xml), [risposta](4005_ex_001_res_elabora.xml)  
-- Es 002 - Richiesta verifica stato, [richiesta](4005_ex_002_req_verifica.xml), [risposta](4005_ex_002_res_verifica.xml)  
+- Es 002 - Richiesta verifica stato con risposta in elaborazione, [richiesta](4005_ex_002_req_verifica.xml), [risposta](4005_ex_002_res_verifica.xml)  
 - Es 003 - Richiesta elaborazione notifiche N031 stato lavorazione 9, [richiesta](4005_ex_003_req_elabora.xml), [risposta](4005_ex_003_res_elabora.xml)  
-
+- Es 004 - Richiesta verifica stato con risposta pronta, [richiesta](4005_ex_004_req_verifica.xml), [risposta](4005_ex_004_res_verifica.xml)  
 

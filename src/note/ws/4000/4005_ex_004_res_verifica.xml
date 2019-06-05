@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <a:Risposta4005 xmlns:a="http://sogei.it/ANPR/4000estrazione">
+         <a:RispostaMultipla4005>
+            <testataRisposta>
+               <idOperazioneComune>20190605004</idOperazioneComune>
+               <codMittente>040007</codMittente>
+               <codDestinatario>ANPR02</codDestinatario>
+               <operazioneRichiesta>4005</operazioneRichiesta>
+               <dataOraRichiesta>2019-06-05T08:15:40.053+02:00</dataOraRichiesta>
+               <idOperazioneANPR>303501</idOperazioneANPR>
+               <esitoOperazione>0000</esitoOperazione>
+            </testataRisposta>
+            <statoRichiesta>2</statoRichiesta>
+            <idOperazioneANPR>300286</idOperazioneANPR>
+            <dataDisponibilita>2019-04-16T00:00:00.000+02:00</dataDisponibilita>
+            <ricercaElenchiRichieste>
+               <statoLavorazione>9</statoLavorazione>
+               <operazioneRichiesta>N031</operazioneRichiesta>
+               <periodoRiferimentoRichieste>
+                  <dataOraIniziale>2016-03-01T12:15:40.053+01:00</dataOraIniziale>
+                  <dataOraFinale>2019-04-16T12:15:40.053+02:00</dataOraFinale>
+               </periodoRiferimentoRichieste>
+            </ricercaElenchiRichieste>
+            <elencoRisposte>
+				<!-- 
+				A seconda del livello di dettaglio specificato nella richiesta originaria troverete : 
+				* idOperazioneANPR, statoLavorazione, tipoOperazione : SEMPRE
+				* contenutoRichiesta : RICHIESTA, TUTTO  (Per le notifiche la richiesta non viene comunque restituita perchè non prevista).
+				* contenutoRichiesta : RISPOSTA, TUTTO
+				NOTA :  contenuto richiesta e risposta contengono l'xml della richiesta o risposta dell'operazione 
+						in chiaro (se il formato è 'xml') o compresso (se il formato è 'gz').
+			   -->
+               <idOperazioneANPR>144427</idOperazioneANPR>
+               <statoLavorazione>7</statoLavorazione>
+               <tipoOperazione>N031</tipoOperazione>
+               <contenutoRisposta>
+                  <xop:Include href="cid:0a82480d5ce584e9315fbd889b0ac28036486a2fdadeb1fb@apache.org" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+               </contenutoRisposta>
+               <formatoRisposta>gz</formatoRisposta>
+            </elencoRisposte>
+         </a:RispostaMultipla4005>
+      </a:Risposta4005>
+   </soapenv:Body>
+</soapenv:Envelope>
