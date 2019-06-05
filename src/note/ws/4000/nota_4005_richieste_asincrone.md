@@ -2,7 +2,7 @@
 
 # 4005 - richieste asincorne #
 
-Autore : mttfranci, Date: 2019-05-29, Versione : 001
+Autore : mttfranci, Date: 2019-06-05, Versione : 002
 
 Abstract : 
 Il servizio di richieste asincrone (4005) sostituisce la modalit&agrave; 'elenchi richieste' dei servizi di gestione richieste (3003) e indetificativi ANPR (3007). Il nuovo servizio prevede due modalit&agrave;. Con la prima (Elaborazione) viene inserita una richiesta di elaborazione, mentre la seconda (verifica stato) permette di verificare se la richiesta &egrave; e pronta e scaricarla.
