@@ -35,4 +35,13 @@
 	</xs:complexType>
 <!-- Fine tipoNotificheN031 -->
 
+<!-- tipoNotificheN032 -->
+	<xs:complexType name="tipoNotificheN032">
+		<xs:sequence>
+			<xs:element name="comuneRichiesta" 								type="tpdt:tipoComuneRichiesta" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiFile" 					 				type="tpdt:tipoDatiFile" 				minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoNotificheN032 -->
+
 </xs:schema>

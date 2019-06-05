@@ -39,10 +39,11 @@
 <!-- Fine tipoListaErrori -->
 
 <!-- tipoComuneRichiesta -->
-   <xs:complexType name="tipoComuneRichiesta">
-     <xs:sequence>
-		<xs:element name="errore" type="tpdt:tipoComuneRichiesta"/>
-	 </xs:sequence>
+	<xs:complexType name="tipoComuneRichiesta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoComuneRichiesta">
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 <!-- Fine tipoComuneRichiesta -->
 
@@ -126,8 +127,8 @@
 <!-- tipoIdentificativiAnpr -->
 	<xs:complexType name="tipoIdentificativiAnpr4001">
 		<xs:sequence>
-			<xs:element name="idSchedaSoggettoANPRDa" 		type="tpdt:numericoMax15" 				minOccurs="0" maxOccurs="1"/>
-			<xs:element name="idSchedaSoggettoANPRA"  		type="tpdt:numericoMax15" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoANPRDa" 		type="tpdt:tipoIdSchedaSoggettoANPR" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoANPRA"  		type="tpdt:tipoIdSchedaSoggettoANPR" 				minOccurs="0" maxOccurs="1"/>
 			<xs:element name="tipoScheda" 	          		type="tpdt:tipoScheda"   	 			minOccurs="0" maxOccurs="1"/>	
 			<xs:element name="identificativoANPRDa"   		type="tpdt:charMax20" 					minOccurs="0" maxOccurs="1"/>
 			<xs:element name="identificativoANPRA"    		type="tpdt:charMax20" 					minOccurs="0" maxOccurs="1"/>
@@ -300,9 +301,9 @@
 
 <!-- ################################################################# Fine usati in 4003 ###########################################################-->
 
-<!-- ################################################################# Inizio usati in 4003 ###########################################################-->
+<!-- ################################################################# Inizio usati in 4004 ###########################################################-->
 
-<!-- tipoDatiRichiesta4003 -->
+<!-- tipoDatiRichiesta4004 -->
 	<xs:complexType name="tipoDatiRichiesta4004">
 		<xs:sequence>
 			<xs:element name="comune"  	  		            type="tpdt:tipoComuneRichiesta"		 	   minOccurs="0" maxOccurs="1"/>
@@ -313,7 +314,149 @@
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoDatiRichiesta4004 -->
-<!-- ################################################################# Fine usati in 4003 ###########################################################-->
+<!-- ################################################################# Fine usati in 4004 ###########################################################-->
 
+
+<!-- ################################################################# Inizio usati in 4005 ###########################################################-->
+
+	<xs:simpleType name="tipoDettaglioDati">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="ID|RICHIESTA|RISPOSTA|TUTTO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoElaborazione4005">
+		<xs:sequence>
+			<xs:element name="comuneRichiesta"  					type="tipoComuneRichiesta"                          minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dettaglioDati"                        type="tipoDettaglioDati"                            minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ricercaElenchiRichieste" 				type="tipoRicercaElenchiRichieste"					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:complexType name="tipoVerificaStato4005">
+		<xs:sequence>
+			<xs:element name="idOperazioneANPR" 	    type="tpdt:tipoIdOperazioneANPR" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="progressivo"		 	    type="tpdt:numericoMax5" 					minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:complexType name="tipoDatiFornitura4005">
+		<xs:sequence>
+			<xs:element name="progressivoCorrente"		 	    type="tpdt:numericoMax5" 					minOccurs="1" maxOccurs="1"/>
+			<xs:element name="progressivoTotale"		 	    type="tpdt:numericoMax5" 					minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+<!-- tipoDatiRichiesta4005 -->
+	<xs:complexType name="tipoDatiRichiesta4005">
+		<xs:sequence>
+			<xs:element name="testataRichiesta" 					type="tipoTestataRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="elaborazione" 					type="tipoElaborazione4005" 						minOccurs="1" maxOccurs="1"/>
+				<xs:element name="verificaStato" 		type="tipoVerificaStato4005" 						minOccurs="1" maxOccurs="1"/>	
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta4005 -->
+
+	<!-- tipoRicercaSingolaRichiesta -->
+	<!-- Fine tipoRicercaSingolaRichiesta -->
+
+	<!-- tipoRicercaElenchiRichieste -->
+	<xs:complexType name="tipoRicercaElenchiRichieste">
+		<xs:sequence>
+			<xs:element name="statoLavorazione" 				type="tpdt:tipoStatoLavorazione" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="operazioneRichiesta" 				type="tpdt:charMax4"      				minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="periodoRiferimentoRichieste" 		type="tipoPeriodoRiferimento" 			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="identificativiANPR" 				type="tipoIdentificativiANPR" 			minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	<!-- Fine tipoRicercaElenchiRichieste -->
+	
+	<!-- tipoPeriodoRiferimento -->
+		<xs:complexType name="tipoPeriodoRiferimento">
+			<xs:sequence>
+				<xs:element name="dataOraIniziale" 	type="xs:dateTime" 				minOccurs="1" maxOccurs="1"/>
+				<xs:element name="dataOraFinale" 	type="xs:dateTime" 				minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>	
+		</xs:complexType>
+	<!-- Fine tipoPeriodoRiferimento -->
+	
+	<!-- tipoIdentificativiANPR -->
+	<xs:complexType name="tipoIdentificativiANPR">
+		<xs:sequence>
+			<xs:element name="protocolloANPRDa" 	type="tpdt:numericoMax30" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="protocolloANPRA"  	type="tpdt:numericoMax30" 	minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	<!-- Fine tipoIdentificativiANPR -->
+
+	<!-- tipoIdentificativiComune -->
+	<!-- Fine tipoIdentificativiComune -->
+	
+	<!-- tipoParametriProcedimenti -->
+	<!-- Fine tipoParametriProcedimenti -->
+
+	<!-- tipoProcedimentiInScadenza -->
+		<xs:complexType name="tipoProcedimentiInScadenza">
+			<xs:sequence>
+				<xs:element name="dataChiusuraIniziale"			 	type="xs:dateTime" 					minOccurs="1" maxOccurs="1"/>
+				<xs:element name="dataChiusuraFinale" 				type="xs:dateTime" 					minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>	
+		</xs:complexType>
+	<!-- Fine tipoProcedimentiInScadenza -->
+	
+	<!-- tipoParametriRicercaSoggetto -->
+	<!-- Fine tipoParametriRicercaSoggetto -->
+
+	<!-- tipoDatiSoggetto -->
+		<xs:complexType name="tipoDatiSoggetto">
+			<xs:sequence>
+				<xs:element name="codiceFiscale"
+					type="tpdt:tipoDominioCodiceFiscale" minOccurs="0" maxOccurs="1" />
+				<xs:element name="cognome"
+					type="tpdt:alfabeticoNomiCognomi" minOccurs="0" maxOccurs="1" />
+				<xs:element name="nome"
+					type="tpdt:alfabeticoNomiCognomi" minOccurs="0" maxOccurs="1" />
+				<xs:element name="datiNascitaSoggetto"
+					type="tipoDatiNascita4005" minOccurs="0" maxOccurs="1" />
+				<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR"/>
+			</xs:sequence>
+		</xs:complexType>
+	<!-- Fine tipoDatiSoggetto -->
+	
+	<!-- tipodatiRisposta4005 -->
+	<xs:complexType name="tipoDatiNascita4005">
+		<xs:sequence>
+			<xs:element name="dataEvento"     			type="xs:date" 	        			minOccurs="1" maxOccurs="1"/>		
+			<xs:element name="luogoNascita"  	    	type="tpdt:tipoLuogoNascita3000" 	minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	<!-- Fine tipodatiRisposta4005 -->
+
+
+	<xs:simpleType name="formatoType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z])*"/>
+			<xs:minLength value="2"/>
+			<xs:maxLength value="4"/>			
+		</xs:restriction>
+	</xs:simpleType>	
+
+	<!-- tipodatiRisposta4005 -->
+	<xs:complexType name="tipodatiRisposta4005">
+		<xs:sequence>
+			<xs:element name="idOperazioneANPR" 	    type="tpdt:tipoIdOperazioneANPR" 		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="statoLavorazione"     	type="tpdt:numericoMax2" 	        	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tipoOperazione"  	    	type="tpdt:tipoOperazioneRichiesta" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="contenutoRichiesta" 		type="xs:base64Binary" 	        		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="formatoRichiesta"         type="formatoType" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="contenutoRisposta" 		type="xs:base64Binary" 	        		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="formatoRisposta"          type="formatoType" 						minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	<!-- Fine tipodatiRisposta4005 -->
+
+<!-- ################################################################# Fine usati in 4005 ###########################################################-->
 
 </xs:schema>

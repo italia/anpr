@@ -220,6 +220,79 @@
 </xs:element>
 <!-- fine servizio 4004 -->
 
+<!-- servizio 4005 -->
+<xs:element name="Richiesta4005">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 		type="anpr:tipoTestataRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="elaborazione" 		type="anpr:tipoElaborazione4005" 						minOccurs="1" maxOccurs="1"/>
+				<xs:element name="verificaStato" 		type="anpr:tipoVerificaStato4005" 						minOccurs="1" maxOccurs="1"/>	
+			</xs:choice>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
 
+<xs:element name="Risposta4005">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta elenchi supporto
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4005" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- 
+		Possibili stati dell'elaborazione
+		0 - Inserita
+		1 - In elaborazione
+		2 - Completata con esito positivo
+		3 - Completata con esito negativo
+		99 - Richiesta terminata con errore
+	 -->
+	<xs:simpleType name="tipoStatoRichiesta">		
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+	</xs:simpleType>	
+
+<!-- 
+	Le sezioni valorizzate di questo elemento variano in base a cosa era stato valorizzato nella richiesta.
+	se è stato valorizzato l'elemento 
+	 	elaborazione : allora verranno valorizzati solo i primi 4 elementi e messa in coda la richiesta (lo stato di elaborazione sarà 0)
+	 	verificaStato : fino a quando lo stato di elaborazione è 1 (in elaborazione) verranno valorizzati solo i primi 4 elementi, successivamente anche gli altri.
+	NB : le'lemento dataDisponibilita è solo uno stima fino a quando l'elaborazione non è terminata. 
+-->
+<xs:element name="RispostaMultipla4005">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla Elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />
+			<xs:element name="statoRichiesta" type="tipoStatoRichiesta" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idOperazioneANPR" type="anpr:tipoIdOperazioneANPR" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataDisponibilita" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta" type="anpr:tipoComuneRichiesta" minOccurs="0" maxOccurs="1" />
+			<xs:element name="ricercaElenchiRichieste" type="anpr:tipoRicercaElenchiRichieste" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiFornitura" type="anpr:tipoDatiFornitura4005" minOccurs="0" maxOccurs="1" />				
+			<xs:element name="elencoRisposte" type="anpr:tipodatiRisposta4005" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4005 -->
 
 </xs:schema>

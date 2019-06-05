@@ -89,7 +89,7 @@
 			<xs:element name="luogoNascita" 	 					type="tpdt:tipoLuogoEvento" 			        minOccurs="1" maxOccurs="1"/>
 			<xs:element name="soggettoAIRE" 	 					type="tpdt:char1"	 				   		   	minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="idSchedaSoggettoComune" 				type="tpdt:tipoIdSchedaSoggettoComune" 		   	minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:numericoMax15"                		   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:tipoIdSchedaSoggettoANPR"                		   	minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataPrimaIscrizioneComune"            type="xs:date"                                  minOccurs="0" maxOccurs="1"/>					
 		</xs:sequence>	
 	</xs:complexType>

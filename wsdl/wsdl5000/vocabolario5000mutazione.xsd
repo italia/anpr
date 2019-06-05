@@ -516,14 +516,14 @@
     
     <xs:complexType name="tipoRispostaRettifica101">
     	<xs:sequence>
-    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:numericoMax15" minOccurs="1" maxOccurs="1"/>
+    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="1" maxOccurs="1"/>
     		<xs:element name="dataDecorrenzaResidenza" type="xs:date"></xs:element>
     	</xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="tipoRispostaRettifica102">
     	<xs:sequence>
-    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:numericoMax15" minOccurs="1" maxOccurs="1"/>
+    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="1" maxOccurs="1"/>
             <xs:element name="idMotivoIscrizione" type="tpdt:tipoMotivoIscrizione" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="note" type="tpdt:charMax240" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="provenienza" type="tpdt:tipoProvenienzaDestinazione" minOccurs="0" maxOccurs="1"/>
@@ -532,7 +532,7 @@
     
     <xs:complexType name="tipoRispostaRettifica103">
     	<xs:sequence>
-    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:numericoMax15" minOccurs="1" maxOccurs="1"/>
+    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="1" maxOccurs="1"/>
             <xs:element name="dataUltimoAggiornamentoAPR" type="xs:date" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataPrimaIscrizioneComune" type="xs:date" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="dataIngressoFamiglia" type="xs:date" minOccurs="0" maxOccurs="1"/>

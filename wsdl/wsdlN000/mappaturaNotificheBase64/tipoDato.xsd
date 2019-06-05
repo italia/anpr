@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="http://sogei.it/ANPR/tipoDato" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://sogei.it/ANPR/tipoDato" elementFormDefault="unqualified" attributeFormDefault="unqualified">
 	<!-- ######################################################  INIZIO DATI COMPLESSI ##############################################################  -->
+	
 	<!-- tipoOperazioneRichiesta -->
 	<xs:simpleType name="tipoOperazioneRichiesta">
 		<xs:restriction base="xs:string">
@@ -18,7 +19,8 @@
 	<!-- tipoDominioCodiceFiscale -->
 	<xs:simpleType name="tipoDominioCodiceFiscale">	
 		<xs:restriction base="xs:string">
-			<xs:length value="16"/>
+			<xs:minLength value="11"/>
+            <xs:maxLength value="16"/>
 			<xs:pattern value="([A-Z0-9])*"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -53,15 +55,16 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="80"/>
-			<xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/>
+			<!--  xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/-->
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Fine alfabeticoComune -->
 	<!-- tipo alfabetico della provincia -->
 	<xs:simpleType name="alfabeticoProvincia">
 		<xs:restriction base="xs:string">
-			<xs:length value="2"/>
-			<xs:pattern value="([a-zA-Z])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="2"/>
+			<!--  xs:pattern value="([a-zA-Z])*"/-->
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Fine tipo alfabetico della provincia -->
@@ -70,7 +73,7 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="100"/>
-			<xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/>
+			<!--  xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/ -->
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Fine tipo alfabetico della denominazioneToponimo -->
@@ -79,7 +82,7 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="120"/>
-			<xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/>
+			<!--xs:pattern value="([0-9À-ža-zA-Z\- &apos;/.,])*"/-->
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Fine alfanumericoLocalita massimo 120 caratteri -->
@@ -764,9 +767,14 @@
 			<xs:maxLength value="30"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="numericoMax15">
+	<xs:simpleType name="tipoIdSchedaSoggettoANPR">
 		<xs:restriction base="numerico">
-			<xs:maxLength value="15"/>
+			<xs:maxLength value="16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="numericoMax10">
+		<xs:restriction base="numerico">
+			<xs:maxLength value="10"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- fine tipi numerici a lunghezza massima -->
@@ -956,8 +964,8 @@
 	<!-- tipoDatoLocalita -->
 	<xs:complexType name="tipoDatoLocalitaEstera">
 		<xs:sequence>
-			<xs:element name="descrizioneLocalita" 				type="alfabeticoLocalitaStato"     	minOccurs="0" maxOccurs="1"/>
-			<xs:element name="descrizioneStato"    				type="alfabeticoLocalitaStato"     	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="descrizioneLocalita" 				type="alfanumerico120char"     	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="descrizioneStato"    				type="alfanumerico120char"     	minOccurs="0" maxOccurs="1"/>
 			<xs:element name="codiceStato"         				type="numerico3"               		minOccurs="1" maxOccurs="1"/>
 			<xs:element name="provinciaContea"     				type="charMax30"               		minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
@@ -1136,15 +1144,15 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- Fine tipoMatrimonio -->
+	
 	<!-- tipoVedovanza -->
 	<xs:complexType name="tipoVedovanza">
 		<xs:sequence>
-			<xs:element name="datiMorteConiuge" 	        type="tipoDatiEvento" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiMorteConiuge" 	        type="tipoDatiEventoEsteso"				minOccurs="1" maxOccurs="1"/>
 			<xs:element name="ordineMatrimonioPrecedente" 	type="numericoMax2" 					minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- Fine tipovedovanza -->
-
 
 <!-- tipoAnnullamentoMatrimonio -->
 	<xs:complexType name="tipoAnnullamentoMatrimonio">
@@ -1153,6 +1161,125 @@
 		</xs:sequence>
 	</xs:complexType>   
 <!-- Fine tipoAnnullamentoMatrimonio -->
+
+<!-- tipoConvivenzaDiFatto -->
+   <xs:complexType name="tipoConvivenzaDiFatto">
+    	<xs:sequence>
+    		<xs:element name="convivente" type="tipoGeneralitaEstese"    			minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Generalità del soggetto convivente</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="cittadinanza" type="tipoCittadinanza" minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>La cittadinanza del soggetto convivente</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="contrattoStipula" 			type="tipoDocumentoProtocollato" minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Estremi relativi al contratto con il quale viene stipulata la convivenza</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="contrattoRisoluzione"    			type="tipoRisoluzioneConvivenza" minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Estremi relativi al contratto e al motivo di risoluzione della convivenza</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="ordineConvivenza" type="numericoMax3"    			minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Numero d'ordine della convivenza (relativo al convivente cui l'oggetto di tipo tipoConvivenzaDiFatto si riferisce)</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    	</xs:sequence>
+   </xs:complexType>
+<!-- Fine tipoConvivenzaDiFatto -->
+
+<!-- tipoContrattoConvivenza -->
+    <xs:complexType name="tipoDocumentoProtocollato">
+    	<xs:sequence>
+    		<xs:element name="data" type="xs:date" minOccurs="0" maxOccurs="1">
+    		</xs:element>
+    		<xs:element name="comuneRegistrazione" type="tipoComune" minOccurs="0" maxOccurs="1"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+<!-- Fine tipoContrattoConvivenza -->
+
+<!-- tipoUnioneCivile -->
+    <xs:complexType name="tipoUnioneCivile">
+    	<xs:sequence>
+    		<xs:element name="unitoCivilmente" type="tipoGeneralitaEstese"    			minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Generalità del soggetto unito civilmente</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="attoUnione" type="tipoDatiEventoEsteso"    			minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Estremi relativi all'atto di Unione Civile</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="scioglimentoUnione" type="tipoScioglimentoUnione" minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Estremi relativi alla sentenza e al motivo di scioglimento dell'Unione Civile</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="cittadinanza" type="tipoCittadinanza"    			minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>La cittadinanza del soggetto unito civilmente</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    		<xs:element name="ordineUnione" type="numericoMax3" 				minOccurs="0" maxOccurs="1">
+    			<xs:annotation>
+		                <xs:documentation>
+		                    <p>Numero d'ordine dell'unione civile (relativo al soggetto cui l'oggetto di tipo tipoUnioneCivile si riferisce)</p>                        			
+		                </xs:documentation>
+				</xs:annotation>
+    		</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+<!-- Fine tipoUnioneCivile -->
+
+<!-- tipoScioglimentoUnione -->
+    <xs:complexType name="tipoScioglimentoUnione">
+    	<xs:sequence>
+    		<xs:element name="motivoScioglimento" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+    		<xs:element name="sentenza" type="tipoSentenza" minOccurs="0" maxOccurs="1"></xs:element>
+    		<xs:element name="datiEvento" type="tipoDatiEvento" minOccurs="0" maxOccurs="1"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+<!-- Fine tipoScioglimentoUnione -->
+
+<!-- tipoRisoluzioneConvivenza -->
+    <xs:complexType name="tipoRisoluzioneConvivenza">
+    	<xs:sequence>
+    		<xs:element name="motivoRisoluzione" type="xs:int" minOccurs="0" maxOccurs="1">
+    		</xs:element>
+    		<xs:element name="contratto"
+    			type="tipoDocumentoProtocollato" minOccurs="0" maxOccurs="1">
+    		</xs:element>
+
+    	</xs:sequence>
+    </xs:complexType>
+<!-- Fine tipoRisoluzioneConvivenza -->
+
+
 <!-- tipoCensimento -->
 	<xs:complexType name="tipoCensimento">
 		<xs:sequence>
@@ -1282,7 +1409,7 @@
 			<xs:element name="luogoNascita" 	 		type="tipoLuogoEvento" 			    minOccurs="0" maxOccurs="1"/>
 			<xs:element name="soggettoAIRE" 	 		type="charMax1"	 				   	minOccurs="0" maxOccurs="1"/>
 			<xs:element name="annoEspatrio" 	 		type="numerico4"	 				minOccurs="0" maxOccurs="1"/>					
-			<xs:element name="idSchedaSoggettoANPR" 	type="numericoMax15"               	minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="idSchedaSoggettoANPR" 	type="tipoIdSchedaSoggettoANPR"               	minOccurs="0" maxOccurs="1"/>				
 		</xs:sequence>	
 	</xs:complexType>
 	<!-- Fine tipoGeneralita -->
@@ -1330,6 +1457,15 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- Fine tipoCittadinanzaAE -->
+
+	<!-- tipoDatiFile -->
+	<xs:complexType name="tipoDatiFile">
+		<xs:sequence>
+			<xs:element name="identificativoFile" 							type="numericoMax30" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tipoFile" 									type="numericoMax10" 	minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiFile -->
 	
 	<!--######################################################  FINE OGGETTI CONDIVISI ##############################################################  -->
 </xs:schema>

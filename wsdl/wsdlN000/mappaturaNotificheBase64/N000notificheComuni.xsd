@@ -20,13 +20,18 @@
 <xs:element name="NotificaN015" type="vcbl:tipoNotificaCambioResidenza"  />
 <!-- Fine NotificaN010 -->
 
+<!-- NotificaN030 fornitura -->
+	<xs:element name="NotificaN030" type="vcbl:tipoNotificheN030" />   
+<!-- Fine NotificaN030 -->
+
 <!-- NotificaN031 subentro -->
 	<xs:element name="NotificaN031" type="vcbl:tipoNotificheN031" />
 <!-- Fine NotificaN031 -->
 
-<!-- NotificaN030 fornitura -->
-	<xs:element name="NotificaN030" type="vcbl:tipoNotificheN030" />   
-<!-- Fine NotificaN030 -->
+<!-- NotificaN032 -->
+	<xs:element name="NotificaN032" type="vcbl:tipoNotificheN032" />
+<!-- Fine NotificaN032 -->
+
 
 </xs:schema>
 	

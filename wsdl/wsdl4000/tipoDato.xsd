@@ -5,6 +5,12 @@
 		   targetNamespace="http://sogei.it/ANPR/tipoDato" 
 		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
 
+	<xs:simpleType name="tipoIdSchedaSoggettoANPR">
+		<xs:restriction base="numerico">
+			<xs:maxLength value="16"/>
+		</xs:restriction>
+	</xs:simpleType>	
+
 	<!-- tipi dati specifici -->
 	<xs:simpleType name="tipoAutorita">
 		<xs:restriction base="xs:string">
@@ -21,7 +27,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="tipoCapEstero">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9a-zA-Z\- ])*"/>
+			<xs:pattern value="([0-9a-zA-Z\-. ])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="10"/>
 		</xs:restriction>
@@ -253,7 +259,7 @@
 		<xs:restriction base="xs:string">	
 			<xs:pattern value="([0-9a-zA-Z ])*"/>
 			<xs:minLength value="1"/>
-			<xs:maxLength value="10"/>			
+			<xs:maxLength value="20"/>			
 		</xs:restriction>
 	</xs:simpleType>	
 	<xs:simpleType name="tipoLuogoEccezionale">
@@ -394,10 +400,17 @@
 			<xs:minLength value="1"/>
 			<xs:maxLength value="20"/>
 		</xs:restriction>
+	</xs:simpleType>	
+	<xs:simpleType name="tipoDenominazioneEstero">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,()&#35;&#58;])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="120"/>
+		</xs:restriction>
 	</xs:simpleType>			
 	<xs:simpleType name="tipoNumeroCivicoEstero">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9a-zA-Z\-\./ ])*"/>
+			<xs:pattern value="([0-9a-zA-Z\-\./ &#35;])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="9"/>
 		</xs:restriction>
@@ -446,7 +459,7 @@
 	</xs:simpleType>	
 	<xs:simpleType name="tipoPresso">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;.,])*"/>
+			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- ()&apos;.,])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="100"/>
 		</xs:restriction>
@@ -474,7 +487,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="tipoRigaAnnotazione">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,()])*"/>
+			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,()&#8364;])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="240"/>
 		</xs:restriction>
@@ -680,10 +693,11 @@
 	</xs:simpleType>
 <!-- tipo alfabetico dei nomi e cognomi -->	
 	<xs:simpleType name="alfabeticoNomiCognomi">
-		<xs:restriction base="alfanumericobase">
+		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="80"/>
+			<xs:pattern value="([&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;.,])*"/>
 		</xs:restriction>	
 	</xs:simpleType>
 <!-- Fine tipo alfabetico dei nomi e cognomi -->	
@@ -717,7 +731,7 @@
 <xs:simpleType name="tipoLinguaCertificato">
 		<xs:restriction base="xs:string">
 			<xs:length value="2"/>
-			<xs:pattern value="IT|DE|FR|SI"/>
+			<xs:pattern value="([a-zA-Z])*"/>
 		</xs:restriction>
 	</xs:simpleType>
 <!-- Fine tipoLinguaCertificato -->
@@ -1888,7 +1902,7 @@ Se il parametro non è compatibile con l'ambiente di riferimento il servizio ter
 <!-- tipoLocalita contiene i dati relativi a una localita -->
 	<xs:complexType name="tipoLocalita">
 		<xs:sequence>
-			<xs:element name="descrizioneLocalita" type="alfanumerico120char"     minOccurs="0" maxOccurs="1">
+			<xs:element name="descrizioneLocalita" type="alfanumericoslash120char"     minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Descrizione della località estera</xs:documentation></xs:annotation></xs:element>			
 			<xs:element name="descrizioneStato"    type="alfanumerico120char"     minOccurs="1" maxOccurs="1">
@@ -2119,15 +2133,16 @@ Se il parametro non è compatibile con l'ambiente di riferimento il servizio ter
 <!-- tipoCartaIdentita -->	
 	<xs:complexType name="tipoCartaIdentita">
 		<xs:sequence>
-			<xs:element name="numero" 				type="tipoNumeroCartaIdentita" 			minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataRilascio" 		type="xs:date" 						minOccurs="1" maxOccurs="1"/>
-			<xs:element name="cartaceaElettronica" 	type="tipoCartaceaElettronica" 		minOccurs="0" maxOccurs="1"/>
-			<xs:element name="interdizioneEspatrio" type="tipoSN1" 				 	    minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numero" 					type="tipoNumeroCartaIdentita" 			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataRilascio" 			type="xs:date" 						minOccurs="1" maxOccurs="1"/>
+			<xs:element name="cartaceaElettronica" 		type="tipoCartaceaElettronica" 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="interdizioneEspatrio" 	type="tipoSN1" 				 	    minOccurs="1" maxOccurs="1"/>
 			<xs:choice>
 				<xs:element name="comuneRilascio" 		type="tipoComune" 											/>
 				<xs:element name="consolatoRilascio" 	type="tipoConsolato" 										/>
 			</xs:choice>
-			<xs:element name="dataScadenza" 		type="xs:date" 						minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="dataScadenza" 			type="xs:date" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataAnnullamento" 		type="xs:date" 						minOccurs="0" maxOccurs="1"/>			
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoCartaIdentita -->
@@ -2446,7 +2461,7 @@ Si può indicare solo se soggettoAIRE = S</xs:documentation>
 				<xs:annotation>
 					<xs:documentation>dati identificativi del soggetto attribuiti dal comune</xs:documentation>
 				</xs:annotation></xs:element>			
-			<xs:element name="idSchedaSoggettoANPR" 				type="numericoMax15"                	   minOccurs="0" maxOccurs="1">
+			<xs:element name="idSchedaSoggettoANPR" 				type="tipoIdSchedaSoggettoANPR"                	   minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>identificativo della scheda soggetto attribuito da ANPR</xs:documentation>
 				</xs:annotation></xs:element>
@@ -2833,7 +2848,7 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
  <!-- tipoToponimoEstero -->
 				<xs:complexType name="tipoToponimoEstero">
 					<xs:sequence>			 
-						<xs:element name="denominazione" type="alfanumericoslash120char"    minOccurs="1" maxOccurs="1"/>
+						<xs:element name="denominazione" type="tipoDenominazioneEstero"    minOccurs="1" maxOccurs="1"/>
 						<xs:element name="numeroCivico"  type="tipoNumeroCivicoEstero" 			minOccurs="0" maxOccurs="1"/>
 					</xs:sequence>
 				</xs:complexType>
@@ -3204,7 +3219,7 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 			<xs:element name="unioneCivile" type="tipoUnioneCivile"
 				minOccurs="0" maxOccurs="1">
 			</xs:element>
-			<xs:element name="convivenzaDifatto" type="tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="convivenzaDiFatto" type="tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1"></xs:element>
 			<xs:element name="censimento" type="tipoCensimento"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="famigliaConvivenza"
@@ -3403,7 +3418,7 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element maxOccurs="1" minOccurs="0" name="idSchedaSoggettoANPR" type="numericoMax15">
+			<xs:element maxOccurs="1" minOccurs="0" name="idSchedaSoggettoANPR" type="tipoIdSchedaSoggettoANPR">
 				<xs:annotation>
 					<xs:documentation>identificativo della scheda soggetto attribuito
 						da ANPR

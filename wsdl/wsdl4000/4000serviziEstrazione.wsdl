@@ -36,7 +36,13 @@
 	<wsdl:message name="Risposta4004">  
 		<wsdl:part name="response" element="schema:Risposta4004"/>  
 	</wsdl:message>	
-	
+	<wsdl:message name="Richiesta4005">  
+		<wsdl:part name="request" element="schema:Richiesta4005"/>  
+	</wsdl:message>	
+	<wsdl:message name="Risposta4005">  
+		<wsdl:part name="response" element="schema:Risposta4005"/>  
+	</wsdl:message>	
+		
 	
 	<wsdl:portType name="AnprPortType4000">  
 		<wsdl:operation name="estrazione_dati_cittadini">    
@@ -55,6 +61,10 @@
 			<wsdl:input   message="tns:Richiesta4004"/>    
 			<wsdl:output  message="tns:Risposta4004" />  
 		</wsdl:operation>		
+		<wsdl:operation name="richieste_asincrone">    
+			<wsdl:input   message="tns:Richiesta4005"/>    
+			<wsdl:output  message="tns:Risposta4005" />  
+		</wsdl:operation>			
 	</wsdl:portType>
 	
 	<wsdl:binding name="AnprBinding4000" type="tns:AnprPortType4000">    
@@ -94,7 +104,16 @@
 			<wsdl:output>        
 				<wsdlsoap:body use="literal"/>      
 			</wsdl:output>   
-		</wsdl:operation>		
+		</wsdl:operation>
+		<wsdl:operation name="richieste_asincrone">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>	
 	</wsdl:binding>  
 	
 	<wsdl:service name="AnprService4000">    
