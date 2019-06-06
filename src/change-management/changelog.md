@@ -1,6 +1,19 @@
 # Changelog
 
 
+### Versione 5.4.5 (2019-06-05)
+
++ (Requirement) Pubblicazione WSDL su github (issue: [https://github.com/italia/anpr/issues/1374](https://github.com/italia/anpr/issues/1374))
+    + I wsdl verranno pubblicati su github, nel ramo [master](https://github.com/italia/anpr/tree/master/wsdl) per produzione e [develop](https://github.com/italia/anpr/tree/develop/wsdl) per test/presubentro.
+
+
++ (Requirement) Webapp - Abilitazione consultazione per comuni non subentrati
+    + Ora anche i comuni non subentrati sono abilitati alla consultazione da web application se hanno richiesto e ricevuto le smartcard.
+
++ (Requirement) Download risultato elaborazione export intero Comune (issue: [https://github.com/italia/anpr/issues/1357](https://github.com/italia/anpr/issues/1357))
+    + Ora è possibile scaricare l'export anche da webapp di ANPR, dall'area download, ma per i soli profili che hanno anche accesso all'area amministrazione del comune (vale a dire chi ha potuto effettuare la richiesta di scarico).
+
+
 ### Versione 5.4.4 (2019-05-29)
 
 + (Requirement) Ampliamento dettaglio esiti errore ricerca soggetti cancellati per altri motivi (issue: [https://github.com/italia/anpr/issues/1349](https://github.com/italia/anpr/issues/1349))
