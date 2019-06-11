@@ -1,6 +1,12 @@
 # Changelog
 
 
+### Versione 5.4.6 (2019-06-11)
+
++ (Bug) Codice anomalia EN389 - gestione errore base dati (issue: [https://github.com/italia/anpr/issues/1378](https://github.com/italia/anpr/issues/1378))
+    + Il servizio mostrava impropriamente l'eccezione della base dati. Ora il servizio viene mandato in errore in caso di anomalia base dati non gestita.
+
+
 ### Versione 5.4.5 (2019-06-05)
 
 + (Requirement) Pubblicazione WSDL su github (issue: [https://github.com/italia/anpr/issues/1374](https://github.com/italia/anpr/issues/1374))
