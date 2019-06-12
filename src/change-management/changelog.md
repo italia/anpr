@@ -6,6 +6,9 @@
 + (Bug) Codice anomalia EN389 - gestione errore base dati (issue: [https://github.com/italia/anpr/issues/1378](https://github.com/italia/anpr/issues/1378))
     + Il servizio mostrava impropriamente l'eccezione della base dati. Ora il servizio viene mandato in errore in caso di anomalia base dati non gestita.
 
++ (Requirement) Web - Indicazione del formato in pixel dei loghi nell'area amministrativa comuni
+    + Il logo dei certificati deve essere Altezza:70 pixel, Larghezza:70 pixel, quello web Altezza:56 pixel, Larghezza:40 pixel, entrambi in formato PNG, GIF o JPG
+
 
 ### Versione 5.4.5 (2019-06-05)
 
