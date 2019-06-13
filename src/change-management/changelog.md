@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.4.7 (2019-06-13)
+
++ (Bug) Estrazione 4005 generazione notifiche N031 (issue: [https://github.com/italia/anpr/issues/1386](https://github.com/italia/anpr/issues/1386))
+    + Quando non veniva specificata la tipologia di notifica richiesta poteva comparire nell'elenco anche notifiche generate per gli enti.
+
 
 ### Versione 5.4.6 (2019-06-11)
 
