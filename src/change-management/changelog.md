@@ -1,10 +1,13 @@
 # Changelog
 
-### Versione 5.4.8 (2019-06-27)
+### Versione 5.4.8 (2019-06-28)
 
 + (Bug) Errore richiesta 3003/3007 notifica N031 in caso di statolavorazione non congruente
     + in alcuni casi una richiesta con statoLavorazione on congruente poteva andare in errore.
-    
+
++ (Bug) Errore estrazione notifica N031 con richiesta singola 3003 (issue: [https://github.com/italia/anpr/issues/1412](https://github.com/italia/anpr/issues/1412))
+    + L'estrazione delle richieste N031 produceva nessun risultato in caso di richiesta singola operazione.
+
     
 ### Versione 5.4.7 (2019-06-13)
 
