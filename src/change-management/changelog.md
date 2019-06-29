@@ -2,11 +2,21 @@
 
 ### Versione 5.4.8 (2019-06-28)
 
-+ (Bug) Errore richiesta 3003/3007 notifica N031 in caso di statolavorazione non congruente
-    + in alcuni casi una richiesta con statoLavorazione on congruente poteva andare in errore.
-
 + (Bug) Errore estrazione notifica N031 con richiesta singola 3003 (issue: [https://github.com/italia/anpr/issues/1412](https://github.com/italia/anpr/issues/1412))
     + L'estrazione delle richieste N031 produceva nessun risultato in caso di richiesta singola operazione.
+
++ (Bug) Errore richiesta 3003/3007 notifica N031 in caso di statolavorazione non congruente
+    + in alcuni casi una richiesta con statoLavorazione non congruente poteva andare in errore.
+
++ (Bug) ws 6001 - certificati on line - esenzione diritti segreteria
+    + Aggiornato  il servizio 6001: richiamato utilizzando il flag on line, deve tener conto della eventuale presenza tra i dati del comune di impostazione di esenzione diritti di segreteria per certificati on line
+
++ (Bug) ANPRWEB - campo "Esenzione diritti per certificati online" e campo "diritti di segreteria" (issue: [https://github.com/italia/anpr/issues/1411](https://github.com/italia/anpr/issues/1411))
+    + Corretto il problema  nella pagina di Amministrazione: al Conferma il flag del campo in oggetto non veniva registrato in archivio.
+
++ (Requirement) Richiesta conferma upload forniture subentro in ambiente di produzione (issue: [https://github.com/italia/anpr/issues/1368](https://github.com/italia/anpr/issues/1368))
+    + In previsione della modifica delle modalità di accesso in ambiente di presubentro, verrà richiesta conferma all'utente nel momento in cui esegue l'upload delle forniture APR e AIRE.
+
 
     
 ### Versione 5.4.7 (2019-06-13)
