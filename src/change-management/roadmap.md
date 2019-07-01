@@ -1,12 +1,6 @@
 # Prossime versioni
 
 
-### Versione 5.5-RC (2019-07-01)
-
-+ (Requirement) Limitazione richieste 4005 ad un periodo massimo di un mese (issue: [https://github.com/italia/anpr/issues/1410](https://github.com/italia/anpr/issues/1410))
-    + Verrà introdotto un controllo che bloccherà le richieste per le quali il periodo di riferimento della richiesta abbia durata maggiore di 30 giorni.
-
-
 ### Versione 6.0-RC (2019-07-15)
 
 + (Requirement) Fine supporto servizio richiesta paternità maternità 3001
