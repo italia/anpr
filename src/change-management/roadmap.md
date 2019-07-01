@@ -6,9 +6,6 @@
 + (Requirement) Limitazione richieste 4005 ad un periodo massimo di un mese (issue: [https://github.com/italia/anpr/issues/1410](https://github.com/italia/anpr/issues/1410))
     + Verrà introdotto un controllo che bloccherà le richieste per le quali il periodo di riferimento della richiesta abbia durata maggiore di 30 giorni.
 
-+ (Requirement) Verifica obbligatorietà numero permesso di soggiorno da XSD (issue: [https://github.com/italia/anpr/issues/1413](https://github.com/italia/anpr/issues/1413))
-    + Adesso l'xsd verifica che il numero del permesso di soggiorno sia impostato.
-    
 
 ### Versione 6.0-RC (2019-07-15)
 
