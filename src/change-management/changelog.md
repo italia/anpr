@@ -1,5 +1,15 @@
 # Changelog
 
+
+### Versione 5.5.0 (2019-07-01)
+
++ (Requirement) Limitazione richieste 4005 ad un periodo massimo di un mese (issue: [https://github.com/italia/anpr/issues/1410](https://github.com/italia/anpr/issues/1410))
+    + Verrà introdotto un controllo che bloccherà le richieste per le quali il periodo di riferimento della richiesta abbia durata maggiore di 30 giorni.
+
++ (Bug) Rimozione colonna ID su tabella 045 del 7001 (issue: [https://github.com/italia/anpr/issues/1418](https://github.com/italia/anpr/issues/1418))
+    + La colonna ID era stata erroneamente aggiunta alla tabella 045 scaricata da servizio 7001.
+    
+
 ### Versione 5.4.8 (2019-06-28)
 
 + (Bug) Errore estrazione notifica N031 con richiesta singola 3003 (issue: [https://github.com/italia/anpr/issues/1412](https://github.com/italia/anpr/issues/1412))
@@ -18,7 +28,6 @@
     + In previsione della modifica delle modalità di accesso in ambiente di presubentro, verrà richiesta conferma all'utente nel momento in cui esegue l'upload delle forniture APR e AIRE.
 
 
-    
 ### Versione 5.4.7 (2019-06-13)
 
 + (Bug) Estrazione 4005 generazione notifiche N031 (issue: [https://github.com/italia/anpr/issues/1386](https://github.com/italia/anpr/issues/1386))
