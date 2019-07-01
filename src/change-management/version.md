@@ -1,6 +1,6 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : 5.4.8
-- Test Comuni : 5.4.8
-- Pre subentro : 5.4.8
+- Free test : 5.5.0
+- Test Comuni : 5.5.0
+- Pre subentro : 5.5.0
 - Produzione : 5.4.8
