@@ -1,6 +1,12 @@
 # Changelog
 
 
+### Versione 5.4.9 (2019-07-03)
+
++ (Bug) Verifica della denominazione traslitterata in caso di Comune di nascita con la lettera accentata (issue: [https://github.com/italia/anpr/issues/1415](https://github.com/italia/anpr/issues/1415))
+    + Se il comune di nascita conteneva un accento invece di un apostrofo, l'iscrizione poteva fallire.
+
+
 ### Versione 5.5.0 (2019-07-01)
 
 + (Requirement) Limitazione richieste 4005 ad un periodo massimo di un mese (issue: [https://github.com/italia/anpr/issues/1410](https://github.com/italia/anpr/issues/1410))
