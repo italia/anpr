@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.4.10 (2019-07-09)
+
++ (Bug) EN212 - Certificabilità convivenza
+    + A volte il diagnostico EN212 poteva essere riportato erroneamente per le convivenze.
+
++ (Bug) Correzione generazione anomalie subentro duplicate (issue: [https://github.com/italia/anpr/issues/1422](https://github.com/italia/anpr/issues/1422))
+    + In alcuni casi, per soggetti cancellati e re iscritti, potevano essere generate erroneamente troppe anomalie in fase di subentro.
+
 
 ### Versione 5.4.9 (2019-07-03)
 
