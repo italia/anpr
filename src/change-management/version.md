@@ -6,7 +6,7 @@
 - Produzione : 5.4.10
 
 
-# Versionu supportate in ogni ambiente
+# Versioni supportate in ogni ambiente
 
 - Produzione : ANPR02(attiva), ANPR01(2019-07-15)
 - Free test, Test Comuni, Presubentro : ANPR02(attiva)
