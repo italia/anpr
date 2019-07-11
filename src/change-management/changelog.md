@@ -1,5 +1,11 @@
 # Changelog
 
+### Versione 5.5.1 (2019-07-11)
+
++ (Bug) WEB - Upload file subentro - Verifica consolato di residenza
+    + Verifica al momento dell'upload del file AIRE dell'esistenza del consolato di residenza.
+    
+    
 ### Versione 5.4.10 (2019-07-09)
 
 + (Bug) EN212 - Certificabilità convivenza
