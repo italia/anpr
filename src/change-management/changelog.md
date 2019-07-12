@@ -5,7 +5,7 @@
 + (Bug) WEB - Upload file subentro - Verifica consolato di residenza
     + Verifica al momento dell'upload del file AIRE dell'esistenza del consolato di residenza.
     
-+ (Bug) Miglioramento sistema di gestione dell'anomalia EN527
++ (Bug) Miglioramento sistema di gestione dell'anomalia EN527 (issue: [https://github.com/italia/anpr/issues/1447](https://github.com/italia/anpr/issues/1447))
     + A volte il sistema diagnostico EN527 non permetteva di reperire tutte le informazioni utili a risolvere il problema
     
     
