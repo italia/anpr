@@ -12,9 +12,6 @@
 
 # Roadmap
 
-+ (Feature) Scarico massivo dati ANPR  per motivata richiesta
-    + L'intervento prevede l'automazione delle richieste di scarico massivo per motivata richiesta. Sono previsti i seguenti macroprocessi:   -       gestione della richiesta di scarico massivo per giustificato motivo; -       realizzazione di una procedura batch di estrazione massiva con innesco da richiesta approvata (cfr req 55986);  -       nuova tipologia di notifica di fine elaborazione per la comunicazione dell’unico o degli “n” identificativi di file prodotti. 
-
 + (Requirement) Accesso tramite CIE/CNS/SPID
     + Accesso all'applicazione InterrogazioneCittadino, per la consultazione dei propri dati, con CNS,CIE e credenziali SPID.
 
