@@ -2,6 +2,9 @@
 
 ### Versione 5.5.1 (2019-07-11)
 
++ (Requirement) WebApp - Modifiche segnalazione ambiente di accesso
+    + Viene ora reso più evidente l'ambiente in cui l'utente ha effettuato l'accesso (test, presubentro, produzione). Inoltre in ambiente di produzione vengono forniti dei messaggi non bloccanti sullo stato del presubentro per il comune. (l'unica situazione bloccante continua ad essere, come sempre, l'assenza del comune dal piano di subentro.
+
 + (Bug) WEB - Upload file subentro - Verifica consolato di residenza
     + Verifica al momento dell'upload del file AIRE dell'esistenza del consolato di residenza.
     
