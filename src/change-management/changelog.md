@@ -5,6 +5,9 @@
 + (Requirement) WebApp - Modifiche segnalazione ambiente di accesso
     + Viene ora reso più evidente l'ambiente in cui l'utente ha effettuato l'accesso (test, presubentro, produzione). Inoltre in ambiente di produzione vengono forniti dei messaggi non bloccanti sullo stato del presubentro per il comune. (l'unica situazione bloccante continua ad essere, come sempre, l'assenza del comune dal piano di subentro.
 
++ (Bug) Anomalia verifica idOperazioneComune già utilizzata
+    + Il servizio 4005 non verificava correttamente che n idOperazioneComune fosse già stato usato
+
 + (Bug) WebApp - Errore controllo estrazione id operazione comune da web app
     + In alcuni casi il servizio 4001 restituiva impropriamente il diagnostico EN148 da web app.
 
