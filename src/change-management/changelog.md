@@ -1,5 +1,15 @@
 # Changelog
 
+
+### Versione 5.5.2 (2019-07-24)
+
++ (Bug) Web - Validazione località estera
+    + La web app non accettava le parentesi nella località estera di nascita.
+
++ (Bug) Web - Validazione IP con zero a sinistra
+    + Il salvataggio dell'IP nell'area amministrazione non valida i numeri con degli zero a sinistra.
+
+
 ### Versione 5.5.1 (2019-07-11)
 
 + (Requirement) WebApp - Modifiche segnalazione ambiente di accesso
