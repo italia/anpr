@@ -15,6 +15,9 @@
 + (Bug) A006 Errore valorizzazione idSchedaSoggettoComune stesso comune di riferimento AIRE (issue: [https://github.com/italia/anpr/issues/1475](https://github.com/italia/anpr/issues/1475))
     + A006  Errore valorizzazione idSchedaSoggettoComune in caso di cambio di residenza all'interno dello stesso comune di riferimento AIRE     
 
++ (Bug) Anomalia configurazione comuni fittizi ambiente free test (issue: [https://github.com/italia/anpr/issues/1479](https://github.com/italia/anpr/issues/1479))
+    + Alcuni dei comuni fittizi 888* non erano configurati correttamente per poter effettuare il subentro di test.
+
 
 ### Versione 5.5.1 (2019-07-11)
 
