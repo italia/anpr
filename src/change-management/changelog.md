@@ -11,6 +11,9 @@
     
 + (Bug) Anomali Verifica esito operazione 4005 (issue: [https://github.com/italia/anpr/issues/1477](https://github.com/italia/anpr/issues/1477))
     + In alcuni casi il servizio di verifica esito richieste sincrone non restituiva il contenuto dell'elaborazione correttamente.
+    
++ (Bug) A006 Errore valorizzazione idSchedaSoggettoComune stesso comune di riferimento AIRE (issue: [https://github.com/italia/anpr/issues/1475](https://github.com/italia/anpr/issues/1475))
+    + A006  Errore valorizzazione idSchedaSoggettoComune in caso di cambio di residenza all'interno dello stesso comune di riferimento AIRE     
 
 
 ### Versione 5.5.1 (2019-07-11)
