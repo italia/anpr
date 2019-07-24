@@ -1,9 +1,9 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : 5.5.1
-- Test Comuni : 5.5.1
-- Pre subentro : 5.5.1
-- Produzione : 5.5.1
+- Free test : 5.5.2
+- Test Comuni : 5.5.2
+- Pre subentro : 5.5.2
+- Produzione : 5.5.2
 
 
 # Versioni supportate in ogni ambiente
