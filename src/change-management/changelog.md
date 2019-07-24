@@ -8,6 +8,9 @@
 
 + (Bug) Web - Validazione IP con zero a sinistra
     + Il salvataggio dell'IP nell'area amministrazione non valida i numeri con degli zero a sinistra.
+    
++ (Bug) Anomali Verifica esito operazione 4005 (issue: [https://github.com/italia/anpr/issues/1477](https://github.com/italia/anpr/issues/1477))
+    + In alcuni casi il servizio di verifica esito richieste sincrone non restituiva il contenuto dell'elaborazione correttamente.
 
 
 ### Versione 5.5.1 (2019-07-11)
