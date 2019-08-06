@@ -1,6 +1,12 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : 5.4.5
-- Test Comuni : 5.4.5
-- Pre subentro : 5.4.5
-- Produzione : 5.4.5
+- Free test : 5.5.2
+- Test Comuni : 5.5.2
+- Pre subentro : 5.5.2
+- Produzione : 5.5.2
+
+
+# Versioni supportate in ogni ambiente
+
+- Produzione : ANPR02(attiva)
+- Free test, Test Comuni, Presubentro : ANPR02(attiva)

@@ -1,6 +1,90 @@
 # Changelog
 
 
+### Versione 5.5.2 (2019-07-24)
+
++ (Bug) Web - Validazione località estera
+    + La web app non accettava le parentesi nella località estera di nascita.
+
++ (Bug) Web - Validazione IP con zero a sinistra
+    + Il salvataggio dell'IP nell'area amministrazione non valida i numeri con degli zero a sinistra.
+    
++ (Bug) Anomali Verifica esito operazione 4005 (issue: [https://github.com/italia/anpr/issues/1477](https://github.com/italia/anpr/issues/1477))
+    + In alcuni casi il servizio di verifica esito richieste sincrone non restituiva il contenuto dell'elaborazione correttamente.
+    
++ (Bug) A006 Errore valorizzazione idSchedaSoggettoComune stesso comune di riferimento AIRE (issue: [https://github.com/italia/anpr/issues/1475](https://github.com/italia/anpr/issues/1475))
+    + A006  Errore valorizzazione idSchedaSoggettoComune in caso di cambio di residenza all'interno dello stesso comune di riferimento AIRE     
+
++ (Bug) Anomalia configurazione comuni fittizi ambiente free test (issue: [https://github.com/italia/anpr/issues/1479](https://github.com/italia/anpr/issues/1479))
+    + Alcuni dei comuni fittizi 888* non erano configurati correttamente per poter effettuare il subentro di test.
+
+
+### Versione 5.5.1 (2019-07-11)
+
++ (Requirement) WebApp - Modifiche segnalazione ambiente di accesso
+    + Viene ora reso più evidente l'ambiente in cui l'utente ha effettuato l'accesso (test, presubentro, produzione). Inoltre in ambiente di produzione vengono forniti dei messaggi non bloccanti sullo stato del presubentro per il comune. (l'unica situazione bloccante continua ad essere, come sempre, l'assenza del comune dal piano di subentro.
+
++ (Bug) Anomalia verifica idOperazioneComune già utilizzata
+    + Il servizio 4005 non verificava correttamente che n idOperazioneComune fosse già stato usato
+
++ (Bug) WebApp - Errore controllo estrazione id operazione comune da web app
+    + In alcuni casi il servizio 4001 restituiva impropriamente il diagnostico EN148 da web app.
+
++ (Bug) WEB - Upload file subentro - Verifica consolato di residenza
+    + Verifica al momento dell'upload del file AIRE dell'esistenza del consolato di residenza.
+    
++ (Bug) Miglioramento sistema di gestione dell'anomalia EN527 (issue: [https://github.com/italia/anpr/issues/1447](https://github.com/italia/anpr/issues/1447))
+    + A volte il sistema diagnostico EN527 non permetteva di reperire tutte le informazioni utili a risolvere il problema
+    
+    
+### Versione 5.4.10 (2019-07-09)
+
++ (Bug) EN212 - Certificabilità convivenza
+    + A volte il diagnostico EN212 poteva essere riportato erroneamente per le convivenze.
+
++ (Bug) Correzione generazione anomalie subentro duplicate (issue: [https://github.com/italia/anpr/issues/1422](https://github.com/italia/anpr/issues/1422))
+    + In alcuni casi, per soggetti cancellati e re iscritti, potevano essere generate erroneamente troppe anomalie in fase di subentro.
+
+
+### Versione 5.4.9 (2019-07-03)
+
++ (Bug) Verifica della denominazione traslitterata in caso di Comune di nascita con la lettera accentata (issue: [https://github.com/italia/anpr/issues/1415](https://github.com/italia/anpr/issues/1415))
+    + Se il comune di nascita conteneva un accento invece di un apostrofo, l'iscrizione poteva fallire.
+
+
+### Versione 5.5.0 (2019-07-01)
+
++ (Requirement) Limitazione richieste 4005 ad un periodo massimo di un mese (issue: [https://github.com/italia/anpr/issues/1410](https://github.com/italia/anpr/issues/1410))
+    + Verrà introdotto un controllo che bloccherà le richieste per le quali il periodo di riferimento della richiesta abbia durata maggiore di 30 giorni.
+
++ (Bug) Rimozione colonna ID su tabella 045 del 7001 (issue: [https://github.com/italia/anpr/issues/1418](https://github.com/italia/anpr/issues/1418))
+    + La colonna ID era stata erroneamente aggiunta alla tabella 045 scaricata da servizio 7001.
+    
+
+### Versione 5.4.8 (2019-06-28)
+
++ (Bug) Errore estrazione notifica N031 con richiesta singola 3003 (issue: [https://github.com/italia/anpr/issues/1412](https://github.com/italia/anpr/issues/1412))
+    + L'estrazione delle richieste N031 produceva nessun risultato in caso di richiesta singola operazione.
+
++ (Bug) Errore richiesta 3003/3007 notifica N031 in caso di statolavorazione non congruente
+    + in alcuni casi una richiesta con statoLavorazione non congruente poteva andare in errore.
+
++ (Bug) ws 6001 - certificati on line - esenzione diritti segreteria
+    + Aggiornato  il servizio 6001: richiamato utilizzando il flag on line, deve tener conto della eventuale presenza tra i dati del comune di impostazione di esenzione diritti di segreteria per certificati on line
+
++ (Bug) ANPRWEB - campo "Esenzione diritti per certificati online" e campo "diritti di segreteria" (issue: [https://github.com/italia/anpr/issues/1411](https://github.com/italia/anpr/issues/1411))
+    + Corretto il problema  nella pagina di Amministrazione: al Conferma il flag del campo in oggetto non veniva registrato in archivio.
+
++ (Requirement) Richiesta conferma upload forniture subentro in ambiente di produzione (issue: [https://github.com/italia/anpr/issues/1368](https://github.com/italia/anpr/issues/1368))
+    + In previsione della modifica delle modalità di accesso in ambiente di presubentro, verrà richiesta conferma all'utente nel momento in cui esegue l'upload delle forniture APR e AIRE.
+
+
+### Versione 5.4.7 (2019-06-13)
+
++ (Bug) Estrazione 4005 generazione notifiche N031 (issue: [https://github.com/italia/anpr/issues/1386](https://github.com/italia/anpr/issues/1386))
+    + Quando non veniva specificata la tipologia di notifica richiesta poteva comparire nell'elenco anche notifiche generate per gli enti.
+
+
 ### Versione 5.4.6 (2019-06-11)
 
 + (Bug) Codice anomalia EN389 - gestione errore base dati (issue: [https://github.com/italia/anpr/issues/1378](https://github.com/italia/anpr/issues/1378))
