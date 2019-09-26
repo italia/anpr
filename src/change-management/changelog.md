@@ -1,6 +1,26 @@
 # Changelog
 
 
+### Versione 5.6.0 (2019-09-26)
+
++ (Requirement) Richieste di allineamento dati trasmesse dai Consolati
+    + Nell’applicazione WEB di ANPR è stata inserita una nuova funzionalità nella sezione “Utilità e notifiche” denominata “Richieste di allineamento dati trasmesse dai Consolati”. A partire da tale funzionalità il funzionario del Comune (sia subentrato che non subentrato) potrà ricercare le richieste di allineamento dati anagrafici e procedere all'allineamento dati
+
+### Versione 5.5.4 (2019-09-18)
+
++ (Bug) Malfunzionamento estrazione richiesta singola (issue: [https://github.com/italia/anpr/issues/1571](https://github.com/italia/anpr/issues/1571))
+    + In caso di richiesta di estrazione singola 3003, non viene restituito il risultato ma un errore EN122.
+
++ (Bug) ANPRWEB campo annotazioni 6001 simbolo euro non ammesso (issue: [https://github.com/italia/anpr/issues/1580](https://github.com/italia/anpr/issues/1580))
+    + Accettare l'inserimento del carattere € nei campi note nella richiesta di certificato dell'applicazione Web di ANPR.
+
++ (Bug) Subentro - Caricamento piano indirizzo (issue: [https://github.com/italia/anpr/issues/1339](https://github.com/italia/anpr/issues/1339))
+    + Il piano è definito di 5 caratteri ma viene troncato a 3.
+
+### Versione 5.5.3 (2019-08-08)
+
++ (Requirement) A001 e A002 controllare la presenza del tipo elettore
+
 ### Versione 5.5.2 (2019-07-24)
 
 + (Bug) Web - Validazione località estera
