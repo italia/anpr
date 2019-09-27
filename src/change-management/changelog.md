@@ -4,7 +4,7 @@
 ### Versione 5.6.0 (2019-09-26)
 
 + (Requirement) Richieste di allineamento dati trasmesse dai Consolati
-    + Nell’applicazione WEB di ANPR è stata inserita una nuova funzionalità nella sezione “Utilità e notifiche” denominata “Richieste di allineamento dati trasmesse dai Consolati”. A partire da tale funzionalità il funzionario del Comune (sia subentrato che non subentrato) potrà ricercare le richieste di allineamento dati anagrafici. Solo il comune subentrato afronte di ciascuna richiesta, potrà procedere all'allineamento dati tramite web app. Il comune non subentrato dovrà utilizzare il propio gestionale oppure l'AnagAire
+    + Nell’applicazione WEB di ANPR è stata inserita una nuova funzionalità nella sezione “Utilità e notifiche” denominata “Richieste di allineamento dati trasmesse dai Consolati”. A partire da tale funzionalità il funzionario del Comune (sia subentrato che non subentrato) potrà ricercare le richieste di allineamento dati anagrafici. Solo il comune subentrato a fronte di ciascuna richiesta, potrà procedere all'allineamento dati tramite web app. Il comune non subentrato dovrà utilizzare il propio gestionale oppure l'AnagAire
 
 ### Versione 5.5.4 (2019-09-18)
 
