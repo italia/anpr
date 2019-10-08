@@ -1,6 +1,33 @@
 # Changelog
 
 
+### Versione 5.6.2 (2019-10-08)
+
++ (Bug) Port hotfix 5.5.6 su ramo 5.6
+
+### Versione 5.5.6 (2019-10-08)
+
++ (Bug) EN493 in caso di modifica responsabile convivenza (issue: [https://github.com/italia/anpr/issues/1643](https://github.com/italia/anpr/issues/1643))
+    + In caso di mutazione responsabile convivenza a volte si attivava impropriamente il controllo EN493.
+
++ (Bug) 1010 - associazione errato responsabile convivenza (issue: [https://github.com/italia/anpr/issues/1620](https://github.com/italia/anpr/issues/1620))
+    + Risolto il bug per il servizio di iscrizione della convivenza.
+    
++ (Bug) ws 1002: errata acquisizione dati unioneCivile  (issue: [https://github.com/italia/anpr/issues/1613](https://github.com/italia/anpr/issues/1613))
+    + In presenza di sciogliemento unione poteva essere acquisito il luogo evento errato.
+    
++ (Bug) 3002 - Nella ricerca per convivenza a volte veniva restituito erroneamente la voce "Responsabile assente"
+    + Avveniva in caso venisse cercata una scheda famiglia esistente.  
+
+### Versione 5.6.1 (2019-10-01)
+
++ (Bug) Port hotfix 5.5.5 su ramo 5.6
+
+### Versione 5.5.5 (2019-10-01)
+
++ (Bug) WebApp - Validazione campo descrizione specie
+    + L'applicazione web non accetta alcuni valori validi secondo gli xsd per il campo specie.
+
 ### Versione 5.6.0 (2019-09-26)
 
 + (Requirement) Richieste di allineamento dati trasmesse dai Consolati
