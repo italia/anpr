@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.6.3 (2019-10-12)
+
++ (Bug) Gestione esiti servizi 3003/4005 (issue: [https://github.com/italia/anpr/issues/1665](https://github.com/italia/anpr/issues/1665))
+    + In alcuni casi i servizi 3003/4005 potevano portare ad un errore non gestito a causa di una non corretta gestione del meccanismo di verifica presenza idOperazioneComune ancora in stato di elaborazione.
 
 ### Versione 5.6.2 (2019-10-08)
 
