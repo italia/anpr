@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.6.4 (2019-10-15)
+
++ (Requirement) Aggiunta parentesi al tipoProvinciaContea
+    + Adesso il tipoProvinciaContea accetta anche le parentesi.
+
 ### Versione 5.6.3 (2019-10-12)
 
 + (Bug) Gestione esiti servizi 3003/4005 (issue: [https://github.com/italia/anpr/issues/1665](https://github.com/italia/anpr/issues/1665))
