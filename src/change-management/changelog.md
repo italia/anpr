@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.6.5 (2019-10-17)
+
++ (Bug) Certificazione - Stampa frazione null (issue: [https://github.com/italia/anpr/issues/1675](https://github.com/italia/anpr/issues/1675))
+    + In alcuni casi poteva essere stampata la dicitura "frazione : null" in modo erroneo.
+
 ### Versione 5.6.4 (2019-10-15)
 
 + (Requirement) Aggiunta parentesi al tipoProvinciaContea
