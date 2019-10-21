@@ -5,6 +5,9 @@
 + (Requirement) Disabilitazione servizio subentro in ambiente di produzione (issue: [https://github.com/italia/anpr/issues/1289](https://github.com/italia/anpr/issues/1289))
     + Come annunciato il servizio S001 rimane abilitato solo fino all'ambiente di presubentro.
     
++ (Requirement) Servizio 3001 disabilitato in tutti gli ambienti eccetto produzione (issue: [https://github.com/italia/anpr/issues/1289](https://github.com/italia/anpr/issues/1289))
+    + Il servizio 3001 è interrogabile ancora fino al 1 Dicembre 2019 solo in produzione.  
+    
 + (Requirement) AN-74 Web - Risoluzione disallineamenti - gestione CF rifugiati
     + La funzionalità è resa disponibile per il collegamento tra CF numerici rifugiati e CF alfanumerici con stessi dati anagrafici.  
     
