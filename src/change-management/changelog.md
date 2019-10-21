@@ -1,5 +1,14 @@
 # Changelog
 
+### Versione 5.6.6 (2019-10-21)
+
++ (Requirement) Disabilitazione servizio subentro in ambiente di produzione (issue: [https://github.com/italia/anpr/issues/1289](https://github.com/italia/anpr/issues/1289))
+    + Come annunciato il servizio S001 rimane abilitato solo fino all'ambiente di presubentro.
+    
++ (Requirement) AN-74 Web - Risoluzione disallineamenti - gestione CF rifugiati
+    + La funzionalità è resa disponibile per il collegamento tra CF numerici rifugiati e CF alfanumerici con stessi dati anagrafici.  
+    
+
 ### Versione 5.6.5 (2019-10-17)
 
 + (Bug) Certificazione - Stampa frazione null (issue: [https://github.com/italia/anpr/issues/1675](https://github.com/italia/anpr/issues/1675))
