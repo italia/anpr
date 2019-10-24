@@ -1,5 +1,11 @@
 # Changelog
 
+### Versione 5.6.7 (2019-10-25)
+
++ (Bug) Fix [2003] Anomalia EN240 (issue: [https://github.com/italia/anpr/issues/1676](https://github.com/italia/anpr/issues/1676))
+    + In alcuni casi la cancellazione non verificava correttamente l'elenco delle passate residenze.
+
+
 ### Versione 5.6.6 (2019-10-21)
 
 + (Requirement) Disabilitazione servizio subentro in ambiente di produzione (issue: [https://github.com/italia/anpr/issues/1289](https://github.com/italia/anpr/issues/1289))
