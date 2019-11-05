@@ -167,7 +167,7 @@
 	</xs:simpleType>		
 	<xs:simpleType name="tipoEstDocRiconoscimento">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9a-zA-Z. ])*"/>
+			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="40"/>
 		</xs:restriction>
@@ -473,7 +473,7 @@
 	</xs:simpleType>	
 	<xs:simpleType name="tipoProvinciaContea">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,])*"/>
+			<xs:pattern value="([0-9&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;a-zA-Z\- &apos;/.,()])*"/>
 			<xs:minLength value="1"/>
 			<xs:maxLength value="30"/>
 		</xs:restriction>
@@ -3428,6 +3428,25 @@ Tabella 6 LEGAME – SCHEDA CONVIVENZA
 			<xs:element maxOccurs="1" minOccurs="0" name="codiceConsolato" type="tipoCodiceConsolatoRilascio"/>
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:complexType name="tipoFileMeta">
+		<xs:annotation>
+			<xs:documentation>File con meta informazioni aggiunte</xs:documentation>
+			<xs:documentation>formato (obbligatorio) : , contiene la tipologia del file restituito (es. xml, csv)</xs:documentation>
+			<xs:documentation>compressione (facoltativo): se l'element risulta presente contiene il formato di compressione usato (gz, zip, 7z)</xs:documentation>
+			<xs:documentation>nome (facoltativo) : il nome del file</xs:documentation>
+			<xs:documentation>note (facoltativo) : note del file</xs:documentation>
+			<xs:documentation>contenuto (obbligatorio) : il contenuto binario del file</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="formato"  	type="charMax10"        minOccurs="1" maxOccurs="1"/>
+			<xs:element name="compressione" type="charMax10"        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nome" 		type="charMax50"        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="note" 		type="charMax100"       minOccurs="0" maxOccurs="1"/>
+			<xs:element name="contenuto"  	type="xs:base64Binary"  minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>		
+	
 	<!-- Fine tipoGeneralitaPerRicerca -->
 
 </xs:schema>
