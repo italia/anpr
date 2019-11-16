@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.6.8 (2019-11-14)
+
++ (Bug) Errore upload forniture APR / AIRE in ambienti di test / presubentro (issue: [https://github.com/italia/anpr/issues/1762](https://github.com/italia/anpr/issues/1762))
+    + Molto spesso l'upload delle forniture di subentro in ambiente di test / presubentro poteva non andare a buon fine.
+
++ (Bug) Assenza elemento formatoRichiesta nella elaborazione 4005 (issue: [https://github.com/italia/anpr/issues/1760](https://github.com/italia/anpr/issues/1760))
+    + Nella elaborazione 4005 veniva impostato solo il tag formatoRisposta ma non quello formatoRichiesta.
+
 ### Versione 5.6.7 (2019-10-25)
 
 + (Bug) Fix [2003] Anomalia EN240 (issue: [https://github.com/italia/anpr/issues/1676](https://github.com/italia/anpr/issues/1676))
