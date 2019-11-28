@@ -1,5 +1,17 @@
 # Changelog
 
+### Versione 5.6.9 (2019-11-28)
+
++ (Bug) Certificato storico di residenza - prima data iscrizione rettificata
+    + In caso di rettifica della data di iscrizione sul certificato non viene riportatata la data aggiornata 
+E' necessario quindi recuperare la data di iscrizione nel primo comune più aggiornata.
+
++ (Bug) Revoca matrimonio - non devono essere inseriti i dati  (issue: [https://github.com/italia/anpr/issues/1778](https://github.com/italia/anpr/issues/1778))
+    + In caso di revoca dati matrimonio non devono essere inseriti gli estremi del matrimonio errato.
+    
++ (Bug) Annullamento iscrizione bloccata dal coniuge (issue: [https://github.com/italia/anpr/issues/1766](https://github.com/italia/anpr/issues/1766))
+    + Risolto il problema che impediva l'annullamento di un'iscrizione a seguito di iscrizione del coniuge e di ulteriori mutazioni sul coniuge.
+
 ### Versione 5.6.8 (2019-11-14)
 
 + (Bug) Errore upload forniture APR / AIRE in ambienti di test / presubentro (issue: [https://github.com/italia/anpr/issues/1762](https://github.com/italia/anpr/issues/1762))
