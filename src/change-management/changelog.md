@@ -2,6 +2,9 @@
 
 ### Versione 5.6.9 (2019-11-28)
 
++ (Requirement) Controllo sulle date con anno superiore a 4 cifre
+    + E' stato attivato un controllo sugli XSD dei servizi affinchè non vengano accettate date con anno superiore alle 4 cifre. (il controllo è stato già attivato al momento del subentro e a breve sarà propagato anche ai servizi)..
+
 + (Bug) Certificato storico di residenza - prima data iscrizione rettificata
     + In caso di rettifica della data di iscrizione sul certificato non viene riportatata la data aggiornata 
 E' necessario quindi recuperare la data di iscrizione nel primo comune più aggiornata.
