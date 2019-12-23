@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.6.10 (2019-12-20)
+
++ (Bug) Validazione date con spazi del tracciato AIRE subentro
+    + Ora viene verificato che nelle date del tracciato AIRE non siano presenti spazi.
+
++ (Bug) Servizio 6001 - certificati residenza AIRE - stampa duplicata indirizzoi  (issue: [https://github.com/italia/anpr/issues/1828](https://github.com/italia/anpr/issues/1828))
+    + Nei certificati residenza AIRE quando è presente il territorio viene stampata 2 volte la residenza che a volte non è l'attuale.
+
 ### Versione 5.6.9 (2019-11-28)
 
 + (Requirement) Controllo sulle date con anno superiore a 4 cifre
