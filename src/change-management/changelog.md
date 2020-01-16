@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.6.11 (2020-01-15)
+
++ (Bug) Web - Decodifica posizione professionale A e B (issue: [https://github.com/italia/anpr/issues/1882](https://github.com/italia/anpr/issues/1882))
+    + La consultazione non decodificava posizione professionale A e B.
+
 ### Versione 5.6.10 (2019-12-20)
 
 + (Bug) Validazione date con spazi del tracciato AIRE subentro
