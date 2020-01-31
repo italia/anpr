@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.6.12 (2020-01-31)
+
++ (Requirement) Gestione del cambio di residenza tra diversi Comuni: controllo bloccante per procedimenti aperti (issue: [https://github.com/italia/anpr/issues/1910](https://github.com/italia/anpr/issues/1910)[https://github.com/italia/anpr/issues/1193](https://github.com/italia/anpr/issues/1193))
+    + Nel caso in cui a carico del cittadino esiste un procedimento non concluso la mutazione di residenza (sia di un singolo cittadino che della famiglia) è inibita.    
+
++ (Requirement) Escludere operazioni di sistema dallo scarico operazioni (issue: [https://github.com/italia/anpr/issues/1907](https://github.com/italia/anpr/issues/1907))
+    + Alcune operazioni di sistema di ANPR (come la 8046) venivano riportate nello scarico operazione 4005. Tali operazioni sono state rimosse perchè non di interesse del gestionale. 
+
++ (Bug) Gestione rettifica data decorrenza residenza (issue: [https://github.com/italia/anpr/issues/1893](https://github.com/italia/anpr/issues/1893))
+    + A volte la rettifica (5014) della data decorrenza residenza poteva rendere non consultabile la posizione di un soggetto prima della data decorrenza operazione.
+
 ### Versione 5.6.11 (2020-01-15)
 
 + (Bug) Web - Decodifica posizione professionale A e B (issue: [https://github.com/italia/anpr/issues/1882](https://github.com/italia/anpr/issues/1882))
