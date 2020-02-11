@@ -1,5 +1,14 @@
 # Changelog
 
+
+### Versione 5.6.13 (2020-02-11)
+
++ (Bug) Errore caricamento elenco province relative all'atto di Unione Civile (issue: [https://github.com/italia/anpr/issues/1928](https://github.com/italia/anpr/issues/1928))
+    + Se la data formazione atto viene inserita direttamente, invece di usare il calendario, viene caricato un elenco province errato (ad esempio compare Littoria al posto di Latina).
+    
++ (Bug) Servizio 6001 - Bug certificati cumulativi di contratto di convivenza (issue: [https://github.com/italia/anpr/issues/1934](https://github.com/italia/anpr/issues/1924))
+    + Il certificato cumulativo di contratto di convivenza non reperisce correttamente i dati del convivente.
+
 ### Versione 5.6.12 (2020-01-31)
 
 + (Requirement) Gestione del cambio di residenza tra diversi Comuni: controllo bloccante per procedimenti aperti (issue: [https://github.com/italia/anpr/issues/1910](https://github.com/italia/anpr/issues/1910)[https://github.com/italia/anpr/issues/1193](https://github.com/italia/anpr/issues/1193))
