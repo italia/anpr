@@ -1,5 +1,12 @@
 # Changelog
 
+### Versione 5.6.14 (2020-02-16)
+
++ (Bug) Gestione date limite cambio ora legale anomale
+    + In alcuni anni passati, il cambio ora legale non seguiva regole precise ( vedi http://toi.inrim.it/it/ienitlt.html ). In alcuni casi, a seconda del comportamento del gestionale comunale, tali date limite possono non venire interpretate correttamente (es. 1979-05-27+02:00).
+    
++ (Bug) Web - Mutazione famiglia convivenza - campo isolato
+    + Il campo isolato da web consente di inserire solo 10 caratteri mentre da servizio è possibile inserirne fino a 20. Deve essere ampliato il campo
 
 ### Versione 5.6.13 (2020-02-11)
 
