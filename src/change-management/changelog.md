@@ -2,6 +2,12 @@
 
 ### Versione 5.6.14 (2020-02-16)
 
++ (Bug) Web - Lughezza massima 80 caratteri noteCancellazione
+    + La webapp non controllava correttamente la lunghezza massima di 80 caratteri del campo note cancellazione.
+
++ (Bug) Soggetto registrato con stato nascita non valido
+    + In caso sia stato registrato un soggetto con stato di nascita non valido per la nascita (ES codiceStato 508, BERMUDA) la mutazione AIRE poteva fallire.
+    
 + (Bug) Gestione date limite cambio ora legale anomale
     + In alcuni anni passati, il cambio ora legale non seguiva regole precise ( vedi http://toi.inrim.it/it/ienitlt.html ). In alcuni casi, a seconda del comportamento del gestionale comunale, tali date limite possono non venire interpretate correttamente (es. 1979-05-27+02:00).
     
