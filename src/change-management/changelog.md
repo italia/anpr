@@ -1,5 +1,8 @@
 # Changelog
 
++ (Requirement) Stampa da web app prospetti annuali
+    + Il ws 4003 prevede l'inserimento di una richiesta  produzione di prospetti di supporto alle elaborazioni statistiche di tipo mensile o annuale. La richiesta viene elaborata in modalità asincrona, il risultato è una risposta di tipo XML di cui è possibile effettuare il download.  Dalla web app è possibile richiedere sia l'elaborazione che la stampa. La funzionalità di stampa è integrata solo per i prospetti mensili. E' necessario integrare le stampe dei prospetti annuali.
+
 ### Versione 5.6.14 (2020-02-16)
 
 + (Bug) Web - Lughezza massima 80 caratteri noteCancellazione
