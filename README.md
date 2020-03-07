@@ -20,7 +20,7 @@ Questo progetto intende raccogliere la documentazione tecnica e segnalazioni e d
 
 ### Come creare una segnalazione
 
-Creare una segnalazione in Github é molto semplice e puoi farlo direttamente dal tuo account.
+Creare una segnalazione in Github è molto semplice e puoi farlo direttamente dal tuo account.
 
 Se non hai già un account su github lo puoi creare registandoti
 [https://github.com/join?source=login](https://github.com/join?source=login) usando sia la tua mail personale che aziendale.
