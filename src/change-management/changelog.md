@@ -1,7 +1,20 @@
 # Changelog
 
+### Versione 5.6.16 (2020-03-26)
+
++ (Requirement) Ottimizzazione elaborazione richieste 4005
+    + Serie di interventi per rendere più veloce l'elaborazione delle richieste asincrone 4005.
+
++ (Bug) Web - Mutazione famiglia convivenza - campo isolato
+    + Il campo isolato da web consente di inserire solo 10 caratteri mentre da servizio è possibile inserirne fino a 20. Deve essere ampliato il campo
+
+### Versione 5.6.15 (2020-02-20)
+
 + (Requirement) Stampa da web app prospetti annuali
     + Il ws 4003 prevede l'inserimento di una richiesta  produzione di prospetti di supporto alle elaborazioni statistiche di tipo mensile o annuale. La richiesta viene elaborata in modalità asincrona, il risultato è una risposta di tipo XML di cui è possibile effettuare il download.  Dalla web app è possibile richiedere sia l'elaborazione che la stampa. La funzionalità di stampa è integrata solo per i prospetti mensili. E' necessario integrare le stampe dei prospetti annuali.
+
++ (Bug) Verifica congruenza tipo operazione da annullare
+    + Non sempre veniva verificata la congruenza tra il tipo dichiarato e il tipo reale dell'operazione che si sta tentando di annullare (in particolare in caso si provi ad annullare un subentro, la qual cosa non è permessa, il sistema poteva andare in errore)
 
 ### Versione 5.6.14 (2020-02-16)
 
