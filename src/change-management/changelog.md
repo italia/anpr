@@ -1,5 +1,17 @@
 # Changelog
 
+
+### Versione 5.7.0 (2020-03-31)
+
++ (Requirement) Fine supporto servizio richiesta paternità maternità 3001
+    + Con il rilascio della versione ANPR03 di ANPR, questo servizio sarà supportato solo per i 3 mesi di supporto alla precedente versione.
+
++ (Requirement) 5014 - Estensione risposta NRIS servizio di rettifica
+    + Vengono aggiunte le sezioni previste dagli XSD per la risposta al fine di fornire nelle NRIS le informazioni sul soggetto modificato.
+
++ (Bug) Patch scarico massivo comune in ambiente di test / presubentro
+    + In ambiente di test / presubentro le richieste massive di scarico comune potevano fallire.
+
 ### Versione 5.6.16 (2020-03-26)
 
 + (Requirement) Ottimizzazione elaborazione richieste 4005
