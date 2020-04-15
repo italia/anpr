@@ -12,6 +12,9 @@
 + (Bug) Patch scarico massivo comune in ambiente di test / presubentro
     + In ambiente di test / presubentro le richieste massive di scarico comune potevano fallire.
 
++ (Bug) 6001 - Certificato storico di residenza per soggetto cancellato nello stesso comune
+    + Se il soggetto viene cancellato e poi reiscritto nello stesso comune, può risultare impossibile emettere lo storico di residenza. 
+
 ### Versione 5.6.16 (2020-03-26)
 
 + (Requirement) Ottimizzazione elaborazione richieste 4005
