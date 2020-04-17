@@ -1,16 +1,10 @@
 # Prossime versioni
 
 
-### Versione 5.7.0-RC (2020-04-15)
+### Versione 5.8.0-RC (2020-05-07)
 
-
-+ (Requirement) Generazione risposta servizio di rettifica per le NRIS del 5014
-    + Le operazioni 5014 eseguite da web riporteranno ora le informazioni necessarie alla elaborazione delle NRIS.
-
-+ (Requirement) Fine supporto servizio richiesta paternità maternità 3001
-    + Il 3001 viene deprecato come servizio.
-
-
++ (Requirement) Web - Estensione elenco operazioni soggetto (issue: [https://github.com/italia/anpr/issues/1074](https://github.com/italia/anpr/issues/1074))
+    + Nell'applicazione web vengono incluse nell'elenco operazioni anche quelle che riguardano esclusivamente i dati della scheda famiglia (es. motivo costituzione, id famiglia attribuito dal comune). Tali operazioni, non visualizzate nella lista nella versione precedente, possono essere bloccanti ai fini degli annullamenti.
 
 
 # Roadmap
