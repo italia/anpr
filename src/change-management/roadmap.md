@@ -3,7 +3,7 @@
 
 ### Versione 5.8.0-RC (2020-05-07)
 
-+ (Requirement) 7002 - Ora viene restituito un diagnostico separato se la richiesta è ancora da elaborare
++ (Requirement) 7002 - Ora viene restituito un diagnostico separato se la richiesta è ancora da elaborare (issue: [https://github.com/italia/anpr/issues/1706](https://github.com/italia/anpr/issues/1706))
     + In precedenza il 7002 restituiva l'esito EN122 (nessun risultato trovato) anche se la richiesta era ancora in elaborazione. Ora viene restituito anche un apposito diagnostico se la richiesta è ancora in elaborazione.
 
 + (Requirement) Web - Estensione elenco operazioni soggetto (issue: [https://github.com/italia/anpr/issues/1074](https://github.com/italia/anpr/issues/1074))
