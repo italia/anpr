@@ -1,6 +1,21 @@
 # Changelog
 
 
+### Versione 5.7.1 (2020-04-22)
+
++ (Requirement) CN531 - Integrazione messaggio di errore (issue: [https://github.com/italia/anpr/issues/1917](https://github.com/italia/anpr/issues/1917))
+    + Nel messaggio di errore del controllo EN531 devono restituiti sia la denominazione del comune che ha lasciato  
+il procedimento aperto che il numero di tale procedimento. 
+
++ (Requirement) Visualizzazione stato/territorio provenienza in casi di rimpatrio da AIRE (issue: [https://github.com/italia/anpr/issues/1222](https://github.com/italia/anpr/issues/1222))
+    + Nei casi di rimpatrio di un cittadino AIRE, nell'oggetto provenienza non verrà più visualizzato il comune di iscrizione AIRE ma lo stato/territorio di provenienza
+    
++ (Requirement) Visualizzazione stato/territorio provenienza in casi di rimpatrio da AIRE (issue: [https://github.com/italia/anpr/issues/1222](https://github.com/italia/anpr/issues/1222))
+    + Nel caso di comuni non più esistenti (es. TRESIGALLO), per il luogo di nascita del coniuge scattava il controllo EC152 (bloccante) al posto di EC155 (warning).
+
++ (Bug) EC175 - Cancellazione per emigrazione in territorio (es. ARUBA) (issue: [https://github.com/italia/anpr/issues/1843](https://github.com/italia/anpr/issues/1843))
+    + Il Controllo EC175, che verifica che lo stato estero presente nell'oggetto provenienza/destinazione sia presente tra gli stati asteri, deve accettare anche i territori (2003)
+
 ### Versione 5.7.0 (2020-03-31)
 
 + (Requirement) Fine supporto servizio richiesta paternità maternità 3001
