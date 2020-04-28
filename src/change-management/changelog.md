@@ -1,6 +1,6 @@
 # Changelog
 
-### Versione 5.7.1 (2020-04-28)
+### Versione 5.7.2 (2020-04-28)
 
 + (Bug) 3002 - Anomalia ricerca per carta di identità (issue: [https://github.com/italia/anpr/issues/1818](https://github.com/italia/anpr/issues/1818))
     + Quando veniva effettuata una ricerca per cartà identità indicando contemporaneamente il nome e cognome, non veniva valutato il filtro sulla carta di identità.
