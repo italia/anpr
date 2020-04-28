@@ -1,5 +1,34 @@
 # Changelog
 
+### Versione 5.7.1 (2020-04-28)
+
++ (Bug) 3002 - Anomalia ricerca per carta di identità (issue: [https://github.com/italia/anpr/issues/1818](https://github.com/italia/anpr/issues/1818))
+    + Quando veniva effettuata una ricerca per cartà identità indicando contemporaneamente il nome e cognome, non veniva valutato il filtro sulla carta di identità.
+    
++ (Bug) ws 5005: Ripristino indirizzo ante subentro per più soggetti (codice mut.6): errore bloccante EN415 (issue: [https://github.com/italia/anpr/issues/1810](https://github.com/italia/anpr/issues/1810))
+    + Casistica simile a quella della issue #976 per il ws 5001.
+
++ (Bug) [1001] ES043 in iscrizione per nascita (issue: [https://github.com/italia/anpr/issues/2045](https://github.com/italia/anpr/issues/2045))
+    + Ora i controlli ES043 ed ES042 accennano senzacognome.
+ 
++ (Bug) Web - Errore salvataggio dati carta identità in iscrizione AIRE per altri motivi
+    + Da webapp non era possibile salvare la carta di identità nella sezione documenti del cittadino, a causa di una anomalia della validazione.
+    
++ (Bug) Web - Errore annullamento certificati cumulativi
+    + Se da web app si provava ad annullare un certificato cumulativo cercandolo per nome e cognome del soggetto l'applicazione andava in errore.   
+
++ (Bug) WEB - Lunghezza Massima numero carta di identità da 9 a 20
+    + La lunghezza massima numero carta di identità viene portata da 9 a 20 caratteri.
+
++ (Bug) Web - Data di scadenza massima carta identita' 2020
+    + La da di scadenza massima per la carta di identità era limitata a 2020 da interfaccia di selezione (date picker). Era comunque possibile impostare date superiori digitandolo direttamente nel box dell'anno.
+
++ (Bug) 5013 - Revoca dati in assenza di id soggetto anpr
+    + La revoca dati falliva se tra le generalità per ricerca non era indicato l'idsoggetto anpr.
+
++ (Bug) ws 4005 - errore 99 quando viene verificato lo stato di una operazione inesistente
+    + Il servizio 4005 generava un errore sulla verifica stato di una richiesta inesistente. Ora viene restituito un errore EN122.
+
 ### Versione 5.8.0 (2020-04-23)
 
 + (Requirement) 7002 - Ora viene restituito un diagnostico separato se la richiesta è ancora da elaborare (issue: [https://github.com/italia/anpr/issues/1706](https://github.com/italia/anpr/issues/1706))
