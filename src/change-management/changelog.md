@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.8.1 (2020-04-29)
+
++ (Bug) Integrazione version 5.7.2 su verione 5.8.1
+
 ### Versione 5.7.2 (2020-04-28)
 
 + (Bug) 3002 - Anomalia ricerca per carta di identità (issue: [https://github.com/italia/anpr/issues/1818](https://github.com/italia/anpr/issues/1818))
