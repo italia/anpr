@@ -4,6 +4,9 @@
 
 + (Bug) Integrazione version 5.7.2 su verione 5.8.1
 
++ (Bug) Validazione codice fiscale AIRE in subentro
+    + La validazione del codice fiscale nella fornitura AIRE del subentro va resa simile a quella dei soggetti APR (in particolare non verrà più accettato lo spazio nel codice fiscale).
+
 ### Versione 5.7.2 (2020-04-28)
 
 + (Bug) 3002 - Anomalia ricerca per carta di identità (issue: [https://github.com/italia/anpr/issues/1818](https://github.com/italia/anpr/issues/1818))
