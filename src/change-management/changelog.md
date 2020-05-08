@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.8.2 (2020-05-08)
+
++ (Bug) Subentro - Validazione "CODICE ISCRIZIONE AIRE" e fornitura AIRE
+    + Analogamente a quanto avviene per i soggetti APR, nel subentro non verranno più accettati id comunali del soggetto con spazi in mezzo.
+
 ### Versione 5.8.1 (2020-04-29)
 
 + (Bug) Integrazione version 5.7.2 su verione 5.8.1
