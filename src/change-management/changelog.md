@@ -1,5 +1,14 @@
 # Changelog
 
+
+### Versione 5.9.0 (2020-05-14)
+
++ (Requirement) WS [3003/3007] - estensione elenco operazioni soggetto
+    + Nel WS 3003/3007 viene data la possibilità tramite apposito parametro di includere nell'elenco operazioni anche quelle che riguardano esclusivamente i dati della scheda famiglia (es. motivo costituzione, id famiglia attribuito dal comune). Tali operazioni, non visualizzate nella lista nella versione precedente, possono essere bloccanti ai fini degli annullamenti.
+
++ (Requirement) Web - arricchimento informazioni elenco operazioni
+    + E' stato aggiunto un tooltip con informazioni aggiuntive sulle singole operazione nell'elenco operazioni della consultazione.
+
 ### Versione 5.8.2 (2020-05-08)
 
 + (Bug) Subentro - Validazione "CODICE ISCRIZIONE AIRE" e fornitura AIRE
