@@ -83,14 +83,14 @@
 				<xs:element name="senzaNome" 		 				type="tpdt:tipoSenza"                  		   	/>
 			</xs:choice>
 			<xs:element name="sesso" 		 						type="tpdt:tipoSesso" 			 	   		   	minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataNascita" 	     					type="xs:date" 	                  		  		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataNascita" 	     					type="tpdt:tipoDataAnagrafica" 	                minOccurs="1" maxOccurs="1"/>
             <xs:element name="senzaGiorno"       					type="tpdt:tipoSenza"                		   	minOccurs="0" maxOccurs="1"/>
             <xs:element name="senzaGiornoMese"   					type="tpdt:tipoSenza"                		   	minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="luogoNascita" 	 					type="tpdt:tipoLuogoEvento" 			        minOccurs="1" maxOccurs="1"/>
 			<xs:element name="soggettoAIRE" 	 					type="tpdt:char1"	 				   		   	minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="idSchedaSoggettoComune" 				type="tpdt:tipoIdSchedaSoggettoComune" 		   	minOccurs="0" maxOccurs="1"/>			
-			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:tipoIdSchedaSoggettoANPR"                		   	minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataPrimaIscrizioneComune"            type="xs:date"                                  minOccurs="0" maxOccurs="1"/>					
+			<xs:element name="idSchedaSoggettoANPR" 				type="tpdt:numericoMax15"                		   	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataPrimaIscrizioneComune"            type="tpdt:tipoDataAnagrafica"                                  minOccurs="0" maxOccurs="1"/>					
 		</xs:sequence>	
 	</xs:complexType>
 <!-- Fine tipoGeneralitaSubIscr -->
@@ -115,7 +115,7 @@
 	<xs:complexType name="tipoDatiInvio">
 		<xs:sequence>
 			<xs:element name="progressivoInvio" 					 type="tpdt:numericoMax3"	minOccurs="1" maxOccurs="1"/>
-			<xs:element name="dataEstrazione"						 type="xs:date" 	 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataEstrazione"						 type="tpdt:tipoDataAnagrafica" 	 	minOccurs="1" maxOccurs="1"/>
 			<xs:element name="numeroSchedeSoggettoInvio" 	  	 	 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
 			<xs:element name="numeroCittadiniItalianiInvio"		 	 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
 			<xs:element name="numeroIscrittiNonItalianiInvio"		 type="numericoMax9" 	 	minOccurs="1" maxOccurs="1"/>
@@ -133,7 +133,7 @@
 			<xs:element name="generalitaSubIscr"					type="tipoGeneralitaSubIscr"						 	minOccurs="1" maxOccurs="1"/>			
 			<xs:element name="statoCivile"							type="tpdt:tipoStatoCivile" 							minOccurs="0" maxOccurs="1"/>
 			<xs:element name="attributiSoggetto"					type="tpdt:tipoAttributiSoggetto" 						minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dataUltimoAggiornamento"				type="xs:date" 										 	minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="dataUltimoAggiornamento"				type="tpdt:tipoDataAnagrafica" 										 	minOccurs="0" maxOccurs="1"/>		
 			<xs:element name="motivoIscrizioneAPR"					type="tpdt:tipoMotivoIscrizione" 						minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="attoNascita"							type="tpdt:tipoAtto" 									minOccurs="0" maxOccurs="1"/>			
 			<xs:element name="cittadinanza" 						type="tpdt:tipoCittadinanza" 							minOccurs="0" maxOccurs="1"/>			
@@ -165,7 +165,7 @@
 		<xs:sequence>
 			<xs:element name="idFamConvComune"  					type="tpdt:charMax20"						minOccurs="1" maxOccurs="1"/>			
 			<xs:element name="legameSoggetto" 						type="tpdt:tipoLegameSoggetto"   	        minOccurs="1" maxOccurs="1"/>				
-			<xs:element name="dataDecorrenzaLegame"    				type="xs:date"       						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataDecorrenzaLegame"    				type="tpdt:tipoDataAnagrafica"       						minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 <!-- Fine tipoFamiglia -->

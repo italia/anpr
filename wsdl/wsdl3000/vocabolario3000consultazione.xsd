@@ -271,9 +271,19 @@
 <!-- Fine tipoProcedimentiInScadenza -->
 
 <!-- tipoParametriRicercaSoggetto -->
+	<xs:simpleType name="tipoDettaglioElenco">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="2"/>			
+		</xs:restriction>
+	</xs:simpleType>	
+<!-- Fine tipoParametriRicercaSoggetto -->
+
+<!-- tipoParametriRicercaSoggetto -->
 	<xs:complexType name="tipoParametriRicercaSoggetto">
 		<xs:sequence>
-			<xs:element name="datiSoggetto" type="tipoDatiSoggetto" minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="datiSoggetto" type="tipoDatiSoggetto" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dettaglioElenco" type="tipoDettaglioElenco" minOccurs="0" maxOccurs="1"/>			
 		</xs:sequence>	
 	</xs:complexType>
 <!-- Fine tipoParametriRicercaSoggetto -->

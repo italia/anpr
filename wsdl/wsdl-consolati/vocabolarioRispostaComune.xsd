@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolarioRispostaComune"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tpdt="http://sogei.it/ANPR/tipoDato"		   
+		   targetNamespace="http://sogei.it/ANPR/vocabolarioRispostaComune" 
+		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>
+	
+	
+<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		 <xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">				
+			</xs:extension>
+		  </xs:complexContent>
+	</xs:complexType>
+
+<!-- Fine tipoTestataRisposta -->
+
+<!-- tipoListaSoggettiVariati -->
+<xs:complexType name="tipoListaSoggettiVariati">
+	<xs:sequence>
+		<xs:element name="datiSoggetto" type="tpdt:tipoDatiSoggettiRisposta" 	minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>  
+</xs:complexType>
+<!-- fine tipoListaSoggettiVariati -->	
+
+
+<!-- tipoListaAnomalie -->
+	<xs:complexType name="tipoListaAnomalie">
+		<xs:sequence>
+			<xs:element name="anomalie"	 type="tipoAnomalie" 		minOccurs="0" maxOccurs="unbounded"/>											
+		</xs:sequence>		
+	</xs:complexType>
+<!-- Fine tipoListaAnomalie -->
+
+<!-- tipoAnomalie -->
+	<xs:complexType name="tipoAnomalie">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoErroriAnomalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoAnomalie -->
+	
+</xs:schema>
