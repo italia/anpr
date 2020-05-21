@@ -1,5 +1,12 @@
 # Changelog
 
+### Versione 5.9.1 (2020-05-21)
+
++ (Requirement) WS 5013 REVOCA DATO - ELIMINAZIONE TUTORE e CF
+    + Nel WS 5013 sono stati implementati il tipo 9 - tutore e 12 - codice fiscale non validato. L'eliminazione dei dati è possibile con le stesse regole applicate per paternità e maternità, quindi non solo a valle del subentro.
+
++ (Bug) WSDL - eliminazione restrizione tipoDataAnagrafica
+    + La validazione di molte data è stata resa più stringente e questo poteva causare problemi a chi usava il vecchio formato per la data decorrenza della testata. Solo per la data decorrenza in testata siamo tornati al tipo xs:date.
 
 ### Versione 5.9.0 (2020-05-14)
 
