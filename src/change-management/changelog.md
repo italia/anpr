@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.10.0 (2020-05-28)
+
++ (Requirement) 6001 - rimozione controllo EN181 per certificato residenza e stato di famiglia
+    + Il controllo EN181 scatta se viene richiesto qualsiasi certificato quando è presente un procedimento aperto. Tale controllo deve essere eliminato se vengono richiesti i certificati di residenza, residenza AIRE e stato di famiglia.
+
 ### Versione 5.9.1 (2020-05-21)
 
 + (Requirement) WS 5013 REVOCA DATO - ELIMINAZIONE TUTORE e CF
