@@ -1,9 +1,9 @@
 # Prossime versioni
 
-### Versione 5.9.0-RC (2020-05-28)
+### Versione 5.10.0-RC (2020-06-11)
 
-+ (Requirement) WS [3003/3007] - estensione elenco operazioni soggetto
-    + Nel WS 3003/3007 viene data la possibilità tramite apposito parametro di includere nell'elenco operazioni anche quelle che riguardano esclusivamente i dati della scheda famiglia (es. motivo costituzione, id famiglia attribuito dal comune). Tali operazioni, non visualizzate nella lista nella versione precedente, possono essere bloccanti ai fini degli annullamenti.
++ (Requirement) 6001 - rimozione controllo EN181 per certificato residenza e stato di famiglia
+    + Il controllo EN181 scatta se viene richiesto qualsiasi certificato quando è presente un procedimento aperto. Tale controllo deve essere eliminato se vengono richiesti i certificati di residenza, residenza AIRE e stato di famiglia.
 
 
 # Roadmap
