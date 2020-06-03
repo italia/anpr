@@ -3,7 +3,7 @@
 
 ### Versione 5.9.3 (2020-06-01)
 
-+ (Bug) Estrazione elenco esteso - aggiunta ultimo annullamento mutazione famiglia
++ (Requirement) Estrazione elenco esteso - aggiunta ultimo annullamento mutazione famiglia
     + A volte l'ultimo annullamento effettuato su una operazione riguardante la famiglia del soggetto poteva non comparire.
 
 ### Versione 5.10.0 (2020-05-28)
