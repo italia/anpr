@@ -1,5 +1,11 @@
 # Changelog
 
+
+### Versione 5.9.3 (2020-06-01)
+
++ (Bug) Estrazione elenco esteso - aggiunta ultimo annullamento mutazione famiglia
+    + A volte l'ultimo annullamento effettuato su una operazione riguardante la famiglia del soggetto poteva non comparire.
+
 ### Versione 5.10.0 (2020-05-28)
 
 + (Requirement) 6001 - rimozione controllo EN181 per certificato residenza e stato di famiglia (issue: [https://github.com/italia/anpr/issues/1937](https://github.com/italia/anpr/issues/1937))
