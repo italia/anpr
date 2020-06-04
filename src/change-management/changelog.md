@@ -1,6 +1,6 @@
 # Changelog
 
-### Versione 5.10.1 (2020-05-04)
+### Versione 5.10.1 (2020-06-04)
 
 + (Requirement) Integrazione patch 5.9.3 / 5.94 su ramo 5.10
 
