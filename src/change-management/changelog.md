@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.10.1 (2020-05-04)
+
++ (Requirement) Integrazione patch 5.9.3 / 5.94 su ramo 5.10
+
+### Versione 5.9.4 (2020-06-04)
+
++ (Requirement) Rimozione controllo EN494 acquisizione specie altre lingue
+    + Nell'acquisizione dell'indirizzo in altre lingue non è più obbligatorio in nessun caso acquisire la specie. (in seguito alle verifiche effettuate con i comuni bilingue tedesco)
 
 ### Versione 5.9.3 (2020-06-01)
 
