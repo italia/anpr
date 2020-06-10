@@ -2,7 +2,8 @@
 
 ### Versione 5.10.2 (2020-06-10)
 
-+ (Bug) In alcuni casi particolari la validazione del file AIRE restituiva un errore di fine riga errato.
++ (Bug) WEB - Caricamento file AIRE subentro
+    + In alcuni casi particolari la validazione del file AIRE restituiva un errore di fine riga errato.
 
 ### Versione 5.10.1 (2020-06-04)
 
