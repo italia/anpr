@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.10.2 (2020-06-10)
+
++ (Bug) In alcuni casi particolari la validazione del file AIRE restituiva un errore di fine riga errato.
+
 ### Versione 5.10.1 (2020-06-04)
 
 + (Requirement) Integrazione patch 5.9.3 / 5.94 su ramo 5.10
