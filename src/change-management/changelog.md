@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.10.4 (2020-06-17)
+
++ (Bug) WEB - Iscrizione per altri motivi di altro soggetto in elenco esteso operazioni
+    + A volte nell'elenco operazioni esteso della web app o del 3003/3007 potevano comparire iscrizioni nella stessa famiglia del soggetto.
+
 ### Versione 5.10.3 (2020-06-16)
 
 + (Bug) WEB Errata visualizzazione documenti storici - Permesso di soggiorno (issue: [https://github.com/italia/anpr/issues/2103](https://github.com/italia/anpr/issues/2103))
