@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.10.3 (2020-06-16)
+
++ (Bug) WEB Errata visualizzazione documenti storici - Permesso di soggiorno (issue: [https://github.com/italia/anpr/issues/2103](https://github.com/italia/anpr/issues/2103))
+    + Corretta visualizzazione di Documenti storici con annualità diversa e medesima numerazione.
+
++ (Bug) 7001 - Disallineamento servizio scarico tabella decodifica 2 stati esteri
+    + L'elenco degli stato esteri (tabella 2) restituito dal servizio 7001 non conteneva alcuni record presenti nella tabella ufficiale pubblicata.
+
 ### Versione 5.10.2 (2020-06-10)
 
 + (Bug) WEB - Caricamento file AIRE subentro
