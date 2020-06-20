@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.10.5 (2020-06-19)
+
++ (Bug) 7001 - Correzione tabella 2 stati esteri
+    + Il record con id 197 non compariva nello scarico. Inoltre il layout delle colonne è stato riportato a quello precedente alla patch 5.10.3
+
 ### Versione 5.10.4 (2020-06-17)
 
 + (Bug) WEB - Iscrizione per altri motivi di altro soggetto in elenco esteso operazioni
