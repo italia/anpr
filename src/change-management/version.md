@@ -1,9 +1,9 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : Patch 5.10.4
-- Test Comuni : Patch 5.10.4
-- Pre subentro : Patch 5.10.4
-- Produzione : Patch 5.10.4
+- Free test : Patch 5.10.5
+- Test Comuni : Patch 5.10.5
+- Pre subentro : Patch 5.10.5
+- Produzione : Patch 5.10.5
 
 
 # Versioni supportate in ogni ambiente
