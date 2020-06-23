@@ -5,6 +5,9 @@
 + (Requirement) 4005 - Messaggio fine validità richieste elaborate (issue: [https://github.com/italia/anpr/issues/2122](https://github.com/italia/anpr/issues/2122))
     + Il servizio 4005 ora informa quando è stat superato il termine entro il quale è possibile scaricare la richiesta (non meno di 3 mesi dalla data di produzione).
 
++ (Bug) WEB - Validazione campo frazione
+    + L'applicazione web non accetta alcuni valori validi secondo gli xsd per il campo frazione.
+
 ### Versione 5.10.5 (2020-06-19)
 
 + (Bug) 7001 - Correzione tabella 2 stati esteri
