@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.11.0 (2020-06-27)
+
++ (Requirement) A006 - Tabella di decodifica tipo mutazione AIRE (id tabella 50)
+    + Censimento tabella dei tipi mutazione AIRE (id 50).
+
 ### Versione 5.10.6 (2020-06-22)
 
 + (Requirement) 4005 - Messaggio fine validità richieste elaborate (issue: [https://github.com/italia/anpr/issues/2122](https://github.com/italia/anpr/issues/2122))
