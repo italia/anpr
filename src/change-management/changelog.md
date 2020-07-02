@@ -1,5 +1,14 @@
 # Changelog
 
+### Versione 5.10.7 (2020-07-03)
+
++ (Bug) Backport patch 5.11.1 in produzione
+
+### Versione 5.11.1 (2020-07-01)
+
++ (Bug) 3002 - Esito ricerca per famiglia a partire da codice fiscale
+    + In alcuni casi la ricerca per famiglia a partire dal codice fiscale poteva andare in errore invece di restituire il messaggio che nessuno soggetto è stato trovato.
+
 ### Versione 5.11.0 (2020-06-27)
 
 + (Requirement) A006 - Tabella di decodifica tipo mutazione AIRE (id tabella 50)
