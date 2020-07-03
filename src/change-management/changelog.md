@@ -4,6 +4,9 @@
 
 + (Bug) Backport patch 5.11.1 in produzione
 
++ (Requirement) Disponibilità funzione "Richieste di allineamento dati trasmesse dai consolati" ai comuni non subentrati (issue: [https://github.com/italia/anpr/issues/2122](https://github.com/italia/anpr/issues/2122))
+    + Viene abilitata la visualizzazione delle funzionalità di utilità e notifiche anche ai comuni non subentrati..
+
 ### Versione 5.11.1 (2020-07-01)
 
 + (Bug) 3002 - Esito ricerca per famiglia a partire da codice fiscale
