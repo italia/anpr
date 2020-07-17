@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.11.1 (2020-07-17)
+
++ (Bug) 5001 EN469 modifica testo messaggio utente (issue: [https://github.com/italia/anpr/issues/2152](https://github.com/italia/anpr/issues/2152))
+    + Il messaggio ora dovrebbe essere maggiormente di aiuto nel capire come procedere in caso di blocco.
+
 ### Versione 5.10.7 (2020-07-03)
 
 + (Bug) Backport patch 5.11.1 in produzione
