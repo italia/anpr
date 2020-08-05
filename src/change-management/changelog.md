@@ -1,6 +1,17 @@
 # Changelog
 
-### Versione 5.11.1 (2020-07-17)
+### Versione 5.11.3 (2020-07-17)
+
++ (Bug) EC056 - Anomalia in caso di alcuni diacritici nel nome comune
+    + E' stata corretta la denominazione translitterata di 16 comuni, che portava ad una anomalia anche quando il comune era corretto.
+    
++ (Bug) 2011 correzione data definizione pratica nella risposta NRIS
+    + La data definizione pratica contenuta nelle NRIS poteva essere errata.
+    
++ (Bug) 6001 - Errore in caso di idSchedaSoggettoANPR intestatario con spazi
+    + Il servizio poteva non interpretare correttamente spazi prima o dopo  l'idSchedaSoggettoANPR per cui si richiede il certificato
+    
+### Versione 5.11.2 (2020-07-17)
 
 + (Bug) 5001 EN469 modifica testo messaggio utente (issue: [https://github.com/italia/anpr/issues/2152](https://github.com/italia/anpr/issues/2152))
     + Il messaggio ora dovrebbe essere maggiormente di aiuto nel capire come procedere in caso di blocco.
