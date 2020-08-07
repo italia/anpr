@@ -2,6 +2,9 @@
 
 ### Versione 5.11.3 (2020-07-17)
 
++ (Bug) WEB - Validazione campo protocollo comune
+    + L'applicazione web non accetta alcuni valori validi secondo gli xsd per il campo protocollo comune.
+
 + (Bug) EC056 - Anomalia in caso di alcuni diacritici nel nome comune
     + E' stata corretta la denominazione translitterata di 16 comuni, che portava ad una anomalia anche quando il comune era corretto.
     
