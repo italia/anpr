@@ -2,6 +2,9 @@
 
 ### Versione 5.11.4 (2020-08-14)
 
++ (Bug) WEB - Codice Fiscale non valido per Mutazione Tutti i dati ed Eliminazione codice fiscale non validato.
+    + In precedenza un codice fiscale non valido portava al messaggio "Il campo Codice fiscale contiene dei caratteri non validi" senza possibilità di proseguire nella mutazione tutti i dati e nella eliminazione dati - codice fiscale non validato
+
 + (Bug) WEB - Richieste allineamento dai trasmesse dai consolati
     + Per i comuni non subentrati si presentava un errore nella verifica della validità del codice fiscale.
 
