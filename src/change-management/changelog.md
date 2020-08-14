@@ -1,6 +1,11 @@
 # Changelog
 
-### Versione 5.11.3 (2020-07-17)
+### Versione 5.11.4 (2020-08-14)
+
++ (Bug) WEB - Richieste allineamento dai trasmesse dai consolati
+    + Per i comuni non subentrati si presentava un errore nella verifica della validità del codice fiscale.
+
+### Versione 5.11.3 (2020-08-04)
 
 + (Bug) WEB - Validazione campo protocollo comune
     + L'applicazione web non accetta alcuni valori validi secondo gli xsd per il campo protocollo comune.
