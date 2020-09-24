@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.11.5 (2020-09-10)
+
++ (Bug) WS1002 Errore controllo CN531 in caso di re-iscrizione soggetto AIRE
+    + Il servizio di iscrizione poteva andare in errore in caso di reiscrizione di un soggetto che precedentemente era AIRE
+
 ### Versione 5.11.4 (2020-08-14)
 
 + (Bug) WEB - Codice Fiscale non valido per Mutazione Tutti i dati ed Eliminazione codice fiscale non validato.
