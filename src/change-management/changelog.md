@@ -1,5 +1,12 @@
 # Changelog
 
+### Versione 5.11.6 (2020-09-25)
+
++ (Bug) WEB - Anomalia controllo diacritici sulla scelta sindaco in amministrazione comune
+    + A volte il controllo della ricerca sindaco poteva fallire in presenza di diacritici.
+
++ (Requirement) Nel blocco dei dati cancellazione della webapp deve essere mostrata anche la decodifica del motivo cancellazione e non solo il codice. Stessa cosa nel riepilogo dei dati finale in fase di cancellazione sempre nella webapp.
+
 ### Versione 5.11.5 (2020-09-10)
 
 + (Bug) WS1002 Errore controllo CN531 in caso di re-iscrizione soggetto AIRE
