@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.11.7 (2020-10-20)
+
++ (Bug) WS6001 - CN542 - Errore 99 in assenza del legame di parentela
+    + Quando non presente il legame di parentela, in alcune situazione il servizio poteva andare in errore
+
++ (Bug) Visura anagrafica - Formattazione date permesso di soggiorno (issue: [https://github.com/italia/anpr/issues/2275](https://github.com/italia/anpr/issues/2275))
+    + Le date della sezione permesso di soggiorno non vengono formattate correttamente.
+
 ### Versione 5.11.6 (2020-09-25)
 
 + (Bug) WEB - Anomalia controllo diacritici sulla scelta sindaco in amministrazione comune
