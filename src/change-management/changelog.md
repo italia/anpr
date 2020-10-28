@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.11.8 (2020-10-28)
+
++ (Requirement) 5014- attivazione diagnostico EN527 per rettifica dati
+    + In precedenza il servizio 5014 non forniva infomrazioni diagnostiche da comunicare all'assistenza ANPR in caso di problemi.
+
 ### Versione 5.11.7 (2020-10-20)
 
 + (Bug) WS6001 - CN542 - Errore 99 in assenza del legame di parentela
