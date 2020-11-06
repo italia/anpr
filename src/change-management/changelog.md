@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.11.9 (2020-11-06)
+
++ (Bug) WS 5008 Attribuzione omocodia
+    + E' stato corretto l'errore che consentiva di modificare il codice fiscale impostando il campo gestioneCF = 2 richiesta omocodice. Tale operazione è prevista solo in assenza di codice fiscale
+
++ (Bug) WEB UPLOAD CONTRATTO CONVIVENZA
+    + E' stato corretto l'errore che non consentiva di acquisire il file relativo al contratto di convivenza dall'applicazione Web di ANPR
+    
++ (Bug) Modifica controllo EN447
+    + E' stato necessario modificare il controllo "la data di decorrenza non è congruente con la data di ingresso in famiglia del soggetto  EN 447" nel caso in cui non cambia l'intestatario (es. il marito) ma si vuole cambiare il legame di uno dei componenti la famiglia (es. da convivente a moglie) ad una data antecedente la data di ingresso dei componenti rimanenti (es. i figli)
+
 ### Versione 5.11.8 (2020-10-28)
 
 + (Requirement) 5014- attivazione diagnostico EN527 per rettifica dati
