@@ -1,6 +1,6 @@
 # Changelog
 
-### Versione 5.11.7 (2020-11-18)
+### Versione 5.11.10 (2020-11-18)
 
 + (Bug) Servizi ANPR - Gestione atto di nascita inferiore a 4 cifre
     + Per il servizio 5008 è stato aggiunto il attivato il controllo EHR69 che verifica non vengano inseriti anni atto non validi, come 0008.
