@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.11.7 (2020-11-18)
+
++ (Bug) Servizi ANPR - Gestione atto di nascita inferiore a 4 cifre
+    + Per il servizio 5008 è stato aggiunto il attivato il controllo EHR69 che verifica non vengano inseriti anni atto non validi, come 0008.
+
++ (Bug) Web - Stampa Visura anagrafica - anomalia decodifica legame di parentela soggetti AIRE (issue: [https://github.com/italia/anpr/issues/2331](https://github.com/italia/anpr/issues/2331))
+    + Corretta stampa Visura anagrafica da Web ANPR che riportava una relazione parentela errata per soggetti AIRE.
+
 ### Versione 5.11.9 (2020-11-06)
 
 + (Bug) WS 5008 Attribuzione omocodia
