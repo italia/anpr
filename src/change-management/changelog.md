@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.11.11 (2020-11-27)
+
++ (Bug) Anomalia generazione richiesta 4005 [EN148] (issue: [https://github.com/italia/anpr/issues/2359](https://github.com/italia/anpr/issues/2359))
+    + Una anomolia nell'elaborazione delle richieste poteva portare ad un errore EN148 anche quando la richiesta è effettivamente generabile.
+
 ### Versione 5.11.10 (2020-11-18)
 
 + (Bug) Servizi ANPR - Gestione atto di nascita inferiore a 4 cifre
