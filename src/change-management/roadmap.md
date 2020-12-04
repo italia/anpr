@@ -1,9 +1,6 @@
 # Prossime versioni
 
-### Versione 5.12.1 (2020-12-07)
-
-+ (Requirement) C003: scrivere la chiamata ad ae in richieste_consolati
-    + A seguito della chiamata al servizio C003 da parte dei consolati sarà possibile visualizzare, per i comuni interessati, il risultato dell'elaborazione(validazione o attribuzione cf) nella sezione "Utilità e Notifiche" -> "Richieste di allineamento dati trasmesse dai Consolati"
+### Versione 5.12.1 (2020-12-09)
 
 + (Requirement) Preferenza Stampa : Possibilità di sovrascrivere la dicitura "Comune di ..." in tutti i certificati
     + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riparata la dicitura standard "Comune di ..")
