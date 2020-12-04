@@ -5,7 +5,7 @@
 + (Requirement) Preferenza Stampa : Possibilità di sovrascrivere la dicitura "Comune di ..." in tutti i certificati
     + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riparata la dicitura standard "Comune di ..")
     
-### Versione 5.12.0 (2020-12-07)
+### Versione 5.12.0 (2020-12-09)
 
 + (Requirement) Preferenza Stampa : responsabile comunale emissione certificati online
     + E' possibile indicare una dicitura diversa rispetto al sindaco quando vengo emessi certificati online. In tal caso il nome e il cognome vengono ricavati automaticamente dall'utente usato per le invocazioni.
