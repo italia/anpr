@@ -1,5 +1,23 @@
 # Changelog
 
+### Versione 5.12.2 (2020-12-10)
+
++ (Requirement) Modifica Data Validità Cittadinanza ITALIA per AIRE da WEB (issue: [https://github.com/italia/anpr/issues/2370](https://github.com/italia/anpr/issues/2370))
+    + E' necessario consentire di far modificare la data decorrenza ITALIA per gli AIRE da web eliminando con il bottoncino rosso e poi reinserendo ITALIA con la nuova data. Questo è già possibile per le altre cittadinanze.
+
++ (Requirement) Preferenze Stampa : Possibilità di personalizzare voce "Comune di ..." relativa alla comune di residenza del soggetto (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
+    + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riportata la dicitura standard "Comune di ..")
+
+### Versione 5.12.1 (2020-12-10)
+
++ (Requirement) Preferenze Stampa : Possibilità di personalizzare l'intestazione "Comune di ..." relativa al comune di emissione del certificato (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
+    + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riparata la dicitura standard "Comune di ..")
+    
+### Versione 5.12.0 (2020-12-10)
+
++ (Requirement) Preferenza Stampa : responsabile comunale emissione certificati online (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
+    + E' possibile indicare una dicitura diversa rispetto al sindaco quando vengo emessi certificati online. In tal caso il nome e il cognome vengono ricavati automaticamente dall'utente usato per le invocazioni.
+
 ### Versione 5.11.11 (2020-11-27)
 
 + (Bug) Anomalia generazione richiesta 4005 [EN148] (issue: [https://github.com/italia/anpr/issues/2359](https://github.com/italia/anpr/issues/2359))
