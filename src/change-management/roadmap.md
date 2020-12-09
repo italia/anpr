@@ -1,20 +1,5 @@
 # Prossime versioni
 
-### Versione 5.12.1 (2020-12-10)
-
-+ (Requirement) Preferenze Stampa : Possibilità di personalizzare voce "Comune di ..." relativa alla comune di residenza del soggetto (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
-    + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riportata la dicitura standard "Comune di ..")
-
-### Versione 5.12.1 (2020-12-10)
-
-+ (Requirement) Preferenze Stampa : Possibilità di personalizzare l'intestazione "Comune di ..." relativa al comune di emissione del certificato (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
-    + La funzione si trova si trova nell'area amministrazione - Parametri utilizzati per l'emissione dei certificati (se non impostata nei certificati verrà riparata la dicitura standard "Comune di ..")
-    
-### Versione 5.12.0 (2020-12-10)
-
-+ (Requirement) Preferenza Stampa : responsabile comunale emissione certificati online (issue: [https://github.com/italia/anpr/issues/2353](https://github.com/italia/anpr/issues/2353))
-    + E' possibile indicare una dicitura diversa rispetto al sindaco quando vengo emessi certificati online. In tal caso il nome e il cognome vengono ricavati automaticamente dall'utente usato per le invocazioni.
-
 # Roadmap
 
 + (Requirement) Accesso tramite CIE/CNS/SPID
