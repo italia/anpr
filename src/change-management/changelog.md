@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.12.3 (2020-12-15)
+
++ (Bug) 6001 - errore emissione certificato soggetto senza cognome [EN148] (issue: [https://github.com/italia/anpr/issues/2384](https://github.com/italia/anpr/issues/2384))
+    + Risolto il bug per cui non era possibile emettere un certificato da Web App per un soggetto senza nom o senza cognome.
+
++ (Bug) 5008 web: errore in caso di presenza contratto di convivenza
+    + In alcuni casi la modifica di un soggetto poteva andare in errore se era presente un contratto di convivenza
+   
++ (Bug) WEB - Fix gestione risorse per performance del sistema ANPR (issue: [https://github.com/italia/anpr/issues/2388](https://github.com/italia/anpr/issues/2388))
+    + Un errato utilizzo delle risorse dell'applicazione web di ANPR portava ad un utilizzo eccessivo delle risorse, con conseguente decadimento delle prestazioni.
+
 ### Versione 5.12.2 (2020-12-10)
 
 + (Requirement) Modifica Data Validità Cittadinanza ITALIA per AIRE da WEB (issue: [https://github.com/italia/anpr/issues/2370](https://github.com/italia/anpr/issues/2370))
