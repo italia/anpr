@@ -11,6 +11,9 @@
 + (Bug) WEB - Fix gestione risorse per performance del sistema ANPR (issue: [https://github.com/italia/anpr/issues/2388](https://github.com/italia/anpr/issues/2388))
     + Un errato utilizzo delle risorse dell'applicazione web di ANPR portava ad un utilizzo eccessivo delle risorse, con conseguente decadimento delle prestazioni.
 
++ (Bug) Anomalia generazione richieste 4001
+    + In alcuni casi le richieste 4001 non venivano elaborate correttamente.
+
 ### Versione 5.12.2 (2020-12-10)
 
 + (Requirement) Modifica Data Validità Cittadinanza ITALIA per AIRE da WEB (issue: [https://github.com/italia/anpr/issues/2370](https://github.com/italia/anpr/issues/2370))
