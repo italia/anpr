@@ -1,4 +1,4 @@
 requests==2.13.0
-lxml==3.7.3
+lxml==4.6.2
 openpyxl==2.4.6
 xlrd==1.0.0
