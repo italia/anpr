@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.12.4 (2021-01-12)
+
++ (Requirement) Eliminazione controllo EN222 sul tipo certificato 12 - stato famiglia
+    + Il certificato di stato di famiglia viene emesso anche in  caso di incongruenza dei legami di parentela in quanto questi non vengono riportati sul certificato stesso. E' stato quindi eliminato il controllo EN222
+
 ### Versione 5.12.3 (2020-12-15)
 
 + (Bug) 6001 - errore emissione certificato soggetto senza cognome [EN148] (issue: [https://github.com/italia/anpr/issues/2384](https://github.com/italia/anpr/issues/2384))
