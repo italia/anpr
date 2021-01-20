@@ -1,5 +1,16 @@
 # Changelog
 
+### Versione 5.12.5 (2021-01-19)
+
++ (Requirement) Modifica messaggio diagnostico EN493 (issue: [https://github.com/italia/anpr/issues/1433](https://github.com/italia/anpr/issues/1433) [https://github.com/italia/anpr/issues/1574](https://github.com/italia/anpr/issues/1574) [https://github.com/italia/anpr/issues/2422](https://github.com/italia/anpr/issues/2422) )
+    + Il diagnostico EN493 passa da a "L'utente non dispone dei privilegi per eseguire l' operazione @"  "La ricerca non produce risultati o l'utente non dispone dei privilegi per eseguire l' operazione @ sul soggetto/famiglia".
+
++ (Bug) Prospetto statistico annuale ISTAT: incongruenze su totali ad inizio anno ed iscritti con provenienza da altri comuni
+    + Prospetto annuale: rilevate incongruenze sui cittadini ad inizio anno e sulla voce "iscritti con provenienza da altri comuni". 
+
++ (Bug) WEB - Cambio residenza soggetto proveniente da comune bilingue
+    + Per un cambio residenza in ANPR da comune bilingue a comune non bilingue, si attivava il controllo EN504.
+
 ### Versione 5.12.4 (2021-01-12)
 
 + (Requirement) Eliminazione controllo EN222 sul tipo certificato 12 - stato famiglia
