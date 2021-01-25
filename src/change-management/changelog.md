@@ -3,7 +3,7 @@
 
 ### Versione 5.12.6 (2021-01-25)
 
-+ (Requirement) Servizi 4000 Verifica valori tabella di decodifica (issue: [https://github.com/italia/anpr/issues/2443](https://github.com/italia/anpr/issues/2443) [https://github.com/italia/anpr/issues/2447](https://github.com/italia/anpr/issues/2447) )
++ (Requirement) Servizi 4000 Verifica valori tabella di decodifica (issue: [https://github.com/italia/anpr/issues/2447](https://github.com/italia/anpr/issues/2440) [https://github.com/italia/anpr/issues/2440](https://github.com/italia/anpr/issues/2443) [https://github.com/italia/anpr/issues/2447](https://github.com/italia/anpr/issues/2447) [https://github.com/italia/anpr/issues/2448](https://github.com/italia/anpr/issues/2440) )
     + Le operazioni del servizio 4000 non gestivano correttamente alcuni controlli (EC021 / EC025)
 
 ### Versione 5.12.5 (2021-01-19)
