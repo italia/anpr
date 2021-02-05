@@ -1,5 +1,8 @@
 # Changelog
 
+### Versione 5.12.7 (2021-02-05)
+
++ (Bug) WS 5008: corretto l'errore di rettifica dei dati del divorzio con presenza di successiva convivenza (issue: [https://github.com/italia/anpr/issues/2470](https://github.com/italia/anpr/issues/2470) )
 
 ### Versione 5.12.6 (2021-01-25)
 
