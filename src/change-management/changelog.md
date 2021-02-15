@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.12.8 (2021-02-10)
+
++ (Bug) WEB - Errore Abilitazione ip per utilizzo servizi
+    + Le richieste di abilitazione di nuovi IP poteva fallire. (gli ip non abilitati vanno inseriti nuovamente).
+
 ### Versione 5.12.7 (2021-02-05)
 
 + (Bug) WS 5008: corretto l'errore di rettifica dei dati del divorzio con presenza di successiva convivenza (issue: [https://github.com/italia/anpr/issues/2470](https://github.com/italia/anpr/issues/2470) )
