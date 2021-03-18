@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.12.10 (2021-03-15)
+
++ (Bug) Visura cittadino - visualizzazione date
+    + In alcuni casi le date veniva visualizzate in modo non corretto.
+
 ### Versione 5.13.0 (2021-03-01)
 
 + (Requirement) WEB - RICHIESTE DI RETTIFICA DATI TRASMESSE DAI CITTADINI
