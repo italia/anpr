@@ -2,7 +2,7 @@
 
 ### Versione 5.12.11 (2021-03-26)
 
-+ (Bug) 6001 certificati on line (issue: [https://github.com/italia/anpr/issues/2545](https://github.com/italia/anpr/issues/2545)
++ (Bug) 6001 certificati on line (issue: [https://github.com/italia/anpr/issues/2545](https://github.com/italia/anpr/issues/2545))
     + Corretto l'errore per cui, impostando nella sezione Amministrazione ->Parametri utilizzati per l'emissione dei certificati online
 Spunta su Attiva responsabile certificazione online e impostando nel campo Titolo responsabile certificazione online: L'Ufficiale d'Anagrafe
 in stampa viene riportato LUfficale dAnagrafe.
