@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.13.01 (2021-04-22)
+
++ (Bug) 6001 - Errore Certificato storico di residenza
+    + In alcuni casi veniva le residenze storiche potevano essere sbagliate.
+
+### Versione 5.12.12 (2021-04-02)
+
++ (Bug) WEB - Anomalia richieste consolati per comuni non subentrati
+    + Correzione anomalia delle richieste allineamento trasmesse dai consoloati per comuni non subentrati
+
 ### Versione 5.12.11 (2021-03-26)
 
 + (Bug) 6001 certificati on line (issue: [https://github.com/italia/anpr/issues/2545](https://github.com/italia/anpr/issues/2545))
