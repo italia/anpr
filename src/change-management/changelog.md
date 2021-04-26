@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.02 (2021-04-26)
+
++ (Bug) 4001 - Anomalia specie in forniture elenchi cittadini (issue: [https://github.com/italia/anpr/issues/2626](https://github.com/italia/anpr/issues/2626))
+    + In caso di specieFonte=1 la specie poteva non essere valorizzata nella risposta del 4001 scaricata dal 7002.
+
 ### Versione 5.13.01 (2021-04-22)
 
 + (Bug) 6001 - Errore Certificato storico di residenza
