@@ -1,11 +1,16 @@
 # Changelog
 
-### Versione 5.13.02 (2021-04-26)
+### Versione 5.13.3 (2021-05-03)
+
++ (Requirement) WEB - Amministrazione comune : Notifica richieste inviate dal cittadino
+    + Funzione di trasmissione delle notifiche via PEC e/o PEL delle richieste di rettifica trasmesse dai cittadini, disponibile ai comuni nell’Area Amministrazione.
+
+### Versione 5.13.2 (2021-04-26)
 
 + (Bug) 4001 - Anomalia specie in forniture elenchi cittadini (issue: [https://github.com/italia/anpr/issues/2626](https://github.com/italia/anpr/issues/2626))
     + In caso di specieFonte=1 la specie poteva non essere valorizzata nella risposta del 4001 scaricata dal 7002.
 
-### Versione 5.13.01 (2021-04-22)
+### Versione 5.13.1 (2021-04-22)
 
 + (Bug) 6001 - Errore Certificato storico di residenza
     + In alcuni casi veniva le residenze storiche potevano essere sbagliate.
