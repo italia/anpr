@@ -1,9 +1,12 @@
 # Changelog
 
-### Versione 5.13.3 (2021-05-03)
+### Versione 5.13.4 (2021-05-04)
 
-+ (Requirement) WEB - Amministrazione comune : Notifica richieste inviate dal cittadino
++ (Requirement) WEB - Amministrazione comune : Notifica richieste inviate dal cittadino 
     + Funzione di trasmissione delle notifiche via PEC e/o PEL delle richieste di rettifica trasmesse dai cittadini, disponibile ai comuni nell’Area Amministrazione.
+
++ (Bug) WEB - Anomalia salvataggio area amministrazione comune (issue: [https://github.com/italia/anpr/issues/2642](https://github.com/italia/anpr/issues/2642) [https://github.com/italia/anpr/issues/2643](https://github.com/italia/anpr/issues/2643))
+    + L'applicazione web di ANPR, andava in errore al momento di salvare le preferenze nell'area Amministrazione - Gestione Dati Comune.
 
 ### Versione 5.13.2 (2021-04-26)
 
