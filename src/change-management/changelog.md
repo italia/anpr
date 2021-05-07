@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.4 (2021-05-08)
+
++ (Requirement) WEB -Flusso gestione richieste cittadini - Nuovo stato irricevibile
+    + In caso di richiesta irricevibile l'ufficiale d'anagrafe può ora respingere immediatamente le richieste dei cittadini (per ora attiva solo per i comuni che partecipano alla sperimentazione delle richieste rettifiche dati)
+
 ### Versione 5.13.3 (2021-05-04)
 
 + (Requirement) WEB - Amministrazione comune : Notifica richieste inviate dal cittadino
