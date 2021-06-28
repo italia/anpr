@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.13.6 (2021-06-28)
+
++ (Requirement) Visualizzazione richieste cittadino sulla home page
+    + In caso non sia ancora pervenuta nessuan richiesta di rettifica da parte dei cittadini, l'applicazione ora veicola tale informazione con un messaggio.
+
+### Versione 5.13.5 (2021-05-26)
+
++ (Bug) La consultazione potrebbe restituire un codistat comune nascita non congruente
+    + In alcuni casi il codistat restituito dalla consultazione non era congruente rispetto alla data di nascita.
+
 ### Versione 5.13.4 (2021-05-08)
 
 + (Requirement) WEB -Flusso gestione richieste cittadini - Nuovo stato irricevibile
