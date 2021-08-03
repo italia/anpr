@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.13.7 (2021-07-08)
+
++ (Bug) 6001 - certificati in tedesco 
+    + E' stato corretto l'errore nella stampa dei certificati in lingua tedesca: la frazione nella colonna tedesca viene riportata in tale lingua
+
++ (Requirement) Estremi autorizzazione in lingua straniera
+    + E' stata aggiunta in stampa e sulla funzione di gestione dati del comune la dicitura relativa agli Estremi dell'autorizzazione rilasciata dall'Agenzia delle Entrate per la riscossione del bollo in modo virtuale,  in duplice lingua
+
 ### Versione 5.13.6 (2021-06-28)
 
 + (Requirement) Visualizzazione richieste cittadino sulla home page
