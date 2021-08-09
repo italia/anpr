@@ -1,7 +1,7 @@
 # Prossime versioni
 
-# Roadmap
+### Versione 5.14.0 (2021-10-31)
 
-+ (Requirement) Accesso tramite CIE/CNS/SPID
-    + Accesso all'applicazione InterrogazioneCittadino, per la consultazione dei propri dati, con CNS,CIE e credenziali SPID.
++ (Requirement) Web Service P000 - gestione richieste dei cittadini da Portale ANPR
+    + Cooperazione applicativa con i gestionali comunali per automatizzare la consultazione / cambiamento stati delle richieste inviata dai cittadini
 
