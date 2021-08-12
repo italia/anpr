@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.8 (2021-08-11)
+
++ (Bug) WEB - Cambio residenza soggetto con parentesi nel luogo eccezionale di nascita
+    + La web app di anpr bloccava un cambio residenza in caso di soggetto con luogo eccezionale di nascita con parentesi.
+
 ### Versione 5.13.7 (2021-07-08)
 
 + (Bug) 6001 - certificati in tedesco 
