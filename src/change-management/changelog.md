@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.9 (2021-09-06)
+
++ (Requirement) Certificati in sloveno: traduzione del bollo errata
+    + E' stato corretto una traduzione relativa al bollo in lingua slovena che ci era stato tradotta erroneamente e modificata la generazione del certificato storico di residenza per casistiche particolari (soggetto presente in ANPR, emigrato in un altro comune, per il quale non è stata fatta una mutazione residenza ma bensi' una cancellazione e una successiva iscrizione).
+
 ### Versione 5.13.8 (2021-08-11)
 
 + (Bug) WEB - Cambio residenza soggetto con parentesi nel luogo eccezionale di nascita
