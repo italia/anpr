@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.13.10 (2021-09-16)
+
++ (Bug) WEB - web: certificati prima in doppia lingua e poi monolingua (issue: [https://github.com/italia/anpr/issues/2814](https://github.com/italia/anpr/issues/2814)
+    + Nella produzione del certificato prima bilingue e poi monolingua (tramite la funzione altro certificato) il sistema produceva erroneamente un errore che è stato risolto
+
++ (Requirement) Certificati in sloveno: sistemare la formattazione
+    + Corretta la formattazione del certificato bilingue italiano sloveno relativamente alla sezione indirizzo
+
 ### Versione 5.13.9 (2021-09-06)
 
 + (Requirement) Certificati in sloveno: traduzione del bollo errata
