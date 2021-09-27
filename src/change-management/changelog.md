@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.13.11 (2021-09-27)
+
++ (Bug) WEB - Diacritici sommario richiesta cittadini PDF (issue: [https://github.com/italia/anpr/issues/2828](https://github.com/italia/anpr/issues/2828)
+    + Nel PDF di sommari delle richieste dei cittadini, alcuni diacritici potevano non essere visualizzati correttamente.
+
+### Versione 5.14.0 (2021-09-24)
+
++ (Requirement) Web Service P000 - gestione richieste dei cittadini da Portale ANPR (issue: [https://github.com/italia/anpr/issues/2765](https://github.com/italia/anpr/issues/2765)
+    + Cooperazione applicativa con i gestionali comunali per automatizzare la consultazione / cambiamento stati delle richieste inviata dai cittadini
+
 ### Versione 5.13.10 (2021-09-16)
 
 + (Bug) WEB - web: certificati prima in doppia lingua e poi monolingua (issue: [https://github.com/italia/anpr/issues/2814](https://github.com/italia/anpr/issues/2814)
