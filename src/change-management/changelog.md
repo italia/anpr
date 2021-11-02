@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.12 (2021-10-17)
+
++ (Bug) [italia/anpr] [6001] anomalia in certificazione soggetti residenti (issue: [https://github.com/italia/anpr/issues/2858](https://github.com/italia/anpr/issues/2858))
+    + In alcuni casi particolari poteva venire mostrato uno dei precedenti comuni di residenza del soggetto come responsabile dei dati del cittadino (in particolare se sul comune in questione era attiva la personalizzazione del nome).
+
 ### Versione 5.13.11 (2021-09-27)
 
 + (Bug) WEB - Diacritici sommario richiesta cittadini PDF (issue: [https://github.com/italia/anpr/issues/2828](https://github.com/italia/anpr/issues/2828))
