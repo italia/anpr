@@ -3,7 +3,7 @@
 - Free test : Patch 5.14.0
 - Test Comuni : Patch 5.14.0
 - Pre subentro : Patch 5.14.0
-- Produzione : Patch 5.13.12
+- Produzione : Patch 5.13.13
 
 
 # Versioni supportate in ogni ambiente
