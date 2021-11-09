@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.13.13 (2021-11-09)
+
++ (Bug) 4005 - Esclusione operazioni 6001 dal risultato (issue: [https://github.com/italia/anpr/issues/2905](https://github.com/italia/anpr/issues/2905))
+    + Ora il servizio 4005 non restituisce più le operazioni di certificazione 6001 quando invocato senza filtro per operazione.
+
 ### Versione 5.13.12 (2021-10-17)
 
 + (Bug) [italia/anpr] [6001] anomalia in certificazione soggetti residenti (issue: [https://github.com/italia/anpr/issues/2858](https://github.com/italia/anpr/issues/2858))
