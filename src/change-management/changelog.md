@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.14.1 (2021-11-22)
+
++ (Requirement) 4005 - Integrazione patch 5.13.15 su ramo 5.14
+
 ### Versione 5.13.13 (2021-11-09)
 
 + (Bug) 4005 - Esclusione operazioni 6001 dal risultato (issue: [https://github.com/italia/anpr/issues/2905](https://github.com/italia/anpr/issues/2905))
