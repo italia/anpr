@@ -1,5 +1,9 @@
 # Changelog
 
+### Versione 5.15.0 (2021-12-29)
+
++ (Requirement) Web Service P000 - gestione dichiarazioni cambio residenza dei cittadini da Portale ANPR
+
 ### Versione 5.14.1 (2021-11-22)
 
 + (Requirement) 4005 - Integrazione patch 5.13.15 su ramo 5.14
