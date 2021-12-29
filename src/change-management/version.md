@@ -1,8 +1,8 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : Patch 5.14.1
-- Test Comuni : Patch 5.14.1
-- Pre subentro : Patch 5.14.1
+- Free test : Minor version 5.15.0
+- Test Comuni : Minor version 5.15.0
+- Pre subentro : Minor version 5.15.0
 - Produzione : Patch 5.14.1
 
 
