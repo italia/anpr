@@ -1,5 +1,15 @@
 # Changelog
 
+### Versione 5.15.2 (2022-02-11)
+
++ (Bug) Errore visualizzazione riepilogo dichiarazione cambio residenza web app
+    + Nella web app, il riepilogo delle dichiarazini di residenza non mostrava correttamente i dati dei cittadini che si spostano insieme al richiedente (nella versione html, la versione pdf era funzionante).
+
+### Versione 5.15.1 (2022-01-27)
+
++ (Bug) controllo EN248
+    + Risolto il bug per cui il controllo EN248 scattava anche se il CF indicato nella mutazione non era più utilizzato 
+
 ### Versione 5.15.0 (2021-12-29)
 
 + (Requirement) Web Service P000 - gestione dichiarazioni cambio residenza dei cittadini da Portale ANPR
