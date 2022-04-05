@@ -1,5 +1,23 @@
 # Changelog
 
+### Versione 5.15.5 (2022-04-05)
+
++ (Bug) Invio pec notifica richieste portale cittadini
+    + A volte le notifiche di cambio stato di rettifiche e cambio residenza non veniva inviate quando era stata indicata una PEC.
+
++ (Requirement) Notifiche - Gestione rinnovo certificati CO-9999
+    + gestione sostituzione certificati Comunali CO-9999 che sono in scadenza con CO-9998, per crittografia notifiche verso endpoint Comunali.
+
+### Versione 5.15.4 (2022-03-08)
+
++ (Bug) [ws P002] Dettagli Richieste - Allegati: Formato File (issue: [https://github.com/italia/anpr/issues/3200](https://github.com/italia/anpr/issues/3200))
+    + Correzione gestione formato file dei P002
+
+### Versione 5.15.3 (2022-02-16)
+
++ (Bug) Email / PEC notifica richieste cittadino superiore ai 50 caratteri
+    + Nella sezione amministrazione, gestione dati comune, della web app, non era possibile indicare Email / PEC di noficia richieste dei cittadini con lunghezza superiore ai 50 caratteri.
+
 ### Versione 5.15.2 (2022-02-11)
 
 + (Bug) Errore visualizzazione riepilogo dichiarazione cambio residenza web app
