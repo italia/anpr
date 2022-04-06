@@ -2,6 +2,9 @@
 
 ### Versione 5.15.5 (2022-04-05)
 
++ (Bug) Visualizzazione componenti, versione PDF dichiarazioni cambio residenza
+    + In alcuni casi la versione PDF non mostra i componenti aggiuntivi della richiesta.
+
 + (Bug) Invio pec notifica richieste portale cittadini
     + A volte le notifiche di cambio stato di rettifiche e cambio residenza non veniva inviate quando era stata indicata una PEC.
 
