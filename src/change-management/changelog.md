@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.15.6 (2022-04-29)
+
++ (Bug) Web: Allineamento codice fiscale da 11 cifre in Entrate
+    + Non era consentito il collegamento tra CF numerico e alfanumerico in caso di cittadino nato in Italia
+
 ### Versione 5.15.5 (2022-04-05)
 
 + (Bug) Visualizzazione componenti, versione PDF dichiarazioni cambio residenza
