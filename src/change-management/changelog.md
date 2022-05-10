@@ -1,5 +1,13 @@
 # Changelog
 
+### Versione 5.15.7 (2022-05-10)
+
++ (Requirement) Web: Disabilitata ricerca iniziale richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
+    + Al fine di limitare il carico sul sistema è stato per ora inibilita la ricerca iniziale di default delle richieste dei cittadini (va effettuata esplicitamente).
+
++ (Requirement) Web: Disabilitazione contatori richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
+    + Al fine di limitare il carico sul sistema è stato per ora rimossa la dashboard con i contatori delle richieste dei cittadini sulla home page.
+
 ### Versione 5.15.6 (2022-04-29)
 
 + (Bug) Web: Allineamento codice fiscale da 11 cifre in Entrate
