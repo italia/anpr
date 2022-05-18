@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 5.15.8 (2022-05-17)
+
++ (Bug) Web: Riabilitazione campo residenza e conteggi ricerca richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
+    + Il campo residenza deell'elenco richieste cittadini e i conteggi delle richieste inviate sono stati ripristinati. Contestualmente è stato rimosso il campo email del cittadino, sempre dall'elenco.
+
 ### Versione 5.15.7 (2022-05-10)
 
 + (Requirement) Web: rimozione campo residenza ricerca richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
