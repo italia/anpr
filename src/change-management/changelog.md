@@ -1,5 +1,29 @@
 # Changelog
 
+### Versione 6.0.4 (2022-12-12)
+
++ (Bug) Liste elettorari: ricerca soggetto cancellato
+    + Mutazione liste elettorali: è stata aggiunta la possibilità di aggiornare la lista elettorale anche per un soggetto cancellato
+
+### Versione 6.0.3 (2022-11-30)
+
++ (Requirement) Aggiunti controlli al servizio 5010 - liste elettorali
+
+### Versione 6.0.2 (2022-09-20)
+
++ (Bug) 1001: traslitterazione frazione verso ae
+    + Nel 1001 in alcuni casi c'era una errata tralitterazione della frazione nell'invio dei dati ad Agenzia entrate.
+
+### Versione 6.0.1 (2022-09-03)
+
++ (Bug) 2011: risposta con datiiscrizioneaire senza che il soggetto sia aire
+    + A volte il 2011 poteva restituire i dati iscrizione aire anche per soggetti non aire.
+
+### Versione 6.0.0 (2022-09-01)
+
++ (Requirement) Rilascio liste elettorali
+    + Le liste elettorali sono richiamabili con il codice destintario ANPR03
+
 ### Versione 5.15.8 (2022-05-17)
 
 + (Bug) Web: Riabilitazione campo residenza e conteggi ricerca richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
