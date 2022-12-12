@@ -1,12 +1,15 @@
 # Versione rilasciata in ogni ambiente
 
-- Free test : Minor version 5.15.7
-- Test Comuni : Minor version 5.15.7
-- Pre subentro : Minor version 5.15.7
-- Produzione : Patch 5.15.7
+- Test Comuni : Minor version 7.0.0
+- Produzione : Patch 6.0.4
 
 
 # Versioni supportate in ogni ambiente
 
-- Produzione : ANPR02(attiva)
-- Free test, Test Comuni, Presubentro : ANPR02(attiva)
+- Produzione : ANPR03(attiva)
+- Test comuni : ANPR04(attiva)
+
+# Ambienti non più supportati
+
+- Free test è stato dismesso a giugno 2022
+- Presubentro, essendo terminati subentri, sarà attivo fino al 31 Dicembre 2022, ma non ne viene garantito l'allineamento.
