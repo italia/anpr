@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 7.0.0 (2022-11-30) (issue: [https://github.com/italia/anpr/issues/3625](https://github.com/italia/anpr/issues/3625))
+
++ (Requirement) Rilascio atto ANSC per ANPR
+    + Il nuovo tipo verrà trattato se viene indicato il codDestintario ANPR04
+
 ### Versione 6.0.4 (2022-12-12)
 
 + (Bug) Liste elettorari: ricerca soggetto cancellato
@@ -34,7 +39,7 @@
 + (Requirement) Web: rimozione campo residenza ricerca richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
     + Al fine di migliorare le prestazione delal ricerca, il campo residenza viene rimosso dal risultato sintetico delle richieste dei cittadini.  (2022-05-12)
 
-+ (Bug) Web: performance Export CSV richieste cittadino (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
++ (Bug) Web: performance Export (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))CSV richieste cittadino (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
     + L'esport CSV delle richieste del cittadino poteva portare a dei timeout, specialmente per i comuni più popolosi. (2022-05-11)
 
 + (Requirement) Web: Disabilitata ricerca iniziale richieste cittadini (issue: [https://github.com/italia/anpr/issues/3366](https://github.com/italia/anpr/issues/3366))
