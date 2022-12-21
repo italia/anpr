@@ -1,14 +1,19 @@
 # Changelog
 
-### Versione 7.0.0 (2022-11-30) (issue: [https://github.com/italia/anpr/issues/3625](https://github.com/italia/anpr/issues/3625))
+### Versione 6.0.5 (2022-12-20)
 
-+ (Requirement) Rilascio atto ANSC per ANPR
-    + Il nuovo tipo verrà trattato se viene indicato il codDestintario ANPR04
++ (Requirement) 5008: tipo mutazione 5 liste: bloccare in caso di primo caricamento
+    + Per i soggetti per i quali sono stati inseriti i nuovi dati delle liste elettorali verrà inibito il 5008 per la mutazione delle stesse.
 
 ### Versione 6.0.4 (2022-12-12)
 
 + (Bug) Liste elettorari: ricerca soggetto cancellato
     + Mutazione liste elettorali: è stata aggiunta la possibilità di aggiornare la lista elettorale anche per un soggetto cancellato
+
+### Versione 7.0.0 (2022-11-30) (issue: [https://github.com/italia/anpr/issues/3625](https://github.com/italia/anpr/issues/3625))
+
++ (Requirement) Rilascio atto ANSC per ANPR
+    + Il nuovo tipo verrà trattato se viene indicato il codDestintario ANPR04
 
 ### Versione 6.0.3 (2022-11-30)
 
