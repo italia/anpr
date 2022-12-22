@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 7.0.1 (2022-12-22) (issue: [https://github.com/italia/anpr/issues/3705](https://github.com/italia/anpr/issues/3705))
+
++ (Requirement) Integrazione patch 6.0.5 su ramo 7.0
+    + Le hotfix attualmente presenti in produzione sono state riportate anche sulla versione 7.0 di ANPR.
+
 ### Versione 6.0.5 (2022-12-20)
 
 + (Requirement) 5008: tipo mutazione 5 liste: bloccare in caso di primo caricamento
