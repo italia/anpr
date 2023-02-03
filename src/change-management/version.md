@@ -1,12 +1,12 @@
 # Versione rilasciata in ogni ambiente
 
-- Test Comuni : Minor version 7.0.2
-- Produzione : Patch 6.0.5
+- Test Comuni : Minor version 7.0.3
+- Produzione : Patch 7.0.3
 
 
 # Versioni supportate in ogni ambiente
 
-- Produzione : ANPR03(attiva)
+- Produzione : ANPR04(attiva)
 - Test comuni : ANPR04(attiva)
 
 # Ambienti non più supportati

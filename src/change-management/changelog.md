@@ -1,11 +1,18 @@
 # Changelog
 
+### Versione 7.0.3 (2023-02-02)
+
++ (Requirement) Liste elettorali: mev dec_collegi, bilinguismo e scarico
+    + Gestione Bilinguismo: nella mutazione sezione è possibile inserire l'indirizzo e la denominazione della sezione in altra lingua e consultarlo con il servizio di consultazione 3002.
++ (Bug) Aggiornamento Web Service P000 - Gestione richieste dei cittadini da Portale ANPR (issue: [https://github.com/italia/anpr/issues/3587](https://github.com/italia/anpr/issues/3587) [https://github.com/italia/anpr/issues/3603](https://github.com/italia/anpr/issues/3603) [https://github.com/italia/anpr/issues/3608](https://github.com/italia/anpr/issues/3608) [https://github.com/italia/anpr/issues/3620](https://github.com/italia/anpr/issues/3620))
+    + Viene inserita l’informazione soggettoAIRE (Y/N) per P002 e aggiornato formato del campo note per P003. (vedi in particolare issue #3731)
+   
 ### Versione 7.0.2 (2023-01-22)
 
 + (Requirement) Web App Consultazione AE per dati anagrafici
     + La consultazione AE permette ora anche l'interrogazione per dati anagrafici. Sono sempre obbligatori COGNOME, NOME e SESSO oltre a uno tra data di nascita e range di anni di nascita.
-+ (Bug) Aggiornamento Web Service P000 - Gestione richieste dei cittadini da Portale ANPR (issue: [https://github.com/italia/anpr/issues/3587](https://github.com/italia/anpr/issues/3587) [https://github.com/italia/anpr/issues/3603](https://github.com/italia/anpr/issues/3603) [https://github.com/italia/anpr/issues/3608](https://github.com/italia/anpr/issues/3608) [https://github.com/italia/anpr/issues/3620](https://github.com/italia/anpr/issues/3620))
-    + Viene inserita l’informazione soggettoAIRE (Y/N) per P002 e aggiornato formato del campo note per P003. (vedi in particolare issue #3731)
++ (Bug) Web App produzione: atti di stato civile non visibili (issue: [https://github.com/italia/anpr/issues/3760](https://github.com/italia/anpr/issues/3760) [https://github.com/italia/anpr/issues/3753](https://github.com/italia/anpr/issues/3753))
+    + Gli atti di stato civile dalla web app non era più visualizzabili.
 
 ### Versione 7.0.1 (2022-12-22)
 
