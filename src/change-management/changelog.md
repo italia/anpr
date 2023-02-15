@@ -1,5 +1,10 @@
 # Changelog
 
+### Versione 7.0.4 (2023-02-08)
+
++ (Bug) ws 5008: tipo mutazione 20  
+    + Il ws 5008 tipo mutazione 20 deve essere utilizzato per "completare" l'iscrizione del cittadino inviando ulteriori dati afferenti allo stesso; non deve in alcun modo modificare i dati anagrafici del cittadino. 
+
 ### Versione 7.0.3 (2023-02-02)
 
 + (Requirement) Liste elettorali: mev dec_collegi, bilinguismo e scarico
