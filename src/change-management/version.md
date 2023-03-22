@@ -1,7 +1,7 @@
 # Versione rilasciata in ogni ambiente
 
-- Test Comuni : Minor version 7.0.4
-- Produzione : Patch 7.0.4
+- Test Comuni : Minor version 7.1.1
+- Produzione : Patch 7.1.1
 
 
 # Versioni supportate in ogni ambiente

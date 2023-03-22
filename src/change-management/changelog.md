@@ -1,5 +1,18 @@
 # Changelog
 
+### Versione 7.1.1 (2023-03-07)
+
++ (Bug) webapp: upload liste elettorali con refresh pagina e certificati
+    + Controllo della presenza della data decorrenza su ws 5010 e 5011. Vietato l'upload massivo di due liste elettorali. Per i certificati elettorali, in caso di elettore a N, lo stesso non viene prodotto.
+
+### Versione 7.1.0 (2023-02-27)
+
++ (Requirement) Domicilio Digitale Webapp e ws P000
+    + Gestione Domicilio Digitale: Il servizio è attualmente in sperimentazione per un numero ristretto di utenti il cui domicilio digitale viene trasmesso da INAD a ANPR
+Per tali utenti le comunicazioni relative alle pratiche di richiesta di rettifica e dichiarazioni di residenza vengono trasmesse al domicilio digitale. In caso di richiesta di un certificato, gli stessi utenti possono scegliere di riceverlo al domicilio digitale eletto su INAD.
+ws P000 viene inserita l’informazione del domicilio digitale tra i <recapiti> associati alla pratica identificato con idTipologiaRecapito=5
+
+
 ### Versione 7.0.4 (2023-02-08)
 
 + (Bug) ws 5008: tipo mutazione 20  
