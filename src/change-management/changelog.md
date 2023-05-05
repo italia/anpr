@@ -1,5 +1,20 @@
 # Changelog
 
+## Versione 8.0.0 (2023-05-05)
+
++ (Requirement) Identificativo Unico Nazionale (DECRETO 3 marzo 2023)
+    + Viene reso disponibile il nuovo ID ANPR, come previsto dal decreto [ID ANPR, DECRETO 3 marzo 2023](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2023-04-18&atto.codiceRedazionale=23A02326&elenco30giorni=false)
+  
++ (Requirement) Notifiche eventi di stato civile
+    + Sono rese disponibili le notifiche relative agli eventi (atti) provenienti dal nuovo Archivio Nazionale informatizzato dei registri dello Stato Civile (ANSC), nei casi in cui sia prevista la registrazione anagrafica.
+
++ (Requirement) Limite ricerca operazioni e notifiche a 180 giorni
+    + Con la major versione 8 (ANPR05) la ricerca delle operazioni e delle notifiche dai servizi come il 4005 viene limitata agli ultimi 180 giorni. Sarà ancora possibile ricercare periodi precedenti indicando le versioni di anpr 7 o inferiore (fino ad ANPR04). Dal 15 Gennaio 2024 anche la web app imporrà tale limitazione (ad esempio sull'accesso alle notifiche o i dettagli delle operazioni dei soggetti).
+    
++ (Requirement) Adeguamento Web App ANPR per gestione nuovo identificativo ATTI digitali 
+    + Per i servizi di ANPR di Iscrizione, Iscrizione AIRE (per nascita e altri motivi), mutazione, Cancellazione per decesso, Consultazione, Emissione carta identità, sono state adeguate le sezioni ATTO.
+    
+
 ### Versione 7.1.1 (2023-03-07)
 
 + (Bug) webapp: upload liste elettorali con refresh pagina e certificati
