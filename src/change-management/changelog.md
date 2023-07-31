@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.1.0 (2023-07-31)
+
++ (Requirement) Aggiornato tracciato XSD per le notifiche delle predisposizioni anagrafiche (issue: [https://github.com/italia/anpr/issues/3587](https://github.com/italia/anpr/issues/3883))
+    + Revisione tracciato predisposizioni anagrafiche di Stato Civile (ANSC)
+
 ## Versione 8.0.0 (2023-05-05)
 
 + (Requirement) Identificativo Unico Nazionale (DECRETO 3 marzo 2023)
