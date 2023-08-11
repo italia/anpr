@@ -13,6 +13,11 @@
 + (Requirement) Aggiornato tracciato XSD per le notifiche delle predisposizioni anagrafiche (issue: [https://github.com/italia/anpr/issues/3587](https://github.com/italia/anpr/issues/3883))
     + Revisione tracciato predisposizioni anagrafiche di Stato Civile (ANSC)
 
+## Versione 8.0.1 (2023-06-14)
+
++ (Requirement) Elettorale: certificati elettorali sloveno, scarico massivo e riepiloghi
+    + Integrazione funzionalità liste elettorali 
+
 ## Versione 8.0.0 (2023-05-05)
 
 + (Requirement) Identificativo Unico Nazionale (DECRETO 3 marzo 2023)
