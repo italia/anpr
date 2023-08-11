@@ -1,6 +1,14 @@
 # Changelog
 
-## Versione 8.1.0 (2023-07-31)
+## Versione 8.1.1 (2023-08-10)
+
++ (Requirement) Contributi al subentro delle liste elettorali visualizzazione campo note rifiuto richiesta 
+    + Nel riepilogo di una richiesta in presenza di note valorizzate mostrarle a video nela box riepilogativo dei dati della richiesta (box nell'immagine in allegato). 
+
+## Versione 8.1.0 (2023-08-03)
+
++ (Requirement) Richiesta contributo adesione liste elettorali 
+    + Nuova funzionalità disponibile nella web app di ANPR alla voce Amministrazione->Richiesta Contributo Integrazione Liste Elettorali in ANPR. La funzionalità deve essere utilizzabile solo dal profilo del Sindaco. 
 
 + (Requirement) Aggiornato tracciato XSD per le notifiche delle predisposizioni anagrafiche (issue: [https://github.com/italia/anpr/issues/3587](https://github.com/italia/anpr/issues/3883))
     + Revisione tracciato predisposizioni anagrafiche di Stato Civile (ANSC)

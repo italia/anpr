@@ -1,7 +1,7 @@
 # Versione rilasciata in ogni ambiente
 
-- Test Comuni : Minor version 8.1.0
-- Produzione : Patch 8.1.0
+- Test Comuni : Patch 8.1.1
+- Produzione : Patch 8.1.1
 
 
 # Versioni supportate in ogni ambiente
