@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 8.1.2 (2023-08-22)
+
++ (Bug) 5010: mutazione listareg bloccata se manca lista generale
+    + Sarà possibile inserire una lista generale aggiunta prima dell'inserimento di una lista generale. 
+
++ (Bug)  WebApp: errore ricerca convivenza
+    + Era presente un errore nella ricerca delle convivenze da webapp.
+   
 ## Versione 8.1.1 (2023-08-10)
 
 + (Requirement) Contributi al subentro delle liste elettorali visualizzazione campo note rifiuto richiesta 
