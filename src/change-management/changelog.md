@@ -1,5 +1,21 @@
 # Changelog
 
+## Versione 8.1.4 (2023-09-22)
+
++ (Bug) Scarico massivo comune adattato ad ANPR05
+    + Lo scarico massivo comune non era ancora stato adattato alle ultime versioni di ANPR.
+
++ (Requirement) Contributo subentro liste elettorali - modifica testi prima schermata.
+    + Chiarificati i test della prima schermata della richiesta contributo subentro liste elettorali.
+
+## Versione 8.1.3 (2023-08-31)
+
++ (Bug) WebApp: ricerca soggettoa aire con lista aggiunta 
+    + Andava in errore la ricerca di un aire con una lista generale aggiunta
+
++ (Requirement) 1002,A002: bloccare inserimento liste in caso di lista generale inserita
+    + Non sarà permesso inserire con 1002 e A002 la sezione listaElettorale relativamente a soggetti a cui sono stati inseriti i nuovi dati elettorali da altro comune (a meno di una cancellazione elettorale)
+
 ## Versione 8.1.2 (2023-08-22)
 
 + (Bug) 5010: mutazione listareg bloccata se manca lista generale
