@@ -1,5 +1,16 @@
 # Changelog
 
+## Versione 8.1.5 (2023-10-03)
+
++ (Requirement) Webapp : Notifiche ANSC
+    + Visualizzazione delle predisposizione anagrafiche dello stato civile.
+
++ (Requirement) Webapp: gestione documenti storici e visualizzazione operazioni elettorali
+    + Nella sezione documenti storici presente nella pagina carta d'identita saranno visualizzabili, oltre ai documenti cartacei storici, anche i documenti elettronici cie storici
+    
++ (Requirement) WS6001 : liste elettorali: mev sui certificati
+    + Sarà possibile firmare con il nome di un incaricato o a nome del vice sindaco i certificati di godimento dei diritti politici o il certificato di iscrizione nelle liste elettorali (impostare il flag tipoFirmaElettorale a 1 nei dati controllo) 
+
 ## Versione 8.1.4 (2023-09-22)
 
 + (Bug) Scarico massivo comune adattato ad ANPR05
