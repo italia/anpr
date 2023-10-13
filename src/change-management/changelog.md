@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.1.6 (2023-10-13)
+
++ (Requirement) Webapp - disabilitazione del salvataggio nella richiesta di contributo elettorale
+    + Nel caso in cui non venga modificato alcun dato nella form del contributo al subentro elettorale, alla pressione del tasto "salva" non verrà generato un nuovo documento da firmare digitalmente.
+
 ## Versione 8.1.5 (2023-10-03)
 
 + (Requirement) Webapp : Notifiche ANSC
