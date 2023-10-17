@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.1.6 (2023-10-17)
+
++ (Bug) WS4005 - Esclusione P00X da risultati richiesta asincrone 4005
+    + Ora i serrvizi P000 non vengono più restituiti negli elenchi generati tramite il servziio 4005. 
+
 ## Versione 8.1.6 (2023-10-13)
 
 + (Requirement) Webapp - disabilitazione del salvataggio nella richiesta di contributo elettorale
