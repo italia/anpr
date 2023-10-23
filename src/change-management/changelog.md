@@ -1,6 +1,11 @@
 # Changelog
 
-## Versione 8.1.6 (2023-10-17)
+## Versione 8.1.8 (2023-10-23)
+
++ (Requirement) Mev elettorale certificati e consultazione
+    + Inserite traduzioni in sloveno e tedesco per la sezione di firma dei certificati elettorali. Gestione del caso di elettore N senza l'associazione della lista.
+
+## Versione 8.1.7 (2023-10-17)
 
 + (Bug) WS4005 - Esclusione P00X da risultati richiesta asincrone 4005
     + Ora i serrvizi P000 non vengono più restituiti negli elenchi generati tramite il servziio 4005. 
