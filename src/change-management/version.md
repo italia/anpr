@@ -6,10 +6,10 @@
 
 # Versioni supportate in ogni ambiente
 
-- Produzione : ANPR05(attiva)
-- Test comuni : ANPR05(attiva)
+- Produzione : ANPR05 (attiva), ANPR04, ANPR03, ANPR02
+- Test comuni : ANPR05 (attiva), ANPR04, ANPR03, ANPR02
 
 # Ambienti non più supportati
 
 - Free test è stato dismesso a giugno 2022
-- Presubentro, essendo terminati subentri, sarà attivo fino al 31 Dicembre 2022, ma non ne viene garantito l'allineamento.
+- Presubentro, essendo terminati subentri, sarà attivo fino al 31 Dicembre 2023, ma non ne viene garantito l'allineamento.
