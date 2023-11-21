@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.1.9 (2023-11-21)
+
++ (Requirement) Aggiornamento notifiche di stato civile
+    + Adeguamento alla versione [1.19.0](https://github.com/italia/ansc/tree/v1.19.0) di ANSC.
+
 ## Versione 8.1.8 (2023-10-23)
 
 + (Requirement) Mev elettorale certificati e consultazione
