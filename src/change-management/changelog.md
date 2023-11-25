@@ -5,6 +5,9 @@
 + (Requirement) Aggiornamento notifiche di stato civile
     + Adeguamento alla versione [1.19.0](https://github.com/italia/ansc/tree/v1.19.0) di ANSC.
 
++ (Requirement) Contributi al subentro elettorale - IBAN
+    + Ora è sempre possibile indicare l'IBAN per ricevere il contributo.
+
 ## Versione 8.1.8 (2023-10-23)
 
 + (Requirement) Mev elettorale certificati e consultazione
