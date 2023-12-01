@@ -5,6 +5,9 @@
 + (Requirement) Richiesta di contributo per l'adesione allo stato civile.
     + Nell'applicazione web di ANPR è disponibile per i sindaci la funzione per effettuare la richiesta di contributi per l'adesione all' Archivio Nazionale informatizzato dei registri dello Stato Civile. (Amministrazione - RICHIESTA CONTRIBUTO PER L’ADESIONE AL SISTEMA ANSC). [La richiesta può essere inviata solo dopo l'adesione formale e la registrazione del primo evento di stato civile]
 
++ (Requirement) XSD ed Esempi discordanze anagrafiche
+    + Oltre alla predisposizione eventi digitali stato civile sono disponibili anche le segnalazioni di discordanze anagrafiche tra Stato civile e Anagrafe.
+
 ## Versione 8.1.9 (2023-11-21)
 
 + (Requirement) Aggiornamento notifiche di stato civile
