@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 8.2.1 (2023-12-04)
+
++ (Requirement) Liste Elettorali: gestione sezioni
+    + E' stata implementata la gestione della consultazione e cancellazione delle sezioni.
+
++ (Bug) Liste: in consultazione non viene visualizzata la lista senza sezione
+    + WebApp: sarà possibile visualizzare un elettore ad N senza una sezione associata.
+
 ## Versione 8.2.0 (2023-11-28)
 
 + (Requirement) Richiesta di contributo per l'adesione allo stato civile.
