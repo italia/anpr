@@ -1,9 +1,16 @@
 # Changelog
 
-## Versione 8.2.1 (2023-12-04)
+## Versione 8.2.3 (2023-12-14)
+
++ (Bug) Bug: scambiato lista warning con lista errori nel servizio 2012
+    + Bug nella operation 2012 che restituiva errore EN562 come warning anzichè come bloccante
+
+## Versione 8.2.2 (2023-12-05)
 
 + (Requirement) Liste Elettorali: gestione sezioni
     + E' stata implementata la gestione della consultazione e cancellazione delle sezioni.
+
+## Versione 8.2.1 (2023-12-04)
 
 + (Bug) Liste: in consultazione non viene visualizzata la lista senza sezione
     + WebApp: sarà possibile visualizzare un elettore ad N senza una sezione associata.
