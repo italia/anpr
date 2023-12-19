@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 8.2.4 (2023-12-18)
+
++ (Bug) Bug: Allineamento template richiesta contributo Stato Civile
+    + Il documento da firmare per richiedere il contributo per l'adesione allo stato civile digitale è stato aggiornato.
+
++ (Requirement) Accesso contributo stato civile
+    + Ora i permessi richiesti per accedere alla richiesta contributo per l'adesione allo Stato Civile digitale sono gli stesso necessari per il contributo al subentro delle liste elettorali
+
 ## Versione 8.2.3 (2023-12-14)
 
 + (Bug) Bug: scambiato lista warning con lista errori nel servizio 2012
