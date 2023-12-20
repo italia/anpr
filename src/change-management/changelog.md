@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.2.5 (2023-12-20)
+
++ (Requirement) Performance tuning notifiche stato civile per anagrafe
+    + Coda a priorità per le notifiche da ANSC verso ANPR, con tempo stimato della richiesta entro 15 minuti (la notifica viene inclusa nella risposta solo se è stata prodotta già).
+
 ## Versione 8.2.4 (2023-12-18)
 
 + (Bug) Bug: Allineamento template richiesta contributo Stato Civile
