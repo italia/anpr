@@ -1,5 +1,20 @@
 # Changelog
 
+## Versione 8.2.6 (2024-01-29)
+
++ (Bug) WEBAPP: decesso - mutazione tutti i dati - non vengono riportati i dati dell'atto inserito durante la cancellazione (issue: [https://github.com/italia/anpr/issues/4161](https://github.com/italia/anpr/issues/4161))
+    + Effettuando una mutazione tutti i dati, dati di decesso: non vengono riportati i dati dell’atto inserito durante la cancellazione.
+
++ (Requirement) Richiesta di contributo per l'adesione allo stato civile - modifica etichetta
+    + Modificare l'etichetta visualizzata nella schermata dell'immagine in allegato da "Gestione Comunale" in "Gestionale Comunale".
+
++ (Requirement) WEB : gestione da parte dei comuni dei certificati per la firma delle notifiche
+    + I comuni potranno 1. Inserire – aggiornare – abilitare – disabilitare l’endpoint cui chiedono gli vengano inviate le notifiche, 2 - Scegliere con quale certificato, tra quelli che l’applicazione mostrerà come disponibili, gli vengano firmate le notifiche.
+
++ (Requirement) Notifiche da AppIO del cambio di stato delle richieste di cambio di residenza e di rettifica dati inserite dai cittadini nell'Area Riservata del sito ANPR
+    + Da oggi 29 Gennaio, i cittadini riceveranno le notifiche di lavorazione e cambio di stato della richiesta, oltre che per mezzo del canale mail anche da AppIO a meno di non eseguire esplicito opt-out (disabilitazione) del relativo servizio di notifica presente nella sezione Servizi di AppIO.
+
+
 ## Versione 8.2.5 (2023-12-20)
 
 + (Requirement) Performance tuning notifiche stato civile per anagrafe
