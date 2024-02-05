@@ -1,5 +1,18 @@
 # Changelog
 
+## Versione 8.3.0 (2024-02-05)
+
++ (Requirement) Pratiche di iscrizione SDG da area riservata (issue: [https://github.com/italia/anpr/issues/4384](https://github.com/italia/anpr/issues/4384))
+    + WEBAPP - gestione delle dichiarazioni di trasferimento cittadino EU inviate da Portale ANPR attraverso la webapp di ANPR, funzionalità Utilità e notifiche - Dichiarazioni di trasferimento in italia trasmesse dai cittadini ue. Web Service P000 - gestione dichiarazioni di trasferimento cittadino EU inviate da Portale ANPR attraverso le operazioni wsP001, wsP002, wsP003 della famiglia di wsP000 - Nuova tipologia di richiesta con identificativo 4.
+
++ (Bug) 5010: bloccare se motivo cancellazione 9 e manca lista generale
+
++ (Bug) WEBAPP: lista generale erroneamente quando presente lista aggiunta ue
+
++ (Bug) WS1000 - Presenza elemento attoEventoANPR vuoto
+    + In presenza di elemento XML empty <attoEventoANPR/> il servizio falliva. (da notare che in questi casi sarebbe preferibile non inviare per niente l'elemento)
+
+
 ## Versione 8.2.6 (2024-01-29)
 
 + (Bug) WEBAPP: decesso - mutazione tutti i dati - non vengono riportati i dati dell'atto inserito durante la cancellazione (issue: [https://github.com/italia/anpr/issues/4161](https://github.com/italia/anpr/issues/4161))
