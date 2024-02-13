@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 8.3.1 (2024-02-13)
+
++ (Requirement) 4003: impedire inserimento nuove richieste in presenza di un altra da elaborare
+    + Non sarà più possibile inserire una richiesta 4003 se ne è presente un'altra in attesa di elaborazione
+
++ (Bug) WEBAPP: valorizza circoscrizione camera e senato anche quando il flag è N
+    + Risolto bug che non permetteva la mutazione dei dati elettorali quando si impostavano i flag camara e senato a N
+
 ## Versione 8.3.0 (2024-02-05)
 
 + (Requirement) Pratiche di iscrizione SDG da area riservata (issue: [https://github.com/italia/anpr/issues/4384](https://github.com/italia/anpr/issues/4384))
