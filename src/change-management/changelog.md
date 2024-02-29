@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.3.2 (2024-02-29)
+
++ (Bug) 5010: non permette di inserire un lista aggiunta ue dopo una generale
+    + adesso permette di inserire un lista aggiunta ue a seguito di una cancellazione di una lista generale
+
 ## Versione 8.3.1 (2024-02-13)
 
 + (Requirement) 4003: impedire inserimento nuove richieste in presenza di un altra da elaborare
