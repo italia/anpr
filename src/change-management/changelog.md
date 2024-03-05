@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.3.3 (2024-03-05)
+
++ (Requirement) Certificati elettorali
+    + Servizi per i comuni: nei certificati elettorali non compare più l'atto di nascita
+
 ## Versione 8.3.2 (2024-02-29)
 
 + (Bug) 5010: non permette di inserire un lista aggiunta ue dopo una generale
