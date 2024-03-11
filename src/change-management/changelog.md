@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.3.4 (2024-03-11)
+
++ (Bug) 6001: iscrizione liste senza declinazione del sesso per iscritta
+    + Certificato di iscrizione nelle liste elettorale: sarà declinato il sesso del termine iscritto/a presente nel body del certificato. (Risolve bug reltivo alla certificazione anagrafica per i cancellati da ANPR)
+
 ## Versione 8.3.3 (2024-03-05)
 
 + (Requirement) Certificati elettorali
