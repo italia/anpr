@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.3.5 (2024-03-26)
+
++ (Bug) webapp: bug elettorale sulla cancellazione sezione
+    + Rirolto un bug sull'applicazione web anpr che, alla cancellazione di una sezione, restituiva pagina bianca.
+
 ## Versione 8.3.4 (2024-03-11)
 
 + (Bug) 6001: iscrizione liste senza declinazione del sesso per iscritta
