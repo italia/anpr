@@ -1,9 +1,14 @@
 # Changelog
 
+## Versione 8.3.6 (2024-04-07)
+
++ (Requirement) Webapp: Identificativo unico nazionale usabile nella consultazione Agenzia Entrate
+    + Gestione identificativo unico nazionale nella consultazione agenzia entrate.
+
 ## Versione 8.3.5 (2024-03-26)
 
 + (Bug) webapp: bug elettorale sulla cancellazione sezione
-    + Rirolto un bug sull'applicazione web anpr che, alla cancellazione di una sezione, restituiva pagina bianca.
+    + Risolto un bug sull'applicazione web anpr che, alla cancellazione di una sezione, restituiva pagina bianca.
 
 ## Versione 8.3.4 (2024-03-11)
 
