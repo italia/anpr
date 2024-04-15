@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.4.0 (2024-04-15)
+
++ (Requirement) Iscrizione liste elettorali da portale cittadini.
+    + Gestione della nuova pratica di iscrizione alle liste elettorali proveniente dal portale per i cittadini. (Webapp e P000)
+
 ## Versione 8.3.6 (2024-04-07)
 
 + (Requirement) Webapp: Identificativo unico nazionale usabile nella consultazione Agenzia Entrate
