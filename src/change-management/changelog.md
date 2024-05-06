@@ -1,5 +1,19 @@
 # Changelog
 
+## Versione 8.4.1 (2024-05-07)
+
++ (Requirement) Iscrizioni: inserire warning in caso di cognome o nome con pattern NN o N.N
+    + Nei servizi 1001,1002,A001,A002,5008, se verrano forniti i dati di paternità o maternità con il campo cognome/nome uguale a NN o nn (con o senza punteggiatura), sarà restituito il controllo warning EN566
+
++ (Requirement) Aggiunta residenza soggetto a notifiche di stato civile
+    + Aggiunte nelle notifiche da ANSC verso ANPR le informazioni relative alla cittadinanza e alla residenza sia dell’intestatario dell’atto (non per l’atto di nascita) che dei genitori in caso di atti di nascita.
+    
++ (Requirement) 6001 emissione online: impedire che venga richiesto certificato per un componente terzo
+    + Servizio di certificazione 6001 con emissione online: non sarà possibile richiedere un certificato per un componente terzo non presente nella famiglia.
+    
++ (Requirement) 6001: errori su certificato in tedesco
+    + Nel testo tedesco del certificato la denominazione del comune viene indicata adesso in lingua tedesca.
+
 ## Versione 8.4.0 (2024-04-15)
 
 + (Requirement) Iscrizione liste elettorali da portale cittadini.
