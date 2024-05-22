@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.4.2 (2024-05-22)
+
++ (Bug) webapp: rifugiati con cf numerico nati in italia
+    + Risolto bug collegamento cf tra numerico e alfanumerico nel caso in cui il cittadino è uno stranierio nato in Italia
+
 ## Versione 8.4.1 (2024-05-07)
 
 + (Requirement) Iscrizioni: inserire warning in caso di cognome o nome con pattern NN o N.N
