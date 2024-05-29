@@ -6,8 +6,6 @@ Nel campo "Title" (qua sopra), usa "[codice flusso] Breve descrizione del proble
 
 Inoltre, non inserire dati sensibili dei cittadini. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
 
-Se devi inviarci un tracciato con dati sensibili invialo per email a "segnalazioni-anpr@teamdigitale.governo.it", specificando nell'oggetto il codice del bug.
-
 In ogni caso, ricordati di inserire:
 
    * Una descrizione accurata del comportamento o dell'errore, e come possiamo esservi utile.
