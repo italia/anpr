@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.4.3 (2024-05-30)
+
++ (Bug) WebApp: timeout in consultazione convivenza
+    + Migliorate le perfomance della risposta delle consultazione delle convivenze, che in alcuni casi poteva portare a dei timeout.
+
 ## Versione 8.4.2 (2024-05-22)
 
 + (Bug) webapp: rifugiati con cf numerico nati in italia
