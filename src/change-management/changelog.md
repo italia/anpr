@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.4.4 (2024-06-04)
+
++ (Bug) 1000: reiscrizione con nome città di castello
+    + Risolto un bug che riguardava la reiscrizione di un soggetto avente nel comune di nascita un carattere diacritico.
+
 ## Versione 8.4.3 (2024-05-30)
 
 + (Bug) WebApp: timeout in consultazione convivenza
