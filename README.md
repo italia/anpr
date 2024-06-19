@@ -34,8 +34,6 @@ Per favore, **non inserire dati sensibili dei cittadini**. Evita, per esempio, q
 
 Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password.**
 
-Se devi inviarci un tracciato con dati sensibili invialo per email a [segnalazioni-anpr@teamdigitale.governo.it](mailto:segnalazioni-anpr@teamdigitale.governo.it) specificando nell'oggetto il codice del bug.
-
 In ogni caso, ricordati di inserire:
 
    * Una descrizione accurata del comportamento o dell'errore, e come possiamo esservi utile.
