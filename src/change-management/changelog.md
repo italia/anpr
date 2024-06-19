@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 8.4.5 (2024-06-12)
+
++ (Bug) 3002: desclocalitaprov visualizzata in presenza di idcomuneprov
+    + Risolto il bug che restituiva la descrizione localita di provenienza anche in caso di comune di provenienza
+
++ (Requirement) WebApp: Gestire ritorno ae 27 e 28 per omocodice
+    + Sarà permesso l'annullamento di un omocodia precedentemente richiesta
+
 ## Versione 8.4.4 (2024-06-04)
 
 + (Bug) 1000: reiscrizione con nome città di castello
