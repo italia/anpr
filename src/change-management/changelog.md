@@ -1,5 +1,10 @@
 # Changelog
 
+## Fine supporto versione ANPR precedenti alla 8 (2024-07-01)
+
++ (Requirement) Fine supporto versione ANPR precedenti alla 8 (issue: [https://github.com/italia/anpr/issues/4360](https://github.com/italia/anpr/issues/4360))
+    + Da oggi i cod destintario inferiori ad ANPR05 non verranno più accettati.
+
 ## Versione 8.4.5 (2024-06-12)
 
 + (Bug) 3002: desclocalitaprov visualizzata in presenza di idcomuneprov
