@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.4.5 (2024-07-05)
+
++ (Bug) 7001 : Scarico tabelle 61 (tipo categoria) e 62 (tipo componente) - valori errati (issue: [https://github.com/italia/anpr/issues/4575](https://github.com/italia/anpr/issues/4575))
+    + Ora il servizio restituisce anche le tabelle con id 61 e 62
+
 ## Fine supporto versione ANPR precedenti alla 8 (2024-07-01)
 
 + (Requirement) Fine supporto versione ANPR precedenti alla 8 (issue: [https://github.com/italia/anpr/issues/4360](https://github.com/italia/anpr/issues/4360))
