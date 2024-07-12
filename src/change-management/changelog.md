@@ -1,6 +1,11 @@
 # Changelog
 
-## Versione 8.4.5 (2024-07-05)
+## Versione 8.4.7 (2024-07-12)
+
++ (Requirement) WebApp: Disabilitata Richiesta di contributo per l'adesione allo stato civile - modifica etichetta
+    + In attesa delle nuove linee guida per la richiesta di contributo, la funzione viene disabilitata.
+
+## Versione 8.4.6 (2024-07-05)
 
 + (Bug) 7001 : Scarico tabelle 61 (tipo categoria) e 62 (tipo componente) - valori errati (issue: [https://github.com/italia/anpr/issues/4575](https://github.com/italia/anpr/issues/4575))
     + Ora il servizio restituisce anche le tabelle con id 61 e 62
