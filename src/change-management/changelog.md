@@ -1,5 +1,15 @@
 # Changelog
 
+## Versione 8.5.0 (2024-09-23)
+
++ (Requirement) WebApp: Accesso comune spid/cie/cns Anagrafe/Elettorale/Stato civile
+    + Come da comunicazione <https://dait.interno.gov.it/servizi-demografici/circolari/circolare-dait-n76-del-19-settembre-2024>
+
+## Versione 8.4.8 (2024-09-17)
+
++ (Bug) 6001: non certificabilita anagrafica impedisce di emettere il certificato elettorale
+    + Risolto bug che riguardava la richiesta di un certificato elettorale. Veniva restituito un errore di non certificabilita quando il soggetto non era certificabile anagraficamente ma lo era elettoralmente
+
 ## Versione 8.4.7 (2024-07-12)
 
 + (Requirement) WebApp: Disabilitata Richiesta di contributo per l'adesione allo stato civile - modifica etichetta
