@@ -1,6 +1,6 @@
 # Versione rilasciata in ogni ambiente
 
-- Test Comuni : Patch 8.5.0
+- Test Comuni : Patch 9.0.0
 - Produzione : Patch 8.5.0
 
 

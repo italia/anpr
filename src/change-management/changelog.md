@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.0 (2024-09-30)
+
++ (Requirement) Gestione poligamie
+    + Servizi di gestione delle poligamie [disponibile solo in test comuni]
+
 ## Versione 8.5.0 (2024-09-23)
 
 + (Requirement) WebApp: Accesso comune spid/cie/cns Anagrafe/Elettorale/Stato civile
