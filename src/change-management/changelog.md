@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.0.1 (2024-10-21)
+
++ (Requirement) Liste elettorali: scarico massivo
+    + Nella sezione "Liste elettorali" sarà possibile richiedere lo scarico dei dati elettorali del proprio comune con profilo ufficiale elettorale
+
++ (Requirement) Scarico comuni: download personalizzato
+    + Possibilità di scegliere le sezioni dati da includere nello scarico massivo comune
+
 ## Versione 9.0.0 (2024-09-30)
 
 + (Requirement) Gestione poligamie
