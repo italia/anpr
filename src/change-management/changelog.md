@@ -1,5 +1,15 @@
 # Changelog
 
+## Versione 8.5.1 (2024-09-31)
+
++ (Bug) A002: controllo 339 controlla congruenza codcatastale comune nascita con codice fiscale
+    + Per Iscrizione aire altri motivi non verrà più effettuato il controllo di congruenza tra codice catastale del comune nascita  e codice fiscale in caso di reiscrizione
+
+## Versione 9.0.2 (2024-10-29)
+
++ (Bug) web: pannelli di monitoraggio ministero
+    + Aggiornata la home del profilo Ministero e tolte informazioni non più accessibili
+
 ## Versione 9.0.1 (2024-10-21)
 
 + (Requirement) Liste elettorali: scarico massivo
