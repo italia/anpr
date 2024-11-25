@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 8.5.2 (2024-11-25)
+
++ (Requirement) WebApp: disabilitazione invio richiesta contributo al subentro elettorale
+    + Non è più possibile inviare richieste di contributo per il subentro elettorale
+
 ## Versione 8.5.1 (2024-09-31)
 
 + (Bug) A002: controllo 339 controlla congruenza codcatastale comune nascita con codice fiscale
