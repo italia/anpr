@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/rispostaComune" 
+		   targetNamespace="http://sogei.it/ANPR/rispostaComune" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolarioRispostaComune"  
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+		   
+<xs:import namespace="http://sogei.it/ANPR/vocabolarioRispostaComune"  schemaLocation="vocabolarioRispostaComune.xsd"/>
+ 
+<!-- servizio risposta_comune -->	
+<xs:element name="Risposta_Comune">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta Comune
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 						type="anpr:tipoTestataRisposta"						 minOccurs="0" maxOccurs="1"/> 			
+			<xs:element name="listaSoggettiVariati" 				type="anpr:tipoListaSoggettiVariati"				 minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Lista dei soggetti variati con l'operazione richiesta</xs:documentation>
+				</xs:annotation></xs:element> 
+			<xs:element name="listaAnomalie" 						type="anpr:tipoListaAnomalie"						 minOccurs="0" maxOccurs="1"/> 				
+	</xs:sequence>  
+</xs:complexType>
+</xs:element>
+
+<!-- fine servizio risposta_comune -->
+
+</xs:schema>

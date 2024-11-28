@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:predisposizioneAnagrafica xmlns:ns2="http://sogei.it/ansc/predisposizioneAnagrafica">
+    <testata>
+        <idNotifica>128</idNotifica>
+        <idTipoContenuto>2</idTipoContenuto>
+        <idTipoEvento>1</idTipoEvento>
+        <codMittente>999999</codMittente>
+        <idTipoNotifica>SC17</idTipoNotifica>
+        <dataValidita>2022-01-31</dataValidita>
+        <idUsecase>14630000</idUsecase>
+        <descrizioneUsecase>Annotazione per rettifica</descrizioneUsecase>
+    </testata>
+    <evento>
+        <intestatario>
+            <cognome>TRENTE</cognome>
+            <nome>SESSANTA</nome>
+            <sesso>M</sesso>
+            <dataNascita>2022-11-22</dataNascita>
+            <luogoNascita>
+                <comune>
+                    <nomeComune>ROMA</nomeComune>
+                    <codiceIstat>058091</codiceIstat>
+                    <siglaProvinciaIstat>RM</siglaProvinciaIstat>
+                </comune>
+            </luogoNascita>
+            <idSoggettoANSC>42102723</idSoggettoANSC>
+        </intestatario>
+        <atto>
+            <idAnsc>2023-568124-12312-999999</idAnsc>
+            <comuneRegistrazione>
+                <nomeComune>ANPR</nomeComune>
+                <codiceIstat>999999</codiceIstat>
+                <siglaProvinciaIstat>RM</siglaProvinciaIstat>
+            </comuneRegistrazione>
+            <anno>2023</anno>
+            <numeroComunale>12312</numeroComunale>
+            <dataFormazioneAtto>2023-03-02</dataFormazioneAtto>
+            <composizioneCompleta><![CDATA[Con provvedimento del Tribunale di ROMA (RM) Numero AAAA in data 23/02/2023 l'atto di cui sopra è stato così rettificato: Il nome dell'intestatario è XXXXXX]]></composizioneCompleta>
+        </atto>
+        <datiRettifica>
+            <eventoCollegato>
+                <idAnsc>2023-443893-4323432-999999</idAnsc>
+                <comuneRegistrazione>
+                    <nomeComune>ANPR</nomeComune>
+                    <codiceIstat>999999</codiceIstat>
+                    <siglaProvinciaIstat>RM</siglaProvinciaIstat>
+                </comuneRegistrazione>
+                <anno>2022</anno>
+                <numeroComunale>4323432</numeroComunale>
+                <dataFormazioneAtto>2022-11-29</dataFormazioneAtto>
+                <composizioneCompleta><![CDATA[L'anno 2022 addì 29 del mese di novembre alle ore 18 e minuti 36 nella Casa Comunale avanti a me, MARIE CURIE Ufficiale dello Stato Civile del Comune di ANPR per delega ricevuta è comparso VENTI TRENTA nato in ROMA (RM) il 28/06/1989 con cittadinanza AUSTRIACA residente in CESENA (FC) il quale mi ha dichiarato quanto segue: Il giorno 28 del mese di novembre dell'anno 2022 alle ore 18 e minuti 37 da Trentadue Ventuno nata in ROMA (RM) il 01/05/2020 con cittadinanza ITALIANA residente in CESENA (FC) moglie del dichiarante, con cittadinanza AUSTRIACA, è nato un bambino di sesso Maschile. A detto bambino che non mi viene presentato, ma della cui nascita io mi sono accertato, il dichiarante dà il nome di SESSANTA. Il presente atto viene letto agli intervenuti, i quali tutti, insieme con me, lo sottoscrivono.]]></composizioneCompleta>
+            </eventoCollegato>
+            <idTipoRettifica>1</idTipoRettifica>
+        </datiRettifica>
+    </evento>
+</ns2:predisposizioneAnagrafica>

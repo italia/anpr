@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/P000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/P000AnprService"
+				  xmlns:schema="http://sogei.it/ANPR/P000sc" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/P000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/P000sc" schemaLocation="P000sc.xsd" />  
+		</xsd:schema>		
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaP001">
+		<wsdl:part name="request" element="schema:RichiestaP001"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaP001">  
+		<wsdl:part name="response" element="schema:RispostaP001"/>  
+	</wsdl:message>
+	 <wsdl:message name="RichiestaP002">  
+		<wsdl:part name="request" element="schema:RichiestaP002"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaP002">  
+		<wsdl:part name="response" element="schema:RispostaP002"/>  
+	</wsdl:message>
+	<wsdl:message name="RichiestaP003">  
+		<wsdl:part name="request" element="schema:RichiestaP003"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaP003">  
+		<wsdl:part name="response" element="schema:RispostaP003"/>  
+	</wsdl:message>
+			
+	<wsdl:portType name="AnprPortTypeP000">  
+		<wsdl:operation name="elenco">    
+			<wsdl:input   message="tns:RichiestaP001"/>    
+			<wsdl:output  message="tns:RispostaP001" />  
+		</wsdl:operation>
+		<wsdl:operation name="dettaglio">    
+			<wsdl:input   message="tns:RichiestaP002"/>    
+			<wsdl:output  message="tns:RispostaP002" />  
+		</wsdl:operation>
+		<wsdl:operation name="aggiorna">    
+			<wsdl:input   message="tns:RichiestaP003"/>    
+			<wsdl:output  message="tns:RispostaP003" />  
+		</wsdl:operation>			
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingP000" type="tns:AnprPortTypeP000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="elenco">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="dettaglio">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="aggiorna">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceP000">    
+		<wsdl:port binding="tns:AnprBindingP000" name="AnprServicePortP000">      
+			<wsdlsoap:address location="https://ws.anpr.interno.it/P000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

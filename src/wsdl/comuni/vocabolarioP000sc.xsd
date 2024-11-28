@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolarioP000sc"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+		   targetNamespace="http://sogei.it/ANPR/vocabolarioP000sc" 
+		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+
+<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>
+
+<!-- tipoIdOperazioneANPR -->
+	<xs:simpleType name="tipoCodiceRichiesta">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>		
+	</xs:simpleType>
+<!-- Fine tipoIdOperazioneANPR -->	
+	
+<!-- ######################## USATO IN TUTTI I MSG DI RICHIESTA ######################## -->
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoDatoTestataRichiesta" >
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- ################################################################################## -->
+
+<!-- ######################## USATO IN TUTTI I MSG DI RISPOSTA ######################## -->
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->
+	
+<!-- ################################################################################## -->
+
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori -->
+
+<!-- tipoComuneRichiesta -->
+	<xs:complexType name="tipoComuneRichiesta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoComuneRichiesta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoComuneRichiesta -->
+	
+<!-- ################################################################# INIZIO USATI IN P001 ########################################################### -->
+
+	<xs:complexType name="tipoCriteriRicercaP001">
+		<xs:sequence>
+			<xs:element name="dataIniziale" 			type="xs:date" 									minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataFinale" 				type="xs:date" 									minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idTipologia" 			    type="tipoIdTipologia" 						    minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idStatoRichiesta" 		minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"/>
+						<xs:pattern value="(\d)*"/>
+						<xs:maxLength value="2"/>
+					</xs:restriction>		
+				</xs:simpleType>
+			</xs:element>	
+			<xs:choice minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation xml:lang="it">Specifica il tipo di ricerca che puo' essere effettuata, recuperando le richieste
+						prorogate oppure le richieste in scadenza.</xs:documentation>
+					</xs:annotation>
+					<xs:element name="flagInScadenza"   type="xs:boolean"/>
+					<xs:element name="flagProrogate"    type="xs:boolean"/>
+			</xs:choice>	
+		</xs:sequence>
+	</xs:complexType>
+
+    <xs:complexType name="tipoListaRichiestaP001">
+		<xs:sequence>
+			<xs:element name="richiesta" 			type="tipoRichiestaP001" 				minOccurs="0" maxOccurs="unbounded"/>		
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoRichiestaP001">
+		<xs:sequence>
+			<xs:element name="codiceRichiesta" 			    		type="tipoCodiceRichiesta" 				   minOccurs="1" maxOccurs="1"/>	
+			<xs:element name="idSchedaSoggettoRichiedente" 			type="tpdt:tipoIdSchedaSoggettoANPR" 	   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idSchedaSoggettoInteressato"  		type="tpdt:tipoIdSchedaSoggettoANPR"       minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idFamigliaConvivenzaANPR"   			type="tpdt:tipoIdFamigliaConvivenzaANPR"   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idStatoRichiesta" 		    		type="tipoIdStatoRichiesta" 	           minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idTipologia" 			        		type="tipoIdTipologia" 					   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataApertura" 			    		type="xs:dateTime" 						   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataChiusura" 			    		type="xs:dateTime" 						   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="operatore" 			        		type="xs:string" 						   minOccurs="0" maxOccurs="1"/>
+            <xs:element name="codiceFiscaleSoggettoRichiedente"     type="tpdt:tipoCodiceFiscale"         	   minOccurs="0" maxOccurs="1"/>			
+		</xs:sequence>	
+	</xs:complexType>
+	
+<!-- ################################################################# INIZIO USATI IN P002 ########################################################### -->
+
+	<xs:complexType name="tipoRiepilogoRichiesta">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene l'informazione sul file di riepilogo della richiesta, scaricabile con relativo formato file. 
+			Rappresenta un documento di sintesi della richiesta del cittadino.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nomeFile" 	 				type="xs:string" 			    		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idFormatoFile" 	 	    	type="tipoIdFormatoFile" 			    minOccurs="1" maxOccurs="1"/>
+			<xs:element name="descrizione" 					type="xs:string" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="contenuto" 	 	    		type="xs:base64Binary" 				    minOccurs="1" maxOccurs="1"/>	
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaStoricoStati">
+		<xs:sequence>
+			<xs:element name="statoRichiesta" 	type="tipoStatoRichiesta" 	minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCriteriRicercaP002">
+		<xs:sequence>
+			<xs:element name="codiceRichiesta" 			type="tipoCodiceRichiesta" 				minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>	
+	</xs:complexType>
+		
+	<xs:complexType name="tipoStatoRichiesta">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene lo stato in cui la richiesta si trova oppure e precedentemente transitata.
+			Riporta l'identificativo dell'operatore e la data in cui e' entrata in quello stato. (vedi tabella stato richiesta per le Rettifiche Dati, vedi 
+			tabella 58 per Dichiarazione Cambio Residenza o Iscrizione Online.)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="idStato" 					type="tipoIdStatoRichiesta" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="operatore" 				type="xs:string" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataStato" 				type="xs:dateTime" 				minOccurs="1" maxOccurs="1"/>
+			<xs:element name="note" 	 	   			type="xs:string" 				minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaRecapiti">
+		<xs:sequence>
+			<xs:element name="recapito" 				type="tipoRecapito" 			minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>	
+	
+	<xs:complexType name="tipoRecapito">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene l'informazione sul recapito indicato dal cittadino.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="idTipologiaRecapito" 		type="tipoIdTipologiaRecapito"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="valoreRecapito" 		    type="xs:string" 				minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaAllegati">
+		<xs:sequence>
+			<xs:element name="allegato" 	type="tipoAllegato" 	minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoAllegato">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene l'informazione sull'eventuale file allegato che integra la richiesta del cittadino.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="idTipologia" 					type="tipoIdTipologia" 					minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nomeFile" 	 				type="xs:string" 			    		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idFormatoFile" 	 	    	type="tipoIdFormatoFile" 			    minOccurs="1" maxOccurs="1"/>
+			<xs:element name="descrizione" 					type="xs:string" 						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="contenuto" 	 	    		type="xs:base64Binary" 				    minOccurs="1" maxOccurs="1"/>	
+	        <xs:element name="flagOots"	                    type="tipoFlagOots"                     minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoDettaglioP002">
+		<xs:sequence>
+			<xs:element name="codiceRichiesta" 			type="tipoCodiceRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idTipologia" 				type="tipoIdTipologia" 							minOccurs="1" maxOccurs="1"/>
+			<xs:element name="note" 	 	   			type="xs:string" 								minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataApertura" 	 		type="xs:dateTime" 				    			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataChiusura" 	 		type="xs:dateTime" 				    			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataScadenza" 	 		type="xs:dateTime" 				    			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataUltimoAggiornamento" 	type="xs:dateTime" 				    			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroProroghe" 	 		type="xs:int" 					    			minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene un intero che rappresenta il numero di proroghe.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="statoRichiestaCorrente" 	type="tipoStatoRichiesta" 						minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene lo stato attuale della richiesta del cittadino.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="recapiti" 				type="tipoListaRecapiti" 						minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene i recapiti indicati dal cittadino.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identificativi" 	    type="tpdt:tipoIdentificativi" 				    minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene gli identificativi: ad oggi abbiamo solo Identificativo Unico Nazionale (IDANPR).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="soggettoRichiedente" 	    type="tpdt:tipoGeneralita" 				        minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene le generalita del soggetto che ha inserito la richiesta.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="soggettoInteressato" 	    type="tpdt:tipoGeneralita" 				        minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene le generalita del soggetto interessato dalla variazione richiesta 
+					rettifica dei dati oppure dichiarazione cambio residenza.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="famigliaConvivenza" 		type="tpdt:tipoFamigliaConvivenzaRisposta" 		minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Contiene l'informazione sulla famiglia, convivenza, residenza del soggetto interessato.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comuneInteressato" 		type="tpdt:tipoComune" 					        minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Dati del comune italiano in cui si e' verificato l'evento.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="storicoStati"  			type="tipoListaStoricoStati"        	        minOccurs="1" maxOccurs="1"/>
+			<xs:element name="riepilogoRichiesta" 		type="tipoRiepilogoRichiesta" 			        minOccurs="1" maxOccurs="1"/>
+			<xs:element name="allegati" 				type="tipoListaAllegati" 				        minOccurs="1" maxOccurs="1"/>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Sulla base della tipologia richiesta puo' contenere i dati della rettifica richiesta (primo element) 
+					che contiene l'elenco delle variazioni dei dati (datiRettifica), i dati della dichiarazione di cambio residenza (datiDichiarazioneResidenza) 
+					oppure i dati della richiesta di iscrizione online (datiIscrizioneOnline).</xs:documentation>
+				</xs:annotation>
+				<xs:element name="datiRettifica" 					    type="tipoDatiRettifica"/>
+				<xs:element name="datiDichiarazioneResidenza"   	    type="tipoDatiDichiarazioneResidenza"/>
+				<xs:element name="datiIscrizioneOnline"         		type="tipoDatiIscrizioneOnline"/> 
+				<xs:element name="datiRichiestaIscrizioneElettorale"    type="tipoDatiRichiestaIscrizioneElettorale"/> 
+			</xs:choice>			
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoDatiRettifica">
+		<xs:sequence>
+			<xs:element name="rettificheRichieste" 		type="tipoListaRettifiche" 				minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoListaRettifiche">
+		<xs:sequence>
+			<xs:element name="infoRettifica" 			type="tipoInfoRettifica" 				minOccurs="0" maxOccurs="unbounded"/>		
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoInfoRettifica">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR"     type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="idSezioneDati" 			type="tipoIdSezioneDati" 			 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sezioneDati" 				type="xs:string" 			    	 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idDatoAnagrafico" 		type="tipoIdDatoAnagrafico" 		 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datoAnagrafico" 			type="xs:string" 					 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="valoreAttuale" 			type="xs:string" 					 minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Il valore attuale del campo che il cittadino vuole modificare.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="valoreRichiesto" 			type="xs:string" 				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">La modifica richiesta dal cittadino.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="note" 				    type="xs:string" 				minOccurs="0" maxOccurs="1"/>		
+		</xs:sequence>	
+	</xs:complexType>
+	
+	
+	<xs:complexType name="tipoDatiImmobile">
+		<xs:sequence>
+			<xs:element name="idTipoOccupazione" 		type="tipoIdTipoOccupazione"  		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sezione" 					type="xs:string"  					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="foglio" 					type="xs:string"  					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="particella_mappale" 		type="xs:string"  					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="subalterno" 				type="xs:string" 				    minOccurs="0" maxOccurs="1"/>
+			<xs:element name="registrazioneAE" 			type="xs:string"  					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataRegistrazioneAE"    	type="xs:dateTime" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numeroRegistrazioneAE"    type="xs:string" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="noteVerificaUffAnagrafe"  type="xs:string" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="noteVerificaContratto"    type="xs:string" 					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	
+	<xs:complexType name="tipoIndirizzoResidenza">
+		<xs:sequence>
+			<xs:element name="cap" 				        type="tpdt:tipoCap"       		 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comune"                   type="tpdt:tipoComune"  			minOccurs="1" maxOccurs="1"/>
+			<xs:element name="frazione"                 type="tpdt:tipoFrazione"  			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="toponimo"                 type="tpdt:tipoToponimo"  	      	minOccurs="1" maxOccurs="1"/>	
+			<xs:element name="civico"             		type="xs:string"		   	 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="scala"             		type="xs:string"		   	 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="piano"             		type="xs:string"		   	 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="interno"             		type="xs:string"		   	 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="esponente"             	type="xs:string"		   	 		minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaComponentiCoinvolti">
+		<xs:sequence>
+			<xs:element name="componente" 	type="tipoComponente"  minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaComponentiCoinvoltiIsc">
+		<xs:sequence>
+			<xs:element name="componenteIsc" 	type="tipoComponenteIsc"  minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoComponente">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR" 		    type="tpdt:tipoIdSchedaSoggettoANPR"          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idGradoParentela" 	            type="tpdt:tipoCodiceRelazioneParentela"  	  minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Indica la relazione di parentela indicata nella dichiarazione cambio residenza rispetto ai soggetti coinvolti e rispetto l'intestatario scheda famiglia.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flagPatente" 				        type="tipoSINO"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="flagVeicoli" 				        type="tipoSINO"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="statoAccettazione" 	            type="tipoIdBase2" 					          minOccurs="1" maxOccurs="1">
+			 	<xs:annotation>
+					<xs:documentation xml:lang="it">Se il soggetto coinvolto e' maggiorenne indica con valore 3 se ha convalidato la dichiarazione o con valore 1 se deve ancora convalidare.</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+			<xs:element name="dataAccettazione" 	            type="xs:dateTime"  				          minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Indica la data di avvenuta convalida del soggetto maggiorenne.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="idTitoloStudio" 					type="tipoIdTitoloStudio" 					  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idCondizioneNonProfessionale" 	type="tipoIdCondNonProf" 					  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idPosizioneProfessionale" 		type="tipoIdPosizioneProf" 					  minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoComponenteIsc">
+		<xs:sequence>
+			<xs:element name="codiceFiscale" 		            type="tpdt:tipoCodiceFiscale"         		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cognome" 	            			type="xs:string"  	  						  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nome" 				        	type="xs:string"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sesso" 				        	type="tpdt:tipoSesso"  					      minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataNascita" 	            		type="tpdt:tipoDataAnagrafica" 				  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="siglaProvinciaNascita" 	        type="tpdt:alfabeticoProvincia"  			  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nomeComuneNascita" 				type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoNascita" 					type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cittadinanza"                     type="tipoCittadinanza"                       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="statoCivile" 					    type="tpdt:tipoStatoCivile" 			      minOccurs="1" maxOccurs="1"/>
+			<xs:element name="statoNascitaNonAttribuibile" 		type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="localitaEstera"                   type="tpdt:tipoLocalita"                      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idGradoParentela" 	            type="tpdt:tipoCodiceRelazioneParentela"  	  minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Indica la relazione di parentela indicata nella richiesta di iscrizione online rispetto ai soggetti coinvolti e rispetto l'intestatario scheda famiglia.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="classificazioneComponente"        type="tipoClassificazioneComponente"          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="categoriaComponente"              type="tipoCategoriaComponente"                minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneUltimaResidenza"    	  	type="tpdt:tipoComune" 		                  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoUltimaProvenienza"           type="xs:string" 		                      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="localitaUltimaProvenienza"        type="xs:string"                              minOccurs="0" maxOccurs="1"/>
+			<xs:element name="flagPatente" 				        type="tipoSINO"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="flagVeicoli" 				        type="tipoSINO"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idTitoloStudio" 					type="tipoIdTitoloStudio" 					  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idCondizioneNonProfessionale" 	type="tipoIdCondNonProf" 					  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idPosizioneProfessionale" 		type="tipoIdPosizioneProf" 					  minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCompFamEsistente">
+		<xs:sequence>
+			<xs:element name="codiceFiscale" 		            type="tpdt:tipoCodiceFiscale"         		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cognome" 	            			type="xs:string"  	  						  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nome" 				        	type="xs:string"  					          minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sesso" 				        	type="tpdt:tipoSesso"  					      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataNascita" 	            		type="tpdt:tipoDataAnagrafica" 				  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="siglaProvinciaNascita" 	        type="tpdt:alfabeticoProvincia"  			  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nomeComuneNascita" 				type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoNascita" 					type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoNascitaNonAttribuibile" 		type="xs:string" 					  		  minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="tipoDatiDichiarazioneResidenza">	
+		<xs:sequence>
+			<xs:element name="tipoFamiglia"     	  		type="tipoIdBase2"    				  minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Indica la tipologia di dichiarazione cambio residenza. Il valore 1 indica una residenza in FAMIGLIA ESISTENTE, il valore 2 una residenza in NUOVA FAMIGLIA.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fasciaReperibilita"     		type="xs:string"      				  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="recapitoTelefonico"     		type="xs:string"      				  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="componentiCoinvolti"    		type="tipoListaComponentiCoinvolti"   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="indirizzo"    	  			type="tipoIndirizzoResidenza" 		  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiImmobile"    	      		type="tipoDatiImmobile" 			  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="componenteFamigliaEsistente"  type="tipoCompFamEsistente" 		  minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoDatiIscrizioneOnline">	
+		<xs:sequence>
+			<xs:element name="tipoFamiglia"     	  		type="tipoIdBase2"    				  minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="it">Indica la tipologia di dichiarazione cambio residenza. Il valore 1 indica una residenza in FAMIGLIA ESISTENTE, il valore 2 una residenza in NUOVA FAMIGLIA.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fasciaReperibilita"     		type="xs:string"      				     minOccurs="0" maxOccurs="1"/>
+			<xs:element name="recapitoTelefonico"     		type="xs:string"      				     minOccurs="0" maxOccurs="1"/>
+			<xs:element name="componentiCoinvoltiIsc"       type="tipoListaComponentiCoinvoltiIsc"   minOccurs="1" maxOccurs="1"/>
+			<xs:element name="indirizzo"    	  			type="tipoIndirizzoResidenza" 		     minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiImmobile"    	      		type="tipoDatiImmobile" 			     minOccurs="1" maxOccurs="1"/>
+			<xs:element name="componenteFamigliaEsistente"  type="tipoCompFamEsistente" 		     minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoDatiRichiestaIscrizioneElettorale">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Indica il dettaglio dei dati di un richiesta di iscrizione elettorale (tipo pratica 5)</xs:documentation>
+		</xs:annotation>	
+		<xs:sequence>
+			<xs:element name="recapito"     			       type="xs:string"      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idStatoResidenzaOrigine"     	   type="xs:string"      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statoResidenzaOrigine"    	   type="xs:string"      minOccurs="0" maxOccurs="1"/>
+			<xs:element name="capStatoResidenzaOrigine"        type="xs:string"   	 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="localitaStatoResidenzaOrigine"   type="xs:string" 	 minOccurs="0" maxOccurs="1"/>
+			<xs:element name="indirizzoStatoResidenzaOrigine"  type="xs:string" 	 minOccurs="0" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+
+<!-- ################################################################# INIZIO USATI IN P003 ########################################################### -->
+
+	<xs:complexType name="tipoCriteriAggiornamentoP003">
+		<xs:sequence>
+			<xs:element name="codiceRichiesta" 				type="tipoCodiceRichiesta" 			minOccurs="1" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="richiestaProroga" 		type="xs:boolean" 					minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation xml:lang="it">Se valorizzato con true si vuole richiedere la proroga della data di scadenza della richiesta.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="idStatoRichiesta" 		type="tipoIdStatoRichiesta" 		minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation xml:lang="it">Se valorizzato con opportuno id stato si vuole impostare un nuovo stato per la richiesta.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="idMotivoIrricevibile" 	 	type="tipoIdMotivoIrricevibile" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="note"  minOccurs="0" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"/>
+						<xs:pattern value="([0-9a-zA-Zàèéìòù&#73;&#105;&#138;&#140;&#142;&#154;&#156;&#158;-&#159;&#192;-&#382;&#393;&#13;&#10;,.\-&apos;&quot;:;@/\\_() ])*" />
+						<xs:minLength value="1"/>
+					    <xs:maxLength value="2000"/>		
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		    <xs:element name="idUnicoNazionale"  minOccurs="0" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"/>
+						<xs:pattern value="([0-9a-zA-Z])*" />
+					    <xs:maxLength value="10"/>		
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="operatore" 			   		type="xs:string" 								minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:simpleType name="tipoCodiceEsitoP003">
+		<xs:annotation>
+			<xs:documentation>
+				0 - operazione eseguita
+				1 - operazione eseguita con warning
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>		
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoIdDatoAnagrafico">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Rappresenta il tipo dato anagrafico.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="([a-zA-Z0-9_])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="64"/>
+		</xs:restriction>		
+	</xs:simpleType>		
+
+	<xs:simpleType name="tipoIdBase2">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="2"/>
+		</xs:restriction>		
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdBase3">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="(\d)+"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>		
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoAlfanumericoBase2">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="([a-zA-Z0-9])*"/> 
+			<xs:maxLength value="2"/>
+		</xs:restriction>		
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoIdTipologia">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta la tipologia di richiesta: 1 = RETTIFICA, 2 = DICHIARAZIONE CAMBIO RESIDENZA</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdStatoRichiesta">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta lo stato del ciclo di vita di una richiesta.
+			Puo' assumere i seguenti valori: 1 = BOZZA, 2 = APERTA, 3 ... (vedi tabella stato richiesta per le Rettifiche Dati, vedi 
+			tabella 58 per le Dichiarazione Cambio Residenza)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+		
+	<xs:simpleType name="tipoIdSezioneDati">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta la sezione del dato. 
+			Puo' assumere i seguenti valori: 1 = GENERALITA, 2 = STATO CIVILE, 3 = RESIDENZA, ...(vedi tabella sezione dati rettifica)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>				
+	</xs:simpleType>	
+	
+	<xs:simpleType name="tipoIdTipologiaRecapito">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta la tipologia di recapito. 
+			Puo' assumere i seguenti valori: 1 = EMAIL, 2 = PEC, 3 = TEL CELLULARE, 4 = TELEFONO FISSO, ...(vedi tabella tipo recapito)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>			
+	</xs:simpleType>	
+	
+	<xs:simpleType name="tipoIdFormatoFile">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta il formato file. 
+			Puo' assumere i seguenti valori: 1 = PDF, 99 = ALTRO, ...(vedi tabella formato file)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdMotivoIrricevibile">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero a 2-digit che rappresenta il motivo di irricevibilita.
+			Puo' assumere i valori in tabella di decodifica. (vedi tabella 60 per i motivi di irricevibilita)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+
+	<xs:complexType name="tipoEsitoP003">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene un intero che rappresenta l'esito dell'elaborazione della richiesta P003.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="codiceEsito" 	type="tipoCodiceEsitoP003" 	minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoSINO">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Contiene la stringa SI oppure NO per indicare presenza affermativa o negativa.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tpdt:char2">
+			<xs:pattern value="SI|NO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdTitoloStudio">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Identificativo del titolo di studio (vedi tabella titolo di studio)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoAlfanumericoBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoIdCondNonProf">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Identificativo della condizione non professionale (vedi tabella condizione non professionale)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoAlfanumericoBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdPosizioneProf">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Identificativo della posizione professionale (vedi tabella posizione professionale)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoAlfanumericoBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoIdTipoOccupazione">
+		<xs:annotation>
+			<xs:documentation xml:lang="it">Identificativo del diritto di occupazione dell'immobile (vedi tabella tipo occupazione)
+				Puo' assumere i seguenti valori: 1 = PROPRIETARIO, 2 = INTESTATARIO DI CONTRATTO... 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tipoIdBase2">
+		</xs:restriction>		
+	</xs:simpleType>
+		
+	<xs:complexType name="tipoCittadinanza">	
+		<xs:sequence>
+			<xs:element name="nomeCittadinanza"     type="xs:string" 		            minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idCittadinanza" 		type="tipoIdBase3" 				    minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoClassificazioneComponente">	
+		<xs:sequence>
+			<xs:element name="nomeClassificazione"          type="xs:string" 		    minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idClassificazione" 		    type="tipoIdBase2" 		    minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		
+	</xs:complexType>
+	<xs:complexType name="tipoCategoriaComponente">	
+		<xs:sequence>
+			<xs:element name="nomeCategoria"           type="xs:string" 		        minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idCategoria" 		       type="tipoIdBase2" 				minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tipoFlagOots">
+	<xs:annotation>
+		<xs:documentation>0=Non presente|1=Presente</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:pattern value="0|1"/>
+	</xs:restriction>
+</xs:simpleType>
+</xs:schema>

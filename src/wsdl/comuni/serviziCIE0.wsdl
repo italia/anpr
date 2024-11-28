@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:schema="http://sogei.it/ANPR/CIE0Servizi" xmlns:tns="http://sogei.it/ANPR/CIEAnprService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sogei.it/ANPR/CIEAnprService">
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/CIEAnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/CIE0Servizi" schemaLocation="CIE0Servizi.xsd"/>  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaCIE2">
+		<wsdl:part element="schema:RichiestaCIE2" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoCIE2">
+		<wsdl:part element="schema:RispostaEsitoCIE2" name="response"/>
+	</wsdl:message>	
+
+	<wsdl:message name="RichiestaCIE7">
+		<wsdl:part element="schema:RichiestaCIE7" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoCIE7">
+		<wsdl:part element="schema:RispostaEsitoCIE7" name="response"/>
+	</wsdl:message>	
+	
+	<wsdl:message name="RichiestaCIE8">
+		<wsdl:part element="schema:RichiestaCIE8" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoCIE8">
+		<wsdl:part element="schema:RispostaEsitoCIE8" name="response"/>
+	</wsdl:message>		
+
+	<wsdl:portType name="AnprPortTypeCIE">  
+		<wsdl:operation name="interrogazioneDatiAnagrafici">
+			<wsdl:input message="tns:RichiestaCIE2"/>
+			<wsdl:output message="tns:RispostaEsitoCIE2"/>
+		</wsdl:operation>
+		<wsdl:operation name="comunicazioneAnnullamentoCIE">
+			<wsdl:input message="tns:RichiestaCIE7"/>
+			<wsdl:output message="tns:RispostaEsitoCIE7"/>
+		</wsdl:operation>	
+		<wsdl:operation name="comunicazioneEmissioneCIE">
+			<wsdl:input message="tns:RichiestaCIE8"/>
+			<wsdl:output message="tns:RispostaEsitoCIE8"/>
+		</wsdl:operation>							
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingCIE" type="tns:AnprPortTypeCIE">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="interrogazioneDatiAnagrafici">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>
+		<wsdl:operation name="comunicazioneAnnullamentoCIE">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>  			  
+		<wsdl:operation name="comunicazioneEmissioneCIE">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>  
+					  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceCIE">    
+		<wsdl:port binding="tns:AnprBindingCIE" name="AnprServicePortCIE"> 
+		     <wsdlsoap:address location="https://ws.anpr.interno.it/anpr-ws-cie-webapp/AnprServiceCIE"/>
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:predisposizioneAnagrafica xmlns:ns2="http://sogei.it/ansc/predisposizioneAnagrafica">
+    <testata>
+        <idNotifica>130</idNotifica>
+        <idTipoContenuto>2</idTipoContenuto>
+        <idTipoEvento>1</idTipoEvento>
+        <codMittente>002137</codMittente>
+        <idTipoNotifica>SC16</idTipoNotifica>
+        <dataValidita>2022-01-31</dataValidita>
+        <idUsecase>14400000</idUsecase>
+        <descrizioneUsecase>Caso d'uso di servizio annotazione (comunicazione da altri comuni)</descrizioneUsecase>
+    </testata>
+    <evento>
+        <intestatario>
+            <cognome>QUARANTADUE</cognome>
+            <nome>TRENTA</nome>
+            <sesso>M</sesso>
+            <dataNascita>2023-04-07</dataNascita>
+            <luogoNascita>
+                <comune>
+                    <nomeComune>NOVARA</nomeComune>
+                    <codiceIstat>003106</codiceIstat>
+                    <siglaProvinciaIstat>NO</siglaProvinciaIstat>
+                </comune>
+            </luogoNascita>
+            <nazionalita>
+                <descrizioneStato>ITALIA</descrizioneStato>
+                <codiceStato>100</codiceStato>
+            </nazionalita>
+            <luogoResidenza>
+                <comune>
+                    <nomeComune>FIRENZE</nomeComune>
+                    <codiceIstat>048017</codiceIstat>
+                    <siglaProvinciaIstat>FI</siglaProvinciaIstat>
+                </comune>
+            </luogoResidenza>
+            <idSoggettoANSC>1861720</idSoggettoANSC>
+        </intestatario>
+        <atto>
+            <idAnsc>2023-952670-238-002137</idAnsc>
+            <comuneRegistrazione>
+                <nomeComune>SERRAVALLE SESIA</nomeComune>
+                <codiceIstat>002137</codiceIstat>
+                <siglaProvinciaIstat>VC</siglaProvinciaIstat>
+            </comuneRegistrazione>
+            <anno>2023</anno>
+            <numeroComunale>238</numeroComunale>
+            <dataFormazioneAtto>2023-05-23</dataFormazioneAtto>
+            <composizioneCompleta><![CDATA[L’anno duemilaventitre addì tredici del mese di aprile alle ore otto e minuti trenta nella Casa Comunale, avanti a me TREDICI DIECI, Istruttore Direttivo, Ufficiale dello Stato Civile del Comune di SERRAVALLE SESIA per delega avuta, è comparso QUARANTADUE CARLO nato in BIELLA (VC) il 04 aprile 1990, con cittadinanza ITALIANA, residente in BIELLA (BI), il quale  mi ha dichiarato quanto segue:Il giorno SETTE del mese di APRILE dell’anno DUEMILAVENTITRE, alle ore tre e minuti cinquantacinque nel AZIENDA OSPEDALIERA MAGGIORE DELLA CARITA' DI NOVARA  dall’unione naturale di esso dichiarante, con cittadinanza ITALIANA con QUARANTADUEN VENTI nata in NOVARA (NO) il 05 maggio 1990 con cittadinanza ITALIANA residente in SERRAVALLE SESIA (VC), non parente né affine con lui nei gradi che ostano al riconoscimento ai sensi dell’ art. 251 del codice civile qui comparsa per far propria la presente dichiarazione  è nato un bambino di sesso MASCHILE.A detto bambino che non mi viene presentato, ma della cui nascita mi sono accertato a mezzo dell'attestazione di nascita rilasciata dall'ostetrica ----- che ha assistito al parto, il dichiarante dà il nome di TRENTA . Il dichiarante mi ha reso noto che il bambino di cui con il presente atto si è denunciata la nascita, si identifica con quello già riconosciuto come proprio figlio naturale prima della nascita da QUARANTADUEN VENTI e da QUARANTADUE CARLO, come risulta dall’atto n. 13 p. II s. B anno 2022 del Comune di SERRAVALLE SESIA (VC) redatto in data 13/12/2022, documenti che mi vengono prodotti e che, muniti del mio visto, inserisco nel volume degli allegati a questo registro.Il presente atto viene letto al dichiarante, il quale, insieme con me, lo sottoscrive.]]></composizioneCompleta>
+        </atto>
+    </evento>
+</ns2:predisposizioneAnagrafica>

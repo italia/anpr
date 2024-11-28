@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/7001AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/7001AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/7001scaricoTabelle" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/7001AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/7001scaricoTabelle" schemaLocation="7001scaricoTabelle.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta7001">
+		<wsdl:part name="request" element="schema:Richiesta7001"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta7001">  
+		<wsdl:part name="response" element="schema:Risposta7001"/>  
+	</wsdl:message>
+
+	<wsdl:message name="Richiesta7002">
+		<wsdl:part name="request" element="schema:Richiesta7002"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta7002">  
+		<wsdl:part name="response" element="schema:Risposta7002"/>  
+	</wsdl:message>	
+	
+	<wsdl:message name="Richiesta7003">
+		<wsdl:part name="request" element="schema:Richiesta7003"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta7003">  
+		<wsdl:part name="response" element="schema:Risposta7003"/>  
+	</wsdl:message>	
+	
+	<wsdl:portType name="AnprPortType7001">  
+		<wsdl:operation name="scarica_tabelle">    
+			<wsdl:input   message="tns:Richiesta7001"/>    
+			<wsdl:output  message="tns:Risposta7001" />  
+		</wsdl:operation>  
+		<wsdl:operation name="download_file">    
+			<wsdl:input   message="tns:Richiesta7002"/>    
+			<wsdl:output  message="tns:Risposta7002" />  
+		</wsdl:operation>
+		<wsdl:operation name="elenco_versioni">    
+			<wsdl:input   message="tns:Richiesta7003"/>    
+			<wsdl:output  message="tns:Risposta7003" />  
+		</wsdl:operation>		
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding7001" type="tns:AnprPortType7001">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="scarica_tabelle">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="download_file">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="elenco_versioni">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  				
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService7001">    
+		<wsdl:port binding="tns:AnprBinding7001" name="AnprServicePort7001">      
+			<wsdlsoap:address location="https://ws.anpr.interno.it/ANPR7001ServizioScaricoTabelle/AnprService7001"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

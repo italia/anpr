@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/4000estrazione" 
+		   targetNamespace="http://sogei.it/ANPR/4000estrazione" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolario4000estrazione"  
+		   xmlns:risp="http://sogei.it/ANPR/rispostaComune"
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+
+ <xs:import namespace="http://sogei.it/ANPR/vocabolario4000estrazione"  schemaLocation="vocabolario4000estrazione.xsd"/>
+ 
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>    						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- fine rispostaKO -->
+
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- servizio 4001 -->
+<xs:element name="Richiesta4001">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta per estrazione dati anagrafici cittadini
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  					type="anpr:tipoTestataRichiesta" 	       	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  							type="anpr:tipoCriteriRicerca4001" 			minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+ <xs:element name="Risposta4001">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta per estrazione dati anagrafici cittadini
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4001" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaMultipla4001">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla per estrazione dati anagrafici cittadini
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  					type="anpr:tipoTestataRisposta" 	      	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  						type="anpr:tipoCriteriRicerca4001" 			minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="idOperazioneANPR"  	  			    type="anpr:tipoIdOperazioneANPR" 	    	minOccurs="1" maxOccurs="1"/>					
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4001 -->
+
+
+<!-- servizio 4002 -->
+<xs:element name="Richiesta4002">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta rivestimento liste di codici fiscali
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  		type="anpr:tipoTestataRichiesta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca" 				type="anpr:tipoCriteriRicerca4002" 		   minOccurs="1" maxOccurs="1"/>							
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta4002">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta rivestimento liste di codici fiscali
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4002" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
+	
+<xs:element name="RispostaMultipla4002">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla rivestimento liste di codici fiscali
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  			type="anpr:tipoTestataRisposta" 	       minOccurs="1" maxOccurs="1"/>						
+			<xs:element name="datiRichiesti"   		        type="anpr:tipoDatiRichiestiRisposta4002"  minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idOperazioneANPR"  	  	    type="anpr:tipoIdOperazioneANPR" 	       minOccurs="1" maxOccurs="1"/>							
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4002 -->
+
+
+<!-- servizio 4003 -->
+<xs:element name="Richiesta4003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta supporto rilevazioni statistiche
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  		type="anpr:tipoTestataRichiesta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta" 				type="anpr:tipoDatiRichiesta4003" 		   minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta4003">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta supporto rilevazioni statistiche
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4003" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaMultipla4003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla supporto rilevazioni statistiche
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  			type="anpr:tipoTestataRisposta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  	  		    type="anpr:tipoDatiRichiesta4003" 	 	   minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="idOperazioneANPR"  	  	    type="anpr:tipoIdOperazioneANPR" 	       minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4003 -->
+
+<!-- servizio 4004 -->
+<xs:element name="Richiesta4004">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  		type="anpr:tipoTestataRichiesta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  	  		    type="anpr:tipoDatiRichiesta4004" 	 	   minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta4004">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta elenchi supporto
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4004" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaMultipla4004">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  			type="anpr:tipoTestataRisposta" 	       minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiRichiesta"  	  		    type="anpr:tipoDatiRichiesta4004" 	 	   minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idOperazioneANPR"  	  	    type="anpr:tipoIdOperazioneANPR" 	       minOccurs="1" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4004 -->
+
+<!-- servizio 4005 -->
+<xs:element name="Richiesta4005">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 		type="anpr:tipoTestataRichiesta" 						minOccurs="1" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="elaborazione" 		type="anpr:tipoElaborazione4005" 						minOccurs="1" maxOccurs="1"/>
+				<xs:element name="verificaStato" 		type="anpr:tipoVerificaStato4005" 						minOccurs="1" maxOccurs="1"/>	
+			</xs:choice>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta4005">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta elenchi supporto
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaMultipla4005" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- 
+		Possibili stati dell'elaborazione
+		0 - Inserita
+		1 - In elaborazione
+		2 - Completata con esito positivo
+		3 - Completata con esito negativo
+		99 - Richiesta terminata con errore
+	 -->
+	<xs:simpleType name="tipoStatoRichiesta">		
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+	</xs:simpleType>	
+
+<!-- 
+	Le sezioni valorizzate di questo elemento variano in base a cosa era stato valorizzato nella richiesta.
+	se è stato valorizzato l'elemento 
+	 	elaborazione : allora verranno valorizzati solo i primi 4 elementi e messa in coda la richiesta (lo stato di elaborazione sarà 0)
+	 	verificaStato : fino a quando lo stato di elaborazione è 1 (in elaborazione) verranno valorizzati solo i primi 4 elementi, successivamente anche gli altri.
+	NB : le'lemento dataDisponibilita è solo uno stima fino a quando l'elaborazione non è terminata. 
+-->
+<xs:element name="RispostaMultipla4005">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta multipla Elenchi supporto
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />
+			<xs:element name="statoRichiesta" type="tipoStatoRichiesta" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="idOperazioneANPR" type="anpr:tipoIdOperazioneANPR" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dataDisponibilita" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="comuneRichiesta" type="anpr:tipoComuneRichiesta" minOccurs="0" maxOccurs="1" />
+			<xs:element name="ricercaElenchiRichieste" type="anpr:tipoRicercaElenchiRichieste" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiFornitura" type="anpr:tipoDatiFornitura4005" minOccurs="0" maxOccurs="1" />				
+			<xs:element name="elencoRisposte" type="anpr:tipodatiRisposta4005" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 4005 -->
+
+</xs:schema>

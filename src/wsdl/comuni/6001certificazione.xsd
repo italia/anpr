@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/6001certificazione" 
+		   targetNamespace="http://sogei.it/ANPR/6001certificazione" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolario6001certificazione"
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+ 
+ <xs:import namespace="http://sogei.it/ANPR/vocabolario6001certificazione"  schemaLocation="vocabolario6001certificazione.xsd"/>
+ 
+ <!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="Risposta6001KO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>    						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- rispostaKO -->
+<xs:element name="Risposta6001OK">
+<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaOk
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 			type="anpr:tipoTestataRisposta" 			minOccurs="1" maxOccurs="1"/> 
+			<xs:element name="linguaCertificato"        type="anpr:tipoLinguaCertificato6001" 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="listaTipiCertificato" 	type="anpr:tipolistaTipiCertificati"		minOccurs="0" maxOccurs="1"/>	
+			<xs:element name="soggettoIntestatario"		type="anpr:tipoSoggettoIntestatario" 		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="protocolloANPR"		    type="anpr:tipoProtocolloANPR" 		        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="parametriRichiesta"		type="anpr:tipoparametriRisposta6001"		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="file" 					type="anpr:tipoFile"  						minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiCertificato" 			type="anpr:tipoDatiCertificato"  			minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 				minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="listaAnomalie" 			type="anpr:tipoListaAnomalie"			    minOccurs="0" maxOccurs="1"/> 					
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+<!-- servizio 6001 -->
+<xs:element name="Richiesta6001">      
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta di un certificato
+				</xs:documentation>
+			</xs:annotation>			
+			<xs:element name="testataRichiesta" 		type="anpr:tipoTestataRichiesta" 			minOccurs="1" maxOccurs="1"/>    			
+			<xs:element name="linguaCertificato" 		type="anpr:tipoLinguaCertificato6001"		minOccurs="0" maxOccurs="1"/>
+			<xs:element name="listaTipiCertificati" 	type="anpr:tipolistaTipiCertificati" 		minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="generalitaRichiedente" 	type="anpr:tipoSoggettoRichiedente"	  	    minOccurs="0" maxOccurs="1"/>			
+			<xs:element name="soggettoIntestatario" 	type="anpr:tipoSoggettoIntestatario"		minOccurs="1" maxOccurs="1"/>
+			<xs:element name="datiControllo"			type="anpr:tipoDatiControllo6001" 	   	    minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>  
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Risposta6001">  
+	<xs:complexType>    
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta di un certificato
+				</xs:documentation>
+			</xs:annotation>		
+			<xs:choice>
+				<xs:element ref="Risposta6001KO"  minOccurs="0" maxOccurs="1"/> 	
+				<xs:element ref="Risposta6001OK"  minOccurs="0" maxOccurs="1"/> 
+			</xs:choice>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio 6001 -->
+	
+</xs:schema>

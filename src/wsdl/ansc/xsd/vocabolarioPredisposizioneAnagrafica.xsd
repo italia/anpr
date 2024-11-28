@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ansc/vocabolarioPredisposizioneAnagrafica"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tpdt="http://sogei.it/ansc/tipoDatoPredisposizioneAnagrafica"
+           targetNamespace="http://sogei.it/ansc/vocabolarioPredisposizioneAnagrafica"
+           elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://sogei.it/ansc/tipoDatoPredisposizioneAnagrafica"
+               schemaLocation="tipoDatoPredisposizioneAnagrafica.xsd"/>
+
+    <xs:complexType name="tipoPredisposizioneAnagrafica">
+        <xs:sequence>
+            <xs:element name="testata" type="tpdt:tipoDatoTestata" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="evento" type="tpdt:tipoDatoEvento" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

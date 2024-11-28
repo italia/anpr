@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://sogei.it/ANPR/CONSOLATIServizi"
+	xmlns:tpdt="http://sogei.it/ANPR/tipoDato" xmlns:anpr="http://sogei.it/ANPR/vocabolarioCONSOLATIServizi"
+	xmlns:risp="http://sogei.it/ANPR/rispostaComune" attributeFormDefault="unqualified"
+	elementFormDefault="unqualified" targetNamespace="http://sogei.it/ANPR/CONSOLATIServizi">
+
+	<xs:import namespace="http://sogei.it/ANPR/vocabolarioCONSOLATIServizi"
+		schemaLocation="vocabolarioCONSOLATIServizi.xsd" />
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"
+		schemaLocation="tipoDato.xsd" />
+
+
+
+	<!-- rispostaKO -->
+	<xs:element name="rispostaKO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						rispostaKO
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta"
+					type="anpr:tipoTestataRisposta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="listaErrori"
+					type="anpr:tipoListaErrori" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- C001 -->
+	<xs:element name="RichiestaC001">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CONSOLATI: Interrogazione Dati Anagrafici</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente"
+					type="anpr:tipoDatiRichiedente" />
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita"
+					type="tpdt:tipoGeneralita" />
+				<xs:element maxOccurs="1" minOccurs="1"
+					name="comuneIscrizioneAIRE" type="tpdt:tipoComune" />
+				<xs:element maxOccurs="1" minOccurs="0" name="consolato"
+					type="tpdt:tipoConsolato" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoC001">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta C001
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element maxOccurs="1" minOccurs="0" ref="RispostaC001" />
+					<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaC001">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta C001: Interrogazione Dati Anagrafici</p>
+						<p>Lista soggetti è assente in caso di errori. (esito su testata
+							risposta = XXXX)
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta"
+					type="anpr:tipoTestataRisposta" />
+				<xs:element maxOccurs="1" minOccurs="0" name="listaSoggetti"
+					type="anpr:tipoListaDatiSoggetto" />
+				<xs:element maxOccurs="1" minOccurs="0"
+					name="provenienzaInformazioni" type="tpdt:tipoProvenienzaInfo" />
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori"
+					type="anpr:tipoListaErrori" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- C001 -->
+
+
+
+
+	<!-- C002 -->
+	<xs:element name="RichiestaC002">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CONSOLATI: Richiesta allineamento</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente"
+					type="anpr:tipoDatiRichiedente" />
+				<xs:element maxOccurs="1" minOccurs="0" name="generalita"
+					type="tpdt:tipoGeneralita" />
+				<xs:element maxOccurs="1" minOccurs="0"
+					name="comuneIscrizioneAIRE" type="tpdt:tipoComune" />
+				<xs:element maxOccurs="1" minOccurs="0"
+					name="residenza" type="tpdt:tipoResidenza"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="idRichiestaANPR"
+					type="anpr:tipoIdOperazioneANPR" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoC002">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta C002
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element maxOccurs="1" minOccurs="0" ref="RispostaC002" />
+					<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaC002">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta C002: Richiesta allineamento</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta"
+					type="anpr:tipoTestataRisposta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita"
+					type="tpdt:tipoGeneralita" />
+				<xs:element maxOccurs="1" minOccurs="0"
+					name="residenza" type="tpdt:tipoResidenza"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="statoRichiesta"
+					type="anpr:tipoStatoRichiesta" />
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori"
+					type="anpr:tipoListaErrori" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- C003 -->
+	<xs:element name="RichiestaC003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CONSOLATI:  con AE</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente"
+					type="anpr:tipoDatiRichiedente" />
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita"
+					type="tpdt:tipoGeneralita" />
+				<xs:element maxOccurs="1" minOccurs="1"
+					name="comuneIscrizioneAIRE" type="tpdt:tipoComune" />
+				<xs:element maxOccurs="1" minOccurs="0" name="consolato"
+					type="tpdt:tipoConsolato" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoC003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta C003
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element maxOccurs="1" minOccurs="0" ref="RispostaC003" />
+					<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RispostaC003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta C001: Interrogazione Dati Anagrafici</p>
+						<p>Lista soggetti è assente in caso di errori. (esito su testata
+							risposta = XXXX)
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta"
+					type="anpr:tipoTestataRisposta" />
+				<xs:element maxOccurs="1" minOccurs="0" name="generalita"
+					type="tpdt:tipoGeneralita" />
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori"
+					type="anpr:tipoListaErrori" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	
+	<!-- CONSOLATI7 -->
+	
+	
+		<!-- C003 -->
+	<xs:element name="RichiestaC010">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CONSOLATI:  con AE</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta"
+					type="anpr:tipoTestataRichiesta" />
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita"
+					type="tpdt:tipoGeneralita" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoC010">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta C010
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element maxOccurs="1" minOccurs="0" ref="RispostaC010" />
+					<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RispostaC010">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta C001: Interrogazione Dati Anagrafici</p>
+						<p>Lista soggetti è assente in caso di errori. (esito su testata
+							risposta = XXXX)
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta"
+					type="anpr:tipoTestataRisposta" />
+				<xs:element maxOccurs="1" minOccurs="0" name="isAire"
+					type="xs:boolean" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

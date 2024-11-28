@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:schema="http://sogei.it/ANPR/CONSOLATIServizi" xmlns:tns="http://sogei.it/ANPR/CONSOLATIAnprService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sogei.it/ANPR/CONSOLATIAnprService">
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/CONSOLATIAnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/CONSOLATIServizi" schemaLocation="CONSOLATIServizi.xsd"/>  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaC001">
+		<wsdl:part element="schema:RichiestaC001" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoC001">
+		<wsdl:part element="schema:RispostaEsitoC001" name="response"/>
+	</wsdl:message>	
+
+	<wsdl:message name="RichiestaC002">
+		<wsdl:part element="schema:RichiestaC002" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoC002">
+		<wsdl:part element="schema:RispostaEsitoC002" name="response"/>
+	</wsdl:message>	
+	
+	<wsdl:message name="RichiestaC003">
+		<wsdl:part element="schema:RichiestaC003" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoC003">
+		<wsdl:part element="schema:RispostaEsitoC003" name="response"/>
+	</wsdl:message>
+	
+	<wsdl:message name="RichiestaC010">
+		<wsdl:part element="schema:RichiestaC010" name="request"/>
+	</wsdl:message>
+	<wsdl:message name="RispostaEsitoC010">
+		<wsdl:part element="schema:RispostaEsitoC010" name="response"/>
+	</wsdl:message>	
+	
+	
+
+	<wsdl:portType name="AnprPortTypeCONSOLATI">  
+		<wsdl:operation name="interrogazioneDatiAnagrafici">
+			<wsdl:input message="tns:RichiestaC001"/>
+			<wsdl:output message="tns:RispostaEsitoC001"/>
+		</wsdl:operation>
+		<wsdl:operation name="richiestaAllineamento">
+			<wsdl:input message="tns:RichiestaC002"/>
+			<wsdl:output message="tns:RispostaEsitoC002"/>
+		</wsdl:operation>
+		<wsdl:operation name="richiestaAllineamentoAE">
+			<wsdl:input message="tns:RichiestaC003"/>
+			<wsdl:output message="tns:RispostaEsitoC003"/>
+		</wsdl:operation>
+		<wsdl:operation name="consultazioneAire">
+			<wsdl:input message="tns:RichiestaC010"/>
+			<wsdl:output message="tns:RispostaEsitoC010"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingCONSOLATI" type="tns:AnprPortTypeCONSOLATI">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		
+		<wsdl:operation name="interrogazioneDatiAnagrafici">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>
+		<wsdl:operation name="richiestaAllineamento">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>
+		
+		<wsdl:operation name="richiestaAllineamentoAE">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>
+		
+		<wsdl:operation name="consultazioneAire">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>     
+			</wsdl:output> 
+		</wsdl:operation>		  
+					  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceCONSOLATI">    
+		<wsdl:port binding="tns:AnprBindingCONSOLATI" name="AnprServicePortCONSOLATI"> 
+		     <wsdlsoap:address location="https://ws.anpr.interno.it/anpr-ws-CONSOLATI-webapp/AnprServiceCONSOLATI"/>
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolario5000mutazione"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tpdt="http://sogei.it/ANPR/tipoDato"
+	targetNamespace="http://sogei.it/ANPR/vocabolario5000mutazione"
+	elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"
+		schemaLocation="tipoDato.xsd" />
+
+	<!-- USATO IN TUTTI I MSG DI RICHIESTA -->
+	<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRichiesta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoTestataRichiesta -->
+
+	<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+
+	<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoTestataRisposta -->
+
+	<!-- FINEUSATO IN TUTTI I MSG DI RISPOSTA -->
+	<!-- USATO IN + I MSG DI RICHIESTA -->
+
+	<!-- tipoCittadinanza -->
+	<xs:complexType name="tipoCittadinanza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoCittadinanza">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoCittadinanza -->
+
+	<!-- tipoGenitore -->
+	<xs:complexType name="tipoGenitore">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoGenitore">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoGenitore -->
+
+	<!-- tipoStatoCivile -->
+	<xs:complexType name="tipoStatoCivile">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoStatoCivile">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoStatoCivile -->
+
+	<!-- tipoResidenza -->
+	<xs:complexType name="tipoResidenza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoResidenza">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoResidenza -->
+
+	<!-- tipoAltreLingue -->
+	<xs:complexType name="tipoAltraLingua">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAltraLingua">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoAltreLingue -->
+
+	<!-- tipoAutoveicoli -->
+	<xs:complexType name="tipoAutoveicoli">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAutoveicoli">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoAutoveicoli -->
+
+	<!-- tipoDatiProcedimento -->
+	<xs:complexType name="tipoDatiProcedimento">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatiProcedimento">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiProcedimento -->
+
+	<!-- tipoDatiOperazione -->
+	<xs:complexType name="tipoDatiOperazione">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatiOperazione">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiOperazione -->
+
+	<xs:simpleType name="tipoIdSchedaSoggettoANPR">
+		<xs:restriction base="tpdt:numerico">
+			<xs:maxLength value="16" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- tipoGeneralita -->
+	<xs:complexType name="tipoGeneralita">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoGeneralita">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoGeneralita -->
+
+	<!-- tipoIntestatarioFamConv -->
+	<xs:complexType name="tipoIntestatarioFamConv">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoTutoreIntestatario">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoResidenza -->
+
+
+	<!-- tipoMatrimonio -->
+	<xs:complexType name="tipoMatrimonio">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoMatrimonio">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoMatrimonio -->
+
+	<!-- tipoVedovanza -->
+	<xs:complexType name="tipoVedovanza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoVedovanza">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoVedovanza -->
+
+	<!-- tipoAnnullamentoMatrimonio -->
+	<xs:complexType name="tipoAnnullamentoMatrimonio">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAnnullamentoMatrimonio">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoAnnullamentoMatrimonio -->
+
+	<!-- tipoConvivenzaDiFatto -->
+	<xs:complexType name="tipoConvivenzaDiFatto">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoConvivenzaDiFatto"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- tipoConvivenzaDiFatto -->
+
+	<!-- tipoRisoluzioneConvivenza -->
+	<xs:complexType name="tipoRisoluzioneConvivenza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoRisoluzioneConvivenza"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoRisoluzioneConvivenza -->
+
+	<!-- tipoUnioneCivile -->
+	<xs:complexType name="tipoUnioneCivile">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoUnioneCivile"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoUnioneCivile -->
+
+	<!-- tipoScioglimentoUnione -->
+	<xs:complexType name="tipoScioglimentoUnione">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoScioglimentoUnione"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoScioglimentoUnione -->
+
+	<!-- tipoCartaIdentita -->
+	<xs:complexType name="tipoCartaIdentita">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoCartaIdentita">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoCartaIdentita -->
+
+	<!-- tipoPermessoSoggiorno -->
+	<xs:complexType name="tipoPermessoSoggiorno">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoPermessoSoggiorno">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoPermessoSoggiorno -->
+
+	<!-- tipoListaLeva -->
+	<xs:complexType name="tipoListaLeva">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoListaLeva">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoListaLeva -->
+
+	<!-- tipoListaElettorale -->
+	<xs:complexType name="tipoListaElettorale">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoListaElettorale">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoListaElettorale -->
+
+	<!-- tipoCensimento -->
+	<xs:complexType name="tipoCensimento">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoCensimento">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoCensimento -->
+
+	<!-- tipoCensimento -->
+	<xs:complexType name="tipoCertificabilita">
+		<xs:sequence>
+			<xs:element name="soggettoCertificabile" type="tpdt:tipoSoggettoCertificabile"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoCensimento -->
+
+	<!-- tipoDatiProcedimentoIstruttoria -->
+	<xs:complexType name="tipoDatiProcedimentoIstruttoria">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatiProcedimentoIstruttoria">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiProcedimentoIstruttoria -->
+
+	<!-- tipoAttoNascita -->
+	<xs:complexType name="tipoAttoNascita">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAtto">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoAttoNascita -->
+
+	<!-- tipoAttoNascitaANPR -->
+	<xs:complexType name="tipoAttoNascitaANPR">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAttoANPR">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoAttoNascitaANPR -->
+
+	<!-- tipoaltriDati -->
+	<xs:complexType name="tipoAltriDati">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoAltriDati">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoaltriDati -->
+
+	<!-- tipoSentenza -->
+	<xs:complexType name="tipoSentenza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoSentenza">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoSentenza -->
+
+	<!-- tipoDatiIscrizione -->
+	<xs:complexType name="tipoDatiIscrizione">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatiIscrizione">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiIscrizione -->
+
+	<!-- tipoLocalitaEstera -->
+	<xs:complexType name="tipoLocalitaEstera">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoLocalitaEstera">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoLocalitaEstera -->
+
+	<!-- tipoFamigliaConvivenza -->
+	<xs:complexType name="tipoFamigliaConvivenza">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoFamigliaConvivenza">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoFamigliaConvivenza -->
+
+	<!-- tipoLegameSoggetto -->
+	<xs:complexType name="tipoLegameSoggetto">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoLegameSoggetto">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoLegameSoggetto -->
+
+	<!-- tipoDatiDecesso -->
+	<xs:complexType name="tipoDatiDecesso">
+		<xs:sequence>
+			<xs:element name="motivoDecesso" type="tpdt:tipoMotivoCancellazione"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="eventoDecesso" type="tpdt:tipoDatiEvento"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="sentenza" type="tpdt:tipoSentenza"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiDecesso -->
+
+	<!-- tipoDatiRicercaScheda -->
+	<xs:complexType name="tipoDatiRicercaScheda">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatiRicercaScheda">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDatiRicercaScheda -->
+
+	<!-- FINE USATO IN + MSG DI RICHIESTA -->
+
+	<!-- USATO IN + MSG DI RISPOSTA -->
+
+	<!-- tipoListaErrori -->
+	<xs:complexType name="tipoListaErrori">
+		<xs:sequence>
+			<xs:element name="errore" type="tpdt:tipoErroriAnomalia"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoListaErrori -->
+
+	<!-- FINE USATO IN + MSG DI RISPOSTA -->
+
+	<!-- ################################################################# Inizio 
+		usati in 5001 ########################################################### -->
+
+	<!-- tipoSoggettoFamiglia -->
+	<xs:complexType name="tipoSoggettoFamiglia">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoSoggettoFamiglia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoSoggettoFamiglia -->
+
+	<!-- tipoDatiControllo5001 -->
+	<xs:complexType name="tipoDatiControllo5001">
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>codice mutazione 2 - listaControlli: nome = FC -
+					valore = S: famiglia certificabile
+				</xs:documentation>
+				<xs:documentation>codice mutazione 3 - listaControlli: nome = FI -
+					valore = 1: famiglia incompleta
+				</xs:documentation>
+				<xs:documentation>codice mutazione 3 - listaControlli: nome = FI -
+					valore = 0: famiglia completa (DEFAULT)
+				</xs:documentation>
+				<xs:documentation>codice mutazione 4 - listaControlli: nome = FO -
+					valore = S: forza operazione cambio residenza
+				</xs:documentation>
+				<xs:documentation>codice mutazione 5 - listaControlli: nome = FO -
+					valore = S: forza operazione cambio residenza
+				</xs:documentation>
+				<xs:documentation>codice mutazione 6 - listaControlli: nome = FO -
+					valore = S: forza operazione cambio residenza
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="tipoMutazione" type="tpdt:numerico1"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="tipoScheda" type="tpdt:tipoScheda"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5001 -->
+
+	<!-- ################################################################# Fine 
+		usati in 5001 ########################################################### -->
+
+
+	<!-- ################################################################# Inizio 
+		usati in 5005 ########################################################### -->
+
+
+	<!-- tipoDatiControllo5005 -->
+	<xs:complexType name="tipoDatiControllo5005">
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>codice mutazione 2 - listaControlli: nome = FO -
+					valore = S: forza operazione cambio residenza
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="tipoMutazione" type="tpdt:tipoMutazioneResidenza"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="tipoScheda" type="tpdt:tipoSchedaMutazione"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5005 -->
+
+	<!-- ################################################################# Fine 
+		usati in 5005 ########################################################### -->
+
+
+	<!-- ################################################################# Inizio 
+		usati in 5008 ########################################################### -->
+
+	<!-- tipoGeneralitaPerModifica -->
+	<xs:complexType name="tipoGeneralitaPerModifica">
+		<xs:sequence>
+			<xs:element name="generalita" type="tpdt:tipoGeneralita"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="attributiSoggetto" type="tpdt:tipoAttributiSoggetto"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoGeneralitaPerModifica -->
+
+	<!-- tipoListe -->
+	<xs:complexType name="tipoListe">
+		<xs:sequence>
+			<xs:element name="listaLeva" type="tpdt:tipoListaLeva"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="listaElettorale" type="tpdt:tipoListaElettorale"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoListe -->
+
+	<!-- tipoListaElettorale5010 -->
+	<xs:complexType name="tipoListaElettorale5010">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoListaElettorale5010">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipoListaCancellazione">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoListaCancellazione">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="tipoRevisione">
+		<xs:restriction base="xs:string">
+			<xs:pattern
+				value="PRIMOCARICAMENTO|SEMESTRALE|DINAMICA|STRAORDINARIA|ALTRA" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Fine tipoListe -->
+
+	<!-- tipoListaSezioni5011 -->
+	<xs:complexType name="tipoListaSezioni5011">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoListaSezioni5011">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoListe -->
+
+	<!-- tipoDatiControllo5008 -->
+	<xs:complexType name="tipoDatiControllo5008">
+		<xs:sequence>
+			<xs:element name="tipoMutazione" type="tpdt:numerico2"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="gestioneCF" type="tpdt:tipoGestioneCF"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5008 -->
+
+	<!-- tipoDatiControllo5008 -->
+	<xs:complexType name="tipoDatiControllo5010">
+		<xs:sequence>
+			<xs:element name="tipoMutazione" type="tpdt:numerico2"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5008 -->
+
+	<!-- tipoDomicilioDigitale5008 -->
+	<xs:complexType name="tipoDomicilioDigitale5008">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDomicilioDigitale">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoDomicilioDigitale5008 -->
+
+	<!-- ################################################################# Fine 
+		usati in 5008 ########################################################### -->
+
+	<!-- ################################################################# Inizio 
+		usati in 5012 ########################################################### -->
+
+	<!-- tipoDatiControllo5012 -->
+	<xs:complexType name="tipoDatiControllo5012">
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>listaControlli: nome = RA - valore = 1: ripristino
+					posizione anagrafica
+				</xs:documentation>
+				<xs:documentation>listaControlli: nome = RP - valore = 1: ripristino
+					parziale
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="tipoScheda" type="tpdt:tipoSchedaAnn"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="annullamentoAttribuzioneCF" type="tpdt:tipoSN1"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5012 -->
+
+	<!-- ################################################################# Fine 
+		usati in 5012 ########################################################### -->
+
+	<!-- ################################################################# Inizio 
+		usati in 5013 ########################################################### -->
+
+	<xs:complexType name="tipoSchedaSoggetto">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoSchedaSoggetto"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRevocaDato">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoRevocaDato"></xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- tipoDatiControllo5013 -->
+	<xs:complexType name="tipoDatiControllo5013">
+		<xs:sequence>
+			<xs:element name="tipoRevoca" type="tpdt:numerico2"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5013 -->
+	<!-- ################################################################# Fine 
+		usati in 5013 ########################################################### -->
+
+	<!-- ################################################################# Inizio 
+		usati in 5014 ########################################################### -->
+
+	<xs:complexType name="tipoDatiControllo5014">
+		<xs:sequence>
+			<xs:annotation>
+
+			</xs:annotation>
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRichiestaRettifica101">
+		<xs:sequence>
+			<xs:element name="dataDecorrenzaResidenza" type="xs:date"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRichiestaRettifica102">
+		<xs:sequence>
+			<xs:element name="idMotivoIscrizione" type="tpdt:tipoMotivoIscrizione"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="note" type="tpdt:charMax240" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="provenienza" type="tpdt:tipoProvenienzaDestinazione"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRichiestaRettifica103">
+		<xs:sequence>
+			<xs:element name="dataUltimoAggiornamentoAPR" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="dataPrimaIscrizioneComune" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="dataIngressoFamiglia" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRispostaRettifica">
+		<xs:choice>
+			<xs:element name="rispostaRettifica101" type="tipoRispostaRettifica101" />
+			<xs:element name="rispostaRettifica102" type="tipoRispostaRettifica102" />
+			<xs:element name="rispostaRettifica103" type="tipoRispostaRettifica103" />
+      <xs:element name="rispostaRettifica104" type="tipoRispostaRettifica104"/>
+      <xs:element name="rispostaRettifica105" type="tipoRispostaRettifica105"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRispostaRettifica101">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="dataDecorrenzaResidenza" type="xs:date"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRispostaRettifica102">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="idMotivoIscrizione" type="tpdt:tipoMotivoIscrizione"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="note" type="tpdt:charMax240" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="provenienza" type="tpdt:tipoProvenienzaDestinazione"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoRispostaRettifica103">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="dataUltimoAggiornamentoAPR" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="dataPrimaIscrizioneComune" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="dataIngressoFamiglia" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	  <xs:complexType name="tipoRispostaRettifica104">
+    	<xs:sequence>
+    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dataPrimaIscrizioneComune" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataDecorrenzaResidenza" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataOrigineFamigliaConvivenza" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataIngressoFamiglia" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataDecorrenzaLegame" type="xs:date" minOccurs="0" maxOccurs="1"/>
+    	</xs:sequence>
+    </xs:complexType>       
+    
+    <xs:complexType name="tipoRispostaRettifica105">
+    	<xs:sequence>
+    		<xs:element name="idSchedaSoggettoANPR" type="tpdt:tipoIdSchedaSoggettoANPR" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="luogoNascita" type="tpdt:tipoLuogoEvento" minOccurs="1" maxOccurs="1"/>
+    	</xs:sequence>
+    </xs:complexType>
+
+	<!-- ################################################################# Fine 
+		usati in 5014 ########################################################### -->
+    <xs:complexType name="tipoRichiestaRettifica">
+     <xs:choice>
+      <xs:element name="richiestaRettifica101" type="tipoRichiestaRettifica101"/>
+      <xs:element name="richiestaRettifica102" type="tipoRichiestaRettifica102"/>
+      <xs:element name="richiestaRettifica103" type="tipoRichiestaRettifica103"/>
+      <xs:element name="richiestaRettifica104" type="tipoRichiestaRettifica104"/>
+      <xs:element name="richiestaRettifica105" type="tipoRichiestaRettifica105"/>
+    </xs:choice>
+    </xs:complexType>
+    
+     <xs:complexType name="tipoRichiestaRettifica104">
+    	<xs:sequence>
+			<xs:element name="dataPrimaIscrizioneComune" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataDecorrenzaResidenza" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataOrigineFamigliaConvivenza" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataIngressoFamiglia" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dataDecorrenzaLegame" type="xs:date" minOccurs="0" maxOccurs="1"/>
+    	</xs:sequence>
+    </xs:complexType>
+    
+     <xs:complexType name="tipoRichiestaRettifica105">
+    	<xs:sequence>
+            <xs:element name="luogoNascita" type="tpdt:tipoLuogoEvento" minOccurs="1" maxOccurs="1"/>
+    	</xs:sequence>
+    </xs:complexType>
+
+	<!-- ################################################################# Inizio 
+		usati in 5021 ########################################################### -->
+
+	<!-- tipoRicercaMatrimonio -->
+	<xs:complexType name="tipoRicercaMatrimonio">
+		<xs:sequence>
+			<xs:element name="coniuge1" type="tpdt:tipoGeneralita"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="dataMatrimonio" type="tpdt:tipoDataAnagrafica"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="coniuge2" type="tpdt:tipoGeneralita"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						E' obbligatorio per tutti i tipi di mutazione
+						tranne per tipoMutazione = 1 (inserimento matrimonio poligamo)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoRicercaMatrimonio -->
+
+	<!-- tipoDatiControllo5021 -->
+	<xs:complexType name="tipoDatiControllo5021">
+		<xs:sequence>
+			<xs:element name="tipoMutazione" type="tpdt:numerico2"
+				minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						01: Inserimento matrimonio poligamo
+						02: Inserimento
+						vedovanza
+						03:
+						Inserimento cessazione matrimonio poligamo
+						04:
+						Modifica
+						matrimonio poligamo
+						05: Modifica vedovanza
+						06: Modifica cessazione
+						matrimonio poligamo
+						07: Cancellazione (annullamento operazione)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="listaControlli" type="tpdt:tipoListaControlli"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Futuri sviluppi
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiControllo5021 -->
+	
+	<xs:simpleType name="tipoNumerico2">
+		<xs:restriction base="tpdt:numerico">
+			<xs:maxLength value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoDatiAnnullamento">
+		<xs:sequence>
+			<xs:element name="idOperazioneANPR" 		 type="tpdt:tipoIdOperazioneANPR" 				  minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# Fine 
+		usati in 5021 ########################################################### -->
+
+</xs:schema>

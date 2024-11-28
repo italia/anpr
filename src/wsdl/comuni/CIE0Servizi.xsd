@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://sogei.it/ANPR/CIE0Servizi" xmlns:anpr="http://sogei.it/ANPR/vocabolarioCIEServizi" xmlns:risp="http://sogei.it/ANPR/rispostaComune" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://sogei.it/ANPR/CIE0Servizi">
+
+	<xs:import namespace="http://sogei.it/ANPR/vocabolarioCIEServizi" schemaLocation="vocabolarioCIEServizi.xsd"/>
+
+		<!-- rispostaKO -->
+		<xs:element name="rispostaKO">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:annotation>
+						<xs:documentation>
+							rispostaKO
+						</xs:documentation>
+					</xs:annotation>	
+					<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta" type="anpr:tipoTestataRisposta"/>	
+					<xs:element maxOccurs="1" minOccurs="1" name="listaErrori" type="anpr:tipoListaErrori"/>   						
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+
+	<!-- CIE2 -->
+	<xs:element name="RichiestaCIE2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CIE2: Interrogazione Dati Anagrafici</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta" type="anpr:tipoTestataRichiesta"/>				
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita" type="anpr:tipoGeneralitaPerRicercaCIE2"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente" type="anpr:tipoDatiRichiedente"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="datiControllo" type="anpr:tipoDatiControllo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoCIE2">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta CIE2
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element maxOccurs="1" minOccurs="0" ref="RispostaCIE2"/> 	
+						<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaCIE2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta CIE2: Interrogazione Dati Anagrafici</p>
+						<p>Lista soggetti è assente in caso di errori. (esito su testata
+							risposta = XXXX)</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta" type="anpr:tipoTestataRisposta"/>								
+				<xs:element maxOccurs="1" minOccurs="0" name="listaSoggetti" type="anpr:tipoListaDatiSoggetto"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori" type="anpr:tipoListaErrori"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- CIE2 -->
+
+	<!-- CIE7 -->
+	<xs:element name="RichiestaCIE7">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CIE7: Comunicazione annullamento</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta" type="anpr:tipoTestataRichiesta"/>				
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita" type="anpr:tipoGeneralitaPerRicercaCIE7"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="cartaIdentita" type="anpr:tipoCartaIdentitaCIE"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="dataAnnullamento" type="xs:date"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente" type="anpr:tipoDatiRichiedente"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoCIE7">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta CIE7
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element maxOccurs="1" minOccurs="0" ref="RispostaCIE7"/> 	
+						<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaCIE7">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta CIE7: Comunicazione annullamento</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta" type="anpr:tipoTestataRisposta"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="cartaIdentitaAnnullata" type="anpr:tipoCartaIdentitaCIE"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="generalita" type="anpr:tipoGeneralitaPerRicercaCIE7"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori" type="anpr:tipoListaErrori"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- CIE7 -->
+
+	<!-- CIE8 -->
+	<xs:element name="RichiestaCIE8">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Richiesta CIE8: Comunicazione emissione</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRichiesta" type="anpr:tipoTestataRichiesta"/>				
+				<xs:element maxOccurs="1" minOccurs="1" name="datiRichiedente" type="anpr:tipoDatiRichiedente"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="generalita" type="anpr:tipoGeneralitaPerRicercaCIE8"/>
+				<xs:element maxOccurs="1" minOccurs="1" name="cartaIdentita" type="anpr:tipoCartaIdentitaCIE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaEsitoCIE8">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta CIE8
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element maxOccurs="1" minOccurs="0" ref="RispostaCIE8"/> 	
+						<xs:element maxOccurs="1" minOccurs="0" ref="rispostaKO"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaCIE8">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						<p>Risposta CIE8: Comunicazione emissione</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element maxOccurs="1" minOccurs="1" name="testataRisposta" type="anpr:tipoTestataRisposta"/>							
+				<xs:element maxOccurs="1" minOccurs="0" name="cartaIdentitaEmessa" type="anpr:tipoCartaIdentitaCIE"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="generalita" type="anpr:tipoGeneralitaPerRicercaCIE8"/>
+				<xs:element maxOccurs="1" minOccurs="0" name="listaErrori" type="anpr:tipoListaErrori"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- CIE8 -->
+
+</xs:schema>

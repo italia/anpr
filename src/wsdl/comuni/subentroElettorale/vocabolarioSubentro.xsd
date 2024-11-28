@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolarioSubentro"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+           targetNamespace="http://sogei.it/ANPR/vocabolarioSubentro" 
+	       elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>	
+	
+	
+	
+<!-- ################################################################# Inizio usati in 6001 ###########################################################-->
+ 
+<!-- numericoMax9 -->
+<xs:simpleType name="numericoMax9">
+	<xs:restriction base="tpdt:numerico">
+		<xs:maxLength value="9"/>
+	</xs:restriction>
+</xs:simpleType>
+	
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori --> 
+ 
+<!-- tipoListaAnomalie -->
+	<xs:complexType name="tipoListaAnomalie">
+		<xs:sequence>
+			<xs:element name="anomalie"	 type="tipoAnomalie" 		minOccurs="0" maxOccurs="unbounded"/>											
+		</xs:sequence>		
+	</xs:complexType>
+<!-- Fine tipoListaAnomalie -->
+
+<!-- tipoAnomalie -->
+	<xs:complexType name="tipoAnomalie">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoErroriAnomalia">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoAnomalie -->
+	
+
+
+<!-- DATI FORNITURA -->
+	<xs:complexType name="tipoDatiFornitura">
+		<xs:sequence>
+			<xs:element name="versioneFornitura" 					 type="tpdt:numericoMax3"	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numeroTotaleListe"			 		 type="numericoMax9" 		minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+<!-- Fine FORNITURA -->
+
+
+	<xs:simpleType name="tipoIdSoggetto">
+		<xs:restriction base="tpdt:numerico">
+			<xs:maxLength value="16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoCertificabilita">
+		<xs:sequence>
+			<xs:element name="soggettoCertificabile"	type="tpdt:tipoSoggettoCertificabile"	  minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	 <xs:complexType name="tipoLista">
+		<xs:sequence>
+			<xs:element name="listaSoggetto" 			type="tipoListaCert" 	minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoListaCert">
+		<xs:sequence>
+			<xs:element name="idSchedaSoggettoANPR" 		type="tipoIdSoggetto"					minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lista" 						type="tpdt:tipoListaElettorale5010" 	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="certificabilita" 				type="tipoCertificabilita" 				minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	 <xs:complexType name="tipoSezione">
+		<xs:sequence>
+			<xs:element name="sezione" type="tpdt:tipoListaSezioni5011" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

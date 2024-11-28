@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/A000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/A000AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/A000aire" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/A000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/A000aire" schemaLocation="A000aire.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaA001">
+		<wsdl:part name="request" element="schema:RichiestaA001"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaA001">  
+		<wsdl:part name="response" element="schema:RispostaA001"/>  
+	</wsdl:message>
+	<wsdl:message name="RichiestaA002">
+		<wsdl:part name="request" element="schema:RichiestaA002"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaA002">  
+		<wsdl:part name="response" element="schema:RispostaA002"/>  
+	</wsdl:message>
+	<wsdl:message name="RichiestaA006">  
+		<wsdl:part name="request" element="schema:RichiestaA006"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaA006">  
+		<wsdl:part name="response" element="schema:RispostaA006"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortTypeA000">  
+		<wsdl:operation name="AIRE_iscrizione_nascita">    
+			<wsdl:input   message="tns:RichiestaA001"/>    
+			<wsdl:output  message="tns:RispostaA001" />  
+		</wsdl:operation>
+		<wsdl:operation name="AIRE_iscrizione_altriMotivi">    
+			<wsdl:input   message="tns:RichiestaA002"/>    
+			<wsdl:output  message="tns:RispostaA002" />  
+		</wsdl:operation>
+		<wsdl:operation name="AIRE_mutazione">    
+			<wsdl:input   message="tns:RichiestaA006"/>    
+			<wsdl:output  message="tns:RispostaA006" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingA000" type="tns:AnprPortTypeA000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="AIRE_iscrizione_nascita">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="AIRE_iscrizione_altriMotivi">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="AIRE_mutazione">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  	
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceA000">    
+		<wsdl:port binding="tns:AnprBindingA000" name="AnprServicePortA000">      
+			<wsdlsoap:address location="http://sogei.it/ANPR/AnprServiceA000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/P000sc" 
+		   targetNamespace="http://sogei.it/ANPR/P000sc" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:anpr="http://sogei.it/ANPR/vocabolarioP000sc"  
+		   xmlns:risp="http://sogei.it/ANPR/rispostaComune"
+		   elementFormDefault="unqualified" 
+		   attributeFormDefault="unqualified">
+
+ <xs:import namespace="http://sogei.it/ANPR/vocabolarioP000sc"  schemaLocation="vocabolarioP000sc.xsd"/>
+ 
+<!-- ######################################################## USATO IN + MESSAGGI DI RISPOSTA ######################################################## -->
+
+<!-- rispostaKO -->
+<xs:element name="rispostaKO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					rispostaKO
+				</xs:documentation>
+			</xs:annotation>	
+			<xs:element name="testataRisposta" 	        type="anpr:tipoTestataRisposta" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="listaErrori" 		        type="anpr:tipoListaErrori" 	minOccurs="1" maxOccurs="1"/>    						
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine rispostaKO -->
+<!-- ############################################################################################################################################### -->
+
+<!-- servizio P001 -->
+<xs:element name="RichiestaP001">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta elenco
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  					type="anpr:tipoTestataRichiesta" 	       	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  							type="anpr:tipoCriteriRicercaP001" 			minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+ <xs:element name="RispostaP001">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta elenco
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaOKP001" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 			 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaOKP001">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta OK elenco
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  					type="anpr:tipoTestataRisposta" 	      	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  						type="anpr:tipoCriteriRicercaP001" 			minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="elenco" 		 	  					type="anpr:tipoListaRichiestaP001" 	    	minOccurs="0" maxOccurs="1"/>					
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio P001 -->
+
+<!-- servizio P002 -->
+<xs:element name="RichiestaP002">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta dettaglio
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  					type="anpr:tipoTestataRichiesta" 	       	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  							type="anpr:tipoCriteriRicercaP002" 			minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+ <xs:element name="RispostaP002">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta dettaglio
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaOKP002" 	     minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaOKP002">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta OK dettaglio
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  					type="anpr:tipoTestataRisposta" 	      	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  						type="anpr:tipoCriteriRicercaP002" 			minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="dettaglio" 		 	  			    type="anpr:tipoDettaglioP002" 	    	    minOccurs="0" maxOccurs="1"/>					
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio P002 -->
+
+
+<!-- servizio P003 -->
+<xs:element name="RichiestaP003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Richiesta aggiorna
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRichiesta" 	  					type="anpr:tipoTestataRichiesta" 	       	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriAggiornamento"  					type="anpr:tipoCriteriAggiornamentoP003" 			minOccurs="1" maxOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+ <xs:element name="RispostaP003">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>			
+					<xs:documentation>
+						Risposta aggiorna
+					</xs:documentation>
+				</xs:annotation>
+					<xs:choice>
+						<xs:element ref="RispostaOKP003" 	     	 minOccurs="0" maxOccurs="1" /> 	
+						<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+					</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:element name="RispostaOKP003">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>
+					Risposta OK aggiorna
+				</xs:documentation>
+			</xs:annotation>
+			<xs:element name="testataRisposta" 	  					type="anpr:tipoTestataRisposta" 	      	minOccurs="1" maxOccurs="1"/>
+			<xs:element name="criteriRicerca"  						type="anpr:tipoCriteriAggiornamentoP003" 	minOccurs="1" maxOccurs="1"/>			
+			<xs:element name="esito" 		 	  			        type="anpr:tipoEsitoP003" 	    	        minOccurs="1" maxOccurs="1"/>					
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- fine servizio P003 -->
+
+
+</xs:schema>

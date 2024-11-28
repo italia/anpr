@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/6001AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/6001AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/6001certificazione" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/6001AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/6001certificazione" schemaLocation="6001certificazione.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta6001">
+		<wsdl:part name="request" element="schema:Richiesta6001"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta6001">  
+		<wsdl:part name="response" element="schema:Risposta6001"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortType6001">  
+		<wsdl:operation name="emissioneCertificato">    
+			<wsdl:input   message="tns:Richiesta6001"/>    
+			<wsdl:output  message="tns:Risposta6001" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding6001" type="tns:AnprPortType6001">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="emissioneCertificato">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService6001">    
+		<wsdl:port binding="tns:AnprBinding6001" name="AnprServicePort6001">      
+			<wsdlsoap:address location="http://www.sogei.it/Interno/ANPR/AnprService6001"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

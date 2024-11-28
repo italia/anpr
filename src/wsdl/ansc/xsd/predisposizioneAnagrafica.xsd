@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ansc/predisposizioneAnagrafica"
+           targetNamespace="http://sogei.it/ansc/predisposizioneAnagrafica"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcbl="http://sogei.it/ansc/vocabolarioPredisposizioneAnagrafica"
+           elementFormDefault="unqualified"
+           attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://sogei.it/ansc/vocabolarioPredisposizioneAnagrafica"
+               schemaLocation="vocabolarioPredisposizioneAnagrafica.xsd"/>
+
+    <xs:element name="predisposizioneAnagrafica" type="vcbl:tipoPredisposizioneAnagrafica"/>
+
+</xs:schema>
+	

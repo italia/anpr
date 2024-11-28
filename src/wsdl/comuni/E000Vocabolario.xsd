@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/E000Vocabolario"
+	targetNamespace="http://sogei.it/ANPR/E000Vocabolario"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tpdt="http://sogei.it/ANPR/tipoDato"
+	elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"
+		schemaLocation="tipoDato.xsd" />
+
+	<xs:simpleType name="tipoCasoUso">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z])*" />
+			<xs:minLength value="1" />
+			<xs:maxLength value="16" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoIdOperazioneClient">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z])*" />
+			<xs:minLength value="1" />
+			<xs:maxLength value="30" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoProtocolloClient">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z\-_/])*" />
+			<xs:minLength value="1" />
+			<xs:maxLength value="20" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="tipoDatiFamiglia">
+		<xs:sequence>
+			<xs:element name="residenza" type="tpdt:tipoResidenza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="famigliaConvivenza"
+				type="tpdt:tipoFamigliaConvivenzaRisposta" minOccurs="0"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- USATO IN TUTTI I MSG DI RICIHIESTA -->
+	<!-- tipoTestataRichiestaE000 -->
+	<xs:complexType name="tipoTestataRichiestaE000">
+		<xs:sequence>
+			<xs:element name="idOperazioneClient"
+				type="tipoIdOperazioneClient" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione
+						dall'ente.
+						Deve essere numerico e crescente.
+						Se esiste in ANPR,
+						l'ente riceve come esito la risposta in
+						precedenza fornita da ANPR
+						con lo stesso ID; se non esiste ed e'
+						inferiore all'ultimo inviato,
+						l'elaborazione termina con errore.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codMittente" type="tpdt:tipoCodMittente"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice identificativo dell'ente che effettua
+						la richiesta.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codDestinatario"
+				type="tpdt:tipoCodDestinatario" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice delal versione di ANPR (es. ANPR02)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="operazioneRichiesta"
+				type="tpdt:tipoOperazioneRichiesta" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice dell'operazione richiesta
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataOraRichiesta" type="xs:dateTime"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data e l'ora in cui si invia la comunicazione
+						anagrafica ad ANPR.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tipoOperazione"
+				type="tpdt:tipoRichiedenteOperazione" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						C=richiesta del soggetto
+						V= variazione per
+						correzioni di errori o anomalie dei dati
+						R =rettifica di una
+						precedente operazione
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="protocolloClient"
+				type="tipoProtocolloClient" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il protocollo assegnato dall'anagrafe comunale
+						alla pratica
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataProtocolloClient" type="xs:date"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data di protocollazione della pratica da parte
+						dell'ufficio Anagrafe.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tipoInvio" type="tpdt:tipoInvioAmmesso"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Può assumere i valori:
+						TEST
+						PRE_SUB
+						PROD
+						Se il
+						parametro non è compatibile con l'ambiente di riferimento il
+						servizio termina con errore
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataDecorrenza" type="xs:date"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data di inizio validità dell’operazione di
+						registrazione.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataDefinizionePratica" type="xs:date"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data di definizione della pratica dell'ente
+						associata alla registrazione anagrafica
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nomeApplicativo"
+				type="tpdt:tipoNomeApplicativo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Nome dell'applicativo utilizzato per l'invio
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="versioneApplicativo"
+				type="tpdt:tipoVersioneApplicativo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Versione dell'applicativo utilizzato per l'invio
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fornitoreApplicativo"
+				type="tpdt:tipoFornitoreApplicativo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Fornitore del software</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoTestataRichiestaE000 -->
+
+	<!-- tipoCriteriRicercaE003 -->
+	<xs:complexType name="tipoCriteriRicercaE003">
+		<xs:sequence>
+			<xs:element name="dataRiferimento" type="xs:date"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="datiRichiesti"
+				type="tpdt:tipoDatiRichiesti" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="xmlFileCodiciFiscali"
+				type="xs:base64Binary" minOccurs="1" maxOccurs="1" />
+			<xs:element name="casoUso"           type="tipoCasoUso" 				        minOccurs="1" maxOccurs="1"/>				
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoCriteriRicercaE003 -->
+
+	<!-- tipoDatiRichiestiRispostaE003 -->
+	<xs:complexType name="tipoDatiRichiestiRispostaE003">
+		<xs:sequence>
+			<xs:element name="dataRiferimento" type="xs:date"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiRichiesti"
+				type="tpdt:tipoDatiRichiesti" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiRichiestiRispostaE003 -->
+
+	<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+	<!-- tipoTestataRispostaE000 -->
+	<xs:complexType name="tipoTestataRispostaE000">
+		<xs:sequence>
+			<xs:element name="idOperazioneClient"
+				type="tipoIdOperazioneClient" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione.
+						Normalmente è attribuito dall'ente; per il WEB è attribuito da
+						ANPR.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codMittente" type="tpdt:tipoCodMittente"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>codice dell'ANPR</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codDestinatario"
+				type="tpdt:tipoCodDestinatario" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Il codice identificativo dell'ente a cui inviare
+						la
+						risposta.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="operazioneRichiesta"
+				type="tpdt:tipoOperazioneRichiesta" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice dell'operazione richiesta
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataOraRichiesta" type="xs:dateTime"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data e l'ora in cui si invia la comunicazione
+						anagrafica ad ANPR.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="protocolloClient"
+				type="tipoProtocolloClient" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>La data e l'ora in cui si invia la comunicazione
+						anagrafica ad ANPR.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataProtocolloClient" type="xs:date"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Data di protocollazione della pratica da parte
+						dell'ufficio Anagrafe.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+            <xs:element name="idOperazioneANPR"
+				type="tpdt:tipoIdOperazioneANPR" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identificativo univoco attribuito all'operazione
+						da ANPR.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="esitoOperazione" type="tpdt:charMax4"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Codice che indica se l’operazione è terminata con
+						successo oppure con segnalazioni o errori.
+						2 = richiesta completata
+						con esito positivo
+						3 = richiesta completata con esito negativo
+						4 =
+						richiesta annullata
+						6 = richiesta completata con esito positivo ma
+						con warnings
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoTestataRispostaE000 -->
+
+	<!-- servizio E002/E003/E004: rispostaKO -->
+	<xs:element name="rispostaKO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						rispostaKO
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRisposta"
+					type="tipoTestataRispostaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="listaErrori"
+					type="tpdt:tipoErroriAnomalia" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio E002/E003/E004: rispostaKO -->
+
+	<!-- servizio E001 -->	
+	<xs:element name="RichiestaE001">      
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta E001
+					</xs:documentation>
+				</xs:annotation>			
+				<xs:element name="testataRichiesta" 	type="tipoTestataRichiestaE000"	 minOccurs="1" maxOccurs="1"/> 
+				<xs:element name="datiRichiesta" 		type="tipoDatiRichiestaE001" 		 minOccurs="1" maxOccurs="1"/>			  
+		</xs:sequence>  
+	</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaE001">  
+			<xs:complexType>    
+				<xs:sequence>
+					<xs:annotation>			
+						<xs:documentation>
+							Risposta E001
+						</xs:documentation>
+					</xs:annotation>
+						<xs:choice>
+							<xs:element ref="RispostaMultiplaE001" 	     minOccurs="0" maxOccurs="1" /> 	
+							<xs:element ref="rispostaKO" 				 minOccurs="0" maxOccurs="1"/>
+						</xs:choice>			
+				</xs:sequence>
+			</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RispostaMultiplaE001">  
+		<xs:complexType>    
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta E001
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRisposta" 			type="tipoTestataRispostaE000" 		minOccurs="1" maxOccurs="1"/> 
+				<xs:element name="datiDettaglioRisposta" 	type="tipoDatiDettaglioRispostaE001" 	minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- fine servizio E001 -->
+
+
+	<!-- servizio E002: RichiestaE002 -->
+	<xs:element name="RichiestaE002">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta della scheda interrogazione soggetto
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta"
+					type="tipoTestataRichiestaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="criteriRicerca"
+					type="tipoCriteriRicercaE002" minOccurs="1" maxOccurs="1" />
+				<xs:element name="verifica"
+					type="tipoVerificaE002" minOccurs="0" maxOccurs="1" />					
+				<xs:element name="datiRichiesta"
+					type="tipoDatiRichiestaE002" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio E002: RichiestaE002 -->
+
+	<!-- tipoDatiNascita -->
+	<xs:complexType name="tipoDatiNascitaE000">
+		<xs:sequence>
+			<xs:element name="dataEvento" type="xs:date" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="senzaGiorno" type="tpdt:tipoSenza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="senzaGiornoMese" type="tpdt:tipoSenza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="luogoNascita"
+				type="tpdt:tipoLuogoNascita3000" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiNascita -->
+
+	<!-- tipoDatiRichiestaE002 -->
+	<xs:complexType name="tipoDatiRichiestaE002">
+		<xs:sequence>
+			<xs:element name="schedaAnagraficaRichiesta"
+				type="tpdt:tipoSchedaAnagraficaRichiesta3002" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="dataRiferimentoRichiesta" type="xs:date"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="datiAnagraficiRichiesti"
+				type="tpdt:tipoDatiRichiesti" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="motivoRichiesta"           type="tpdt:tipoNoteBase" 				        minOccurs="0" maxOccurs="1"/>
+			<xs:element name="casoUso"           type="tipoCasoUso" 				        minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoDatiRichiestaE002 -->
+
+	<!-- tipoCriteriRicercaE002 -->
+	<xs:complexType name="tipoCriteriRicercaE002">
+		<xs:sequence>
+			<xs:element name="codiceFiscale"
+				type="tpdt:tipoDominioCodiceFiscale" minOccurs="0" maxOccurs="1" />
+			<xs:element name="cognome"
+				type="tpdt:alfabeticoNomiCognomi" minOccurs="0" maxOccurs="1" />
+			<xs:element name="senzaCognome" type="tpdt:tipoSenza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="nome" type="tpdt:alfabeticoNomiCognomi"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="senzaNome" type="tpdt:tipoSenza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="sesso" type="tpdt:tipoSesso"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiNascita" type="tipoDatiNascitaE000"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="idANPR" type="xs:string"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoCriteriRicercaE002 -->
+	
+	<xs:complexType name="tipoVerificaE002">
+		<xs:sequence>
+			<xs:element name="generalita"  		        type="tpdt:tipoGeneralita" 					minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="cittadinanza"  		    type="tpdt:tipoCittadinanza" 				minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="statoCivile"  		    type="tpdt:tipoStatoCivile" 				minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="cartaIdentita"  		    type="tpdt:tipoCartaIdentita3000" 			minOccurs="0" maxOccurs="1"/>
+			<xs:element name="permessoDiSoggiorno"      type="tpdt:tipoPermessoDiSoggiorno3000" 	minOccurs="0" maxOccurs="1"/>
+			<xs:element name="datiDecesso"      		type="tpdt:tipoDatiEvento" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="matrimonio"      		    type="tipoVerificaMatrimonio" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="residenza"      		    type="tipoVerificaResidenza" 				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="vedovanza"      		    type="tpdt:tipoVedovanza" 					minOccurs="0" maxOccurs="1"/>
+			<xs:element name="paternita" 				type="tpdt:tipoGenitore" 					minOccurs="0" maxOccurs="1" />
+			<xs:element name="maternita" 				type="tpdt:tipoGenitore"					minOccurs="0" maxOccurs="1" />
+			<xs:element name="convivenzaDiFatto" 		type="tpdt:tipoConvivenzaDiFatto" 			minOccurs="0" maxOccurs="1" />
+			<xs:element name="unioneCivile" 			type="tpdt:tipoUnioneCivile" 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="listaSoggetti" 			type="tipoListaVerificaSoggetti" 			minOccurs="0" maxOccurs="1" />
+			<xs:element name="identificativi" 			type="tpdt:tipoIdentificativi" 				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:simpleType name="tipoInfoChiave">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z' ])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoValoreCorretto">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z' ])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>	
+
+	<xs:simpleType name="tipoInfoValore">
+		<xs:annotation>
+			<xs:documentation>
+				S = SI
+				N = NO
+				A = IMPOSSIBILE DETERMINARE
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="S"></xs:enumeration>
+			<xs:enumeration value="N"></xs:enumeration>
+			<xs:enumeration value="A"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoInfoDettaglio">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z' ])*"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="160"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- tipoDatiSoggettiEnte -->
+	<xs:complexType name="tipoInfoSoggettoEnte">
+		<xs:sequence>
+			<xs:element name="id" type="tpdt:numericoMax4" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="chiave" type="tipoInfoChiave" minOccurs="1" maxOccurs="1" />
+			<xs:choice>
+				<xs:element name="valore" type="tipoInfoValore" minOccurs="1" maxOccurs="1" />
+				<xs:element name="valoreTesto" type="xs:string" minOccurs="1" maxOccurs="1" />
+				<xs:element name="valoreData" type="xs:date" minOccurs="1" maxOccurs="1" />			
+			</xs:choice>
+			<xs:element name="dettaglio" type="tipoInfoDettaglio" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- tipoDatiSoggettiEnte -->
+	<xs:complexType name="tipoInfoDatoCorretto">
+		<xs:sequence>
+			<xs:element name="percorso" type="tipoInfoChiave" minOccurs="1" maxOccurs="1" />
+			<xs:element name="campo" type="tipoInfoChiave" minOccurs="1" maxOccurs="1" />
+			<xs:element name="valoreCorretto" type="tipoValoreCorretto" minOccurs="1" maxOccurs="1" />
+			<xs:element name="valoreDataCorretto" type="xs:date" minOccurs="1" maxOccurs="1" />	
+			<xs:element name="dettaglio" type="tipoInfoDettaglio" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- tipoDatiSoggettiEnte -->
+	<xs:complexType name="tipoInfoStoriaIscrizione">
+		<xs:sequence>
+			<xs:element name="tipoScheda" type="tpdt:tipoScheda" minOccurs="1" maxOccurs="1" />
+			<xs:element name="dataIscrizione" type="xs:date" minOccurs="1" maxOccurs="1" />
+			<xs:element name="dataCancellazione" type="xs:date" minOccurs="0" maxOccurs="1" />
+			<xs:element name="comuneCompetente" type="tpdt:tipoComune" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<xs:simpleType name="tipoIdSoggettoNazionale">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z\-. ])*"/>
+			<xs:minLength value="9"/>
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoVerificaLegameSoggetto">
+		<xs:sequence>
+			<xs:element name="tipoLegame" type="tpdt:tipoScheda" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Il tipo di legame che lega i componenti della famiglia (tipo scheda):
+							3=famiglia
+							4=convivemza
+							5=famigliaAIRE
+							Se non impostato viene considerato 3
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codiceLegame" type="tpdt:tipoCodiceLegame" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Il codice il legame del soggetto con la famiglia o con la convivenza.
+						Vedi:
+							Tabella 5 RELAZIONE DI PARENTELA – SCHEDA FAMIGLIA o
+							Tabella 6 LEGAME – SCHEDA CONVIVENZA
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- tipoDatiSoggettiEnte -->
+	<xs:complexType name="tipoDatiSoggettiEnte">
+		<xs:sequence>
+			<xs:element name="generalita" type="tpdt:tipoGeneralita"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="statoCivile" type="tpdt:tipoStatoCivile"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="attributiSoggetto"
+				type="tpdt:tipoAttributiSoggetto" minOccurs="0" maxOccurs="1" />
+			<xs:element name="attoNascita" type="tpdt:tipoAtto"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="attoNascitaANPR" type="tpdt:tipoAttoANPR"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="cittadinanza"
+				type="tpdt:tipoCittadinanza" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="paternita" type="tpdt:tipoGenitore"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="maternita" type="tpdt:tipoGenitore"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="residenza" type="tpdt:tipoResidenza"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="altraLingua" type="tpdt:tipoAltraLingua"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="datiTraslitterati"
+				type="tpdt:tipoDatiTranslitterati" minOccurs="0" maxOccurs="1" />
+			<xs:element name="tutoreIntestatario"
+				type="tpdt:tipoTutoreIntestatario" minOccurs="0" maxOccurs="1" />
+			<xs:element name="matrimonio" type="tpdt:tipoMatrimonio"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="vedovanza" type="tpdt:tipoVedovanza"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="annullamentoMatrimonio"
+				type="tpdt:tipoAnnullamentoMatrimonio" minOccurs="0" maxOccurs="1" />
+			<xs:element name="convivenzaDiFatto"
+				type="tpdt:tipoConvivenzaDiFatto" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="unioneCivile"
+				type="tpdt:tipoUnioneCivile" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="cartaIdentita"
+				type="tpdt:tipoCartaIdentita" minOccurs="0" maxOccurs="1" />
+			<xs:element name="permessoSoggiorno"
+				type="tpdt:tipoPermessoSoggiorno" minOccurs="0" maxOccurs="1" />
+			<xs:element name="listaElettorale"
+				type="tpdt:tipoListaElettorale" minOccurs="0" maxOccurs="1" />
+			<xs:element name="listaLeva" type="tpdt:tipoListaLeva"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="censimento" type="tpdt:tipoCensimento"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="legameSoggetto"
+				type="tpdt:tipoLegameSoggettoCompleto" minOccurs="0" maxOccurs="1" />
+			<xs:element name="famigliaConvivenza"
+				type="tpdt:tipoFamigliaConvivenzaRisposta" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="altriDati" type="tpdt:tipoAltriDati"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="autoveicoli" type="tpdt:tipoAutoveicoli"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="domicilioDigitale"
+				type="tpdt:tipoDomicilioDigitale" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiIscrizione"
+				type="tpdt:tipoDatiIscrizione" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiCancellazione"
+				type="tpdt:tipoDatiCancellazione" minOccurs="0" maxOccurs="1" />
+			<xs:element name="datiDecesso" type="tpdt:tipoDatiEvento"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="provenienza"
+				type="tpdt:tipoProvenienzaDestinazione" minOccurs="0" maxOccurs="1" />
+			<xs:element name="destinazione"
+				type="tpdt:tipoProvenienzaDestinazione" minOccurs="0" maxOccurs="1" />
+			<xs:element name="erroriAnomalie"
+				type="tpdt:tipoErroriAnomalia" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="infoSoggettoEnte" type="tipoInfoSoggettoEnte" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="infoDatoCorretto" type="tipoInfoDatoCorretto" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="idSoggettoNazionale" type="tipoIdSoggettoNazionale" minOccurs="0" maxOccurs="1" />
+			<xs:element name="tipoIdentificativi" type="tpdt:tipoIdentificativi" minOccurs="0" maxOccurs="1" />
+			<xs:element name="infoStoriaIscrizione" type="tipoInfoStoriaIscrizione" minOccurs="0" maxOccurs="unbounded" />			
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoDatiSoggettiEnte -->
+
+	<!-- tipoListaSoggetti -->
+	<xs:complexType name="tipoListaSoggetti">
+		<xs:sequence>
+			<xs:element name="datiSoggetto"
+				type="tipoDatiSoggettiEnte" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoListaSoggetti -->
+	
+	<!-- tipoVerificaDatiSoggettiEnte -->
+	<xs:complexType name="tipoVerificaDatiSoggettiEnte">
+		<xs:sequence>
+			<xs:element name="generalita" type="tpdt:tipoGeneralita"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="legameSoggetto"
+				type="tipoVerificaLegameSoggetto" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoVerificaDatiSoggettiEnte -->
+	
+	<!-- tipoListaSoggetti -->
+	<xs:complexType name="tipoListaVerificaSoggetti">
+		<xs:sequence>
+			<xs:element name="datiSoggetto"
+				type="tipoVerificaDatiSoggettiEnte" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoListaSoggetti -->
+	
+	<!-- tipoMatrimonio -->
+	<xs:complexType name="tipoVerificaMatrimonio">
+		<xs:sequence>
+			<xs:element name="coniuge" 	        type="tpdt:tipoGeneralita" 	minOccurs="0" maxOccurs="1"/>
+		    <xs:element name="datiMatrimonio" 	type="tpdt:tipoDatiEvento" 	minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoMatrimonio -->
+
+	<!-- tipoVerificaResidenza -->
+	<xs:complexType name="tipoVerificaResidenza">
+		<xs:sequence>
+			<xs:element name="tipoIndirizzo" type="tpdt:tipoDatoIndirizzo" minOccurs="0" maxOccurs="1" />
+			<xs:choice>
+				<xs:element name="indirizzo" type="tpdt:tipoIndirizzo" />
+				<xs:element name="localitaEstera" type="tipoLocalitaEstera" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoResidenza -->
+
+	<!-- tipoLocalitaEstera -->
+	<xs:complexType name="tipoLocalitaEstera">
+		<xs:sequence>
+			<xs:element name="indirizzoEstero" type="tpdt:tipoIndirizzoEstero" minOccurs="0" maxOccurs="1" />
+			<xs:element name="consolato" type="tpdt:tipoConsolato" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoResidenteEstero -->
+
+	<!-- servizio E002: RispostaE002_OK -->
+	<xs:element name="RispostaE002_OK">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta della scheda interrogazione soggetto
+						E002Response
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRisposta"
+					type="tipoTestataRispostaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="listaSoggetti" type="tipoListaSoggetti"
+					minOccurs="0" maxOccurs="1" />
+				<xs:element name="datiFamigliaConvivenza"
+					type="tipoDatiFamiglia" minOccurs="0" maxOccurs="1" />
+				<xs:element name="listaAnomalie"
+					type="tpdt:tipoErroriAnomalia" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio E002: RispostaE002_OK -->
+
+	<!-- servizio E002: RispostaE002 -->
+	<xs:element name="RispostaE002">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta della scheda interrogazione soggetto
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element ref="RispostaE002_OK" minOccurs="0"
+						maxOccurs="1" />
+					<xs:element ref="rispostaKO" minOccurs="0" maxOccurs="1" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- servizio E002: RispostaE002 -->
+
+	<!-- servizio E003 -->
+	<xs:element name="RichiestaE003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta di rivestimento liste di codici fiscali
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta"
+					type="tipoTestataRichiestaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="criteriRicerca"
+					type="tipoCriteriRicercaE003" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaE003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta di rivestimento liste di codici fiscali
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element ref="RispostaMultiplaE003" minOccurs="0"
+						maxOccurs="1" />
+					<xs:element ref="rispostaKO" minOccurs="0" maxOccurs="1" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaMultiplaE003">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta multipla di rivestimento liste di codici
+						fiscali
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRisposta"
+					type="tipoTestataRispostaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="datiRichiesti"
+					type="tipoDatiRichiestiRispostaE003" minOccurs="0" maxOccurs="1" />
+				<xs:element name="idOperazioneANPR"
+					type="tpdt:tipoIdOperazioneANPR" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- fine servizio E003 -->
+
+	<!-- servizio E004 -->
+	<xs:element name="RichiestaE004">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Richiesta download file
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRichiesta"
+					type="tipoTestataRichiestaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="datiRichiesta"
+					type="tipoDatiRichiestaE004" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaE004">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta di download file
+					</xs:documentation>
+				</xs:annotation>
+				<xs:choice>
+					<xs:element ref="RispostaMultiplaE004" minOccurs="0"
+						maxOccurs="1" />
+					<xs:element ref="rispostaKO" minOccurs="0" maxOccurs="1" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RispostaMultiplaE004">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>
+						Risposta multipla di download file
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="testataRisposta"
+					type="tipoTestataRispostaE000" minOccurs="1" maxOccurs="1" />
+				<xs:element name="datiRichiesta"
+					type="tipoDatiRichiestaE004" minOccurs="1" maxOccurs="1" />
+				<xs:element name="file" type="tpdt:tipoFileMeta" minOccurs="1"
+					maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- tipoDatiRichiestaE004 -->
+	<xs:complexType name="tipoDatiRichiestaE004">
+		<xs:sequence>
+			<xs:element name="idOperazioneANPR" type="tpdt:charMax30"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiRichiestaE004 -->
+	<!-- fine servizio E004 -->
+	
+	<!-- tipoDatiRichiestaE001 -->
+	<xs:complexType name="tipoDatiRichiestaE001" >
+		<xs:sequence>
+			<xs:element name="idTabella" 		type="tpdt:numerico3" 		 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="compressione" 		type="tpdt:numerico1" 		 minOccurs="0" maxOccurs="1"/>   					
+		</xs:sequence>	
+	</xs:complexType>
+	<!-- Fine tipoDatiRichiestaE001 -->
+	
+	<!-- tipoDatiDettaglioRispostaE001 -->
+	<xs:complexType name="tipoDatiDettaglioRispostaE001">
+		<xs:sequence>
+			<xs:element name="idTabella" 		type="tpdt:numerico3" 		 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="file"  			type="tpdt:tipoFileMeta"       minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiDettaglioRispostaE001 -->
+
+</xs:schema>

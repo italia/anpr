@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/E003AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/E003AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/E000Vocabolario" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/E003AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/E000Vocabolario" schemaLocation="E000Vocabolario.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	 <wsdl:message name="RichiestaE003">  
+		<wsdl:part name="request" element="schema:RichiestaE003"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaE003">  
+		<wsdl:part name="response" element="schema:RispostaE003"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortTypeE003">  
+		<wsdl:operation name="rivestimento_cf">    
+			<wsdl:input   message="tns:RichiestaE003"/>    
+			<wsdl:output  message="tns:RispostaE003" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingE003" type="tns:AnprPortTypeE003">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="rivestimento_cf">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceE003">    
+		<wsdl:port binding="tns:AnprBindingE003" name="AnprServicePortE003">      
+			<wsdlsoap:address location="http://www.sogei.it/Interno/ANPR/AnprServiceE003"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

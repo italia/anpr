@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://sogei.it/ANPR/vocabolarioCIEServizi" xmlns:tpdt="http://sogei.it/ANPR/tipoDato" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://sogei.it/ANPR/vocabolarioCIEServizi">
+	
+<xs:import namespace="http://sogei.it/ANPR/tipoDato" schemaLocation="tipoDato.xsd"/>	
+
+
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoDatoTestataRichiesta">
+			
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->	
+
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element maxOccurs="unbounded" minOccurs="1" name="errore" type="tpdt:tipoErroriAnomalia"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori -->
+
+<!-- tipoListaDatiSoggetto -->
+	<xs:complexType name="tipoListaDatiSoggetto">
+		 <xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="datiSoggetto" type="tipoDatiSoggetto"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- fine tipoListaDatiSoggetto -->
+
+<!-- tipoDatiSoggetto ****************************************************  Oggetto usato in risposta 3006/4001 *******************************-->	
+	<xs:complexType name="tipoDatiSoggetto">
+        <xs:annotation>
+                <xs:documentation>
+                    <p>Le generalità sono sempre presenti</p>
+                    <p>Paternità e maternità vengono trasmessi solo se reperiti e la persona è un minore</p>
+                </xs:documentation>
+        </xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="1" name="generalita" type="tpdt:tipoGeneralita"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="attoNascita" type="tpdt:tipoAtto"/>	
+			<xs:element maxOccurs="1" minOccurs="0" name="attoNascitaANPR" type="tpdt:tipoAttoANPR"/>	
+			<xs:element maxOccurs="1" minOccurs="0" name="statoCivile" type="tpdt:tipoStatoCivile"/>			
+			<xs:element maxOccurs="1" minOccurs="0" name="paternita" type="tpdt:tipoGeneralita"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="maternita" type="tpdt:tipoGeneralita"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="residenza" type="tpdt:tipoResidenza"/>			
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="cittadinanza" type="tpdt:tipoCittadinanza"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="datiCancellazione" type="tpdt:tipoDatiCancellazione"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="cartaIdentita" type="tpdt:tipoCartaIdentita"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="permessoSoggiorno" type="tpdt:tipoPermessoSoggiorno"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="attributiSoggetto" type="tpdt:tipoAttributiSoggetto"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="provenienzaInformazioni" type="tpdt:tipoProvenienzaInfo"/>
+		</xs:sequence>  
+	</xs:complexType>
+<!-- fine tipoDatiSoggetto -->	
+
+    <xs:complexType name="tipoDatiControllo">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="comuneResidenza" type="tpdt:tipoComune">
+                <xs:annotation>
+                    <xs:documentation>
+                        <p>Il Comune nel quale risiede il soggetto o nel quale è iscritto all'AIRE</p>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            
+            <xs:element minOccurs="0" name="soggettoAIRE" type="tpdt:tipoSN">
+                <xs:annotation>
+                    <xs:documentation>
+                        <p/>	                        
+                        <p>
+              <b>REGOLE / CONDIZIONI</b>
+                            <ol>
+                                <li>Se S si dichiara che il soggetto è iscritto all'AIRE</li>
+                            </ol>
+                        </p>						
+                    </xs:documentation>
+                </xs:annotation>                
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+	<!-- tipoDatiRichiedente -->
+	<xs:complexType name="tipoDatiRichiedente">
+		<xs:annotation>
+			<xs:documentation>Contiene le generalità di un soggetto utilizzate in
+				fase di ricerca
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="1" name="codMittente" type="tpdt:char6">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice ISTAT del comune che effettua la richiesta</p>
+						<p>
+							<b>VALORI AMMESSI</b>
+							<ol>
+								<li>
+									Valori presenti nella
+									<a href="https://italia.github.io/anpr/tab/tab_comuni.html" target="_self">tabella 3</a>
+								</li>
+							</ol>
+						</p>
+						<p>
+							<b>REGOLE / CONDIZIONI</b>
+							<ol>
+								<li>Verifica esistenza codice nella tabella 3</li>
+							</ol>
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="1" name="idPostazione" type="tpdt:charMax20">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice identificativo della postazione comunale</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="1" name="idUtente" type="tpdt:charMax16">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice fiscale con il quale il sistema CIEOnline identifica
+							l'utente
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiRichiedente -->
+
+<!-- tipoGeneralitaPerRicercaCIE2 -->
+	<xs:complexType name="tipoGeneralitaPerRicercaCIE2">
+		  <xs:complexContent>
+			<xs:extension base="tpdt:tipoGeneralitaPerRicerca"/>
+		  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoGeneralitaPerRicercaCIE2 -->	
+
+<!-- tipoGeneralitaPerRicercaCIE7 -->
+	<xs:complexType name="tipoGeneralitaPerRicercaCIE7">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoGeneralita">
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoGeneralitaPerRicercaCIE7 -->	
+
+<!-- tipoGeneralitaPerRicercaCIE8 -->
+	<xs:complexType name="tipoGeneralitaPerRicercaCIE8">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoGeneralita">
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoGeneralitaPerRicercaCIE8 -->	
+
+<!-- tipoCartaIdentitaCIE -->	
+	<xs:complexType name="tipoCartaIdentitaCIE">
+	  <xs:complexContent>
+		<xs:extension base="tpdt:tipoCartaIdentita">
+		</xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>
+<!-- Fine tipoCartaIdentita -->
+
+</xs:schema>

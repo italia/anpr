@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://sogei.it/ANPR/vocabolarioCONSOLATIServizi" xmlns:tpdt="http://sogei.it/ANPR/tipoDato"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://sogei.it/ANPR/vocabolarioCONSOLATIServizi">
+
+	<xs:import namespace="http://sogei.it/ANPR/tipoDato"
+		schemaLocation="tipoDato.xsd" />
+
+	<!-- tipoIdOperazioneANPR -->
+	<xs:simpleType name="tipoIdOperazioneANPR">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+			<xs:pattern value="(\d)+" />
+			<xs:maxLength value="30" />
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Fine tipoIdOperazioneANPR -->
+
+	<xs:simpleType name="tipoStatoRichiesta">
+		<xs:annotation>
+			<xs:documentation>
+				<p>Indica la fonte delle informazioni</p>
+				<p>
+					<b>VALORI AMMESSI</b>
+					<ol>
+						<li>0, APERTA</li>
+						<li>1, CHIUSA</li>
+					</ol>
+				</p>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="tpdt:numerico1" />
+	</xs:simpleType>
+
+	<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRichiesta">
+
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoTestataRichiesta -->
+
+	<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Fine tipoTestataRisposta -->
+
+	<!-- tipoListaErrori -->
+	<xs:complexType name="tipoListaErrori">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="errore"
+				type="tpdt:tipoErroriAnomalia" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoListaErrori -->
+
+	<!-- tipoListaDatiSoggetto -->
+	<xs:complexType name="tipoListaDatiSoggetto">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="datiSoggetto"
+				type="tpdt:tipoDatiRispostaEstrazioneSoggetti" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- fine tipoListaDatiSoggetto -->
+
+
+
+	<!-- tipoDatiRichiedente -->
+	<xs:complexType name="tipoDatiRichiedente">
+		<xs:annotation>
+			<xs:documentation>Contiene le generalità di un soggetto utilizzate in
+				fase di ricerca
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="1" name="codMittente"
+				type="tpdt:char6">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice ISTAT del comune che effettua la richiesta</p>
+						<p>
+							<b>VALORI AMMESSI</b>
+							<ol>
+								<li>
+									Valori presenti nella
+									<a href="https://italia.github.io/anpr/tab/tab_comuni.html"
+										target="_self">tabella 3</a>
+								</li>
+							</ol>
+						</p>
+						<p>
+							<b>REGOLE / CONDIZIONI</b>
+							<ol>
+								<li>Verifica esistenza codice nella tabella 3</li>
+							</ol>
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="1" name="idPostazione"
+				type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice identificativo della postazione comunale</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="1" name="idUtente"
+				type="tpdt:charMax16">
+				<xs:annotation>
+					<xs:documentation>
+						<p>Il codice fiscale con il quale il sistema CONSOLATIOnline
+							identifica
+							l'utente
+						</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Fine tipoDatiRichiedente -->
+
+</xs:schema>

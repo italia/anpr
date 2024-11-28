@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://sogei.it/ANPR/vocabolario7001scaricoTabelle"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tpdt="http://sogei.it/ANPR/tipoDato"  
+		   targetNamespace="http://sogei.it/ANPR/vocabolario7001scaricoTabelle" 
+		   elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+<xs:import namespace="http://sogei.it/ANPR/tipoDato"  schemaLocation="tipoDato.xsd"/>
+	
+<!-- USATO IN TUTTI I MSG DI RICHIESTA -->
+<!-- tipoTestataRichiesta -->
+	<xs:complexType name="tipoTestataRichiesta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRichiesta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRichiesta -->	
+
+<!-- USATO IN TUTTI I MSG DI RISPOSTA -->
+<!-- tipoTestataRisposta -->
+	<xs:complexType name="tipoTestataRisposta">	
+		<xs:complexContent>
+			<xs:extension base="tpdt:tipoDatoTestataRisposta">				
+			</xs:extension>
+		</xs:complexContent>				
+	</xs:complexType>
+<!-- Fine tipoTestataRisposta -->	
+ 
+<!-- tipoListaErrori -->
+   <xs:complexType name="tipoListaErrori">
+     <xs:sequence>
+		<xs:element name="errore" type="tpdt:tipoErroriAnomalia" minOccurs="1" maxOccurs="unbounded"/>
+	 </xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoListaErrori -->
+
+ <!-- ################################################################# Inizio usati in 7001 ###########################################################-->
+ 
+ 
+<!-- tipoDatiRichiesta -->
+	<xs:complexType name="tipoDatiRichiesta" >
+		<xs:sequence>
+			<xs:element name="idTabella" 		type="tpdt:numerico3" 		 minOccurs="1" maxOccurs="1"/>  					
+		</xs:sequence>	
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta -->
+<!-- tipoDatiDettaglioRisposta -->
+	<xs:complexType name="tipoDatiDettaglioRisposta">
+		<xs:sequence>
+			<xs:element name="idTabella" 		type="tpdt:numerico3" 		 minOccurs="1" maxOccurs="1"/>
+			<xs:element name="xmlFile"  	    type="xs:base64Binary"       minOccurs="1" maxOccurs="unbounded"/>			
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiDettaglioRisposta -->
+
+<!-- ################################################################# Inizio usati in 7001 ###########################################################-->
+	
+<!-- ################################################################# Inizio usati in 7002 ###########################################################--> 
+<!-- tipoDatiRichiesta7002 -->
+	<xs:complexType name="tipoDatiRichiesta7002">
+		<xs:sequence>
+			<xs:element name="idOperazioneANPR" 	type="tpdt:charMax30" 	minOccurs="1" maxOccurs="1"/>				
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta7002 -->
+<!-- tipofile7002 -->
+	<xs:complexType name="tipofile7002">
+		<xs:sequence>
+			<xs:element name="contenutoFile" 		type="xs:base64Binary" 	minOccurs="0" maxOccurs="1"/>				
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipofile7002 -->
+<!-- ################################################################# Fine usati in 7002 ###########################################################-->	
+		
+	
+
+<!-- ################################################################# Inizio usati in 7003 ###########################################################-->
+
+<!-- tipoDatiRichiesta7003 -->
+	<xs:complexType name="tipoDatiRichiesta7003">
+		<xs:annotation>
+			<xs:documentation>1 (Default se non impostato) - Versione corrente
+2 - Tutte le versioni supportate</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>			
+			<xs:element name="tipoVersioni"  	    				type="tpdt:numerico1" 			           minOccurs="0" maxOccurs="1"/>	
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta7003 -->
+
+<!-- tipoDatiRichiesta7003 -->
+	<xs:complexType name="tipoStatoVersioni">
+		<xs:annotation>
+			<xs:documentation>1 (Default se non impostato) - Versione corrente
+2 - Tutte le versioni supportate</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>			
+			<xs:element name="versioneCorrente"  	    				type="tpdt:tipoAnprVersione" 			           minOccurs="1" maxOccurs="1"/>
+			<xs:element name="versioniSupportate"  	    				type="tpdt:tipoAnprVersione" 			           minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- Fine tipoDatiRichiesta7003 -->
+
+<!-- ################################################################# Fine usati in 7003 ###########################################################-->
+	
+	
+</xs:schema>

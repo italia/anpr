@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/E002AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/E002AnprService" 
+				  xmlns:schema="http://sogei.it/ANPR/E000Vocabolario" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/E002AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/E000Vocabolario" schemaLocation="E000Vocabolario.xsd" />  
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="RichiestaE002">
+		<wsdl:part name="request" element="schema:RichiestaE002"/>  
+	</wsdl:message>
+	<wsdl:message name="RispostaE002">  
+		<wsdl:part name="response" element="schema:RispostaE002"/>  
+	</wsdl:message>
+	
+	<wsdl:portType name="AnprPortTypeE002">  
+		<wsdl:operation name="consultazione_soggetti">    
+			<wsdl:input   message="tns:RichiestaE002"/>    
+			<wsdl:output  message="tns:RispostaE002" />  
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBindingE002" type="tns:AnprPortTypeE002">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="consultazione_soggetti">      
+			<wsdl:documentation>
+				Metodo per consultare la posizione di soggetti / famiglie / convivenze.
+			</wsdl:documentation>
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprServiceE002">    
+		<wsdl:port binding="tns:AnprBindingE002" name="AnprServicePortE002">      
+			<wsdlsoap:address location="https://ws.anpr.interno.it/anpr-wsE000/AnprServiceE002"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>

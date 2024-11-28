@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<wsdl:definitions targetNamespace="http://sogei.it/ANPR/4000AnprService"
+				  xmlns:tns="http://sogei.it/ANPR/4000AnprService"
+				  xmlns:schema="http://sogei.it/ANPR/4000estrazione" 
+				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+				  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+	
+	<wsdl:types> 
+		<xsd:schema targetNamespace="http://sogei.it/ANPR/4000AnprService">    
+			<xsd:import namespace="http://sogei.it/ANPR/4000estrazione" schemaLocation="4000estrazione.xsd" />  
+		</xsd:schema>		
+	</wsdl:types>
+	
+	<wsdl:message name="Richiesta4001">
+		<wsdl:part name="request" element="schema:Richiesta4001"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta4001">  
+		<wsdl:part name="response" element="schema:Risposta4001"/>  
+	</wsdl:message>
+	 <wsdl:message name="Richiesta4002">  
+		<wsdl:part name="request" element="schema:Richiesta4002"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta4002">  
+		<wsdl:part name="response" element="schema:Risposta4002"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta4003">  
+		<wsdl:part name="request" element="schema:Richiesta4003"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta4003">  
+		<wsdl:part name="response" element="schema:Risposta4003"/>  
+	</wsdl:message>
+	<wsdl:message name="Richiesta4004">  
+		<wsdl:part name="request" element="schema:Richiesta4004"/>  
+	</wsdl:message>
+	<wsdl:message name="Risposta4004">  
+		<wsdl:part name="response" element="schema:Risposta4004"/>  
+	</wsdl:message>	
+	<wsdl:message name="Richiesta4005">  
+		<wsdl:part name="request" element="schema:Richiesta4005"/>  
+	</wsdl:message>	
+	<wsdl:message name="Risposta4005">  
+		<wsdl:part name="response" element="schema:Risposta4005"/>  
+	</wsdl:message>	
+		
+	
+	<wsdl:portType name="AnprPortType4000">  
+		<wsdl:operation name="estrazione_dati_cittadini">    
+			<wsdl:input   message="tns:Richiesta4001"/>    
+			<wsdl:output  message="tns:Risposta4001" />  
+		</wsdl:operation>
+		<wsdl:operation name="rivestimento_cf">    
+			<wsdl:input   message="tns:Richiesta4002"/>    
+			<wsdl:output  message="tns:Risposta4002" />  
+		</wsdl:operation>
+		<wsdl:operation name="supporto_rilevazioni_statistiche">    
+			<wsdl:input   message="tns:Richiesta4003"/>    
+			<wsdl:output  message="tns:Risposta4003" />  
+		</wsdl:operation>
+		<wsdl:operation name="elenchi_supporto">    
+			<wsdl:input   message="tns:Richiesta4004"/>    
+			<wsdl:output  message="tns:Risposta4004" />  
+		</wsdl:operation>		
+		<wsdl:operation name="richieste_asincrone">    
+			<wsdl:input   message="tns:Richiesta4005"/>    
+			<wsdl:output  message="tns:Risposta4005" />  
+		</wsdl:operation>			
+	</wsdl:portType>
+	
+	<wsdl:binding name="AnprBinding4000" type="tns:AnprPortType4000">    
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>    
+		<wsdl:operation name="estrazione_dati_cittadini">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="rivestimento_cf">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>  
+		<wsdl:operation name="supporto_rilevazioni_statistiche">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="elenchi_supporto">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>
+		<wsdl:operation name="richieste_asincrone">      
+			<wsdlsoap:operation soapAction=""/>      
+			<wsdl:input>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:input>      
+			<wsdl:output>        
+				<wsdlsoap:body use="literal"/>      
+			</wsdl:output>   
+		</wsdl:operation>	
+	</wsdl:binding>  
+	
+	<wsdl:service name="AnprService4000">    
+		<wsdl:port binding="tns:AnprBinding4000" name="AnprServicePort4000">      
+			<wsdlsoap:address location="https://ws.anpr.interno.it/ANPR4000ServiziEstrazione/AnprService4000"/>    
+		</wsdl:port>  
+	</wsdl:service>
+	
+</wsdl:definitions>
