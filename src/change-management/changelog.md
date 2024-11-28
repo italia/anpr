@@ -1,5 +1,16 @@
 # Changelog
 
+## Versione 9.0.3 (2024-11-28)
+
++ (Requirement) Aggiornamento XSD notifiche stato civile (issue: [https://github.com/italia/anpr/issues/3883](https://github.com/italia/anpr/issues/3883))
+    + Aggiunti dati trascrizione e dati lingua, gli intestatari ora possono essere più di 2.
+	
++ (Requirement) Fine tuning prestazionale
+    + Riviste alcune funzionalità per far fronte al carico crescente del sistema ANPR.
+
++ (Bug) A002 e 1002: in reiscrizione viene controllata la validita del luogo di nascita
+	+ Risolto bug che verificava la conformità del comune di nascita anche in caso di nuova iscrizione di un soggetto esistente
+
 ## Versione 8.5.2 (2024-11-25)
 
 + (Requirement) WebApp: disabilitazione invio richiesta contributo al subentro elettorale
@@ -26,7 +37,7 @@
 ## Versione 9.0.0 (2024-09-30)
 
 + (Requirement) Gestione poligamie
-    + Servizi di gestione delle poligamie [disponibile solo in test comuni]
+    + Servizi di gestione delle poligamie [disponibile solo in test comuni, verra' data comunicazione della disponibilità in produzione.]
 
 ## Versione 8.5.0 (2024-09-23)
 
