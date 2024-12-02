@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.0.4 (2024-12-02)
+
++ (Bug) Consultazione liste elettorali: non viene visualizzato lo stato di nascita
+    + Risolto bug che non visualizzava lo stato estero di nascita per la consultazione elettorale
+    
++ (Requirement) 5008: impedire modifiche alle liste elettorali
+    + Sarà impedito l'inserimento dei dati elettorali con Mutazione tutti i dati dato il subentro elettorale di tutti i comuni in ANPR
+
 ## Versione 9.0.3 (2024-11-28)
 
 + (Requirement) Aggiornamento XSD notifiche stato civile (issue: [https://github.com/italia/anpr/issues/3883](https://github.com/italia/anpr/issues/3883))
