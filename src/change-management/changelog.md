@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.5 (2024-12-11)
+
++ (Requirement) ANNCSU: verifica odonimo in ANPR
+    + In caso di nuova iscrizione o cambio residenza sarà fatta una verifica dell'indirizzo con l'archivio ANNCSU. In caso di incongruenza sarà restituito un warning
+
 ## Versione 9.0.4 (2024-12-02)
 
 + (Bug) Consultazione liste elettorali: non viene visualizzato lo stato di nascita
