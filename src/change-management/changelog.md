@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.6 (2025-01-14)
+
++ (Bug) 1000, 2000, A000 e 5000 non validano id ansc
+    + Applicati dei controlli di validità più stringenti quando viene inserito l'id ANSC
+
 ## Versione 9.0.5 (2024-12-11)
 
 + (Requirement) ANNCSU: verifica odonimo in ANPR
