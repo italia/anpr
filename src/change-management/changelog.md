@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.0.7 (2025-01-16)
+
++ (Bug) Errori in comunicazione con ANPR (issue: [https://github.com/italia/anpr/issues/4769](https://github.com/italia/anpr/issues/4769))
+    + Risolti problemi di comunicazione con il sistema ANPR 16/01/2025
+
++ (Bug) Anomalia verifica QRCode certificato
+    + Risolta verifica QR code certificati ANPR
+
 ## Versione 9.0.6 (2025-01-14)
 
 + (Bug) 1000, 2000, A000 e 5000 non validano id ansc
