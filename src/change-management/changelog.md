@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.0.8 (2025-01-24)
+
++ (Bug) [SC]: Notifiche ANSC da ANPR, non coerenti con la richiesta (issue: [https://github.com/italia/anpr/issues/3883](https://github.com/italia/anpr/issues/3883))
+    + Anche quando viene richiesto un tipo di registro specifico (es. NA01 per la nascita) venivano restituite tutte le notifiche (come se si fosse scelto NA00). vedi <https://github.com/italia/ansc/issues/1258>
+
++ (Bug) Verifica QRCode possibile solo nel periodo di validità
+    + La verifica del QRCode dei certificati è ora limitata al solo periodo di validità degli stessi.
+
 ## Versione 9.0.7 (2025-01-16)
 
 + (Bug) Errori in comunicazione con ANPR (issue: [https://github.com/italia/anpr/issues/4769](https://github.com/italia/anpr/issues/4769))
