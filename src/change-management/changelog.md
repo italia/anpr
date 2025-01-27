@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.9 (2025-01-27)
+
++ (Bug) Controlli framework non gestiscono il nuovo attoeventoanpr
+    + Risolto un bug che permetteva l'inserimento in un atto ansc di date incongruenti
+
 ## Versione 9.0.8 (2025-01-24)
 
 + (Bug) [SC]: Notifiche ANSC da ANPR, non coerenti con la richiesta (issue: [https://github.com/italia/anpr/issues/3883](https://github.com/italia/anpr/issues/3883))
