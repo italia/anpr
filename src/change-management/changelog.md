@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.10 (2025-01-30)
+
++ (Bug) Verifica id comunale convivenza
+    + Inserito un controllo che non permette l'iscrizione di una convivenza con lo stesso id comunale.
+
 ## Versione 9.0.9 (2025-01-27)
 
 + (Bug) Controlli framework non gestiscono il nuovo attoeventoanpr
