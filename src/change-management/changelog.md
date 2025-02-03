@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.0.11 (2025-02-03)
+
++ (Bug) Controlli sull'atto unione civile
+    + Risolto bug che impediva la notifica di una unione civile con scioglimento.
+
 ## Versione 9.0.10 (2025-01-30)
 
 + (Bug) Verifica id comunale convivenza
