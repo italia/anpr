@@ -1,5 +1,19 @@
 # Changelog
 
+## Versione 9.1.0 (2025-02-10)
+
++ (Requirement) ANPR / ws P000 - Visualizzazione identificativo ANNCSU  
+    + Web Service P000 - Operazione P002 - Nella sezione Indirizzo di una dichiarazione di cambio residenza (tipologia 2) e in una richiesta di trasferimento dall'estero in Italia (tiplogia 4) inviate dall'area autenticata di ANPR sarà restituito in output il campo prognazacc proveniente dal sistema ANNCSU. (questa modifica si ripercuote anche sull'anteprima pratiche della webapp)
+
++ (Requirement) Notifiche ANSC: Inseriti nuovi campi nel tracciato per le trascrizioni  
+    + Inseriti nuovi campi nel tracciato delle notifiche verso ANPR: cognomeAggiunto, nomeAggiunto e il tipo di modifica oggetto della trascrizione.
+
++ (Requirement) Reindirizzamento accesso anpr anagrafico smart card 
+    + Il predente link di accesso ridirige al nuovo SPID/CIE/CNS/Smartcard <https://dait.interno.gov.it/servizi-demografici/circolari/circolare-dait-n76-del-19-settembre-2024>
+
++ (Bug) 6001: emissione online cf assente  va in errore
+    + Correzione di un bug della certificazione che casu un errore in alcuni casi particolari.
+
 ## Versione 9.0.11 (2025-02-03)
 
 + (Bug) Controlli sull'atto unione civile
