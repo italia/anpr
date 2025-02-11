@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.1 (2025-02-11)
+
++ (Bug) 6001: internal server error per rilascio certificati  (issue: [https://github.com/italia/anpr/issues/4811](https://github.com/italia/anpr/issues/4811))
+    + E' stato corretto un errore che mandava in errore la generazione dei certificati da WebService.
+
 ## Versione 9.1.0 (2025-02-10)
 
 + (Requirement) ANPR / ws P000 - Visualizzazione identificativo ANNCSU  

@@ -1,7 +1,7 @@
 # Versione rilasciata in ogni ambiente
 
-- Test Comuni : Patch 9.1.0
-- Produzione : Patch 9.1.0
+- Test Comuni : Patch 9.1.1
+- Produzione : Patch 9.1.1
 
 
 # Versioni supportate in ogni ambiente
