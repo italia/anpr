@@ -7,7 +7,7 @@
 
 ## Versione 9.1.0 (2025-02-10)
 
-+ (Requirement) ANPR / ws P000 - Visualizzazione identificativo ANNCSU  
++ (Requirement) ANPR / ws P000 / wsdl - Visualizzazione identificativo ANNCSU  
     + Web Service P000 - Operazione P002 - Nella sezione Indirizzo di una dichiarazione di cambio residenza (tipologia 2) e in una richiesta di trasferimento dall'estero in Italia (tiplogia 4) inviate dall'area autenticata di ANPR sarà restituito in output il campo prognazacc proveniente dal sistema ANNCSU. (questa modifica si ripercuote anche sull'anteprima pratiche della webapp)
 
 + (Requirement) Notifiche ANSC: Inseriti nuovi campi nel tracciato per le trascrizioni  
