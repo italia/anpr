@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.2 (2025-02-25)
+
++ (Requirement) ANNCSU: Controllo indirizzo (issue: [https://github.com/italia/anpr/issues/4827](https://github.com/italia/anpr/issues/4827))
+    + Nel corso dell'inizio della prossima settimana sarà attivato un controllo sull'indirizzo inserito in un cambio di residenza o in una iscrizione per il quale l'indirizzo stesso sarà validato con l'archivio ANNCSU e, in caso di incogruenza, sarà restituito un warning di tipo CN558.
+
 ## Versione 9.1.1 (2025-02-11)
 
 + (Bug) 6001: internal server error per rilascio certificati  (issue: [https://github.com/italia/anpr/issues/4811](https://github.com/italia/anpr/issues/4811))
