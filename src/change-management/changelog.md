@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.3 (2025-03-25)
+
++ (Requirement) WebApp: nuova sezione elettorale download file
+    + Pubblicata una nuova linea di menu nella sezione "Liste Elettorali" per lo scarico delle anomalie del campo elettore
+
 ## Versione 9.1.2 (2025-02-25)
 
 + (Requirement) ANNCSU: Controllo indirizzo (issue: [https://github.com/italia/anpr/issues/4827](https://github.com/italia/anpr/issues/4827))
