@@ -1,6 +1,11 @@
 # Changelog
 
-## Versione 9.1.3 (2025-03-25)
+## Versione 9.1.4 (2025-03-07)
+
++ (Bug) Modifica xsd notifiche di stato civile
+    + Aggiunto riferimento evento collegato per trascrizioni.
+
+## Versione 9.1.3 (2025-03-05)
 
 + (Requirement) WebApp: nuova sezione elettorale download file
     + Pubblicata una nuova linea di menu nella sezione "Liste Elettorali" per lo scarico delle anomalie del campo elettore
