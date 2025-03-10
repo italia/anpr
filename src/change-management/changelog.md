@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.1.5 (2025-03-10)
+
++ (Requirement) Liste elettorali: scarico massivo [produzione]
+  + Nella sezione "Liste elettorali" sarà possibile richiedere lo scarico dei dati elettorali del proprio comune con profilo ufficiale elettorale
+
++ (Requirement) Scarico comuni: download personalizzato [produzione]
+  + Possibilità di scegliere le sezioni dati da includere nello scarico massivo comune
+
 ## Versione 9.1.4 (2025-03-07)
 
 + (Bug) Modifica xsd notifiche di stato civile
@@ -111,10 +119,10 @@
 
 ## Versione 9.0.1 (2024-10-21)
 
-+ (Requirement) Liste elettorali: scarico massivo
++ (Requirement) Liste elettorali: scarico massivo [solo test comuni]
     + Nella sezione "Liste elettorali" sarà possibile richiedere lo scarico dei dati elettorali del proprio comune con profilo ufficiale elettorale
 
-+ (Requirement) Scarico comuni: download personalizzato
++ (Requirement) Scarico comuni: download personalizzato [solo test comuni]
     + Possibilità di scegliere le sezioni dati da includere nello scarico massivo comune
 
 ## Versione 9.0.0 (2024-09-30)
