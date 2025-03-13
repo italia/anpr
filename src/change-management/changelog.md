@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.6 (2025-03-13)
+
++ (Bug) Errore Controllo unione civile
+    + Risolto bug del 5008 quando era presente un atto ansc in uno scioglimento unione
+
 ## Versione 9.1.5 (2025-03-10)
 
 + (Requirement) Liste elettorali: scarico massivo [produzione]
