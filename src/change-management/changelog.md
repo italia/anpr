@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.7 (2025-03-17)
+
++ (Requirement) 3002: dato che tutti i comuni sono subentrati elettoralmente togliere la restituzione della sezione listaElettorale
+  + Consultazione 3002 per ufficiali d'anagrafe: dato che tutti i comuni sono subentrati elettoralmente non sarà più restituita la sezione listaElettorale per i soggetti non comunicati al subentro elettorale o successivamente
+
 ## Versione 9.1.6 (2025-03-13)
 
 + (Bug) Errore Controllo unione civile
