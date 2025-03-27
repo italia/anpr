@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.8 (2025-03-27)
+
++ (Bug) 5008: bug in scioglimento unione (issue: [https://github.com/italia/anpr/issues/4862](https://github.com/italia/anpr/issues/4862))
+    + Risolto bug nella mutazione dello scioglimento dell'unione civile
+
 ## Versione 9.1.7 (2025-03-17)
 
 + (Requirement) 3002: dato che tutti i comuni sono subentrati elettoralmente togliere la restituzione della sezione listaElettorale
