@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.9 (2025-04-01)
+
++ (Bug) Rettifica luogo nascita
+    + Risolto il bug che non permetteva la rettifica del luogo nascita per un soggetto aire
+
 ## Versione 9.1.8 (2025-03-27)
 
 + (Bug) 5008: bug in scioglimento unione (issue: [https://github.com/italia/anpr/issues/4862](https://github.com/italia/anpr/issues/4862))
