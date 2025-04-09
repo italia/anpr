@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.10 (2025-04-09)
+
++ (Bug) Modifica xsd notifiche di stato civile
+    + Conferma di accordo di separazione o divorzio, dalla versione 1.39.2 di ansc, la struttura "accordo" contenuta nel tag "separazione" non viene più valorizzata, in sostituzione è stata definita la struttura "accordoSeparazione"
+
 ## Versione 9.1.9 (2025-04-01)
 
 + (Bug) Rettifica luogo nascita
