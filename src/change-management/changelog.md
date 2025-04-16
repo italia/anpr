@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.11 (2025-04-16)
+
++ (Bug) 6001: controlla erroneamente la congruenza del comune nascita
+    + Corretto un controllo di congruenza
+
 ## Versione 9.1.10 (2025-04-09)
 
 + (Bug) Modifica xsd notifiche di stato civile
