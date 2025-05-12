@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.12 (2025-05-12)
+
++ (Bug) Modifica xsd notifiche di stato civile
+  + Estese restrizioni XSD di alcuni tipo, in particolare tipoNumeroAtto, tipoNumeroAttoANSC, tipoParteAtto, tipoSerie.
+
 ## Versione 9.1.11 (2025-04-16)
 
 + (Bug) 6001: controlla erroneamente la congruenza del comune nascita
