@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.13 (2025-05-30)
+
++ (Bug) webapp: bug per revoca convivenza di fatto
+  + Risolto un bug sull'eliminazione della convivenza di fatto.
+
 ## Versione 9.1.12 (2025-05-12)
 
 + (Bug) Modifica xsd notifiche di stato civile
