@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.14 (2025-06-10)
+
++ (Bug) Gestione atto mutazione scheda non prende in considerazione annoatto
+  + Risolto bug sulla mutazione dell'atto di nascita che ne impediva la visualizzazione corretta
+
 ## Versione 9.1.13 (2025-05-30)
 
 + (Bug) webapp: bug per revoca convivenza di fatto
