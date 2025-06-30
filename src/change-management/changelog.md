@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.1.15 (2025-06-30)
+
++ (Bug) Modifica xsd notifiche di stato civile
+  + Aggiunte sezioni per annotazione modificativa generica e nota tecnica di atti ANSC.
+
 ## Versione 9.1.14 (2025-06-10)
 
 + (Bug) Gestione atto mutazione scheda non prende in considerazione annoatto
