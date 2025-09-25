@@ -1,6 +1,6 @@
 # Changelog
 
-## Versione 9.2.0 (2025-08-01)
+## Versione 9.2.0 (Test Comuni 2025-08-01) (Produzione 2025-09-25)
 
 + (Requirement) Servizi per i comuni ANNCSU (issue: [https://github.com/italia/anpr/issues/5011](https://github.com/italia/anpr/issues/5011))
   + Per i servizi 1002,5001,5005,5014 è stato aggiunto alla risposta una sezione "anncsu" dove sono valorizzati, se presenti, i progressi nazionali anncsu dell'odonimo e dell'accesso (in caso contrario sarà presente un warning).
