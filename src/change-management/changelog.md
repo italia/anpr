@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.1 (2025-10-15)
+
++ (Bug) [6001] Richiesta certificati emessi in precedenza (issue: [https://github.com/italia/anpr/issues/5069](https://github.com/italia/anpr/issues/5069))
+  + Per motivi di performance era stata rimosso l'attachment dalle risposte di alcuni servizi tra cui il 6001. Ripristinato solo per la retry dei certificati effettivamente emessi (non per le anteprime).
+
 ## Versione 9.2.0 (Test Comuni 2025-08-01) (Produzione 2025-09-25)
 
 + (Requirement) Servizi per i comuni ANNCSU (issue: [https://github.com/italia/anpr/issues/5011](https://github.com/italia/anpr/issues/5011))
