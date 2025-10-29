@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.2.2 (2025-10-29)
+
++ (Bug) [6001] Certificato godimento dei diritti politici in sloveno
+  + Compare contassegno.
+
++ (Bug) 5010: migliorata verifica comune competente per certificabilità 
+  + Migliorando dei controlli.
+
 ## Versione 9.2.1 (2025-10-15)
 
 + (Bug) [6001] Richiesta certificati emessi in precedenza (issue: [https://github.com/italia/anpr/issues/5069](https://github.com/italia/anpr/issues/5069))
