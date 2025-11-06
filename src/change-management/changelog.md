@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.3 (2025-11-06)
+
++ (Requirement) 6001: rimozione numero comunale e anno per atti di stato civile ANSC (issue: [https://github.com/italia/ansc/issues/2185](https://github.com/italia/ansc/issues/2185))
+  + Rimuoviamo numero comunale e anno in caso di atto ANSC, in quanto risulta come una duplicazione.
+
 ## Versione 9.2.2 (2025-10-29)
 
 + (Bug) [6001] Certificato godimento dei diritti politici in sloveno
