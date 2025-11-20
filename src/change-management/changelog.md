@@ -1,5 +1,12 @@
 # Changelog
 
+
+
+## Versione 9.2.4 (2025-11-20)
+
++ (Requirement) Aggiungere alle notifiche dei divorzi esteri anche l'ente estero presente sotto trascrizione separazione (issue: [https://github.com/italia/ansc/issues/2219](https://github.com/italia/ansc/issues/2219))
+  + Aggiunta struttura per l'inserimento del tipo ente nelle trascrizioni per le notifiche provenienti da ANSC.
+
 ## Versione 9.2.3 (2025-11-06)
 
 + (Requirement) 6001: rimozione numero comunale e anno per atti di stato civile ANSC (issue: [https://github.com/italia/ansc/issues/2185](https://github.com/italia/ansc/issues/2185))
