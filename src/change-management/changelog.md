@@ -1,6 +1,9 @@
 # Changelog
 
+## Versione 9.2.5 (2025-12-04)
 
++ (Bug) [SC]: Redazione atto matrimonio "Rito civile" con data evento maggiore della data formazione atto. #2158
+  + Ora la dataFormazioneAtto rappresenta la data inizio formazione. Mentre il nuovo campo dataFirmaAtto quando l'atto è effettivamente firmato dall'usc.
 
 ## Versione 9.2.4 (2025-11-20)
 
