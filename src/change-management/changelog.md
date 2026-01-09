@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.6 (2026-01-08)
+
++ (Bug) [SC]: Servizio 4005 - Notifiche ANSC #2490
+  + Risoluzione issue 2490 stato civile. Alcune richieste 4005 non venivano elaborate correttamente.
+
 ## Versione 9.2.5 (2025-12-04)
 
 + (Bug) [SC]: Redazione atto matrimonio "Rito civile" con data evento maggiore della data formazione atto. #2158
