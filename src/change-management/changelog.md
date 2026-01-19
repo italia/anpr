@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.7 (2026-01-19)
+
++ (Bug) 5010: EN204 dettagli esito controllo
+  + Migiorata la masseggiastica del codice di ritorno EN204 per facilitare l'utente nella risoluzione dei problemi.
+
 ## Versione 9.2.6 (2026-01-08)
 
 + (Bug) [SC]: Servizio 4005 - Notifiche ANSC #2490
