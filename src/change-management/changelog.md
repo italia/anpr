@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.8 (2026-03-23)
+
++ (Bug) A000: Nelle iscrizioni aire non viene valorizzato un campo accessorio relativo all'indirizzo.
+  + Tale campo era necessario alle notifiche verso Agenzia entrate
+
 ## Versione 9.2.7 (2026-01-19)
 
 + (Bug) 5010: EN204 dettagli esito controllo
