@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.9 (2026-05-26)
+
++ (Bug) 6001: Bugfix servizio di certificazione per gestione errata lunghezza campo idsoggetto.
+  + Alcuni certificati potevano andare in errore quando il valore del campo idsoggetto era superiore a quello di in untero a 32 bit con segno. 
+
 ## Versione 9.2.8 (2026-03-23)
 
 + (Bug) A000: Nelle iscrizioni aire non viene valorizzato un campo accessorio relativo all'indirizzo.
