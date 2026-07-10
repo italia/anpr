@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.10 (2026-07-07)
+
++ (Bug) 5000 e WEBAPP: Estensione di alcuni campi usati per il valore dell' idfamiglia e idsoggetto. (issue: [https://github.com/italia/ansc/issues/5362](https://github.com/italia/ansc/issues/5362))
+  + Alcuni invocazione versione AE potevano andare in errore quando il valore del campo idsoggetto era superiore a quello di in untero a 32 bit con segno.
+
 ## Versione 9.2.9 (2026-05-26)
 
 + (Bug) 6001: Bugfix servizio di certificazione per gestione errata lunghezza campo idsoggetto.
