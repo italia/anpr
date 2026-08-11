@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.11 (2026-08-11)
+
++ (Bug) WS 5010 : Aggiunta verifica ripartizione estera
+  + La ripartizione estera deve avere uno dei seguenti valori : EUROPA","AFRICA ASIA OCEANIA ANTARTIDE","AMERICA MERIDIONALE","AMERICA SETTENTRIONALE E CENTRALE"
+
 ## Versione 9.2.10 (2026-07-07)
 
 + (Bug) 5000 e WEBAPP: Estensione di alcuni campi usati per il valore dell' idfamiglia e idsoggetto. (issue: [https://github.com/italia/ansc/issues/5362](https://github.com/italia/ansc/issues/5362))
