@@ -1,5 +1,13 @@
 # Changelog
 
+## Versione 9.2.12 (2026-08-31)
+
++ (Bug) WS 5001 : Revisione onomastica possibile su comune pregresso
+  + Ora è possibile indicare un comune non attivo per la revisione onomastica
+
++ (Bug) WS 5008 : Blocco comunicazione carte identità elettroniche
+  + Solo i servizi di IPZS possono comunicare l'emissione di CIE adesso.
+
 ## Versione 9.2.11 (2026-08-11)
 
 + (Bug) WS 5010 : Aggiunta verifica ripartizione estera
