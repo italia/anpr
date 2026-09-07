@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.13 (2026-09-07)
+
++ (Bug) WS 5008 tipomutzione 3 in caso di cie dare warning senza completare operazione di inserimento (issue: [https://github.com/italia/anpr/issues/5398](https://github.com/italia/anpr/issues/5398))
+  + Il controllo EN148 che bloccava la mutazione carta di identità per la cie è stato reso warning
+
 ## Versione 9.2.12 (2026-08-31)
 
 + (Bug) WS 5001 : Revisione onomastica possibile su comune pregresso
