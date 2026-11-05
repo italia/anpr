@@ -1,5 +1,10 @@
 # Changelog
 
+## Versione 9.2.14 (2026-11-05)
+
++ (Bug) webapp: impossibile eliminare operazioni sospese (issue: [https://github.com/italia/anpr/issues/5463](https://github.com/italia/anpr/issues/5463))
+  +   Fix errore cancellazione delle operazioni sospese con in alcuni scenari.
+
 ## Versione 9.2.13 (2026-09-07)
 
 + (Bug) WS 5008 tipomutzione 3 in caso di cie dare warning senza completare operazione di inserimento (issue: [https://github.com/italia/anpr/issues/5398](https://github.com/italia/anpr/issues/5398))
