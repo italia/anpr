@@ -7,7 +7,12 @@ body:
     attributes:
       value: |
         Compila tutti i campi obbligatori.
-
+        
+  - type: markdown
+    attributes:
+      value: |
+        Se avete difficoltà ad implementare l'e-service potete scaricare un [client](https://github.com/user-attachments/files/22112526/clientAnpr-1.0.zip) di esempio in java.
+ 
   - type: input
     id: casoduso
     attributes:
@@ -61,8 +66,3 @@ body:
       label: Descrizione problema
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        Se avete difficoltà ad implementare l'e-service alla issue #4488 potete trovare un client di esempio in java.
