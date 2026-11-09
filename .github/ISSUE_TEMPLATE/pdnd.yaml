@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Compila tutti i campi.
+        Compila tutti i campi obbligatori.
 
   - type: input
     id: casoduso
@@ -26,7 +26,12 @@ body:
       - PRODUZIONE
     validations:
       required: true
-      
+  
+  - type: markdown
+    attributes:
+      value: |
+        Se la chiamata è andata in 400 compilare il campo qui sotto.
+     
   - type: input
     id: govwayid
     attributes:
@@ -35,6 +40,11 @@ body:
       placeholder: 
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Se l'implementazione dell'e-service è andata a buon fine ma non si trova un determinato soggetto compilare il campo qui sotto.
       
   - type: input
     id: IDANPR
@@ -51,3 +61,8 @@ body:
       label: Descrizione problema
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Se avete difficoltà ad implementare l'e-service alla issue #4488 potete trovare un client di esempio in java.
