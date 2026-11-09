@@ -1,4 +1,4 @@
-name: Assistenza enti PDND
+name: Assistenza enti PDND 
 description: Segnala un problema seguendo gli step richiesti
 title: "[PDND]: "
 labels: ["domanda"]
@@ -26,7 +26,16 @@ body:
       - PRODUZIONE
     validations:
       required: true
-
+      
+  - type: input
+    id: IDANPR
+    attributes:
+      label: IRDANPR ricercato
+      description: Se la chiamata è andata bene ma non trovate un soggetto indicare l'IDANPR
+      placeholder: 
+    validations:
+      required: false
+      
   - type: input
     id: govwayid
     attributes:
