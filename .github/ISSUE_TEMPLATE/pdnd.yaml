@@ -28,15 +28,6 @@ body:
       required: true
       
   - type: input
-    id: IDANPR
-    attributes:
-      label: IRDANPR ricercato
-      description: Se la chiamata è andata bene ma non trovate un soggetto indicare l'IDANPR
-      placeholder: 
-    validations:
-      required: false
-      
-  - type: input
     id: govwayid
     attributes:
       label: govway_id restituito
@@ -44,7 +35,16 @@ body:
       placeholder: 
     validations:
       required: false
-
+      
+  - type: input
+    id: IDANPR
+    attributes:
+      label: IDANPR ricercato
+      description: Se la chiamata è andata bene ma non trovate un soggetto indicare l'IDANPR
+      placeholder: 
+    validations:
+      required: false
+      
   - type: textarea
     id: descrizione
     attributes:
