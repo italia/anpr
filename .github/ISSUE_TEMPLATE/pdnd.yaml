@@ -7,12 +7,7 @@ body:
     attributes:
       value: |
         Compila tutti i campi obbligatori.
-        
-  - type: markdown
-    attributes:
-      value: |
-        Se avete difficoltà ad implementare l'e-service potete scaricare un [client](https://github.com/user-attachments/files/22112526/clientAnpr-1.0.zip) di esempio in java.
- 
+      
   - type: input
     id: casoduso
     attributes:
@@ -35,7 +30,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Se la chiamata è andata in 400 compilare il campo qui sotto.
+        Se la chiamata è andata in 400 compilare il campo qui sotto.  
+        Vi ricordiamo che se avete difficoltà ad implementare l'e-service potete scaricare un [client](https://github.com/user-attachments/files/22112526/clientAnpr-1.0.zip) di esempio in java.
+
      
   - type: input
     id: govwayid
