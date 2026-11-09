@@ -1,0 +1,42 @@
+name: Assistenza enti PDND
+description: Segnala un problema seguendo gli step richiesti
+title: "[PDND]: "
+labels: ["domanda"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Compila tutti i campi.
+
+  - type: input
+    id: casoduso
+    attributes:
+      label: Caso d'uso
+      placeholder: C030
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: scegli l'ambiente
+      options: 
+      - COLLAUDO
+      - PRODUZIONE
+    validations:
+      required: true
+
+  - type: input
+    id: govwayid
+    attributes:
+      label: Inserisci il govway_id che ti viene restituito
+      placeholder: 
+    validations:
+      required: false
+
+  - type: textarea
+    id: descrizione
+    attributes:
+      label: Descrizione problema
+    validations:
+      required: true
