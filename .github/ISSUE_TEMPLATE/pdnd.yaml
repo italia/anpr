@@ -19,7 +19,8 @@ body:
   - type: dropdown
     id: ambiente
     attributes:
-      label: scegli l'ambiente
+      label: Ambiente di riferimento
+      description: Scegli l'ambiente
       options: 
       - COLLAUDO
       - PRODUZIONE
@@ -29,7 +30,8 @@ body:
   - type: input
     id: govwayid
     attributes:
-      label: Inserisci il govway_id che ti viene restituito
+      label: govway_id restituito
+      description: Inserisci il govway_id che ti viene restituito in response
       placeholder: 
     validations:
       required: false
